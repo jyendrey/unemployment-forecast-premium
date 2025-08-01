@@ -16,7 +16,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #000000;
-            color: #920B17;
+            color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -30,14 +30,14 @@
         .header {
             text-align: center;
             margin-bottom: 40px;
-            border-bottom: 2px solid #920B17;
+            border-bottom: 2px solid #1f77b4;
             padding-bottom: 30px;
         }
 
         .main-title {
             font-size: 2.8rem;
             font-weight: 700;
-            color: #920B17;
+            color: #1f77b4;
             margin-bottom: 10px;
             letter-spacing: -0.5px;
         }
@@ -86,7 +86,7 @@
         .metric-card {
             background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
             border: 1px solid #333333;
-            border-left: 4px solid #920B17;
+            border-left: 4px solid #1f77b4;
             border-radius: 8px;
             padding: 25px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -108,7 +108,7 @@
         .metric-value {
             font-size: 2.2rem;
             font-weight: 700;
-            color: #920B17;
+            color: #1f77b4;
             margin-bottom: 5px;
         }
 
@@ -148,7 +148,7 @@
             padding: 15px;
             text-align: left;
             font-weight: 600;
-            border-bottom: 2px solid #920B17;
+            border-bottom: 2px solid #1f77b4;
         }
 
         .forecast-table td {
@@ -204,7 +204,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background: #920B17;
+            background: #1f77b4;
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
@@ -387,12 +387,20 @@
             const upperBound = [null, 4.2, 4.1, 4.0, 3.9, 3.9, 4.1];
             const lowerBound = [null, 4.0, 3.9, 3.8, 3.7, 3.7, 3.7];
 
+            // Create +0.1% and -0.1% bands from forecast values
+            const forecastMonths = months.slice(1); // Exclude 'Jul 2025' (historical)
+            const forecastValues = forecast.slice(1); // Exclude null value
+            
+            // Calculate +0.1% band (translucent red)
+            const upperErrorBand = forecastValues.map(val => val + 0.1);
+            const lowerErrorBand = forecastValues.map(val => val - 0.1);
+
             const trace1 = {
                 x: months,
                 y: historical,
                 mode: 'lines+markers',
                 name: 'Historical Data',
-                line: { color: '#920B17', width: 3 },
+                line: { color: '#1f77b4', width: 3 },
                 marker: { size: 8 }
             };
 
@@ -405,6 +413,7 @@
                 marker: { size: 10, symbol: 'diamond' }
             };
 
+            // Main confidence interval (98%)
             const trace3 = {
                 x: months.concat(months.slice().reverse()),
                 y: upperBound.concat(lowerBound.slice().reverse()),
@@ -413,6 +422,30 @@
                 line: { color: 'transparent' },
                 name: '98% Confidence Interval',
                 showlegend: true
+            };
+
+            // +0.1% error band (translucent red) - above forecast
+            const trace4 = {
+                x: forecastMonths.concat(forecastMonths.slice().reverse()),
+                y: upperErrorBand.concat(forecastValues.slice().reverse()),
+                fill: 'toself',
+                fillcolor: 'rgba(220,53,69,0.15)', // Translucent red
+                line: { color: 'transparent' },
+                name: '+0.1% Error Band',
+                showlegend: true,
+                hoverinfo: 'none'
+            };
+
+            // -0.1% error band (translucent green) - below forecast
+            const trace5 = {
+                x: forecastMonths.concat(forecastMonths.slice().reverse()),
+                y: forecastValues.concat(lowerErrorBand.slice().reverse()),
+                fill: 'toself',
+                fillcolor: 'rgba(40,167,69,0.15)', // Translucent green
+                line: { color: 'transparent' },
+                name: '-0.1% Error Band',
+                showlegend: true,
+                hoverinfo: 'none'
             };
 
             const layout = {
@@ -436,12 +469,12 @@
                 }
             };
 
-            Plotly.newPlot('forecastChart', [trace1, trace2, trace3], layout, {responsive: true});
+            Plotly.newPlot('forecastChart', [trace1, trace2, trace3, trace4, trace5], layout, {responsive: true});
         }
 
         // Create drivers chart
         function createDriversChart() {
-            const drivers = ['Participation', 'Claims', 'JOLTS', 'Funds Rate', 'Sentiment'];
+            const drivers = ['Labor Force Participation', 'Initial Jobless Claims', 'Job Openings (JOLTS)', 'Federal Funds Rate', 'Consumer Sentiment'];
             const impacts = [-0.15, 0.08, -0.05, 0.03, -0.02];
             const colors = impacts.map(val => val < 0 ? '#2ca02c' : '#d62728');
 
