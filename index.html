@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -293,6 +292,17 @@
 
         <div class="chart-container">
             <h3 class="chart-title">6-Month Unemployment Forecast</h3>
+            <div class="chart-controls" style="margin-bottom: 20px; text-align: center;">
+                <label for="dateRange" style="color: #cccccc; margin-right: 10px;">Historical View:</label>
+                <select id="dateRange" style="background: #333333; color: #ffffff; border: 1px solid #555555; padding: 8px 12px; border-radius: 4px; margin-right: 15px;">
+                    <option value="6m">6 Months</option>
+                    <option value="1y">1 Year</option>
+                    <option value="2y">2 Years</option>
+                    <option value="5y">5 Years</option>
+                    <option value="10y">10 Years</option>
+                </select>
+                <button id="updateChart" style="background: #1f77b4; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Update Chart</button>
+            </div>
             <div id="forecastChart" style="height: 500px;"></div>
         </div>
 
@@ -379,43 +389,85 @@
             document.getElementById('footerUpdate').textContent = fullString;
         }
 
-        // Create forecast chart
-        function createForecastChart() {
-            const months = ['Jul 2025', 'Aug 2025', 'Sep 2025', 'Oct 2025', 'Nov 2025', 'Dec 2025', 'Jan 2026'];
-            const historical = [4.2, null, null, null, null, null, null];
-            const forecast = [null, 4.1, 4.0, 3.9, 3.8, 3.8, 3.9];
-            const upperBound = [null, 4.2, 4.1, 4.0, 3.9, 3.9, 4.1];
-            const lowerBound = [null, 4.0, 3.9, 3.8, 3.7, 3.7, 3.7];
-
-            // Create +0.1% and -0.1% bands from forecast values
-            const forecastMonths = months.slice(1); // Exclude 'Jul 2025' (historical)
-            const forecastValues = forecast.slice(1); // Exclude null value
+        // Generate historical unemployment data
+        function generateHistoricalData(years) {
+            const data = [];
+            const dates = [];
+            const currentDate = new Date('2025-07-01');
             
-            // Calculate +0.1% band (translucent red)
+            // Generate monthly data going back specified years
+            for (let i = years * 12; i >= 0; i--) {
+                const date = new Date(currentDate);
+                date.setMonth(date.getMonth() - i);
+                
+                // Simulate realistic unemployment data with trends and cycles
+                const baseRate = 4.2;
+                const cyclicalComponent = Math.sin((i / 12) * 2 * Math.PI) * 1.5; // Business cycle
+                const trendComponent = (i / (years * 12)) * -2; // Long-term trend
+                const seasonalComponent = Math.sin((date.getMonth() / 12) * 2 * Math.PI) * 0.3; // Seasonal
+                const randomNoise = (Math.random() - 0.5) * 0.4; // Random variation
+                
+                // Add specific historical events
+                let eventComponent = 0;
+                if (date.getFullYear() === 2020 && date.getMonth() >= 2 && date.getMonth() <= 5) {
+                    eventComponent = 10; // COVID spike
+                } else if (date.getFullYear() === 2020 && date.getMonth() >= 6) {
+                    eventComponent = 6 - (date.getMonth() - 6) * 0.8; // COVID recovery
+                } else if (date.getFullYear() === 2021) {
+                    eventComponent = Math.max(0, 3 - date.getMonth() * 0.3); // Continued recovery
+                } else if (date.getFullYear() >= 2008 && date.getFullYear() <= 2010) {
+                    eventComponent = 5 - Math.abs(date.getFullYear() - 2009) * 2; // Financial crisis
+                }
+                
+                const rate = Math.max(2.5, Math.min(15, 
+                    baseRate + cyclicalComponent + trendComponent + seasonalComponent + randomNoise + eventComponent
+                ));
+                
+                data.push(rate);
+                dates.push(date.toISOString().substr(0, 7)); // YYYY-MM format
+            }
+            
+            return { dates, data };
+        }
+
+        // Create forecast chart with historical data
+        function createForecastChart(historicalYears = 0.5) {
+            // Generate historical data
+            const { dates: historicalDates, data: historicalData } = generateHistoricalData(historicalYears);
+            
+            // Future forecast data (next 6 months)
+            const forecastMonths = ['Aug 2025', 'Sep 2025', 'Oct 2025', 'Nov 2025', 'Dec 2025', 'Jan 2026'];
+            const forecastValues = [4.1, 4.0, 3.9, 3.8, 3.8, 3.9];
+            const upperBound = [4.2, 4.1, 4.0, 3.9, 3.9, 4.1];
+            const lowerBound = [4.0, 3.9, 3.8, 3.7, 3.7, 3.7];
+            
+            // Create +0.1% and -0.1% bands from forecast values
             const upperErrorBand = forecastValues.map(val => val + 0.1);
             const lowerErrorBand = forecastValues.map(val => val - 0.1);
 
+            // Historical data trace
             const trace1 = {
-                x: months,
-                y: historical,
+                x: historicalDates,
+                y: historicalData,
                 mode: 'lines+markers',
                 name: 'Historical Data',
-                line: { color: '#1f77b4', width: 3 },
-                marker: { size: 8 }
+                line: { color: '#1f77b4', width: 2 },
+                marker: { size: 4 }
             };
 
+            // Forecast trace
             const trace2 = {
-                x: months,
-                y: forecast,
+                x: forecastMonths,
+                y: forecastValues,
                 mode: 'lines+markers',
                 name: 'Forecast',
                 line: { color: '#ff7f0e', width: 3, dash: 'dash' },
-                marker: { size: 10, symbol: 'diamond' }
+                marker: { size: 8, symbol: 'diamond' }
             };
 
             // Main confidence interval (98%)
             const trace3 = {
-                x: months.concat(months.slice().reverse()),
+                x: forecastMonths.concat(forecastMonths.slice().reverse()),
                 y: upperBound.concat(lowerBound.slice().reverse()),
                 fill: 'toself',
                 fillcolor: 'rgba(255,127,14,0.2)',
@@ -455,7 +507,8 @@
                 xaxis: { 
                     title: 'Date',
                     gridcolor: '#333333',
-                    color: '#ffffff'
+                    color: '#ffffff',
+                    type: 'date'
                 },
                 yaxis: { 
                     title: 'Unemployment Rate (%)',
@@ -466,7 +519,8 @@
                     x: 0,
                     y: 1,
                     bgcolor: 'rgba(0,0,0,0.5)'
-                }
+                },
+                hovermode: 'x unified'
             };
 
             Plotly.newPlot('forecastChart', [trace1, trace2, trace3, trace4, trace5], layout, {responsive: true});
@@ -512,6 +566,28 @@
             updateTimestamps();
             createForecastChart();
             createDriversChart();
+            
+            // Add event listener for chart controls
+            document.getElementById('updateChart').addEventListener('click', function() {
+                const selectedRange = document.getElementById('dateRange').value;
+                let years;
+                
+                switch(selectedRange) {
+                    case '6m': years = 0.5; break;
+                    case '1y': years = 1; break;
+                    case '2y': years = 2; break;
+                    case '5y': years = 5; break;
+                    case '10y': years = 10; break;
+                    default: years = 0.5;
+                }
+                
+                createForecastChart(years);
+            });
+            
+            // Allow Enter key to update chart
+            document.getElementById('dateRange').addEventListener('change', function() {
+                document.getElementById('updateChart').click();
+            });
             
             // Update timestamps every minute
             setInterval(updateTimestamps, 60000);
