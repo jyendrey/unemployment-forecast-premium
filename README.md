@@ -1,4 +1,4 @@
-# 📊 Labor Market Intelligence Dashboard
+# Labor Market Intelligence Dashboard
 
 ## Premium Unemployment Forecasting System for Interactive Brokers
 
