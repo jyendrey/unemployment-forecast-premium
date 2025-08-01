@@ -386,6 +386,14 @@
             const upperBound = [null, 4.2, 4.1, 4.0, 3.9, 3.9, 4.1];
             const lowerBound = [null, 4.0, 3.9, 3.8, 3.7, 3.7, 3.7];
 
+            // Create +0.1% and -0.1% bands from forecast values
+            const forecastMonths = months.slice(1); // Exclude 'Jul 2025' (historical)
+            const forecastValues = forecast.slice(1); // Exclude null value
+            
+            // Calculate +0.1% band (translucent red)
+            const upperErrorBand = forecastValues.map(val => val + 0.1);
+            const lowerErrorBand = forecastValues.map(val => val - 0.1);
+
             const trace1 = {
                 x: months,
                 y: historical,
@@ -404,6 +412,7 @@
                 marker: { size: 10, symbol: 'diamond' }
             };
 
+            // Main confidence interval (98%)
             const trace3 = {
                 x: months.concat(months.slice().reverse()),
                 y: upperBound.concat(lowerBound.slice().reverse()),
@@ -412,6 +421,30 @@
                 line: { color: 'transparent' },
                 name: '98% Confidence Interval',
                 showlegend: true
+            };
+
+            // +0.1% error band (translucent red) - above forecast
+            const trace4 = {
+                x: forecastMonths.concat(forecastMonths.slice().reverse()),
+                y: upperErrorBand.concat(forecastValues.slice().reverse()),
+                fill: 'toself',
+                fillcolor: 'rgba(220,53,69,0.15)', // Translucent red
+                line: { color: 'transparent' },
+                name: '+0.1% Error Band',
+                showlegend: true,
+                hoverinfo: 'none'
+            };
+
+            // -0.1% error band (translucent green) - below forecast
+            const trace5 = {
+                x: forecastMonths.concat(forecastMonths.slice().reverse()),
+                y: forecastValues.concat(lowerErrorBand.slice().reverse()),
+                fill: 'toself',
+                fillcolor: 'rgba(40,167,69,0.15)', // Translucent green
+                line: { color: 'transparent' },
+                name: '-0.1% Error Band',
+                showlegend: true,
+                hoverinfo: 'none'
             };
 
             const layout = {
@@ -435,7 +468,7 @@
                 }
             };
 
-            Plotly.newPlot('forecastChart', [trace1, trace2, trace3], layout, {responsive: true});
+            Plotly.newPlot('forecastChart', [trace1, trace2, trace3, trace4, trace5], layout, {responsive: true});
         }
 
         // Create drivers chart
