@@ -363,6 +363,70 @@ class RealTimeDataCollector:
             'total_apis': total_apis,
             'last_assessment': datetime.now().isoformat()
         }
+    
+    def get_alert_triggers(self) -> List[Dict]:
+        """Check for conditions that should trigger alerts"""
+        alerts = []
+        
+        try:
+            latest_data = self.get_latest_data()
+            
+            # Check for significant changes in labor force participation
+            lfp_change = latest_data.get('labor_force_participation', {}).get('participation_rate', {}).get('recent_change', 0)
+            if abs(lfp_change) > 0.1:
+                alerts.append({
+                    'type': 'warning' if lfp_change < 0 else 'info',
+                    'message': f"Labor Force Participation changed by {lfp_change:+.2f}%",
+                    'severity': 'high' if abs(lfp_change) > 0.15 else 'medium',
+                    'timestamp': datetime.now().isoformat()
+                })
+            
+            # Check for unusual claims activity
+            claims_data = latest_data.get('weekly_claims', {})
+            initial_claims = claims_data.get('initial_claims', {}).get('current', 0)
+            if initial_claims > 350000:
+                alerts.append({
+                    'type': 'warning',
+                    'message': f"Initial claims elevated at {initial_claims:,.0f}",
+                    'severity': 'medium',
+                    'timestamp': datetime.now().isoformat()
+                })
+            
+            # Check data quality
+            quality = latest_data.get('data_quality', {})
+            if quality.get('level') == 'Low':
+                alerts.append({
+                    'type': 'error',
+                    'message': f"Data quality degraded: {quality.get('apis_working', 0)}/{quality.get('total_apis', 3)} APIs working",
+                    'severity': 'high',
+                    'timestamp': datetime.now().isoformat()
+                })
+            
+        except Exception as e:
+            alerts.append({
+                'type': 'error',
+                'message': f"Error checking alert conditions: {str(e)}",
+                'severity': 'high',
+                'timestamp': datetime.now().isoformat()
+            })
+        
+        return alerts
+    
+    def refresh_cache(self) -> bool:
+        """Force refresh of all cached data"""
+        try:
+            self.cache.clear()
+            self.last_update.clear()
+            
+            # Get fresh data
+            fresh_data = self.get_latest_data()
+            
+            self.logger.info("Cache refreshed successfully")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Error refreshing cache: {str(e)}")
+            return False
 
 if __name__ == "__main__":
     # Test the data collector
@@ -377,3 +441,11 @@ if __name__ == "__main__":
     print(f"Labor Force Participation: {data['labor_force_participation']['participation_rate']['current']}%")
     print(f"Initial Claims: {data['weekly_claims']['initial_claims']['current']:,.0f}")
     print(f"Data Quality: {data['data_quality']['level']}")
+    
+    alerts = collector.get_alert_triggers()
+    if alerts:
+        print(f"\nAlerts Triggered: {len(alerts)}")
+        for alert in alerts:
+            print(f"  {alert['type'].upper()}: {alert['message']}")
+    else:
+        print("\nNo alerts triggered")
