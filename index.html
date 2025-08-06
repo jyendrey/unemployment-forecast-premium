@@ -413,28 +413,23 @@
                     <a href="UNEMPLOYMENT_ANALYSIS.md" class="btn">📊 View Full Analysis</a>
                 </div>
             </div>
-            <!-- Economic Factors (Horizontal) -->
-            <div class="card" style="grid-column: 1 / -1; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
-                <h2 style="border-bottom: none; margin-bottom: 0;"><span class="icon">📈</span>Economic Factors</h2>
-                <div class="metrics-grid" style="flex: 1; display: flex; flex-direction: row; gap: 30px; margin: 0 0 0 30px;">
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">4.2%</div>
-                        <div class="metric-label">Current Rate</div>
-                    </div>
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">62.2%</div>
-                        <div class="metric-label">Labor Force Participation</div>
-                    </div>
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">218k</div>
-                        <div class="metric-label">Weekly Claims</div>
-                    </div>
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">-0.124</div>
-                        <div class="metric-label">Market Sentiment</div>
-                    </div>
-                </div>
-                <!-- Economic Factors (Horizontal, Redesigned) -->
+           <body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><span class="ib-logo">Interactive Brokers</span> - Unemployment Forecast Dashboard</h1>
+            <p>Real-time Economic Analysis & Visual Charts</p>
+            <div style="margin-top: 25px;">
+                <span class="status-badge status-success">Live Data</span>
+                <span class="status-badge status-info">Automated Updates</span>
+                <span class="status-badge status-success">Visual Charts</span>
+            </div>
+        </div>
+        <!-- Main Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Current Forecast (Hero) -->
+            <!-- ... (your forecast chart and trend as before) ... -->
+            <!-- Economic Factors (Horizontal, Redesigned) -->
             <div class="card" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
                 <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon">📈</span>Economic Factors</h2>
                 <div class="metrics-grid" style="flex: none; display: flex; flex-direction: row; gap: 30px; margin: 0 0 0 0; justify-content: center; width: 100%;">
@@ -493,15 +488,6 @@
                     setTimeout(() => { this.style.transform = 'scale(1)'; }, 150);
                 });
             });
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() { this.style.transform = 'translateY(-5px)'; });
-                card.addEventListener('mouseleave', function() { this.style.transform = 'translateY(0)'; });
-            });
-        });
-    </script>
-</body>
-</html>
             const cards = document.querySelectorAll('.card');
             cards.forEach(card => {
                 card.addEventListener('mouseenter', function() { this.style.transform = 'translateY(-5px)'; });
