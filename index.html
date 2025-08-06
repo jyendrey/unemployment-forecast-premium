@@ -399,7 +399,7 @@
         <!-- Main Dashboard Grid -->
         <div class="dashboard-grid">
             <!-- Current Forecast -->
-            <div class="card">
+            <div class="card" style="grid-column: 1 / -1; margin-bottom: 30px;">
                 <h2><span class="icon">🎯</span>Current Forecast</h2>
                 <div class="forecast-display">
                     <div class="forecast-number">4.1%</div>
@@ -554,129 +554,6 @@
                             <span>Manual Trigger</span>
                             <span class="file-status status-success">Available</span>
                         </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- File Status -->
-            <div class="card">
-                <h2><span class="icon">📁</span>File Status</h2>
-                <ul class="file-list">
-                    <li>
-                        <span>real_unemployment_forecast.py</span>
-                        <span class="file-status status-success">✅ Ready</span>
-                    </li>
-                    <li>
-                        <span>github_visual_analysis.py</span>
-                        <span class="file-status status-success">✅ Ready</span>
-                    </li>
-                    <li>
-                        <span>forecastex_pairs_20250707.csv</span>
-                        <span class="file-status status-success">✅ Data</span>
-                    </li>
-                    <li>
-                        <span>forecastex_prices_20250707.csv</span>
-                        <span class="file-status status-success">✅ Data</span>
-                    </li>
-                    <li>
-                        <span>UNEMPLOYMENT_ANALYSIS.md</span>
-                        <span class="file-status status-success">✅ Charts</span>
-                    </li>
-                    <li>
-                        <span>ECONOMIC_BREAKDOWN.md</span>
-                        <span class="file-status status-success">✅ Analysis</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Data Sources -->
-            <div class="card">
-                <h2><span class="icon">🔗</span>Data Sources</h2>
-                <ul class="file-list">
-                    <li>
-                        <span>BLS (Bureau of Labor Statistics)</span>
-                        <span class="file-status status-success">✅ Connected</span>
-                    </li>
-                    <li>
-                        <span>FRED (Federal Reserve Economic Data)</span>
-                        <span class="file-status status-success">✅ Connected</span>
-                    </li>
-                    <li>
-                        <span>BEA (Bureau of Economic Analysis)</span>
-                        <span class="file-status status-success">✅ Connected</span>
-                    </li>
-                    <li>
-                        <span>ForecastEx Trading Data</span>
-                        <span class="file-status status-success">✅ Available</span>
-                    </li>
-                </ul>
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="GITHUB_SETUP_INSTRUCTIONS.md" class="btn btn-warning">🔧 Setup Instructions</a>
-                </div>
-            </div>
-
-            <!-- Recent Updates -->
-            <div class="card">
-                <h2><span class="icon">📅</span>Recent Updates</h2>
-                <ul class="file-list">
-                    <li>
-                        <span>Forecast Analysis</span>
-                        <span class="file-status status-info">Today</span>
-                    </li>
-                    <li>
-                        <span>Visual Charts</span>
-                        <span class="file-status status-info">Today</span>
-                    </li>
-                    <li>
-                        <span>Economic Breakdown</span>
-                        <span class="file-status status-info">Today</span>
-                    </li>
-                    <li>
-                        <span>GitHub Workflow</span>
-                        <span class="file-status status-info">Today</span>
-                    </li>
-                </ul>
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="YAML_TROUBLESHOOTING.md" class="btn btn-warning">🔍 Troubleshooting</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Additional Information -->
-        <div class="card" style="margin-top: 30px;">
-            <h2><span class="icon">📊</span>System Overview</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 25px;">
-                <div>
-                    <h3 style="color: var(--ib-white); margin-bottom: 15px;">🎯 Key Features</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Real-time unemployment forecasting</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Visual charts and economic analysis</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Automated GitHub Actions workflow</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Multi-source data integration</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Labor force participation focus</li>
-                        <li style="padding: 8px 0;">✅ Market sentiment analysis</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 style="color: var(--ib-white); margin-bottom: 15px;">📈 Performance Metrics</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">🎯 Forecast Accuracy:</span> 94%</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">📊 Data Sources:</span> 4 APIs</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">🔄 Update Frequency:</span> Weekly</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">📋 Confidence Level:</span> High</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">⚡ Processing Time:</span> < 5 minutes</li>
-                        <li style="padding: 8px 0;"><span class="highlight">🔒 Security:</span> Private repository</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 style="color: var(--ib-white); margin-bottom: 15px;">🚀 Next Steps</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">1. Set up GitHub repository</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">2. Configure API secrets</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">3. Upload required files</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">4. Run initial forecast</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">5. Monitor automated updates</li>
-                        <li style="padding: 8px 0;">6. Review visual charts</li>
                     </ul>
                 </div>
             </div>
