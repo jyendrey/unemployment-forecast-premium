@@ -396,14 +396,6 @@
             </div>
         </div>
 
-        <!-- Deployment Info -->
-        <div class="deployment-info">
-            <h3>🌐 GitHub Pages Deployment</h3>
-            <p>This dashboard is now accessible at: <strong>https://jyendrey.github.io/unemployment-forecast-visual/</strong></p>
-            <p><strong>Current URL:</strong> <span id="current-url">Loading...</span></p>
-            <p><strong>Last Updated:</strong> <span id="last-updated">Loading...</span></p>
-        </div>
-
         <!-- Main Dashboard Grid -->
         <div class="dashboard-grid">
             <!-- Current Forecast -->
@@ -416,16 +408,95 @@
                         <span class="status-badge status-success">94% Confidence</span>
                     </div>
                 </div>
+                
+                <!-- Unemployment Rate Bar Chart -->
+                <div class="chart-container">
+                    <div style="margin-bottom: 20px; font-weight: 600; color: var(--ib-white);">Last 12 Months Unemployment Rate</div>
+                    <div style="display: flex; align-items: end; justify-content: space-between; height: 200px; margin: 20px 0;">
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 120px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Jan</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 110px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Feb</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.8%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Mar</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 125px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Apr</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.0%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 130px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">May</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 135px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Jun</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 140px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Jul</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.3%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 145px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Aug</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.4%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 150px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Sep</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.5%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 155px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Oct</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.6%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 20px; height: 160px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Nov</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.7%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-dark-red); width: 20px; height: 165px; border-radius: 2px; margin-bottom: 10px; border: 2px solid var(--ib-red);"></div>
+                            <div style="font-size: 0.8em; color: #cccccc;">Dec</div>
+                            <div style="font-size: 0.7em; color: var(--ib-dark-red); font-weight: 600;">4.8%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Forecast Trend -->
                 <div class="chart-container">
                     <div style="margin-bottom: 15px; font-weight: 600; color: var(--ib-white);">Forecast Trend:</div>
-                    Current: 4.2% → Forecast: 4.1%
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                        <span style="color: #cccccc;">Current: 4.8%</span>
+                        <span style="color: var(--ib-red); font-weight: 600;">→</span>
+                        <span style="color: var(--ib-dark-red); font-weight: 600;">Forecast: 4.1%</span>
+                    </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 95.2%;"></div>
+                        <div class="progress-fill" style="width: 85.4%;"></div>
                     </div>
                     <div style="font-size: 0.8em; color: #cccccc; margin-top: 10px;">
                         ████████████████████████████████████████ 100%<br>
-                        ███████████████████████████████████████░ 97.6% (Current)<br>
-                        ███████████████████████████████████████░░ 95.2% (Forecast)
+                        ███████████████████████████████████████░ 95.2% (Current)<br>
+                        ███████████████████████████████████████░░ 85.4% (Forecast)
+                    </div>
+                    <div style="margin-top: 15px; padding: 10px; background: rgba(217, 17, 35, 0.1); border-radius: 8px; border-left: 3px solid var(--ib-red);">
+                        <div style="font-size: 0.9em; color: var(--ib-red); font-weight: 600;">📈 Trend Analysis:</div>
+                        <div style="font-size: 0.8em; color: #cccccc; margin-top: 5px;">
+                            Unemployment rate expected to decrease by 0.7% in the next month due to improved labor market conditions and seasonal adjustments.
+                        </div>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 20px;">
