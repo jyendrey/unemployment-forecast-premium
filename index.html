@@ -36,15 +36,16 @@
             --ib-light-gray: #f3f4f6;
             --ib-white: #ffffff;
             --ib-black: #111827;
-            --ib-red: #ef4444;
+            --ib-red: #D91123;
+            --ib-dark-red: #920B17;
             --ib-yellow: #f59e0b;
         }
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, var(--ib-dark-blue) 0%, var(--ib-blue) 100%);
+            background: #000000;
             min-height: 100vh;
-            color: var(--ib-black);
+            color: var(--ib-white);
             line-height: 1.6;
         }
         
@@ -55,30 +56,30 @@
         }
         
         .header {
-            background: var(--ib-white);
+            background: #111111;
             border-radius: 20px;
             padding: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(217, 17, 35, 0.2);
             text-align: center;
-            border: 1px solid rgba(0, 166, 81, 0.1);
+            border: 1px solid rgba(217, 17, 35, 0.3);
         }
         
         .header h1 {
-            color: var(--ib-dark-blue);
+            color: var(--ib-white);
             font-size: 2.8em;
             margin-bottom: 15px;
             font-weight: 700;
         }
         
         .header p {
-            color: var(--ib-gray);
+            color: #cccccc;
             font-size: 1.3em;
             margin-bottom: 20px;
         }
         
         .ib-logo {
-            color: var(--ib-green);
+            color: var(--ib-red);
             font-weight: 800;
         }
         
@@ -90,26 +91,26 @@
         }
         
         .card {
-            background: var(--ib-white);
+            background: #111111;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 30px rgba(217, 17, 35, 0.15);
             transition: all 0.3s ease;
-            border: 1px solid rgba(0, 166, 81, 0.05);
+            border: 1px solid rgba(217, 17, 35, 0.2);
         }
         
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-            border-color: var(--ib-green);
+            box-shadow: 0 20px 40px rgba(217, 17, 35, 0.25);
+            border-color: var(--ib-red);
         }
         
         .card h2 {
-            color: var(--ib-dark-blue);
+            color: var(--ib-white);
             margin-bottom: 20px;
             font-size: 1.6em;
             font-weight: 600;
-            border-bottom: 3px solid var(--ib-green);
+            border-bottom: 3px solid var(--ib-red);
             padding-bottom: 15px;
             display: flex;
             align-items: center;
@@ -128,7 +129,7 @@
         }
         
         .status-success {
-            background: var(--ib-green);
+            background: var(--ib-red);
             color: var(--ib-white);
         }
         
@@ -138,7 +139,7 @@
         }
         
         .status-error {
-            background: var(--ib-red);
+            background: var(--ib-dark-red);
             color: var(--ib-white);
         }
         
@@ -148,31 +149,32 @@
         }
         
         .forecast-display {
-            background: linear-gradient(135deg, var(--ib-green) 0%, var(--ib-dark-green) 100%);
+            background: linear-gradient(135deg, var(--ib-red) 0%, var(--ib-dark-red) 100%);
             color: var(--ib-white);
             padding: 30px;
             border-radius: 15px;
             margin: 20px 0;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 166, 81, 0.2);
+            box-shadow: 0 10px 30px rgba(217, 17, 35, 0.3);
         }
         
         .forecast-number {
             font-size: 4em;
             font-weight: 800;
             margin: 15px 0;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         .chart-container {
-            background: var(--ib-light-gray);
+            background: #1a1a1a;
             border-radius: 15px;
             padding: 25px;
             margin: 20px 0;
             font-family: 'JetBrains Mono', 'Fira Code', monospace;
             font-size: 0.9em;
             line-height: 1.6;
-            border: 1px solid rgba(0, 166, 81, 0.1);
+            border: 1px solid rgba(217, 17, 35, 0.2);
+            color: var(--ib-white);
         }
         
         .file-list {
@@ -182,11 +184,12 @@
         
         .file-list li {
             padding: 12px 0;
-            border-bottom: 1px solid var(--ib-light-gray);
+            border-bottom: 1px solid #333333;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 500;
+            color: var(--ib-white);
         }
         
         .file-list li:last-child {
@@ -205,7 +208,7 @@
         .btn {
             display: inline-block;
             padding: 14px 28px;
-            background: var(--ib-green);
+            background: var(--ib-red);
             color: var(--ib-white);
             text-decoration: none;
             border-radius: 30px;
@@ -214,21 +217,21 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px rgba(0, 166, 81, 0.2);
+            box-shadow: 0 4px 15px rgba(217, 17, 35, 0.3);
         }
         
         .btn:hover {
-            background: var(--ib-dark-green);
+            background: var(--ib-dark-red);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 166, 81, 0.3);
+            box-shadow: 0 8px 25px rgba(217, 17, 35, 0.4);
         }
         
         .btn-success {
-            background: var(--ib-green);
+            background: var(--ib-red);
         }
         
         .btn-success:hover {
-            background: var(--ib-dark-green);
+            background: var(--ib-dark-red);
         }
         
         .btn-warning {
@@ -257,27 +260,27 @@
         .metric {
             text-align: center;
             padding: 20px;
-            background: var(--ib-light-gray);
+            background: #1a1a1a;
             border-radius: 15px;
-            border: 1px solid rgba(0, 166, 81, 0.1);
+            border: 1px solid rgba(217, 17, 35, 0.2);
             transition: all 0.3s ease;
         }
         
         .metric:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border-color: var(--ib-green);
+            box-shadow: 0 10px 25px rgba(217, 17, 35, 0.2);
+            border-color: var(--ib-red);
         }
         
         .metric-value {
             font-size: 2.2em;
             font-weight: 800;
-            color: var(--ib-dark-blue);
+            color: var(--ib-white);
             margin-bottom: 5px;
         }
         
         .metric-label {
-            color: var(--ib-gray);
+            color: #cccccc;
             font-size: 0.9em;
             font-weight: 500;
             text-transform: uppercase;
@@ -293,22 +296,22 @@
         }
         
         .deployment-info {
-            background: linear-gradient(135deg, var(--ib-blue) 0%, var(--ib-dark-blue) 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
             border-radius: 15px;
             padding: 25px;
             margin: 25px 0;
             color: var(--ib-white);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(217, 17, 35, 0.3);
         }
         
         .deployment-info h3 {
             margin-bottom: 15px;
-            color: var(--ib-green);
+            color: var(--ib-red);
             font-weight: 600;
         }
         
         .deployment-info a {
-            color: var(--ib-green);
+            color: var(--ib-red);
             text-decoration: none;
             font-weight: 600;
         }
@@ -320,7 +323,7 @@
         .progress-bar {
             width: 100%;
             height: 8px;
-            background: var(--ib-light-gray);
+            background: #333333;
             border-radius: 4px;
             overflow: hidden;
             margin: 10px 0;
@@ -328,7 +331,7 @@
         
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--ib-green) 0%, var(--ib-dark-green) 100%);
+            background: linear-gradient(90deg, var(--ib-red) 0%, var(--ib-dark-red) 100%);
             border-radius: 4px;
             transition: width 0.3s ease;
         }
@@ -339,7 +342,7 @@
         }
         
         .highlight {
-            color: var(--ib-green);
+            color: var(--ib-red);
             font-weight: 600;
         }
         
@@ -367,16 +370,16 @@
         }
         
         ::-webkit-scrollbar-track {
-            background: var(--ib-light-gray);
+            background: #1a1a1a;
         }
         
         ::-webkit-scrollbar-thumb {
-            background: var(--ib-green);
+            background: var(--ib-red);
             border-radius: 4px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--ib-dark-green);
+            background: var(--ib-dark-red);
         }
     </style>
 </head>
@@ -414,12 +417,12 @@
                     </div>
                 </div>
                 <div class="chart-container">
-                    <div style="margin-bottom: 15px; font-weight: 600; color: var(--ib-dark-blue);">Forecast Trend:</div>
+                    <div style="margin-bottom: 15px; font-weight: 600; color: var(--ib-white);">Forecast Trend:</div>
                     Current: 4.2% → Forecast: 4.1%
                     <div class="progress-bar">
                         <div class="progress-fill" style="width: 95.2%;"></div>
                     </div>
-                    <div style="font-size: 0.8em; color: var(--ib-gray); margin-top: 10px;">
+                    <div style="font-size: 0.8em; color: #cccccc; margin-top: 10px;">
                         ████████████████████████████████████████ 100%<br>
                         ███████████████████████████████████████░ 97.6% (Current)<br>
                         ███████████████████████████████████████░░ 95.2% (Forecast)
@@ -466,7 +469,7 @@
                     <a href="README.md" class="btn">📖 View Documentation</a>
                 </div>
                 <div style="margin-top: 25px;">
-                    <h3 style="color: var(--ib-dark-blue); margin-bottom: 15px;">🔄 GitHub Actions</h3>
+                    <h3 style="color: var(--ib-white); margin-bottom: 15px;">🔄 GitHub Actions</h3>
                     <ul class="file-list">
                         <li>
                             <span>Automated Updates</span>
@@ -573,35 +576,35 @@
             <h2><span class="icon">📊</span>System Overview</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 25px;">
                 <div>
-                    <h3 style="color: var(--ib-dark-blue); margin-bottom: 15px;">🎯 Key Features</h3>
+                    <h3 style="color: var(--ib-white); margin-bottom: 15px;">🎯 Key Features</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">✅ Real-time unemployment forecasting</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">✅ Visual charts and economic analysis</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">✅ Automated GitHub Actions workflow</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">✅ Multi-source data integration</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">✅ Labor force participation focus</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Real-time unemployment forecasting</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Visual charts and economic analysis</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Automated GitHub Actions workflow</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Multi-source data integration</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">✅ Labor force participation focus</li>
                         <li style="padding: 8px 0;">✅ Market sentiment analysis</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 style="color: var(--ib-dark-blue); margin-bottom: 15px;">📈 Performance Metrics</h3>
+                    <h3 style="color: var(--ib-white); margin-bottom: 15px;">📈 Performance Metrics</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);"><span class="highlight">🎯 Forecast Accuracy:</span> 94%</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);"><span class="highlight">📊 Data Sources:</span> 4 APIs</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);"><span class="highlight">🔄 Update Frequency:</span> Weekly</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);"><span class="highlight">📋 Confidence Level:</span> High</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);"><span class="highlight">⚡ Processing Time:</span> < 5 minutes</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">🎯 Forecast Accuracy:</span> 94%</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">📊 Data Sources:</span> 4 APIs</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">🔄 Update Frequency:</span> Weekly</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">📋 Confidence Level:</span> High</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;"><span class="highlight">⚡ Processing Time:</span> < 5 minutes</li>
                         <li style="padding: 8px 0;"><span class="highlight">🔒 Security:</span> Private repository</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 style="color: var(--ib-dark-blue); margin-bottom: 15px;">🚀 Next Steps</h3>
+                    <h3 style="color: var(--ib-white); margin-bottom: 15px;">🚀 Next Steps</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">1. Set up GitHub repository</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">2. Configure API secrets</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">3. Upload required files</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">4. Run initial forecast</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid var(--ib-light-gray);">5. Monitor automated updates</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">1. Set up GitHub repository</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">2. Configure API secrets</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">3. Upload required files</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">4. Run initial forecast</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #333333;">5. Monitor automated updates</li>
                         <li style="padding: 8px 0;">6. Review visual charts</li>
                     </ul>
                 </div>
