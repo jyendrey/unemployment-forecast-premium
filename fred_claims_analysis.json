@@ -1,0 +1,30 @@
+{
+  "latest_data": {
+    "initial_claims": {
+      "value": 235000,
+      "date": "2025-08-16",
+      "trend": "Rising",
+      "change": 11000
+    },
+    "continuing_claims": {
+      "value": 1972000,
+      "date": "2025-08-09",
+      "trend": "Rising",
+      "change": 30000
+    }
+  },
+  "trend_analysis": {
+    "initial_claims_trend": "Rising",
+    "continuing_claims_trend": "Rising",
+    "market_health": {
+      "initial_claims_health": "Good",
+      "continuing_claims_health": "Good",
+      "overall_market_health": "Strong",
+      "initial_claims_benchmark": "200,000 - 250,000",
+      "continuing_claims_benchmark": "1,500,000 - 2,000,000"
+    }
+  },
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "fetched_at": "2025-08-22T21:50:16.026083"
+}
