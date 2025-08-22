@@ -1,0 +1,34 @@
+{
+  "total_trades": 53184,
+  "total_volume": 123102,
+  "avg_price": 0.5056519830235622,
+  "price_std": 0.3102662369908965,
+  "min_price": 0.02,
+  "max_price": 1.0,
+  "avg_quantity": 56.6767955801105,
+  "date_range": {
+    "start": "2024-08-01",
+    "end": "2025-08-18",
+    "total_days": 382
+  },
+  "contract_breakdown": {
+    "UNR_0626_4.1": 766,
+    "UNR_1225_4.0": 766,
+    "UNR_0625_4.0": 674,
+    "UNR_0925_4.0": 638,
+    "UNR_0626_4.0": 502,
+    "UNR_0626_4.2": 502,
+    "UNR_0925_3.9": 502,
+    "UNR_0925_4.1": 502,
+    "UNR_1225_3.9": 502,
+    "UNR_1225_4.1": 502
+  },
+  "sentiment_analysis": {
+    "sentiment_score": -0.0018,
+    "sentiment_std": 0.0548,
+    "trades_analyzed": 27332,
+    "interpretation": "Neutral"
+  },
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+}
