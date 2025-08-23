@@ -340,7 +340,7 @@
                 </div>
             </div>
             
-                   <!-- Bar Chart: Aug 23 to Sep 25 + Forecast -->
+                    <!-- Bar Chart: Aug 23 to Sep 25 + Forecast -->
         <div class="chart-container">
             <div style="margin-bottom: 20px; font-weight: 600; color: var(--ib-white);">Unemployment Rate (Aug 23 – Sep 25 Forecast)</div>
             <div style="display: flex; align-items: end; justify-content: space-between; height: 200px; margin: 20px 0;">
@@ -474,6 +474,180 @@
                     <div style="background: var(--ib-dark-red); width: 20px; height: 110px; border-radius: 2px; margin-bottom: 10px; border: 2px solid var(--ib-red);"></div>
                     <div style="font-size: 0.7em; color: #cccccc;">Sep 25</div>
                     <div style="font-size: 0.7em; color: var(--ib-dark-red); font-weight: 600;">4.2%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Charts Row -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px;">
+            <!-- Left Chart: Unemployment Rate Line Graph with Statistical Probability Limits -->
+            <div class="chart-container">
+                <h3 style="margin-bottom: 20px;">Unemployment Rate Trend with Probability Limits</h3>
+                <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 300px; position: relative;">
+                    <svg width="100%" height="250" viewBox="0 0 400 250">
+                        <!-- Grid lines -->
+                        <line x1="0" y1="50" x2="400" y2="50" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="100" x2="400" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="150" x2="400" y2="150" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="200" x2="400" y2="200" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        
+                        <!-- Upper probability limit (95% confidence) -->
+                        <polyline 
+                            points="0,30 40,35 80,40 120,35 160,40 200,45 240,50 280,55 320,60 360,65 400,70" 
+                            fill="none" 
+                            stroke="var(--ib-yellow)" 
+                            stroke-width="2"
+                            stroke-dasharray="5,5"
+                            opacity="0.7"/>
+                        
+                        <!-- Lower probability limit (95% confidence) -->
+                        <polyline 
+                            points="0,70 40,65 80,60 120,65 160,60 200,55 240,50 280,45 320,40 360,35 400,30" 
+                            fill="none" 
+                            stroke="var(--ib-yellow)" 
+                            stroke-width="2"
+                            stroke-dasharray="5,5"
+                            opacity="0.7"/>
+                        
+                        <!-- Main unemployment rate line -->
+                        <polyline 
+                            points="0,50 40,45 80,50 120,45 160,50 200,55 240,60 280,65 320,70 360,75 400,80" 
+                            fill="none" 
+                            stroke="var(--ib-red)" 
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                        
+                        <!-- Data points -->
+                        <circle cx="0" cy="50" r="3" fill="var(--ib-red)"/>
+                        <circle cx="40" cy="45" r="3" fill="var(--ib-red)"/>
+                        <circle cx="80" cy="50" r="3" fill="var(--ib-red)"/>
+                        <circle cx="120" cy="45" r="3" fill="var(--ib-red)"/>
+                        <circle cx="160" cy="50" r="3" fill="var(--ib-red)"/>
+                        <circle cx="200" cy="55" r="3" fill="var(--ib-red)"/>
+                        <circle cx="240" cy="60" r="3" fill="var(--ib-red)"/>
+                        <circle cx="280" cy="65" r="3" fill="var(--ib-red)"/>
+                        <circle cx="320" cy="70" r="3" fill="var(--ib-red)"/>
+                        <circle cx="360" cy="75" r="3" fill="var(--ib-red)"/>
+                        <circle cx="400" cy="80" r="3" fill="var(--ib-red)"/>
+                        
+                        <!-- X-axis labels -->
+                        <text x="0" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Oct 23</text>
+                        <text x="40" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Nov 23</text>
+                        <text x="80" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Dec 23</text>
+                        <text x="120" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jan 24</text>
+                        <text x="160" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Feb 24</text>
+                        <text x="200" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Mar 24</text>
+                        <text x="240" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Apr 24</text>
+                        <text x="280" y="240" text-anchor="middle" fill="#cccccc" font-size="8">May 24</text>
+                        <text x="320" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jun 24</text>
+                        <text x="360" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jul 24</text>
+                        <text x="400" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Aug 24</text>
+                        
+                        <!-- Y-axis labels -->
+                        <text x="-10" y="50" text-anchor="end" fill="#cccccc" font-size="8">3.5%</text>
+                        <text x="-10" y="100" text-anchor="end" fill="#cccccc" font-size="8">4.0%</text>
+                        <text x="-10" y="150" text-anchor="end" fill="#cccccc" font-size="8">4.5%</text>
+                        <text x="-10" y="200" text-anchor="end" fill="#cccccc" font-size="8">5.0%</text>
+                    </svg>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <div style="display: inline-block; margin: 0 15px;">
+                            <span style="color: var(--ib-red); font-weight: 600;">●</span> Unemployment Rate
+                        </div>
+                        <div style="display: inline-block; margin: 0 15px;">
+                            <span style="color: var(--ib-yellow); font-weight: 600;">●●</span> 95% Confidence Limits
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Chart: Trade Data Probability Forecast -->
+            <div class="chart-container">
+                <h3 style="margin-bottom: 20px;">Trade Data Probability Forecast (4.2% Target)</h3>
+                <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 300px; position: relative;">
+                    <svg width="100%" height="250" viewBox="0 0 400 250">
+                        <!-- Grid lines -->
+                        <line x1="0" y1="50" x2="400" y2="50" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="100" x2="400" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="150" x2="400" y2="150" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="200" x2="400" y2="200" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        
+                        <!-- Yes probability line (Green) -->
+                        <polyline 
+                            points="0,180 40,170 80,160 120,150 160,140 200,130 240,120 280,110 320,100 360,90 400,80" 
+                            fill="none" 
+                            stroke="var(--ib-green)" 
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                        
+                        <!-- No probability line (Red) -->
+                        <polyline 
+                            points="0,20 40,30 80,40 120,50 160,60 200,70 240,80 280,90 320,100 360,110 400,120" 
+                            fill="none" 
+                            stroke="var(--ib-red)" 
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                        
+                        <!-- Data points for Yes -->
+                        <circle cx="0" cy="180" r="3" fill="var(--ib-green)"/>
+                        <circle cx="40" cy="170" r="3" fill="var(--ib-green)"/>
+                        <circle cx="80" cy="160" r="3" fill="var(--ib-green)"/>
+                        <circle cx="120" cy="150" r="3" fill="var(--ib-green)"/>
+                        <circle cx="160" cy="140" r="3" fill="var(--ib-green)"/>
+                        <circle cx="200" cy="130" r="3" fill="var(--ib-green)"/>
+                        <circle cx="240" cy="120" r="3" fill="var(--ib-green)"/>
+                        <circle cx="280" cy="110" r="3" fill="var(--ib-green)"/>
+                        <circle cx="320" cy="100" r="3" fill="var(--ib-green)"/>
+                        <circle cx="360" cy="90" r="3" fill="var(--ib-green)"/>
+                        <circle cx="400" cy="80" r="3" fill="var(--ib-green)"/>
+                        
+                        <!-- Data points for No -->
+                        <circle cx="0" cy="20" r="3" fill="var(--ib-red)"/>
+                        <circle cx="40" cy="30" r="3" fill="var(--ib-red)"/>
+                        <circle cx="80" cy="40" r="3" fill="var(--ib-red)"/>
+                        <circle cx="120" cy="50" r="3" fill="var(--ib-red)"/>
+                        <circle cx="160" cy="60" r="3" fill="var(--ib-red)"/>
+                        <circle cx="200" cy="70" r="3" fill="var(--ib-red)"/>
+                        <circle cx="240" cy="80" r="3" fill="var(--ib-red)"/>
+                        <circle cx="280" cy="90" r="3" fill="var(--ib-red)"/>
+                        <circle cx="320" cy="100" r="3" fill="var(--ib-red)"/>
+                        <circle cx="360" cy="110" r="3" fill="var(--ib-red)"/>
+                        <circle cx="400" cy="120" r="3" fill="var(--ib-red)"/>
+                        
+                        <!-- X-axis labels -->
+                        <text x="0" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Oct 23</text>
+                        <text x="40" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Nov 23</text>
+                        <text x="80" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Dec 23</text>
+                        <text x="120" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jan 24</text>
+                        <text x="160" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Feb 24</text>
+                        <text x="200" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Mar 24</text>
+                        <text x="240" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Apr 24</text>
+                        <text x="280" y="240" text-anchor="middle" fill="#cccccc" font-size="8">May 24</text>
+                        <text x="320" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jun 24</text>
+                        <text x="360" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jul 24</text>
+                        <text x="400" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Aug 24</text>
+                        
+                        <!-- Y-axis labels -->
+                        <text x="-10" y="50" text-anchor="end" fill="#cccccc" font-size="8">20%</text>
+                        <text x="-10" y="100" text-anchor="end" fill="#cccccc" font-size="8">40%</text>
+                        <text x="-10" y="150" text-anchor="end" fill="#cccccc" font-size="8">60%</text>
+                        <text x="-10" y="200" text-anchor="end" fill="#cccccc" font-size="8">80%</text>
+                    </svg>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <div style="display: inline-block; margin: 0 15px;">
+                            <span style="color: var(--ib-gree
+No problem! Here's the continuation of the complete index.html file:
+
+                    <div style="text-align: center; margin-top: 15px;">
+                        <div style="display: inline-block; margin: 0 15px;">
+                            <span style="color: var(--ib-green); font-weight: 600;">●</span> Yes Probability
+                        </div>
+                        <div style="display: inline-block; margin: 0 15px;">
+                            <span style="color: var(--ib-red); font-weight: 600;">●</span> No Probability
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
