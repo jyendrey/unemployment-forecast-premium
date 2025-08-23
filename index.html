@@ -508,17 +508,21 @@
                         <text x="342" y="320" text-anchor="middle" fill="#cccccc" font-size="8">Jul 25</text>
                         <text x="400" y="320" text-anchor="middle" fill="#cccccc" font-size="8">Aug 25</text>
                         
-                        <!-- Medium statistical validation area (85% confidence) -->
-                        <polygon points="0,140 57,70 114,70 171,70 228,70 285,140 342,70 400,70 400,105 342,105 285,175 228,105 171,105 114,105 57,105 0,175" 
+                        <!-- Upper statistical validation area (85% confidence) -->
+                        <polygon points="0,35 57,35 114,35 171,35 228,35 285,35 342,35 400,35 400,70 342,70 285,70 228,70 171,70 114,70 57,70 0,70" 
+                                 fill="rgba(59, 130, 246, 0.15)" stroke="var(--ib-light-blue)" stroke-width="1" stroke-dasharray="3,3"/>
+                        
+                        <!-- Lower statistical validation area (85% confidence) -->
+                        <polygon points="0,175 57,175 114,175 171,175 228,175 285,175 342,175 400,175 400,210 342,210 285,210 228,210 171,210 114,210 57,210 0,210" 
                                  fill="rgba(59, 130, 246, 0.15)" stroke="var(--ib-light-blue)" stroke-width="1" stroke-dasharray="3,3"/>
                         
                         <!-- Unemployment rate line (accurate FRED data: Jan 25 - Aug 25) -->
-                        <polyline points="0,140 57,70 114,70 171,70 228,70 285,140 342,70 400,70" 
+                        <polyline points="0,210 57,140 114,70 171,70 228,70 285,140 342,70 400,70" 
                                  fill="none" stroke="var(--ib-white)" stroke-width="3" stroke-linecap="round"/>
                         
-                        <!-- Data points (accurate FRED values) -->
-                        <circle cx="0" cy="140" r="4" fill="var(--ib-white)"/> <!-- Jan 25: 4.0% -->
-                        <circle cx="57" cy="70" r="4" fill="var(--ib-white)"/>  <!-- Feb 25: 4.1% -->
+                        <!-- Data points (accurate FRED values with correct positioning) -->
+                        <circle cx="0" cy="210" r="4" fill="var(--ib-white)"/> <!-- Jan 25: 4.0% -->
+                        <circle cx="57" cy="140" r="4" fill="var(--ib-white)"/> <!-- Feb 25: 4.1% -->
                         <circle cx="114" cy="70" r="4" fill="var(--ib-white)"/> <!-- Mar 25: 4.2% -->
                         <circle cx="171" cy="70" r="4" fill="var(--ib-white)"/> <!-- Apr 25: 4.2% -->
                         <circle cx="228" cy="70" r="4" fill="var(--ib-white)"/> <!-- May 25: 4.2% -->
@@ -532,7 +536,7 @@
                             <span style="color: var(--ib-white); font-weight: 600;">●</span> Unemployment Rate
                         </div>
                         <div style="display: inline-block; margin: 0 15px;">
-                            <span style="color: var(--ib-light-blue); font-weight: 600;">●●</span> Medium Validation (85% Confidence)
+                            <span style="color: var(--ib-light-blue); font-weight: 600;">●●</span> Statistical Validation (85% Confidence)
                         </div>
                     </div>
                 </div>
