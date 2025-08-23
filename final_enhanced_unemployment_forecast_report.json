@@ -1,5 +1,5 @@
 {
-  "generated_date": "2025-08-23T02:35:45.076047",
+  "generated_date": "2025-08-23T02:50:44.286577",
   "version": "v3.0-final-enhanced",
   "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
   "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
@@ -50,8 +50,8 @@
   "updated_trade_data_integration": {
     "sentiment_score": -0.0018,
     "sentiment_interpretation": "Neutral",
-    "contracts_analyzed": 53184,
-    "total_volume": 123102,
+    "contracts_analyzed": 54032,
+    "total_volume": 123482,
     "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
     "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
   },
