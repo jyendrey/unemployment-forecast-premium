@@ -299,62 +299,143 @@
                 </div>
             </div>
             
-            <!-- 24-Month Unemployment Rate Chart -->
-            <div class="unemployment-chart">
-                <h4 style="color: var(--ib-white); margin-bottom: 20px; text-align: center;">24-Month Unemployment Rate Trend</h4>
-                <div class="chart-bars">
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 60px;"></div>
-                        <div class="bar-label">JAN</div>
-                        <div class="bar-value">3.7%</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 65px;"></div>
-                        <div class="bar-label">FEB</div>
-                        <div class="bar-value">3.8%</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 70px;"></div>
-                        <div class="bar-label">MAR</div>
-                        <div class="bar-value">3.9%</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 75px;"></div>
-                        <div class="bar-label">APR</div>
-                        <div class="bar-value">4.0%</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 80px;"></div>
-                        <div class="bar-label">MAY</div>
-                        <div class="bar-value">4.1%</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 85px;"></div>
-                        <div class="bar-label">JUN</div>
-                        <div class="bar-value">4.2%</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 90px;"></div>
-                        <div class="bar-label">JUL</div>
-                        <div class="bar-value">4.2%</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 90px; background: var(--ib-yellow);"></div>
-                        <div class="bar-label">AUG</div>
-                        <div class="bar-value">4.2%</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="bar" style="height: 90px; background: var(--ib-dark-red);"></div>
-                        <div class="bar-label">SEP</div>
-                        <div class="bar-value">4.2%</div>
+           <!-- Bar Chart: Aug 23 to Sep 25 + Forecast -->
+                <div class="chart-container">
+                    <div style="margin-bottom: 20px; font-weight: 600; color: var(--ib-white);">Unemployment Rate (Aug 23 – Sep 25 Forecast)</div>
+                    <div style="display: flex; align-items: end; justify-content: space-between; height: 200px; margin: 20px 0;">
+                        <!-- Aug 23 to Sep 25 (FRED + forecast) -->
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 92px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Aug 23</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.7%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 95px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Sep 23</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.8%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 100px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Oct 23</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 92px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Nov 23</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.7%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 95px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Dec 23</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.8%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 92px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Jan 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.7%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 100px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Feb 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 100px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Mar 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 100px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Apr 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 105px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">May 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.0%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 110px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Jun 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Jul 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Aug 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 112px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Sep 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 112px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Oct 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Nov 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 112px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Dec 24</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 110px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Jan 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.0%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Feb 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 120px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Mar 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 120px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Apr 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 120px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">May 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Jun 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Jul 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-dark-red); width: 20px; height: 110px; border-radius: 2px; margin-bottom: 10px; border: 2px solid var(--ib-red);"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Aug 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-dark-red); font-weight: 600;">4.2%</div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
+                            <div style="background: var(--ib-dark-red); width: 20px; height: 110px; border-radius: 2px; margin-bottom: 10px; border: 2px solid var(--ib-red);"></div>
+                            <div style="font-size: 0.7em; color: #cccccc;">Sep 25</div>
+                            <div style="font-size: 0.7em; color: var(--ib-dark-red); font-weight: 600;">4.2%</div>
+                        </div>
                     </div>
                 </div>
-                <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
-                    <strong>Trend:</strong> Gradual increase to current levels | <strong>Forecast:</strong> Stable through September
-                </div>
-            </div>
-        </div>
-
         <!-- Multi-Period Trend Analysis -->
         <div class="chart-container">
             <h3>Multi-Period Trend Analysis</h3>
@@ -391,29 +472,37 @@
             </div>
         </div>
 
-        <!-- Economic Factors -->
-        <div class="chart-container">
-            <h3>Economic Factors</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <div style="text-align: center;">
-                    <div style="background: var(--ib-green); width: 6px; height: 60px; border-radius: 2px; margin: 0 auto 10px;"></div>
-                    <div style="font-size: 0.8em; color: #cccccc;">Labor Force Participation</div>
-                    <div style="font-size: 0.8em; color: var(--ib-green);">62.6%</div>
+              <!-- Economic Factors -->
+            <div class="card" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+                <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon">📈</span>Economic Factors</h2>
+                <div class="metrics-grid">
+                    <div class="metric" style="min-width: 140px;">
+                        <div class="metric-value">4.2%</div>
+                        <div class="metric-label">Current Rate</div>
+                    </div>
+                    <div class="metric" style="min-width: 140px;">
+                        <div class="metric-value">62.2%</div>
+                        <div class="metric-label">Labor Force Participation</div>
+                    </div>
+                    <div class="metric" style="min-width: 140px;">
+                        <div class="metric-value">218k</div>
+                        <div class="metric-label">Weekly Claims</div>
+                    </div>
+                    <div class="metric" style="min-width: 140px;">
+                        <div class="metric-value">-0.124</div>
+                        <div class="metric-label">Market Sentiment</div>
+                    </div>
+                    <div class="metric" style="min-width: 140px;">
+                        <div class="metric-value">0.15</div>
+                        <div class="metric-label">Market Stability</div>
+                    </div>
+                    <div class="metric" style="min-width: 140px;">
+                        <div class="metric-value">95%</div>
+                        <div class="metric-label">Confidence Level</div>
+                    </div>
                 </div>
-                <div style="text-align: center;">
-                    <div style="background: var(--ib-red); width: 6px; height: 80px; border-radius: 2px; margin: 0 auto 10px;"></div>
-                    <div style="font-size: 0.8em; color: #cccccc;">Initial Claims</div>
-                    <div style="font-size: 0.8em; color: var(--ib-red);">248K</div>
-                </div>
-                <div style="text-align: center;">
-                    <div style="background: var(--ib-dark-red); width: 6px; height: 90px; border-radius: 2px; margin: 0 auto 10px;"></div>
-                    <div style="font-size: 0.8em; color: #cccccc;">Continuing Claims</div>
-                    <div style="font-size: 0.8em; color: var(--ib-dark-red);">1.85M</div>
-                </div>
-                <div style="text-align: center;">
-                    <div style="background: var(--ib-blue); width: 6px; height: 70px; border-radius: 2px; margin: 0 auto 10px;"></div>
-                    <div style="font-size: 0.8em; color: #cccccc;">Trade Sentiment</div>
-                    <div style="font-size: 0.8em; color: var(--ib-blue);">Bullish</div>
+                <div style="width: 100%; text-align: center; margin-top: 20px;">
+                    <a href="ECONOMIC_BREAKDOWN.md" class="btn">📋 View Economic Breakdown</a>
                 </div>
             </div>
         </div>
