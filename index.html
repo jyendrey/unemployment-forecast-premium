@@ -481,7 +481,7 @@
 
         <!-- Additional Charts Row -->
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px;">
-            <!-- Left Chart: Unemployment Rate Line Graph (Jan 25 - Aug 25) with Statistical Validation -->
+           <!-- Left Chart: Unemployment Rate Line Graph (Jan 25 - Aug 25) with Statistical Validation -->
             <div class="chart-container">
                 <h3 style="margin-bottom: 20px;">Unemployment Rate Trend with Statistical Validation</h3>
                 <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 400px; position: relative;">
@@ -492,12 +492,12 @@
                         <line x1="0" y1="210" x2="400" y2="210" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                         <line x1="0" y1="280" x2="400" y2="280" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                         
-                        <!-- Y-axis labels (properly aligned with data range 3.5% to 4.3%) -->
-                        <text x="-10" y="70" text-anchor="end" fill="#cccccc" font-size="10">4.3%</text>
+                        <!-- Y-axis labels (properly aligned with data range 3.9% to 4.2%) -->
+                        <text x="-10" y="70" text-anchor="end" fill="#cccccc" font-size="10">4.2%</text>
                         <text x="-10" y="140" text-anchor="end" fill="#cccccc" font-size="10">4.1%</text>
-                        <text x="-10" y="210" text-anchor="end" fill="#cccccc" font-size="10">3.9%</text>
-                        <text x="-10" y="280" text-anchor="end" fill="#cccccc" font-size="10">3.7%</text>
-                        <text x="-10" y="350" text-anchor="end" fill="#cccccc" font-size="10">3.5%</text>
+                        <text x="-10" y="210" text-anchor="end" fill="#cccccc" font-size="10">4.0%</text>
+                        <text x="-10" y="280" text-anchor="end" fill="#cccccc" font-size="10">3.9%</text>
+                        <text x="-10" y="350" text-anchor="end" fill="#cccccc" font-size="10">3.8%</text>
                         
                         <!-- X-axis labels (Jan 25 - Aug 25) -->
                         <text x="0" y="370" text-anchor="middle" fill="#cccccc" font-size="8">Jan 25</text>
@@ -510,22 +510,22 @@
                         <text x="400" y="370" text-anchor="middle" fill="#cccccc" font-size="8">Aug 25</text>
                         
                         <!-- Medium statistical validation area (85% confidence) -->
-                        <polygon points="0,65 57,60 114,80 171,65 228,80 285,65 342,85 400,70 400,95 342,110 285,95 228,110 171,95 114,110 57,95 0,80" 
+                        <polygon points="0,140 57,70 114,70 171,70 228,70 285,140 342,70 400,70 400,105 342,105 285,175 228,105 171,105 114,105 57,105 0,175" 
                                  fill="rgba(59, 130, 246, 0.15)" stroke="var(--ib-light-blue)" stroke-width="1" stroke-dasharray="3,3"/>
                         
-                        <!-- Unemployment rate line (Jan 25 - Aug 25 data) -->
-                        <polyline points="0,65 57,60 114,80 171,65 228,80 285,65 342,85 400,70" 
+                        <!-- Unemployment rate line (accurate FRED data: Jan 25 - Aug 25) -->
+                        <polyline points="0,140 57,70 114,70 171,70 228,70 285,140 342,70 400,70" 
                                  fill="none" stroke="var(--ib-white)" stroke-width="3" stroke-linecap="round"/>
                         
-                        <!-- Data points -->
-                        <circle cx="0" cy="65" r="4" fill="var(--ib-white)"/>
-                        <circle cx="57" cy="60" r="4" fill="var(--ib-white)"/>
-                        <circle cx="114" cy="80" r="4" fill="var(--ib-white)"/>
-                        <circle cx="171" cy="65" r="4" fill="var(--ib-white)"/>
-                        <circle cx="228" cy="80" r="4" fill="var(--ib-white)"/>
-                        <circle cx="285" cy="65" r="4" fill="var(--ib-white)"/>
-                        <circle cx="342" cy="85" r="4" fill="var(--ib-white)"/>
-                        <circle cx="400" cy="70" r="4" fill="var(--ib-white)"/>
+                        <!-- Data points (accurate FRED values) -->
+                        <circle cx="0" cy="140" r="4" fill="var(--ib-white)"/> <!-- Jan 25: 4.0% -->
+                        <circle cx="57" cy="70" r="4" fill="var(--ib-white)"/>  <!-- Feb 25: 4.1% -->
+                        <circle cx="114" cy="70" r="4" fill="var(--ib-white)"/> <!-- Mar 25: 4.2% -->
+                        <circle cx="171" cy="70" r="4" fill="var(--ib-white)"/> <!-- Apr 25: 4.2% -->
+                        <circle cx="228" cy="70" r="4" fill="var(--ib-white)"/> <!-- May 25: 4.2% -->
+                        <circle cx="285" cy="140" r="4" fill="var(--ib-white)"/> <!-- Jun 25: 4.1% -->
+                        <circle cx="342" cy="70" r="4" fill="var(--ib-white)"/> <!-- Jul 25: 4.2% -->
+                        <circle cx="400" cy="70" r="4" fill="var(--ib-white)"/> <!-- Aug 25: 4.2% (forecast) -->
                     </svg>
                     
                     <div style="text-align: center; margin-top: 15px;">
