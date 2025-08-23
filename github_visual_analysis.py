@@ -148,7 +148,7 @@ Sentiment Score: -0.0018 (Neutral) [░░░░░░░░░░░░░░�
                 total_adjustment += adj_value
                 
                 # Format adjustment name for display
-                display_name = adj_name.replace(' Adjustment', '').replace('Updated ', '').replace('Extended ', '')
+                display_name = adj_name.replace(' Adjustment', '').replace('Updated ', '').replace('Enhanced ', '')
                 
                 analysis_content += f"| **{display_name}** | {adj_value:+.4f}% | {adj_value:+.4f}% | 15% | {adj_value:+.4f}% | {adj_framework} |\n"
             
@@ -278,14 +278,14 @@ High Confidence (68%): {max(0, final_forecast - 0.12):.2f}% - {min(10, final_for
             for adj in forecast_data['adjustments']:
                 analysis_content += f"- **{adj['name']}**: {adj['value']:+.4f}% (Math Framework: {adj['math_framework']})\n"
         else:
-            analysis_content += f"- **LFPR Adjustment**: -0.0040% (Math Framework: {self.math_framework_id})
+            analysis_content += f"""- **LFPR Adjustment**: -0.0040% (Math Framework: {self.math_framework_id})
 - **Initial Claims Adjustment**: +0.0001% (Math Framework: {self.math_framework_id})
 - **Continuing Claims Adjustment**: +0.0003% (Math Framework: {self.math_framework_id})
 - **Trade Sentiment Adjustment**: -0.0000% (Math Framework: {self.math_framework_id})
 - **Trade Volume Adjustment**: -0.0000% (Math Framework: {self.math_framework_id})
 - **Claims Trend Adjustment**: +0.0000% (Math Framework: {self.math_framework_id})
 - **Market Stability Adjustment**: -0.0000% (Math Framework: {self.math_framework_id})
-"
+"""
         
         analysis_content += f"""
 ### System Performance
