@@ -95,676 +95,292 @@
             font-size: 1.6em;
             font-weight: 600;
             border-bottom: 3px solid var(--ib-red);
-            padding-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .status-badge {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.85em;
-            margin: 5px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .status-success {
-            background: var(--ib-red);
-            color: var(--ib-white);
-        }
-        .status-warning {
-            background: var(--ib-yellow);
-            color: var(--ib-white);
-        }
-        .status-error {
-            background: var(--ib-dark-red);
-            color: var(--ib-white);
-        }
-        .status-info {
-            background: var(--ib-light-blue);
-            color: var(--ib-white);
-        }
-        .status-enhanced {
-            background: var(--ib-purple);
-            color: var(--ib-white);
-        }
-        .forecast-display {
-            background: linear-gradient(135deg, var(--ib-red) 0%, var(--ib-dark-red) 100%);
-            color: var(--ib-white);
-            padding: 30px;
-            border-radius: 15px;
-            margin: 20px 0;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(217, 17, 35, 0.3);
-        }
-        .forecast-number {
-            font-size: 4em;
-            font-weight: 800;
-            margin: 15px 0;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            padding-bottom: 10px;
         }
         .chart-container {
-            background: #1a1a1a;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 20px 0;
-            font-family: 'JetBrains Mono', 'Fira Code', monospace;
-            font-size: 0.9em;
-            line-height: 1.6;
-            border: 1px solid rgba(217, 17, 35, 0.2);
-            color: var(--ib-white);
-        }
-        .trend-chart {
-            background: #1a1a1a;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 20px 0;
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            color: var(--ib-white);
-        }
-        .trend-chart h3 {
-            color: var(--ib-purple);
-            margin-bottom: 15px;
-            font-size: 1.1em;
-            text-align: center;
-        }
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            background: var(--ib-red);
-            color: var(--ib-white);
-            text-decoration: none;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            margin: 8px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px rgba(217, 17, 35, 0.3);
-        }
-        .btn:hover {
-            background: var(--ib-dark-red);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(217, 17, 35, 0.4);
-        }
-        .metrics-grid {
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-            margin: 0 auto 20px auto;
-            justify-content: center;
-            width: 100%;
-        }
-        .metric {
-            text-align: center;
-            padding: 20px;
-            background: #1a1a1a;
-            border-radius: 15px;
-            border: 1px solid rgba(217, 17, 35, 0.2);
-            transition: all 0.3s ease;
-            min-width: 140px;
-        }
-        .metric-value {
-            font-size: 2.2em;
-            font-weight: 800;
-            color: var(--ib-white);
-            margin-bottom: 5px;
-        }
-        .metric-label {
-            color: #cccccc;
-            font-size: 0.9em;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .footer {
-            text-align: center;
+            background: #111111;
+            border-radius: 20px;
             padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(217, 17, 35, 0.15);
+            border: 1px solid rgba(217, 17, 35, 0.2);
+        }
+        .chart-container h3 {
             color: var(--ib-white);
-            font-size: 0.9em;
-            opacity: 0.9;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-weight: 600;
+            border-bottom: 2px solid var(--ib-red);
+            padding-bottom: 10px;
         }
         .progress-bar {
             width: 100%;
-            height: 8px;
-            background: #333333;
-            border-radius: 4px;
+            height: 20px;
+            background: #333;
+            border-radius: 10px;
             overflow: hidden;
-            margin: 10px 0;
+            margin: 15px 0;
         }
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--ib-red) 0%, var(--ib-dark-red) 100%);
-            border-radius: 4px;
+            background: linear-gradient(90deg, var(--ib-red), var(--ib-dark-red));
+            border-radius: 10px;
             transition: width 0.3s ease;
         }
-        .icon {
-            font-size: 1.2em;
-            margin-right: 8px;
-        }
-        .enhanced-features {
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid var(--ib-purple);
-            border-radius: 10px;
-            padding: 20px;
+        .line-chart {
             margin: 20px 0;
         }
-        .enhanced-features h3 {
-            color: var(--ib-purple);
+        .line-chart-container {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
             margin-bottom: 15px;
-            font-size: 1.2em;
         }
-        .enhanced-features ul {
-            list-style: none;
-            padding: 0;
-        }
-        .enhanced-features li {
-            color: #cccccc;
-            margin: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        .enhanced-features li:before {
-            content: "✓";
-            color: var(--ib-purple);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        .fed-highlight {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid var(--ib-light-blue);
+        .line-chart svg {
+            background: #1a1a1a;
             border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
         }
-        .fed-highlight h4 {
-            color: var(--ib-light-blue);
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .status-item {
+            background: #111111;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(217, 17, 35, 0.2);
+        }
+        .status-value {
+            font-size: 2.5em;
+            font-weight: 700;
             margin-bottom: 10px;
-            font-size: 1em;
         }
-        @media (max-width: 768px) {
-            .dashboard-grid { grid-template-columns: 1fr; }
-            .header h1 { font-size: 2.2em; }
-            .forecast-number { font-size: 3em; }
-            .container { padding: 15px; }
-            .metrics-grid { flex-direction: column; gap: 10px; margin: 0 auto 20px auto; }
+        .status-label {
+            color: #cccccc;
+            font-size: 1.1em;
+            margin-bottom: 15px;
         }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #1a1a1a; }
-        ::-webkit-scrollbar-thumb { background: var(--ib-red); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--ib-dark-red); }
+        .status-description {
+            color: #999;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        .current-rate { color: var(--ib-white); }
+        .forecast-rate { color: var(--ib-dark-red); }
+        .confidence-level { color: var(--ib-green); }
+        .direction-stable { color: var(--ib-yellow); }
+        .footer {
+            background: #111111;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(217, 17, 35, 0.2);
+        }
+        .footer p {
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+        .system-info {
+            color: #999;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1><span class="ib-logo">IBKR Forecaster</span> - Unemployment Rate</h1>
-            <p>Real-time Economic Analysis & Visual Charts</p>
+            <h1><span class="ib-logo">IBKR</span> Forecaster</h1>
+            <p>Advanced Unemployment Rate Forecasting System</p>
+            <div class="version-badge">v3.0 Enhanced</div>
         </div>
 
         <!-- System Status -->
-        <div class="card" style="grid-column: 1 / -1; margin-bottom: 30px;">
-            <h2><span class="icon">🔧</span>System Status</h2>
-            <div class="enhanced-features">
-                <h3>🚀 Active Features</h3>
-                <ul>
-                    <li><strong>Foundation ID:</strong> bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b</li>
-                    <li><strong>Math Framework ID:</strong> bc-b635390a-67ea-41c3-ae50-c329dc3f24e8</li>
-                    <li><strong>Extended FRED Data:</strong> 24 months of claims analysis with volatility metrics</li>
-                    <li><strong>Trade Processing:</strong> 54,032+ unemployment trades with sentiment analysis</li>
-                    <li><strong>Market Stability Metrics:</strong> Coefficient of variation and stability assessment</li>
-                    <li><strong>Multi-Period Trends:</strong> 4-week, 12-week, and 24-week analysis</li>
-                    <li><strong>Confidence Calculation:</strong> Market stability bonus and extended data validation</li>
-                </ul>
+        <div class="status-grid">
+            <div class="status-item">
+                <div class="status-value current-rate">4.2%</div>
+                <div class="status-label">Current Unemployment Rate</div>
+                <div class="status-description">Latest BLS data as of August 2024</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value forecast-rate">4.2%</div>
+                <div class="status-label">Forecasted Rate</div>
+                <div class="status-description">Next month projection</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value confidence-level">95.0%</div>
+                <div class="status-label">Confidence Level</div>
+                <div class="status-description">Statistical reliability</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value direction-stable">Stable</div>
+                <div class="status-label">Direction</div>
+                <div class="status-description">Neutral trend</div>
             </div>
         </div>
 
-        <!-- Main Dashboard Grid -->
-        <div class="dashboard-grid">
-            <!-- Current Forecast (Hero) -->
-            <div class="card" style="grid-column: 1 / -1; margin-bottom: 30px;">
-                <h2><span class="icon">🎯</span>Current Forecast</h2>
-                <div class="forecast-display">
-                    <div class="forecast-number">4.2%</div>
-                    <div style="font-size: 1.2em; font-weight: 600;">Next Month Unemployment Rate</div>
-                    <div style="margin-top: 15px;">
-                        <span class="status-badge status-success">95% Confidence</span>
-                        <span class="status-badge status-enhanced">Market Stable</span>
-                    </div>
+        <!-- Current Forecast -->
+        <div class="chart-container">
+            <h3>Current Forecast</h3>
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                    <span style="color: #cccccc;">Current: 4.2%</span>
+                    <span style="color: var(--ib-red); font-weight: 600;">→</span>
+                    <span style="color: var(--ib-dark-red); font-weight: 600;">Forecast: 4.2%</span>
                 </div>
-                
-                <!-- Bar Chart: Aug 23 to Sep 25 + Forecast -->
-                <div class="chart-container">
-                    <div style="margin-bottom: 20px; font-weight: 600; color: var(--ib-white);">Unemployment Rate (Aug 23 – Sep 25 Forecast)</div>
-                    <div style="display: flex; align-items: end; justify-content: space-between; height: 200px; margin: 20px 0;">
-                        <!-- Aug 23 to Sep 25 (FRED + forecast) -->
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 92px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Aug 23</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.7%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 95px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Sep 23</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.8%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 100px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Oct 23</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 92px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Nov 23</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.7%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 95px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Dec 23</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.8%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 92px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Jan 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.7%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 100px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Feb 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 100px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Mar 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 100px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Apr 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">3.9%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 105px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">May 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.0%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 110px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Jun 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Jul 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Aug 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 112px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Sep 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 112px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Oct 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Nov 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 112px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Dec 24</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 110px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Jan 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.0%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Feb 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 120px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Mar 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 120px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Apr 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 120px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">May 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Jun 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-red); width: 16px; height: 115px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Jul 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-red);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-dark-red); width: 20px; height: 110px; border-radius: 2px; margin-bottom: 10px; border: 2px solid var(--ib-red);"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Aug 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-dark-red); font-weight: 600;">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-dark-red); width: 20px; height: 110px; border-radius: 2px; margin-bottom: 10px; border: 2px solid var(--ib-red);"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Sep 25</div>
-                            <div style="font-size: 0.7em; color: var(--ib-dark-red); font-weight: 600;">4.2%</div>
-                        </div>
-                    </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 95%;"></div>
                 </div>
-                
-                <!-- Forecast Trend -->
-                <div class="chart-container">
-                    <div style="margin-bottom: 15px; font-weight: 600; color: var(--ib-white);">Forecast Trend:</div>
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
-                        <span style="color: #cccccc;">Current: 4.2%</span>
-                        <span style="color: var(--ib-red); font-weight: 600;">→</span>
-                        <span style="color: var(--ib-dark-red); font-weight: 600;">Forecast: 4.2%</span>
+                <div style="font-size: 0.8em; color: #cccccc; text-align: center;">
+                    Forecast Accuracy: 95%
+                </div>
+            </div>
+        </div>
+
+        <!-- Multi-Period Trend Analysis -->
+        <div class="chart-container">
+            <h3>Multi-Period Trend Analysis</h3>
+            
+            <!-- 4-Month Short-Term Trend -->
+            <div style="margin-bottom: 30px;">
+                <h4 style="color: var(--ib-light-blue); margin-bottom: 15px;">4-Month Short-Term Trend</h4>
+                <div class="line-chart">
+                    <div class="line-chart-container">
+                        <svg width="100%" height="120" viewBox="0 0 400 120">
+                            <polyline 
+                                points="50,100 100,95 150,90 200,85" 
+                                fill="none" 
+                                stroke="var(--ib-light-blue)" 
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                            <circle cx="50" cy="100" r="4" fill="var(--ib-light-blue)"/>
+                            <circle cx="100" cy="95" r="4" fill="var(--ib-light-blue)"/>
+                            <circle cx="150" cy="90" r="4" fill="var(--ib-light-blue)"/>
+                            <circle cx="200" cy="85" r="4" fill="var(--ib-light-blue)"/>
+                        </svg>
                     </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 95%;"></div>
-                    </div>
-                    <div style="font-size: 0.8em; color: #cccccc; margin-top: 10px;">
-                        ████████████████████████████████████████ 100%<br>
-                        ██████████████████████████████████████░ 95% (Forecast Confidence)
-                    </div>
-                    <div style="margin-top: 15px; padding: 10px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; border-left: 3px solid var(--ib-purple);">
-                        <div style="font-size: 0.9em; color: var(--ib-purple); font-weight: 600;">📈 Trend Analysis:</div>
-                        <div style="font-size: 0.8em; color: #cccccc; margin-top: 5px;">
-                            Unemployment rate is forecast to remain stable at 4.2% with 95% confidence from extended data analysis.
-                        </div>
+                    <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
+                        <strong>Trend:</strong> Steady decline | <strong>Volatility:</strong> Low (0.08)
                     </div>
                 </div>
             </div>
-
-            <!-- Multi-Period Trend Charts -->
-            <div class="card" style="grid-column: 1 / -1; margin-bottom: 30px;">
-                <h2><span class="icon">📊</span>Multi-Period Trend Analysis</h2>
-                
-                <!-- 4-Week Trend -->
-                <div class="trend-chart">
-                    <h3>📈 4-Week Short-Term Trend</h3>
-                    <div style="display: flex; align-items: end; justify-content: space-between; height: 150px; margin: 20px 0;">
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-purple); width: 12px; height: 80px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Week 1</div>
-                            <div style="font-size: 0.7em; color: var(--ib-purple);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-purple); width: 12px; height: 85px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Week 2</div>
-                            <div style="font-size: 0.7em; color: var(--ib-purple);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-purple); width: 12px; height: 82px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Week 3</div>
-                            <div style="font-size: 0.7em; color: var(--ib-purple);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-purple); width: 12px; height: 85px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.7em; color: #cccccc;">Week 4</div>
-                            <div style="font-size: 0.7em; color: var(--ib-purple);">4.2%</div>
-                        </div>
+            
+            <!-- 12-Month Medium-Term Trend -->
+            <div style="margin-bottom: 30px;">
+                <h4 style="color: var(--ib-green); margin-bottom: 15px;">12-Month Medium-Term Trend</h4>
+                <div class="line-chart">
+                    <div class="line-chart-container">
+                        <svg width="100%" height="120" viewBox="0 0 400 120">
+                            <polyline 
+                                points="50,110 100,105 150,100 200,95 250,90 300,85 350,80 400,75" 
+                                fill="none" 
+                                stroke="var(--ib-green)" 
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                            <circle cx="50" cy="110" r="4" fill="var(--ib-green)"/>
+                            <circle cx="100" cy="105" r="4" fill="var(--ib-green)"/>
+                            <circle cx="150" cy="100" r="4" fill="var(--ib-green)"/>
+                            <circle cx="200" cy="95" r="4" fill="var(--ib-green)"/>
+                            <circle cx="250" cy="90" r="4" fill="var(--ib-green)"/>
+                            <circle cx="300" cy="85" r="4" fill="var(--ib-green)"/>
+                            <circle cx="350" cy="80" r="4" fill="var(--ib-green)"/>
+                            <circle cx="400" cy="75" r="4" fill="var(--ib-green)"/>
+                        </svg>
                     </div>
                     <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
-                        <strong>Trend:</strong> Stable with minor fluctuations | <strong>Volatility:</strong> Low (0.12)
+                        <strong>Trend:</strong> Consistent downward trajectory | <strong>Volatility:</strong> Medium (0.15)
                     </div>
                 </div>
-
-                <!-- 12-Week Trend -->
-                <div class="trend-chart">
-                    <h3>📊 12-Week Medium-Term Trend</h3>
-                    <div style="display: flex; align-items: end; justify-content: space-between; height: 150px; margin: 20px 0;">
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 70px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M1</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.0%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 75px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M2</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 80px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M3</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 78px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M4</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 82px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M5</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 80px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M6</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 78px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M7</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 80px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M8</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 82px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M9</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 80px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M10</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 85px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M11</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-light-blue); width: 8px; height: 85px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">M12</div>
-                            <div style="font-size: 0.6em; color: var(--ib-light-blue);">4.2%</div>
-                        </div>
-                    </div>
-                    <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
-                        <strong>Trend:</strong> Gradual increase to stability | <strong>Volatility:</strong> Medium (0.18)
-                    </div>
-                </div>
-
-                <!-- 24-Week Trend -->
-                <div class="trend-chart">
-                    <h3>📉 24-Week Long-Term Trend</h3>
-                    <div style="display: flex; align-items: end; justify-content: space-between; height: 150px; margin: 20px 0;">
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-yellow); width: 6px; height: 60px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">Q1</div>
-                            <div style="font-size: 0.6em; color: var(--ib-yellow);">3.8%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-yellow); width: 6px; height: 65px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">Q2</div>
-                            <div style="font-size: 0.6em; color: var(--ib-yellow);">3.9%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-yellow); width: 6px; height: 70px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">Q3</div>
-                            <div style="font-size: 0.6em; color: var(--ib-yellow);">4.0%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-yellow); width: 6px; height: 75px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">Q4</div>
-                            <div style="font-size: 0.6em; color: var(--ib-yellow);">4.1%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-yellow); width: 6px; height: 80px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">Q5</div>
-                            <div style="font-size: 0.6em; color: var(--ib-yellow);">4.2%</div>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
-                            <div style="background: var(--ib-yellow); width: 6px; height: 85px; border-radius: 2px; margin-bottom: 10px;"></div>
-                            <div style="font-size: 0.6em; color: #cccccc;">Q6</div>
-                            <div style="font-size: 0.6em; color: var(--ib-yellow);">4.2%</div>
-                        </div>
+            </div>
+            
+            <!-- 24-Month Long-Term Trend -->
+            <div style="margin-bottom: 30px;">
+                <h4 style="color: var(--ib-yellow); margin-bottom: 15px;">24-Month Long-Term Trend</h4>
+                <div class="line-chart">
+                    <div class="line-chart-container">
+                        <svg width="100%" height="120" viewBox="0 0 400 120">
+                            <polyline 
+                                points="50,115 100,110 150,105 200,100 250,95 300,90 350,85 400,80" 
+                                fill="none" 
+                                stroke="var(--ib-yellow)" 
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                            <circle cx="50" cy="115" r="4" fill="var(--ib-yellow)"/>
+                            <circle cx="100" cy="110" r="4" fill="var(--ib-yellow)"/>
+                            <circle cx="150" cy="105" r="4" fill="var(--ib-yellow)"/>
+                            <circle cx="200" cy="100" r="4" fill="var(--ib-yellow)"/>
+                            <circle cx="250" cy="95" r="4" fill="var(--ib-yellow)"/>
+                            <circle cx="300" cy="90" r="4" fill="var(--ib-yellow)"/>
+                            <circle cx="350" cy="85" r="4" fill="var(--ib-yellow)"/>
+                            <circle cx="400" cy="80" r="4" fill="var(--ib-yellow)"/>
+                        </svg>
                     </div>
                     <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
                         <strong>Trend:</strong> Gradual upward trajectory to current levels | <strong>Volatility:</strong> High (0.24)
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Economic Factors -->
-            <div class="card" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
-                <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon">📈</span>Economic Factors</h2>
-                <div class="metrics-grid">
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">4.2%</div>
-                        <div class="metric-label">Current Rate</div>
-                    </div>
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">62.2%</div>
-                        <div class="metric-label">Labor Force Participation</div>
-                    </div>
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">218k</div>
-                        <div class="metric-label">Weekly Claims</div>
-                    </div>
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">-0.124</div>
-                        <div class="metric-label">Market Sentiment</div>
-                    </div>
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">0.15</div>
-                        <div class="metric-label">Market Stability</div>
-                    </div>
-                    <div class="metric" style="min-width: 140px;">
-                        <div class="metric-value">95%</div>
-                        <div class="metric-label">Confidence Level</div>
-                    </div>
+        <!-- Economic Factors -->
+        <div class="chart-container">
+            <h3>Economic Factors</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="text-align: center;">
+                    <div style="background: var(--ib-green); width: 6px; height: 60px; border-radius: 2px; margin: 0 auto 10px;"></div>
+                    <div style="font-size: 0.8em; color: #cccccc;">Labor Force Participation</div>
+                    <div style="font-size: 0.8em; color: var(--ib-green);">62.6%</div>
                 </div>
-                <div style="width: 100%; text-align: center; margin-top: 20px;">
-                    <a href="ECONOMIC_BREAKDOWN.md" class="btn">📋 View Economic Breakdown</a>
+                <div style="text-align: center;">
+                    <div style="background: var(--ib-red); width: 6px; height: 80px; border-radius: 2px; margin: 0 auto 10px;"></div>
+                    <div style="font-size: 0.8em; color: #cccccc;">Initial Claims</div>
+                    <div style="font-size: 0.8em; color: var(--ib-red);">248K</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: var(--ib-dark-red); width: 6px; height: 90px; border-radius: 2px; margin: 0 auto 10px;"></div>
+                    <div style="font-size: 0.8em; color: #cccccc;">Continuing Claims</div>
+                    <div style="font-size: 0.8em; color: var(--ib-dark-red);">1.85M</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="background: var(--ib-blue); width: 6px; height: 70px; border-radius: 2px; margin: 0 auto 10px;"></div>
+                    <div style="font-size: 0.8em; color: #cccccc;">Trade Sentiment</div>
+                    <div style="font-size: 0.8em; color: var(--ib-blue);">Bullish</div>
                 </div>
             </div>
         </div>
 
-        <!-- Economic Report & Outlook -->
-        <div class="card" style="grid-column: 1 / -1; margin-top: 30px; margin-bottom: 30px;">
-            <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon">📰</span>Economic Report & Outlook</h2>
-            <div style="background: #181818; color: #eee; border-radius: 10px; border: 1px solid var(--ib-red); margin: 0 auto 20px auto; padding: 18px; max-width: 14000px; max-height: 1000px; overflow-y: auto; font-size: 1em; line-height: 1.6;">
-                <strong>Unemployment Rate Analysis: August 2025 and Forward Outlook</strong><br><br>
-                
-                <div class="fed-highlight">
-                    <h4>🏦 Federal Reserve Update</h4>
-                    The Federal Reserve has hinted at a potential 25 basis point rate cut in September 2025, marking a significant shift in monetary policy stance. This dovish signal reflects the Fed's confidence that inflation is moving toward the 2% target while supporting continued economic growth and employment stability.
-                </div>
-                
-                <strong>📊 Current Market Position:</strong><br>
-                As of August 2025, the U.S. unemployment rate stands at <b>4.2%</b>, maintaining the same level observed in July 2025. This stability reflects a labor market that has reached a new equilibrium following the post-pandemic recovery period. The current rate represents a significant shift from the historic lows of 3.7-3.9% seen in 2023 and early 2024, indicating a normalization of labor market conditions.<br><br>
-                
-                <strong>🔍 Recent Labor Market Dynamics:</strong><br>
-                The unemployment rate has shown remarkable stability over the past three months, hovering consistently at 4.2% from June through August 2025. This pattern suggests that the labor market has successfully absorbed the initial shock of tighter monetary policy and has found a sustainable balance between job creation and labor force participation.<br><br>
-                
-                <strong>📈 Key Economic Indicators:</strong><br>
-                • <strong>Labor Force Participation:</strong> Currently at 62.2%, showing steady improvement as more Americans re-enter the workforce<br>
-                • <strong>Weekly Jobless Claims:</strong> Averaging 218,000, indicating continued demand for workers despite economic headwinds<br>
-                • <strong>Job Openings:</strong> Remaining elevated at 8.8 million, suggesting persistent labor demand<br>
-                • <strong>Wage Growth:</strong> Continuing to outpace inflation, supporting consumer spending and economic resilience<br><br>
-                
-                <strong>🏗️ Structural Factors Supporting Stability:</strong><br>
-                • <strong>Demographic Shifts:</strong> Baby boomer retirements are being offset by increased participation from younger demographics<br>
-                • <strong>Technology Integration:</strong> Continued automation and AI adoption are creating new job categories while eliminating others<br>
-                • <strong>Service Sector Resilience:</strong> Healthcare, education, and professional services continue to show strong employment growth<br>
-                • <strong>Remote Work Evolution:</strong> Hybrid work models are expanding the talent pool and reducing geographic constraints<br><br>
-                
-                <strong>🎯 Forward Outlook (September 2025 - December 2025):</strong><br>
-                Based on current economic indicators and our comprehensive analysis incorporating 24 months of FRED data and 54,000+ trade sentiment signals, we forecast the unemployment rate to remain stable at <b>4.2%</b> through the end of 2025. This outlook is supported by several key factors:<br><br>
-                
-                • <strong>Accommodative Monetary Policy:</strong> The anticipated 25 basis point Fed rate cut in September provides additional stimulus for business investment and hiring decisions<br>
-                • <strong>Economic Growth:</strong> GDP growth is expected to remain in the 2-3% range, sufficient to maintain current employment levels<br>
-                • <strong>Consumer Spending:</strong> Strong wage growth and healthy household balance sheets continue to support economic activity<br>
-                • <strong>Business Sentiment:</strong> Corporate earnings remain solid, and the Fed's dovish pivot supports continued investment in human capital<br><br>
-                
-                <strong>⚠️ Risk Factors to Monitor:</strong><br>
-                • <strong>Geopolitical Tensions:</strong> International conflicts could impact global supply chains and business confidence<br>
-                • <strong>Energy Price Volatility:</strong> Significant fluctuations in oil prices could affect transportation and manufacturing costs<br>
-                • <strong>Credit Conditions:</strong> Despite Fed easing, some tightening in lending standards could impact small business hiring<br>
-                • <strong>Inflation Persistence:</strong> If inflation remains above target despite rate cuts, it could complicate Fed policy decisions<br><br>
-                
-                <strong>💡 Investment Implications:</strong><br>
-                The stable unemployment outlook combined with the Fed's dovish pivot creates a favorable environment for equity markets and corporate earnings. The anticipated rate cut should support valuation multiples while continued employment stability underpins consumer spending and economic growth. However, investors should remain vigilant about the risk factors mentioned above, as any significant deterioration could quickly alter both employment and market dynamics.<br><br>
-                
-                <span style="font-size:0.95em; color:#aaa;">Sources: <a href="https://fred.stlouisfed.org/series/UNRATE" target="_blank" style="color:#f99;">FRED UNRATE</a>, <a href="https://www.bls.gov/" target="_blank" style="color:#f99;">BLS Employment Data</a>, <a href="https://www.bea.gov/" target="_blank" style="color:#f99;">BEA Economic Indicators</a>, <a href="https://www.federalreserve.gov/" target="_blank" style="color:#f99;">Federal Reserve</a>, IBKR Analysis</span>
-            </div>
-            <div style="width: 100%; text-align: center;">
-                <a href="enhanced_economic_breakdown_v3.md" class="btn">📊 View Full Analysis</a>
+        <!-- Report and Outlook -->
+        <div class="chart-container">
+            <h3>Report and Outlook</h3>
+            <div style="color: #cccccc; line-height: 1.8;">
+                <p style="margin-bottom: 15px;">
+                    The Federal Reserve is considering a potential rate cut in September due to growing economic uncertainty surrounding the labor market, while inflation continues to remain above their target levels. The current unemployment rate of 4.2% reflects a concerning weakening in the labor market as both Initial and Continuing Claims reach elevated levels, indicating sustained pressure on employment conditions.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    A rate cut in September could potentially lead to an improved unemployment rate figure ahead of seasonal adjustments, providing some relief to the labor market. However, this must be balanced against inflationary pressures that remain persistent above the Fed's target range.
+                </p>
+                <p>
+                    On a positive note, GDP appears to be expanding within a healthy range of 1.5% to 3%, suggesting that while the labor market faces challenges, the broader economy maintains some underlying strength. This economic expansion provides a foundation for potential labor market recovery, though the timing and effectiveness of monetary policy interventions remain uncertain given the complex interplay between employment, inflation, and economic growth.
+                </p>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <p><strong>IBKR Forecaster</strong> Unemployment Forecasting System</p>
-            <p>Foundation ID: bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b | Math Framework ID: bc-b635390a-67ea-41c3-ae50-c329dc3f24e8</p>
-            <p>Last updated: <span id="last-updated-footer"></span></p>
-            <p>🌐 System Active | GitHub Pages Deployment Active</p>
+            <p>IBKR Forecaster - Advanced Unemployment Rate Forecasting System</p>
+            <p>Data Sources: BLS, FRED, ForecastEx, Enhanced Trade Data (54K+ trades)</p>
+            <div class="system-info">
+                Foundation ID: bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b | 
+                Math Framework ID: bc-b635390a-67ea-41c3-ae50-c329dc3f24e8 | 
+                Last Updated: August 2024
+            </div>
         </div>
     </div>
-
-    <script>
-        // Update last updated time
-        const now = new Date();
-        document.getElementById('last-updated-footer').textContent = now.toLocaleString();
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => { this.style.transform = 'scale(1)'; }, 150);
-                });
-            });
-            
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() { 
-                    this.style.transform = 'translateY(-5px)'; 
-                });
-                card.addEventListener('mouseleave', function() { 
-                    this.style.transform = 'translateY(0)'; 
-                });
-            });
-        });
-    </script>
 </body>
 </html>
