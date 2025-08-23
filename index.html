@@ -481,7 +481,7 @@
 
         <!-- Additional Charts Row -->
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px;">
-             <!-- Left Chart: Unemployment Rate Line Graph (Jan 25 - Aug 25) with Statistical Validation -->
+            <!-- Left Chart: Unemployment Rate Line Graph (Jan 25 - Aug 25) with Statistical Validation -->
             <div class="chart-container">
                 <h3 style="margin-bottom: 20px;">Unemployment Rate Trend with Statistical Validation</h3>
                 <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 400px; position: relative;">
@@ -492,14 +492,14 @@
                         <line x1="0" y1="210" x2="400" y2="210" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                         <line x1="0" y1="280" x2="400" y2="280" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                         
-                        <!-- Y-axis labels (positioned above x-axis) -->
-                        <text x="-10" y="70" text-anchor="end" fill="#cccccc" font-size="10">3.5%</text>
-                        <text x="-10" y="140" text-anchor="end" fill="#cccccc" font-size="10">3.7%</text>
+                        <!-- Y-axis labels (properly aligned with data range 3.5% to 4.3%) -->
+                        <text x="-10" y="70" text-anchor="end" fill="#cccccc" font-size="10">4.3%</text>
+                        <text x="-10" y="140" text-anchor="end" fill="#cccccc" font-size="10">4.1%</text>
                         <text x="-10" y="210" text-anchor="end" fill="#cccccc" font-size="10">3.9%</text>
-                        <text x="-10" y="280" text-anchor="end" fill="#cccccc" font-size="10">4.1%</text>
-                        <text x="-10" y="350" text-anchor="end" fill="#cccccc" font-size="10">4.3%</text>
+                        <text x="-10" y="280" text-anchor="end" fill="#cccccc" font-size="10">3.7%</text>
+                        <text x="-10" y="350" text-anchor="end" fill="#cccccc" font-size="10">3.5%</text>
                         
-                        <!-- X-axis labels -->
+                        <!-- X-axis labels (Jan 25 - Aug 25) -->
                         <text x="0" y="370" text-anchor="middle" fill="#cccccc" font-size="8">Jan 25</text>
                         <text x="57" y="370" text-anchor="middle" fill="#cccccc" font-size="8">Feb 25</text>
                         <text x="114" y="370" text-anchor="middle" fill="#cccccc" font-size="8">Mar 25</text>
@@ -510,7 +510,7 @@
                         <text x="400" y="370" text-anchor="middle" fill="#cccccc" font-size="8">Aug 25</text>
                         
                         <!-- Medium statistical validation area (85% confidence) -->
-                        <polygon points="0,50 57,60 114,40 171,55 228,30 285,45 342,20 400,35 400,80 342,95 285,80 228,95 171,80 114,95 57,80 0,65" 
+                        <polygon points="0,65 57,60 114,80 171,65 228,80 285,65 342,85 400,70 400,95 342,110 285,95 228,110 171,95 114,110 57,95 0,80" 
                                  fill="rgba(59, 130, 246, 0.15)" stroke="var(--ib-light-blue)" stroke-width="1" stroke-dasharray="3,3"/>
                         
                         <!-- Unemployment rate line (Jan 25 - Aug 25 data) -->
@@ -538,7 +538,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Right Chart: Trade Data Probability Forecast -->
             <div class="chart-container">
                 <h3 style="margin-bottom: 20px;">Trade Data Probability Forecast (4.2% Target)</h3>
