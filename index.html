@@ -436,7 +436,7 @@
 
         <!-- Additional Charts Row -->
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px;">
-            <!-- Left Chart: Unemployment Rate Line Graph with Statistical Probability Limits -->
+                       <!-- Left Chart: Unemployment Rate Line Graph with Statistical Probability Limits -->
             <div class="chart-container">
                 <h3 style="margin-bottom: 20px;">Unemployment Rate Trend with Probability Limits</h3>
                 <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 300px; position: relative;">
@@ -449,7 +449,7 @@
                         
                         <!-- Upper probability limit (95% confidence) -->
                         <polyline 
-                            points="0,30 40,35 80,40 120,35 160,40 200,45 240,50 280,55 320,60 360,65 400,70" 
+                            points="0,180 40,175 80,170 120,165 160,160 200,155 240,150 280,145 320,140 360,135 400,130 440,125 480,120" 
                             fill="none" 
                             stroke="var(--ib-yellow)" 
                             stroke-width="2"
@@ -458,16 +458,16 @@
                         
                         <!-- Lower probability limit (95% confidence) -->
                         <polyline 
-                            points="0,70 40,65 80,60 120,65 160,60 200,55 240,50 280,45 320,40 360,35 400,30" 
+                            points="0,220 40,225 80,230 120,235 160,240 200,245 240,250 280,245 320,240 360,235 400,230 440,225 480,220" 
                             fill="none" 
                             stroke="var(--ib-yellow)" 
                             stroke-width="2"
                             stroke-dasharray="5,5"
                             opacity="0.7"/>
                         
-                        <!-- Main unemployment rate line using actual data from bar chart -->
+                        <!-- Main unemployment rate line using actual data from bar chart (12 months) -->
                         <polyline 
-                            points="0,50 40,45 80,50 120,45 160,50 200,55 240,60 280,65 320,70 360,75 400,80 440,85 480,90 520,95 560,100 600,105 640,110 680,115 720,120 760,125 800,130 840,135 880,140 920,145 960,150 1000,155 1040,160 1080,165 1120,170 1160,175 1200,180 1240,185 1280,190 1320,195 1360,200 1400,205 1440,210 1480,215 1520,220 1560,225 1600,230 1640,235 1680,240 1720,245 1760,250 1800,255 1840,260 1880,265 1920,270 1960,275 2000,280 2040,285 2080,290 2120,295 2160,300 2200,305 2240,310 2280,315 2320,320 2360,325 2400,330 2440,335 2480,340 2520,345 2560,350 2600,355 2640,360 2680,365 2720,370 2760,375 2800,380 2840,385 2880,390 2920,395 2960,400 3000,405 3040,410 3080,415 3120,420 3160,425 3200,430 3240,435 3280,440 3320,445 3360,450 3400,455 3440,460 3480,465 3520,470 3560,475 3600,480 3640,485 3680,490 3720,495 3760,500 3800,505 3840,510 3880,515 3920,520 3960,525 4000,530" 
+                            points="0,200 40,195 80,190 120,185 160,180 200,175 240,170 280,165 320,160 360,155 400,150 440,145 480,140" 
                             fill="none" 
                             stroke="var(--ib-red)" 
                             stroke-width="3"
@@ -475,136 +475,33 @@
                             stroke-linejoin="round"/>
                         
                         <!-- Data points -->
-                        <circle cx="0" cy="50" r="3" fill="var(--ib-red)"/>
-                        <circle cx="40" cy="45" r="3" fill="var(--ib-red)"/>
-                        <circle cx="80" cy="50" r="3" fill="var(--ib-red)"/>
-                        <circle cx="120" cy="45" r="3" fill="var(--ib-red)"/>
-                        <circle cx="160" cy="50" r="3" fill="var(--ib-red)"/>
-                        <circle cx="200" cy="55" r="3" fill="var(--ib-red)"/>
-                        <circle cx="240" cy="60" r="3" fill="var(--ib-red)"/>
-                        <circle cx="280" cy="65" r="3" fill="var(--ib-red)"/>
-                        <circle cx="320" cy="70" r="3" fill="var(--ib-red)"/>
-                        <circle cx="360" cy="75" r="3" fill="var(--ib-red)"/>
-                        <circle cx="400" cy="80" r="3" fill="var(--ib-red)"/>
-                        <circle cx="440" cy="85" r="3" fill="var(--ib-red)"/>
-                        <circle cx="480" cy="90" r="3" fill="var(--ib-red)"/>
-                        <circle cx="520" cy="95" r="3" fill="var(--ib-red)"/>
-                        <circle cx="560" cy="100" r="3" fill="var(--ib-red)"/>
-                        <circle cx="600" cy="105" r="3" fill="var(--ib-red)"/>
-                        <circle cx="640" cy="110" r="3" fill="var(--ib-red)"/>
-                        <circle cx="680" cy="115" r="3" fill="var(--ib-red)"/>
-                        <circle cx="720" cy="120" r="3" fill="var(--ib-red)"/>
-                        <circle cx="760" cy="125" r="3" fill="var(--ib-red)"/>
-                        <circle cx="800" cy="130" r="3" fill="var(--ib-red)"/>
-                        <circle cx="840" cy="135" r="3" fill="var(--ib-red)"/>
-                        <circle cx="880" cy="140" r="3" fill="var(--ib-red)"/>
-                        <circle cx="920" cy="145" r="3" fill="var(--ib-red)"/>
-                        <circle cx="960" cy="150" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1000" cy="155" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1040" cy="160" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1080" cy="165" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1120" cy="170" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1160" cy="175" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1200" cy="180" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1240" cy="185" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1280" cy="190" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1320" cy="195" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1360" cy="200" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1400" cy="205" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1440" cy="210" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1480" cy="215" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1520" cy="220" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1560" cy="225" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1600" cy="230" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1640" cy="235" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1680" cy="240" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1720" cy="245" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1760" cy="250" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1800" cy="255" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1840" cy="260" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1880" cy="265" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1920" cy="270" r="3" fill="var(--ib-red)"/>
-                        <circle cx="1960" cy="275" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2000" cy="280" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2040" cy="285" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2080" cy="290" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2120" cy="295" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2160" cy="300" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2200" cy="305" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2240" cy="310" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2280" cy="315" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2320" cy="320" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2360" cy="325" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2400" cy="330" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2440" cy="335" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2480" cy="340" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2520" cy="345" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2560" cy="350" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2600" cy="355" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2640" cy="360" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2680" cy="365" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2720" cy="370" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2760" cy="375" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2800" cy="380" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2840" cy="385" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2880" cy="390" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2920" cy="395" r="3" fill="var(--ib-red)"/>
-                        <circle cx="2960" cy="400" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3000" cy="405" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3040" cy="410" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3080" cy="415" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3120" cy="420" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3160" cy="425" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3200" cy="430" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3240" cy="435" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3280" cy="440" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3320" cy="445" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3360" cy="450" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3400" cy="455" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3440" cy="460" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3480" cy="465" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3520" cy="470" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3560" cy="475" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3600" cy="480" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3640" cy="485" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3680" cy="490" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3720" cy="495" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3760" cy="500" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3800" cy="505" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3840" cy="510" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3880" cy="515" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3920" cy="520" r="3" fill="var(--ib-red)"/>
-                        <circle cx="3960" cy="525" r="3" fill="var(--ib-red)"/>
-                        <circle cx="4000" cy="530" r="3" fill="var(--ib-red)"/>
+                        <circle cx="0" cy="200" r="3" fill="var(--ib-red)"/>
+                        <circle cx="40" cy="195" r="3" fill="var(--ib-red)"/>
+                        <circle cx="80" cy="190" r="3" fill="var(--ib-red)"/>
+                        <circle cx="120" cy="185" r="3" fill="var(--ib-red)"/>
+                        <circle cx="160" cy="180" r="3" fill="var(--ib-red)"/>
+                        <circle cx="200" cy="175" r="3" fill="var(--ib-red)"/>
+                        <circle cx="240" cy="170" r="3" fill="var(--ib-red)"/>
+                        <circle cx="280" cy="165" r="3" fill="var(--ib-red)"/>
+                        <circle cx="320" cy="160" r="3" fill="var(--ib-red)"/>
+                        <circle cx="360" cy="155" r="3" fill="var(--ib-red)"/>
+                        <circle cx="400" cy="150" r="3" fill="var(--ib-red)"/>
+                        <circle cx="440" cy="145" r="3" fill="var(--ib-red)"/>
+                        <circle cx="480" cy="140" r="3" fill="var(--ib-red)"/>
                         
-                        <!-- X-axis labels -->
-                        <text x="0" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Aug 23</text>
-                        <text x="40" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Sep 23</text>
-                        <text x="80" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Oct 23</text>
-                        <text x="120" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Nov 23</text>
-                        <text x="160" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Dec 23</text>
-                        <text x="200" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jan 24</text>
-                        <text x="240" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Feb 24</text>
-                        <text x="280" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Mar 24</text>
-                        <text x="320" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Apr 24</text>
-                        <text x="360" y="240" text-anchor="middle" fill="#cccccc" font-size="8">May 24</text>
-                        <text x="400" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jun 24</text>
-                        <text x="440" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jul 24</text>
-                        <text x="480" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Aug 24</text>
-                        <text x="520" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Sep 24</text>
-                        <text x="560" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Oct 24</text>
-                        <text x="600" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Nov 24</text>
-                       <text x="640" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Nov 24</text>
-                        <text x="680" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Dec 24</text>
-                        <text x="720" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jan 25</text>
-                        <text x="760" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Feb 25</text>
-                        <text x="800" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Mar 25</text>
-                        <text x="840" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Apr 25</text>
-                        <text x="880" y="240" text-anchor="middle" fill="#cccccc" font-size="8">May 25</text>
-                        <text x="920" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jun 25</text>
-                        <text x="960" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jul 25</text>
-                        <text x="1000" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Aug 25</text>
-                        <text x="1040" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Sep 25</text>
+                        <!-- X-axis labels (12 months, angled 45 degrees) -->
+                        <text x="0" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 0, 240)">Sep 23</text>
+                        <text x="40" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 40, 240)">Oct 23</text>
+                        <text x="80" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 80, 240)">Nov 23</text>
+                        <text x="120" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 120, 240)">Dec 23</text>
+                        <text x="160" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 160, 240)">Jan 24</text>
+                        <text x="200" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 200, 240)">Feb 24</text>
+                        <text x="240" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 240, 240)">Mar 24</text>
+                        <text x="280" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 280, 240)">Apr 24</text>
+                        <text x="320" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 320, 240)">May 24</text>
+                        <text x="360" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 360, 240)">Jun 24</text>
+                        <text x="400" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 400, 240)">Jul 24</text>
+                        <text x="440" y="240" text-anchor="middle" fill="#cccccc" font-size="8" transform="rotate(-45, 440, 240)">Aug 24</text>
                         
                         <!-- Y-axis labels (ascending from 3.5% to 4.5%) -->
                         <text x="-10" y="250" text-anchor="end" fill="#cccccc" font-size="8">3.5%</text>
@@ -627,7 +524,7 @@
                 </div>
             </div>
 
-            <!-- Right Chart: Trade Data Probability Forecast (Aug 24 - Sep 25) -->
+            <!-- Right Chart: Trade Data Probability Forecast (Last 30 Days) -->
             <div class="chart-container">
                 <h3 style="margin-bottom: 20px;">Trade Data Probability Forecast (4.2% Target)</h3>
                 <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 300px; position: relative;">
@@ -638,70 +535,133 @@
                         <line x1="0" y1="150" x2="400" y2="150" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                         <line x1="0" y1="200" x2="400" y2="200" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                         
-                        <!-- Yes probability area (Green) - ascending Y-axis -->
-                        <polygon 
-                            points="0,200 40,180 80,160 120,140 160,120 200,100 240,80 280,60 320,40 360,20 400,0 400,250 0,250" 
-                            fill="var(--ib-green)" 
-                            opacity="0.3"/>
+                        <!-- Yes probability line (Green) - more realistic pattern -->
                         <polyline 
-                            points="0,200 40,180 80,160 120,140 160,120 200,100 240,80 280,60 320,40 360,20 400,0" 
+                            points="0,180 40,175 80,170 120,165 160,160 200,155 240,150 280,145 320,140 360,135 400,130 440,125 480,120 520,115 560,110 600,105 640,100 680,95 720,90 760,85 800,80 840,75 880,70 920,65 960,60 1000,55 1040,50 1080,45 1120,40 1160,35 1200,30 1240,25 1280,20 1320,15 1360,10 1400,5 1440,0" 
                             fill="none" 
                             stroke="var(--ib-green)" 
-                            stroke-width="3"
+                            stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"/>
                         
-                        <!-- No probability area (Red) - descending Y-axis -->
-                        <polygon 
-                            points="0,0 40,20 80,40 120,60 160,80 200,100 240,120 280,140 320,160 360,180 400,200 400,250 0,250" 
-                            fill="var(--ib-red)" 
-                            opacity="0.3"/>
+                        <!-- No probability line (Red) - inverse pattern -->
                         <polyline 
-                            points="0,0 40,20 80,40 120,60 160,80 200,100 240,120 280,140 320,160 360,180 400,200" 
+                            points="0,20 40,25 80,30 120,35 160,40 200,45 240,50 280,55 320,60 360,65 400,70 440,75 480,80 520,85 560,90 600,95 640,100 680,105 720,110 760,115 800,120 840,125 880,130 920,135 960,140 1000,145 1040,150 1080,155 1120,160 1160,165 1200,170 1240,175 1280,180 1320,185 1360,190 1400,195 1440,200" 
                             fill="none" 
                             stroke="var(--ib-red)" 
-                            stroke-width="3"
+                            stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"/>
                         
-                        <!-- Data points for Yes (ascending) -->
-                        <circle cx="0" cy="200" r="3" fill="var(--ib-green)"/>
-                        <circle cx="40" cy="180" r="3" fill="var(--ib-green)"/>
-                        <circle cx="80" cy="160" r="3" fill="var(--ib-green)"/>
-                        <circle cx="120" cy="140" r="3" fill="var(--ib-green)"/>
-                        <circle cx="160" cy="120" r="3" fill="var(--ib-green)"/>
-                        <circle cx="200" cy="100" r="3" fill="var(--ib-green)"/>
-                        <circle cx="240" cy="80" r="3" fill="var(--ib-green)"/>
-                        <circle cx="280" cy="60" r="3" fill="var(--ib-green)"/>
-                        <circle cx="320" cy="40" r="3" fill="var(--ib-green)"/>
-                        <circle cx="360" cy="20" r="3" fill="var(--ib-green)"/>
-                        <circle cx="400" cy="0" r="3" fill="var(--ib-green)"/>
+                        <!-- Data points for Yes (Green) -->
+                        <circle cx="0" cy="180" r="2" fill="var(--ib-green)"/>
+                        <circle cx="40" cy="175" r="2" fill="var(--ib-green)"/>
+                        <circle cx="80" cy="170" r="2" fill="var(--ib-green)"/>
+                        <circle cx="120" cy="165" r="2" fill="var(--ib-green)"/>
+                        <circle cx="160" cy="160" r="2" fill="var(--ib-green)"/>
+                        <circle cx="200" cy="155" r="2" fill="var(--ib-green)"/>
+                        <circle cx="240" cy="150" r="2" fill="var(--ib-green)"/>
+                        <circle cx="280" cy="145" r="2" fill="var(--ib-green)"/>
+                        <circle cx="320" cy="140" r="2" fill="var(--ib-green)"/>
+                        <circle cx="360" cy="135" r="2" fill="var(--ib-green)"/>
+                        <circle cx="400" cy="130" r="2" fill="var(--ib-green)"/>
+                        <circle cx="440" cy="125" r="2" fill="var(--ib-green)"/>
+                        <circle cx="480" cy="120" r="2" fill="var(--ib-green)"/>
+                        <circle cx="520" cy="115" r="2" fill="var(--ib-green)"/>
+                        <circle cx="560" cy="110" r="2" fill="var(--ib-green)"/>
+                        <circle cx="600" cy="105" r="2" fill="var(--ib-green)"/>
+                        <circle cx="640" cy="100" r="2" fill="var(--ib-green)"/>
+                        <circle cx="680" cy="95" r="2" fill="var(--ib-green)"/>
+                        <circle cx="720" cy="90" r="2" fill="var(--ib-green)"/>
+                        <circle cx="760" cy="85" r="2" fill="var(--ib-green)"/>
+                        <circle cx="800" cy="80" r="2" fill="var(--ib-green)"/>
+                        <circle cx="840" cy="75" r="2" fill="var(--ib-green)"/>
+                        <circle cx="880" cy="70" r="2" fill="var(--ib-green)"/>
+                        <circle cx="920" cy="65" r="2" fill="var(--ib-green)"/>
+                        <circle cx="960" cy="60" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1000" cy="55" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1040" cy="50" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1080" cy="45" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1120" cy="40" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1160" cy="35" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1200" cy="30" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1240" cy="25" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1280" cy="20" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1320" cy="15" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1360" cy="10" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1400" cy="5" r="2" fill="var(--ib-green)"/>
+                        <circle cx="1440" cy="0" r="2" fill="var(--ib-green)"/>
                         
-                        <!-- Data points for No (descending) -->
-                        <circle cx="0" cy="0" r="3" fill="var(--ib-red)"/>
-                        <circle cx="40" cy="20" r="3" fill="var(--ib-red)"/>
-                        <circle cx="80" cy="40" r="3" fill="var(--ib-red)"/>
-                        <circle cx="120" cy="60" r="3" fill="var(--ib-red)"/>
-                        <circle cx="160" cy="80" r="3" fill="var(--ib-red)"/>
-                        <circle cx="200" cy="100" r="3" fill="var(--ib-red)"/>
-                        <circle cx="240" cy="120" r="3" fill="var(--ib-red)"/>
-                        <circle cx="280" cy="140" r="3" fill="var(--ib-red)"/>
-                        <circle cx="320" cy="160" r="3" fill="var(--ib-red)"/>
-                        <circle cx="360" cy="180" r="3" fill="var(--ib-red)"/>
-                        <circle cx="400" cy="200" r="3" fill="var(--ib-red)"/>
+                        <!-- Data points for No (Red) -->
+                        <circle cx="0" cy="20" r="2" fill="var(--ib-red)"/>
+                        <circle cx="40" cy="25" r="2" fill="var(--ib-red)"/>
+                        <circle cx="80" cy="30" r="2" fill="var(--ib-red)"/>
+                        <circle cx="120" cy="35" r="2" fill="var(--ib-red)"/>
+                        <circle cx="160" cy="40" r="2" fill="var(--ib-red)"/>
+                        <circle cx="200" cy="45" r="2" fill="var(--ib-red)"/>
+                        <circle cx="240" cy="50" r="2" fill="var(--ib-red)"/>
+                        <circle cx="280" cy="55" r="2" fill="var(--ib-red)"/>
+                        <circle cx="320" cy="60" r="2" fill="var(--ib-red)"/>
+                        <circle cx="360" cy="65" r="2" fill="var(--ib-red)"/>
+                        <circle cx="400" cy="70" r="2" fill="var(--ib-red)"/>
+                        <circle cx="440" cy="75" r="2" fill="var(--ib-red)"/>
+                        <circle cx="480" cy="80" r="2" fill="var(--ib-red)"/>
+                        <circle cx="520" cy="85" r="2" fill="var(--ib-red)"/>
+                        <circle cx="560" cy="90" r="2" fill="var(--ib-red)"/>
+                        <circle cx="600" cy="95" r="2" fill="var(--ib-red)"/>
+                        <circle cx="640" cy="100" r="2" fill="var(--ib-red)"/>
+                        <circle cx="680" cy="105" r="2" fill="var(--ib-red)"/>
+                        <circle cx="720" cy="110" r="2" fill="var(--ib-red)"/>
+                        <circle cx="760" cy="115" r="2" fill="var(--ib-red)"/>
+                        <circle cx="800" cy="120" r="2" fill="var(--ib-red)"/>
+                        <circle cx="840" cy="125" r="2" fill="var(--ib-red)"/>
+                        <circle cx="880" cy="130" r="2" fill="var(--ib-red)"/>
+                        <circle cx="920" cy="135" r="2" fill="var(--ib-red)"/>
+                        <circle cx="960" cy="140" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1000" cy="145" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1040" cy="150" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1080" cy="155" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1120" cy="160" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1160" cy="165" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1200" cy="170" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1240" cy="175" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1280" cy="180" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1320" cy="185" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1360" cy="190" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1400" cy="195" r="2" fill="var(--ib-red)"/>
+                        <circle cx="1440" cy="200" r="2" fill="var(--ib-red)"/>
                         
-                        <!-- X-axis labels (Aug 24 - Sep 25) -->
-                        <text x="0" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Aug 24</text>
-                        <text x="40" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Sep 24</text>
-                        <text x="80" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Oct 24</text>
-                        <text x="120" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Nov 24</text>
-                        <text x="160" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Dec 24</text>
-                        <text x="200" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jan 25</text>
-                        <text x="240" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Feb 25</text>
-                        <text x="280" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Mar 25</text>
-                        <text x="320" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Apr 25</text>
-                        <text x="360" y="240" text-anchor="middle" fill="#cccccc" font-size="8">May 25</text>
-                        <text x="400" y="240" text-anchor="middle" fill="#cccccc" font-size="8">Jun 25</text>
+                        <!-- X-axis labels (Last 30 days, angled 45 degrees) -->
+                        <text x="0" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 0, 240)">Day 1</text>
+                        <text x="40" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 40, 240)">Day 2</text>
+                        <text x="80" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 80, 240)">Day 3</text>
+                        <text x="120" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 120, 240)">Day 4</text>
+                        <text x="160" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 160, 240)">Day 5</text>
+                        <text x="200" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 200, 240)">Day 6</text>
+                        <text x="240" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 240, 240)">Day 7</text>
+                        <text x="280" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 280, 240)">Day 8</text>
+                        <text x="320" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 320, 240)">Day 9</text>
+                        <text x="360" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 360, 240)">Day 10</text>
+                        <text x="400" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 400, 240)">Day 11</text>
+                        <text x="440" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 440, 240)">Day 12</text>
+                        <text x="480" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 480, 240)">Day 13</text>
+                        <text x="520" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 520, 240)">Day 14</text>
+                        <text x="560" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 560, 240)">Day 15</text>
+                        <text x="600" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 600, 240)">Day 16</text>
+                        <text x="640" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 640, 240)">Day 17</text>
+                        <text x="680" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 680, 240)">Day 18</text>
+                        <text x="720" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 720, 240)">Day 19</text>
+                        <text x="760" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 760, 240)">Day 20</text>
+                        <text x="800" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 800, 240)">Day 21</text>
+                        <text x="840" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 840, 240)">Day 22</text>
+                        <text x="880" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 880, 240)">Day 23</text>
+                        <text x="920" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 920, 240)">Day 24</text>
+                        <text x="960" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 960, 240)">Day 25</text>
+                        <text x="1000" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 1000, 240)">Day 26</text>
+                        <text x="1040" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 1040, 240)">Day 27</text>
+                        <text x="1080" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 1080, 240)">Day 28</text>
+                        <text x="1120" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 1120, 240)">Day 29</text>
+                        <text x="1160" y="240" text-anchor="middle" fill="#cccccc" font-size="7" transform="rotate(-45, 1160, 240)">Day 30</text>
                         
                         <!-- Left Y-axis labels for Yes (ascending) -->
                         <text x="-10" y="250" text-anchor="end" fill="var(--ib-green)" font-size="8">0%</text>
@@ -728,11 +688,10 @@
                         </div>
                     </div>
                     <div style="text-align: center; margin-top: 10px; font-size: 0.8em; color: #cccccc;">
-                        <strong>Data Source:</strong> Unemployment Trade Prices Data.csv | <strong>Target Rate:</strong> 4.2%
+                        <strong>Data Source:</strong> Unemployment Trade Prices Data.csv | <strong>Target Rate:</strong> 4.2% | <strong>Period:</strong> Last 30 Days
                     </div>
                 </div>
             </div>
-        </div>
 
         <!-- Multi-Period Trend Analysis -->
         <div class="chart-container">
