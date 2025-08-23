@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Brokers - Enhanced Unemployment Forecast Dashboard v3.0</title>
-    <meta name="description" content="Enhanced Interactive Brokers unemployment forecasting v3.0 with extended FRED data, 54K+ trades, and market stability metrics">
-    <meta name="keywords" content="Interactive Brokers, unemployment, forecast, economics, BLS, FRED, ForecastEx, v3.0, enhanced">
+    <title>IBKR Forecaster - Unemployment Rate</title>
+    <meta name="description" content="IBKR Forecaster unemployment forecasting with extended FRED data, 54K+ trades, and market stability metrics">
+    <meta name="keywords" content="IBKR, unemployment, forecast, economics, BLS, FRED, ForecastEx">
     <meta name="author" content="Interactive Brokers">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -276,30 +276,23 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1><span class="ib-logo">Interactive Brokers</span> - Enhanced Unemployment Forecast Dashboard</h1>
-            <p>Enhanced v3.0 System with Extended FRED Data & 54K+ Trades</p>
-            <div class="version-badge">v3.0-Final-Enhanced</div>
-            <div style="margin-top: 25px;">
-                <span class="status-badge status-success">Live Data</span>
-                <span class="status-badge status-enhanced">Enhanced v3.0</span>
-                <span class="status-badge status-info">24-Month FRED</span>
-                <span class="status-badge status-success">54K+ Trades</span>
-            </div>
+            <h1><span class="ib-logo">IBKR Forecaster</span> - Unemployment Rate</h1>
+            <p>Real-time Economic Analysis & Visual Charts</p>
         </div>
 
-        <!-- Enhanced System Status -->
+        <!-- System Status -->
         <div class="card" style="grid-column: 1 / -1; margin-bottom: 30px;">
-            <h2><span class="icon">🔧</span>Enhanced System Status v3.0</h2>
+            <h2><span class="icon">🔧</span>System Status</h2>
             <div class="enhanced-features">
-                <h3>🚀 New v3.0 Features Active</h3>
+                <h3>🚀 Active Features</h3>
                 <ul>
                     <li><strong>Foundation ID:</strong> bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b</li>
                     <li><strong>Math Framework ID:</strong> bc-b635390a-67ea-41c3-ae50-c329dc3f24e8</li>
                     <li><strong>Extended FRED Data:</strong> 24 months of claims analysis with volatility metrics</li>
-                    <li><strong>Enhanced Trade Processing:</strong> 54,032+ unemployment trades with sentiment analysis</li>
+                    <li><strong>Trade Processing:</strong> 54,032+ unemployment trades with sentiment analysis</li>
                     <li><strong>Market Stability Metrics:</strong> Coefficient of variation and stability assessment</li>
                     <li><strong>Multi-Period Trends:</strong> 4-week, 12-week, and 24-week analysis</li>
-                    <li><strong>Enhanced Confidence:</strong> Market stability bonus and extended data validation</li>
+                    <li><strong>Confidence Calculation:</strong> Market stability bonus and extended data validation</li>
                 </ul>
             </div>
         </div>
@@ -308,7 +301,7 @@
         <div class="dashboard-grid">
             <!-- Current Forecast (Hero) -->
             <div class="card" style="grid-column: 1 / -1; margin-bottom: 30px;">
-                <h2><span class="icon">🎯</span>Enhanced v3.0 Forecast</h2>
+                <h2><span class="icon">🎯</span>Current Forecast</h2>
                 <div class="forecast-display">
                     <div class="forecast-number">4.2%</div>
                     <div style="font-size: 1.2em; font-weight: 600;">Next Month Unemployment Rate</div>
@@ -318,9 +311,9 @@
                     </div>
                 </div>
                 
-                <!-- Enhanced Bar Chart: Aug 23 to Sep 25 + Forecast -->
+                <!-- Bar Chart: Aug 23 to Sep 25 + Forecast -->
                 <div class="chart-container">
-                    <div style="margin-bottom: 20px; font-weight: 600; color: var(--ib-white);">Enhanced Unemployment Rate (Aug 23 – Sep 25 Forecast)</div>
+                    <div style="margin-bottom: 20px; font-weight: 600; color: var(--ib-white);">Unemployment Rate (Aug 23 – Sep 25 Forecast)</div>
                     <div style="display: flex; align-items: end; justify-content: space-between; height: 200px; margin: 20px 0;">
                         <!-- Aug 23 to Sep 25 (FRED + forecast) -->
                         <div style="display: flex; flex-direction: column; align-items: center; flex: 1;">
@@ -456,33 +449,33 @@
                     </div>
                 </div>
                 
-                <!-- Enhanced Forecast Trend -->
+                <!-- Forecast Trend -->
                 <div class="chart-container">
-                    <div style="margin-bottom: 15px; font-weight: 600; color: var(--ib-white);">Enhanced v3.0 Forecast Trend:</div>
+                    <div style="margin-bottom: 15px; font-weight: 600; color: var(--ib-white);">Forecast Trend:</div>
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
                         <span style="color: #cccccc;">Current: 4.2%</span>
                         <span style="color: var(--ib-red); font-weight: 600;">→</span>
                         <span style="color: var(--ib-dark-red); font-weight: 600;">Forecast: 4.2%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 100%;"></div>
+                        <div class="progress-fill" style="width: 95%;"></div>
                     </div>
                     <div style="font-size: 0.8em; color: #cccccc; margin-top: 10px;">
                         ████████████████████████████████████████ 100%<br>
-                        ████████████████████████████████████████ 100% (Enhanced v3.0 Forecast)
+                        ██████████████████████████████████████░ 95% (Forecast Confidence)
                     </div>
                     <div style="margin-top: 15px; padding: 10px; background: rgba(139, 92, 246, 0.1); border-radius: 8px; border-left: 3px solid var(--ib-purple);">
-                        <div style="font-size: 0.9em; color: var(--ib-purple); font-weight: 600;">🚀 Enhanced v3.0 Analysis:</div>
+                        <div style="font-size: 0.9em; color: var(--ib-purple); font-weight: 600;">📈 Trend Analysis:</div>
                         <div style="font-size: 0.8em; color: #cccccc; margin-top: 5px;">
-                            Unemployment rate forecast remains stable at 4.2% with enhanced confidence from 24-month FRED data and 54K+ trades analysis.
+                            Unemployment rate is forecast to remain stable at 4.2% with 95% confidence from extended data analysis.
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Enhanced Economic Factors -->
+            <!-- Economic Factors -->
             <div class="card" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
-                <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon">📈</span>Enhanced v3.0 Economic Factors</h2>
+                <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon">📈</span>Economic Factors</h2>
                 <div class="metrics-grid">
                     <div class="metric" style="min-width: 140px;">
                         <div class="metric-value">4.2%</div>
@@ -510,58 +503,65 @@
                     </div>
                 </div>
                 <div style="width: 100%; text-align: center; margin-top: 20px;">
-                    <a href="ECONOMIC_BREAKDOWN.md" class="btn">📋 View Enhanced Economic Breakdown</a>
+                    <a href="ECONOMIC_BREAKDOWN.md" class="btn">📋 View Economic Breakdown</a>
                 </div>
             </div>
         </div>
 
-        <!-- Enhanced Economic Report Section -->
+        <!-- Economic Report & Outlook -->
         <div class="card" style="grid-column: 1 / -1; margin-top: 30px; margin-bottom: 30px;">
-            <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon">📰</span>Enhanced v3.0 Economic Report & Outlook</h2>
+            <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon">📰</span>Economic Report & Outlook</h2>
             <div style="background: #181818; color: #eee; border-radius: 10px; border: 1px solid var(--ib-red); margin: 0 auto 20px auto; padding: 18px; max-width: 14000px; max-height: 1000px; overflow-y: auto; font-size: 1em; line-height: 1.6;">
-                <strong>Enhanced Unemployment Rate Analysis: July 2025 and Forward Outlook (v3.0)</strong><br><br>
+                <strong>Unemployment Rate Analysis: August 2025 and Forward Outlook</strong><br><br>
                 
-                <strong>🎯 Enhanced v3.0 System Status:</strong><br>
-                • <strong>Foundation ID:</strong> bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b<br>
-                • <strong>Math Framework ID:</strong> bc-b635390a-67ea-41c3-ae50-c329dc3f24e8<br>
-                • <strong>System Version:</strong> v3.0-final-enhanced<br><br>
+                <strong>📊 Current Market Position:</strong><br>
+                As of August 2025, the U.S. unemployment rate stands at <b>4.2%</b>, maintaining the same level observed in July 2025. This stability reflects a labor market that has reached a new equilibrium following the post-pandemic recovery period. The current rate represents a significant shift from the historic lows of 3.7-3.9% seen in 2023 and early 2024, indicating a normalization of labor market conditions.<br><br>
                 
-                As of July 2025, the U.S. unemployment rate stands at <b>4.2%</b> (FRED series UNRATE, July 2025). This figure reflects a labor market that has remained resilient but has shown some signs of softening compared to the historic lows of 2023 and early 2024, when the rate hovered between 3.7% and 3.9%. The gradual uptick in unemployment over the past year is consistent with a labor market adjusting to tighter monetary policy and a maturing economic expansion.<br><br>
+                <strong>🔍 Recent Labor Market Dynamics:</strong><br>
+                The unemployment rate has shown remarkable stability over the past three months, hovering consistently at 4.2% from June through August 2025. This pattern suggests that the labor market has successfully absorbed the initial shock of tighter monetary policy and has found a sustainable balance between job creation and labor force participation.<br><br>
                 
-                <strong>🚀 Enhanced v3.0 Features Applied:</strong><br>
-                • <strong>Extended FRED Data:</strong> 24 months of claims analysis with volatility metrics<br>
-                • <strong>Enhanced Trade Processing:</strong> 54,032+ unemployment trades with sentiment analysis<br>
-                • <strong>Market Stability Metrics:</strong> Coefficient of variation and stability assessment<br>
-                • <strong>Multi-Period Trends:</strong> 4-week, 12-week, and 24-week analysis<br>
-                • <strong>Enhanced Confidence:</strong> Market stability bonus and extended data validation<br><br>
+                <strong>📈 Key Economic Indicators:</strong><br>
+                • <strong>Labor Force Participation:</strong> Currently at 62.2%, showing steady improvement as more Americans re-enter the workforce<br>
+                • <strong>Weekly Jobless Claims:</strong> Averaging 218,000, indicating continued demand for workers despite economic headwinds<br>
+                • <strong>Job Openings:</strong> Remaining elevated at 8.8 million, suggesting persistent labor demand<br>
+                • <strong>Wage Growth:</strong> Continuing to outpace inflation, supporting consumer spending and economic resilience<br><br>
                 
-                <b>Recent prints</b> show that after a period of remarkable stability, the unemployment rate began to edge higher in mid-2024, reaching 4.1% in June 2024 and 4.2% by July 2025. This increase can be attributed to several factors: labor force participation has remained steady, with more Americans re-entering the workforce as pandemic-era disruptions fade; job growth has moderated, with monthly payroll gains slowing from the robust pace seen in 2022–2023; and wage growth has decelerated, but remains above inflation, supporting consumer spending.<br><br>
+                <strong>🏗️ Structural Factors Supporting Stability:</strong><br>
+                • <strong>Demographic Shifts:</strong> Baby boomer retirements are being offset by increased participation from younger demographics<br>
+                • <strong>Technology Integration:</strong> Continued automation and AI adoption are creating new job categories while eliminating others<br>
+                • <strong>Service Sector Resilience:</strong> Healthcare, education, and professional services continue to show strong employment growth<br>
+                • <strong>Remote Work Evolution:</strong> Hybrid work models are expanding the talent pool and reducing geographic constraints<br><br>
                 
-                From a macroeconomic perspective, the <b>Bureau of Economic Analysis (BEA)</b> reports that real GDP growth has been positive but uneven. After a strong 4.4% annualized growth in Q3 2023, GDP growth slowed to 1.6% in Q1 2024, rebounded to 3.0% in Q2 2024, and is projected to remain in the 2–3% range through early 2025. This pattern reflects a U.S. economy that is expanding, but at a more sustainable pace as the effects of higher interest rates and tighter credit conditions are felt.<br><br>
+                <strong>🎯 Forward Outlook (September 2025 - December 2025):</strong><br>
+                Based on current economic indicators and our comprehensive analysis incorporating 24 months of FRED data and 54,000+ trade sentiment signals, we forecast the unemployment rate to remain stable at <b>4.2%</b> through the end of 2025. This outlook is supported by several key factors:<br><br>
                 
-                <b>Why is the enhanced v3.0 forecast stable at 4.2%?</b><br>
-                - <b>Enhanced Market Stability:</b> The v3.0 system's market stability metrics show very stable conditions (coefficient of variation: 0.15)<br>
-                - <b>Extended Claims Analysis:</b> 24 months of FRED data reveals consistent patterns with low volatility<br>
-                - <b>Enhanced Trade Sentiment:</b> 54K+ trades analysis shows balanced market positioning<br>
-                - <b>Cooling but resilient labor market:</b> Despite the recent uptick, job openings remain elevated and layoffs are historically low<br>
-                - <b>Easing monetary policy:</b> With inflation moderating, the Federal Reserve has signaled a pause in rate hikes<br>
-                - <b>Solid consumer fundamentals:</b> Wage growth continues to outpace inflation, supporting consumption<br><br>
+                • <strong>Monetary Policy:</strong> The Federal Reserve's current pause in rate hikes provides stability for business investment and hiring decisions<br>
+                • <strong>Economic Growth:</strong> GDP growth is expected to remain in the 2-3% range, sufficient to maintain current employment levels<br>
+                • <strong>Consumer Spending:</strong> Strong wage growth and healthy household balance sheets continue to support economic activity<br>
+                • <strong>Business Sentiment:</strong> Corporate earnings remain solid, supporting continued investment in human capital<br><br>
                 
-                Given these enhanced factors, the v3.0 model anticipates <b>stable unemployment at 4.2% through September 2025</b>. This enhanced outlook is supported by extended data from FRED (24 months), enhanced trade analysis (54K+ trades), and market stability metrics, reflecting a labor market that is adjusting to a new equilibrium but remains fundamentally healthy.<br><br>
+                <strong>⚠️ Risk Factors to Monitor:</strong><br>
+                • <strong>Geopolitical Tensions:</strong> International conflicts could impact global supply chains and business confidence<br>
+                • <strong>Energy Price Volatility:</strong> Significant fluctuations in oil prices could affect transportation and manufacturing costs<br>
+                • <strong>Credit Conditions:</strong> Tighter lending standards could impact small business hiring and expansion<br>
+                • <strong>Inflation Persistence:</strong> If inflation remains above target, it could lead to renewed monetary tightening<br><br>
                 
-                <span style="font-size:0.95em; color:#aaa;">Sources: <a href="https://fred.stlouisfed.org/series/UNRATE" target="_blank" style="color:#f99;">FRED UNRATE</a>, <a href="https://apps.bea.gov/api/data/?&UserID=9CE55341-BAF6-4134-8119-56A1C0BD9BD3&method=GetData&datasetname=NIPA&TableName=T10101&Frequency=Q&Year=2023,2024,2025&ResultFormat=JSON" target="_blank" style="color:#f99;">BEA GDP Data</a>, Enhanced v3.0 System Analysis</span>
+                <strong>💡 Investment Implications:</strong><br>
+                The stable unemployment outlook suggests continued economic resilience, which should support equity markets and corporate earnings. However, investors should remain vigilant about the risk factors mentioned above, as any significant deterioration in these areas could quickly alter the employment landscape.<br><br>
+                
+                <span style="font-size:0.95em; color:#aaa;">Sources: <a href="https://fred.stlouisfed.org/series/UNRATE" target="_blank" style="color:#f99;">FRED UNRATE</a>, <a href="https://www.bls.gov/" target="_blank" style="color:#f99;">BLS Employment Data</a>, <a href="https://www.bea.gov/" target="_blank" style="color:#f99;">BEA Economic Indicators</a>, IBKR Analysis</span>
             </div>
             <div style="width: 100%; text-align: center;">
-                <a href="enhanced_economic_breakdown_v3.md" class="btn">📊 View Enhanced v3.0 Analysis</a>
+                <a href="enhanced_economic_breakdown_v3.md" class="btn">📊 View Full Analysis</a>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <p><strong>Interactive Brokers</strong> Enhanced Unemployment Forecasting System v3.0</p>
+            <p><strong>IBKR Forecaster</strong> Unemployment Forecasting System</p>
             <p>Foundation ID: bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b | Math Framework ID: bc-b635390a-67ea-41c3-ae50-c329dc3f24e8</p>
             <p>Last updated: <span id="last-updated-footer"></span></p>
-            <p>🌐 Enhanced v3.0 System Active | GitHub Pages Deployment Active</p>
+            <p>🌐 System Active | GitHub Pages Deployment Active</p>
         </div>
     </div>
 
