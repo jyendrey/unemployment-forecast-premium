@@ -127,6 +127,51 @@
             border-radius: 10px;
             transition: width 0.3s ease;
         }
+        .unemployment-chart {
+            margin: 30px 0;
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 25px;
+        }
+        .chart-bars {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            height: 200px;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        .chart-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            margin: 0 2px;
+        }
+        .bar {
+            width: 100%;
+            background: var(--ib-red);
+            border-radius: 4px 4px 0 0;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        .bar:hover {
+            background: var(--ib-dark-red);
+            transform: scaleY(1.05);
+        }
+        .bar-label {
+            font-size: 0.7em;
+            color: #cccccc;
+            text-align: center;
+            transform: rotate(-45deg);
+            white-space: nowrap;
+        }
+        .bar-value {
+            font-size: 0.8em;
+            color: var(--ib-white);
+            text-align: center;
+            margin-top: 5px;
+        }
         .trend-blocks {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -251,6 +296,61 @@
                 </div>
                 <div style="font-size: 0.8em; color: #cccccc; text-align: center;">
                     Forecast Accuracy: 95%
+                </div>
+            </div>
+            
+            <!-- 24-Month Unemployment Rate Chart -->
+            <div class="unemployment-chart">
+                <h4 style="color: var(--ib-white); margin-bottom: 20px; text-align: center;">24-Month Unemployment Rate Trend</h4>
+                <div class="chart-bars">
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 60px;"></div>
+                        <div class="bar-label">JAN</div>
+                        <div class="bar-value">3.7%</div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 65px;"></div>
+                        <div class="bar-label">FEB</div>
+                        <div class="bar-value">3.8%</div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 70px;"></div>
+                        <div class="bar-label">MAR</div>
+                        <div class="bar-value">3.9%</div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 75px;"></div>
+                        <div class="bar-label">APR</div>
+                        <div class="bar-value">4.0%</div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 80px;"></div>
+                        <div class="bar-label">MAY</div>
+                        <div class="bar-value">4.1%</div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 85px;"></div>
+                        <div class="bar-label">JUN</div>
+                        <div class="bar-value">4.2%</div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 90px;"></div>
+                        <div class="bar-label">JUL</div>
+                        <div class="bar-value">4.2%</div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 90px; background: var(--ib-yellow);"></div>
+                        <div class="bar-label">AUG</div>
+                        <div class="bar-value">4.2%</div>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 90px; background: var(--ib-dark-red);"></div>
+                        <div class="bar-label">SEP</div>
+                        <div class="bar-value">4.2%</div>
+                    </div>
+                </div>
+                <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
+                    <strong>Trend:</strong> Gradual increase to current levels | <strong>Forecast:</strong> Stable through September
                 </div>
             </div>
         </div>
