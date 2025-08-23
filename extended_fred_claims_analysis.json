@@ -1,0 +1,95 @@
+{
+  "data_coverage": {
+    "initial_claims_observations": 103,
+    "continuing_claims_observations": 103,
+    "date_range": {
+      "initial_start": "2023-09-02",
+      "initial_end": "2025-08-16",
+      "continuing_start": "2023-08-26",
+      "continuing_end": "2025-08-09"
+    }
+  },
+  "latest_data": {
+    "initial_claims": {
+      "value": 235000,
+      "date": "2025-08-16",
+      "trend": "Rising",
+      "change": 16000.0
+    },
+    "continuing_claims": {
+      "value": 1972000,
+      "date": "2025-08-09",
+      "trend": "Rising",
+      "change": 36000.0
+    }
+  },
+  "extended_trends": {
+    "short_term": {
+      "initial_claims": {
+        "change": 16000.0,
+        "trend": "Rising"
+      },
+      "continuing_claims": {
+        "change": 36000.0,
+        "trend": "Rising"
+      }
+    },
+    "medium_term": {
+      "initial_claims": {
+        "change": -13000.0,
+        "trend": "Declining"
+      },
+      "continuing_claims": {
+        "change": 70000.0,
+        "trend": "Rising"
+      }
+    },
+    "long_term": {
+      "initial_claims": {
+        "change": 12000.0,
+        "trend": "Rising"
+      },
+      "continuing_claims": {
+        "change": 121000.0,
+        "trend": "Rising"
+      }
+    },
+    "initial_trend": "Rising",
+    "continuing_trend": "Rising",
+    "initial_change": 16000.0,
+    "continuing_change": 36000.0
+  },
+  "volatility_analysis": {
+    "initial_claims": {
+      "standard_deviation": 12047.78,
+      "coefficient_of_variation": 0.0541,
+      "stability": "Very Stable"
+    },
+    "continuing_claims": {
+      "standard_deviation": 52818.1,
+      "coefficient_of_variation": 0.0286,
+      "stability": "Very Stable"
+    },
+    "overall_market_stability": "Very Stable"
+  },
+  "market_health_assessment": {
+    "initial_claims_health": {
+      "healthy_percentage": 96.1,
+      "healthy_observations": 99,
+      "total_observations": 103,
+      "assessment": "Excellent"
+    },
+    "continuing_claims_health": {
+      "healthy_percentage": 100.0,
+      "healthy_observations": 103,
+      "total_observations": 103,
+      "assessment": "Excellent"
+    },
+    "overall_market_health": "Very Strong",
+    "initial_claims_benchmark": "200,000 - 250,000",
+    "continuing_claims_benchmark": "1,500,000 - 2,000,000"
+  },
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "fetched_at": "2025-08-23T02:20:43.388027"
+}
