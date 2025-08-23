@@ -1,0 +1,79 @@
+{
+  "generated_date": "2025-08-22T21:51:16.938217",
+  "version": "v2.2-enhanced",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "forecast_summary": {
+    "current_unemployment": 4.2,
+    "forecasted_unemployment": 4.2,
+    "change": -0.0,
+    "confidence": 95,
+    "direction": "Improvement"
+  },
+  "adjustments": [
+    {
+      "name": "LFPR Adjustment",
+      "value": -0.004,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Initial Claims Adjustment",
+      "value": 0.0001,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Continuing Claims Adjustment",
+      "value": 0.0003,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Trade Sentiment Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Trade Volume Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Claims Trend Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    }
+  ],
+  "trade_data_integration": {
+    "sentiment_score": -0.0018,
+    "sentiment_interpretation": "Neutral",
+    "contracts_analyzed": 53184,
+    "total_volume": 123102,
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "fred_data_integration": {
+    "initial_claims": 235000,
+    "continuing_claims": 1972000,
+    "claims_trends": {
+      "initial_trend": "Rising",
+      "continuing_trend": "Rising",
+      "market_health": "Strong"
+    },
+    "data_freshness": "Real-time (2025-08-16)",
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "system_architecture": {
+    "foundation_components": [
+      "Data Sources: BLS, FRED (Real-time), ForecastEx, Trade Data",
+      "Core Algorithms: Enhanced unemployment forecasting with real-time updates",
+      "Quality Assurance: Multi-source validation with FRED integration",
+      "System Stability: Robust error handling and real-time data feeds"
+    ],
+    "math_framework_components": [
+      "Statistical Models: Advanced regression analysis with real-time adjustments",
+      "Adjustment Algorithms: Multi-factor weighted calculations including claims trends",
+      "Confidence Intervals: Enhanced statistical validation with FRED data",
+      "Trade Data Integration: Real-time market sentiment and claims analysis"
+    ]
+  }
+}

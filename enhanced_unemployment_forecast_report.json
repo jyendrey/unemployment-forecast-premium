@@ -1,0 +1,57 @@
+{
+  "generated_date": "2025-08-22T21:44:47.057943",
+  "version": "v2.1-enhanced",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "forecast_summary": {
+    "current_unemployment": 4.2,
+    "forecasted_unemployment": 4.2,
+    "change": -0.0,
+    "confidence": 95,
+    "direction": "Improvement"
+  },
+  "adjustments": [
+    {
+      "name": "LFPR Adjustment",
+      "value": -0.004,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Weekly Claims Adjustment",
+      "value": -0.0001,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Trade Sentiment Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Trade Volume Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    }
+  ],
+  "trade_data_integration": {
+    "sentiment_score": -0.0018,
+    "sentiment_interpretation": "Neutral",
+    "contracts_analyzed": 53184,
+    "total_volume": 123102,
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "system_architecture": {
+    "foundation_components": [
+      "Data Sources: BLS, FRED, ForecastEx, Trade Data",
+      "Core Algorithms: Enhanced unemployment forecasting",
+      "Quality Assurance: Multi-source validation",
+      "System Stability: Robust error handling"
+    ],
+    "math_framework_components": [
+      "Statistical Models: Advanced regression analysis",
+      "Adjustment Algorithms: Multi-factor weighted calculations",
+      "Confidence Intervals: Enhanced statistical validation",
+      "Trade Data Integration: Real-time market sentiment"
+    ]
+  }
+}

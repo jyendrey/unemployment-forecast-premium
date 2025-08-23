@@ -1,0 +1,35 @@
+{
+  "generated_date": "2025-08-22T21:44:07.782987",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "version": "v2.1-enhanced",
+  "market_sentiment": {
+    "sentiment_score": -0.0018,
+    "sentiment_interpretation": "Neutral",
+    "contracts_analyzed": 53184,
+    "total_volume": 123102,
+    "confidence": 0.9452
+  },
+  "data_quality": {
+    "total_trades_processed": 53184,
+    "unemployment_trade_ratio": 1.0,
+    "date_coverage": 382,
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b"
+  },
+  "contract_analysis": {
+    "unique_contracts": 10,
+    "top_contracts": {
+      "UNR_0626_4.1": 766,
+      "UNR_1225_4.0": 766,
+      "UNR_0625_4.0": 674,
+      "UNR_0925_4.0": 638,
+      "UNR_0626_4.0": 502,
+      "UNR_0626_4.2": 502,
+      "UNR_0925_3.9": 502,
+      "UNR_0925_4.1": 502,
+      "UNR_1225_3.9": 502,
+      "UNR_1225_4.1": 502
+    },
+    "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  }
+}
