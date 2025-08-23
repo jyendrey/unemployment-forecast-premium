@@ -127,18 +127,33 @@
             border-radius: 10px;
             transition: width 0.3s ease;
         }
-        .line-chart {
-            margin: 20px 0;
+        .trend-blocks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
-        .line-chart-container {
+        .trend-block {
             background: #1a1a1a;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(217, 17, 35, 0.2);
+        }
+        .trend-block h4 {
+            color: var(--ib-white);
             margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
         }
-        .line-chart svg {
-            background: #1a1a1a;
-            border-radius: 8px;
+        .trend-block .trend-value {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .trend-block .trend-description {
+            color: #cccccc;
+            font-size: 0.9em;
+            line-height: 1.5;
         }
         .status-grid {
             display: grid;
@@ -243,86 +258,34 @@
         <!-- Multi-Period Trend Analysis -->
         <div class="chart-container">
             <h3>Multi-Period Trend Analysis</h3>
-            
-            <!-- 4-Month Short-Term Trend -->
-            <div style="margin-bottom: 30px;">
-                <h4 style="color: var(--ib-light-blue); margin-bottom: 15px;">4-Month Short-Term Trend</h4>
-                <div class="line-chart">
-                    <div class="line-chart-container">
-                        <svg width="100%" height="120" viewBox="0 0 400 120">
-                            <polyline 
-                                points="50,100 100,95 150,90 200,85" 
-                                fill="none" 
-                                stroke="var(--ib-light-blue)" 
-                                stroke-width="3"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"/>
-                            <circle cx="50" cy="100" r="4" fill="var(--ib-light-blue)"/>
-                            <circle cx="100" cy="95" r="4" fill="var(--ib-light-blue)"/>
-                            <circle cx="150" cy="90" r="4" fill="var(--ib-light-blue)"/>
-                            <circle cx="200" cy="85" r="4" fill="var(--ib-light-blue)"/>
-                        </svg>
-                    </div>
-                    <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
-                        <strong>Trend:</strong> Steady decline | <strong>Volatility:</strong> Low (0.08)
+            <div class="trend-blocks">
+                <div class="trend-block">
+                    <h4 style="color: var(--ib-light-blue);">4-Month Short-Term Trend</h4>
+                    <div class="trend-value" style="color: var(--ib-light-blue);">4.2%</div>
+                    <div class="trend-description">
+                        <strong>Trend:</strong> Steady decline<br>
+                        <strong>Volatility:</strong> Low (0.08)<br>
+                        <strong>Direction:</strong> Downward
                     </div>
                 </div>
-            </div>
-            
-            <!-- 12-Month Medium-Term Trend -->
-            <div style="margin-bottom: 30px;">
-                <h4 style="color: var(--ib-green); margin-bottom: 15px;">12-Month Medium-Term Trend</h4>
-                <div class="line-chart">
-                    <div class="line-chart-container">
-                        <svg width="100%" height="120" viewBox="0 0 400 120">
-                            <polyline 
-                                points="50,110 100,105 150,100 200,95 250,90 300,85 350,80 400,75" 
-                                fill="none" 
-                                stroke="var(--ib-green)" 
-                                stroke-width="3"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"/>
-                            <circle cx="50" cy="110" r="4" fill="var(--ib-green)"/>
-                            <circle cx="100" cy="105" r="4" fill="var(--ib-green)"/>
-                            <circle cx="150" cy="100" r="4" fill="var(--ib-green)"/>
-                            <circle cx="200" cy="95" r="4" fill="var(--ib-green)"/>
-                            <circle cx="250" cy="90" r="4" fill="var(--ib-green)"/>
-                            <circle cx="300" cy="85" r="4" fill="var(--ib-green)"/>
-                            <circle cx="350" cy="80" r="4" fill="var(--ib-green)"/>
-                            <circle cx="400" cy="75" r="4" fill="var(--ib-green)"/>
-                        </svg>
-                    </div>
-                    <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
-                        <strong>Trend:</strong> Consistent downward trajectory | <strong>Volatility:</strong> Medium (0.15)
+                
+                <div class="trend-block">
+                    <h4 style="color: var(--ib-green);">12-Month Medium-Term Trend</h4>
+                    <div class="trend-value" style="color: var(--ib-green);">4.2%</div>
+                    <div class="trend-description">
+                        <strong>Trend:</strong> Consistent downward trajectory<br>
+                        <strong>Volatility:</strong> Medium (0.15)<br>
+                        <strong>Direction:</strong> Declining
                     </div>
                 </div>
-            </div>
-            
-            <!-- 24-Month Long-Term Trend -->
-            <div style="margin-bottom: 30px;">
-                <h4 style="color: var(--ib-yellow); margin-bottom: 15px;">24-Month Long-Term Trend</h4>
-                <div class="line-chart">
-                    <div class="line-chart-container">
-                        <svg width="100%" height="120" viewBox="0 0 400 120">
-                            <polyline 
-                                points="50,115 100,110 150,105 200,100 250,95 300,90 350,85 400,80" 
-                                fill="none" 
-                                stroke="var(--ib-yellow)" 
-                                stroke-width="3"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"/>
-                            <circle cx="50" cy="115" r="4" fill="var(--ib-yellow)"/>
-                            <circle cx="100" cy="110" r="4" fill="var(--ib-yellow)"/>
-                            <circle cx="150" cy="105" r="4" fill="var(--ib-yellow)"/>
-                            <circle cx="200" cy="100" r="4" fill="var(--ib-yellow)"/>
-                            <circle cx="250" cy="95" r="4" fill="var(--ib-yellow)"/>
-                            <circle cx="300" cy="90" r="4" fill="var(--ib-yellow)"/>
-                            <circle cx="350" cy="85" r="4" fill="var(--ib-yellow)"/>
-                            <circle cx="400" cy="80" r="4" fill="var(--ib-yellow)"/>
-                        </svg>
-                    </div>
-                    <div style="text-align: center; font-size: 0.8em; color: #cccccc;">
-                        <strong>Trend:</strong> Gradual upward trajectory to current levels | <strong>Volatility:</strong> High (0.24)
+                
+                <div class="trend-block">
+                    <h4 style="color: var(--ib-yellow);">24-Month Long-Term Trend</h4>
+                    <div class="trend-value" style="color: var(--ib-yellow);">4.2%</div>
+                    <div class="trend-description">
+                        <strong>Trend:</strong> Gradual upward trajectory to current levels<br>
+                        <strong>Volatility:</strong> High (0.24)<br>
+                        <strong>Direction:</strong> Rising
                     </div>
                 </div>
             </div>
@@ -360,13 +323,16 @@
             <h3>Report and Outlook</h3>
             <div style="color: #cccccc; line-height: 1.8;">
                 <p style="margin-bottom: 15px;">
-                    The Federal Reserve is considering a potential rate cut in September due to growing economic uncertainty surrounding the labor market, while inflation continues to remain above their target levels. The current unemployment rate of 4.2% reflects a concerning weakening in the labor market as both Initial and Continuing Claims reach elevated levels, indicating sustained pressure on employment conditions.
+                    The Federal Reserve is considering a potential rate cut in September due to growing economic uncertainty surrounding the labor market, while inflation continues to remain above their target levels. The current unemployment rate of 4.2% reflects a concerning weakening in the labor market as both Initial and Continuing Claims reach elevated levels, indicating sustained pressure on employment conditions. This deterioration in labor market indicators suggests that the economy may be entering a period of slower growth, which could warrant monetary policy intervention.
                 </p>
                 <p style="margin-bottom: 15px;">
-                    A rate cut in September could potentially lead to an improved unemployment rate figure ahead of seasonal adjustments, providing some relief to the labor market. However, this must be balanced against inflationary pressures that remain persistent above the Fed's target range.
+                    A rate cut in September could potentially lead to an improved unemployment rate figure ahead of seasonal adjustments, providing some relief to the labor market. However, this must be balanced against inflationary pressures that remain persistent above the Fed's target range. The central bank faces a delicate balancing act between supporting employment growth and maintaining price stability, particularly as core inflation metrics continue to show resilience despite recent cooling in headline inflation numbers.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    On a positive note, GDP appears to be expanding within a healthy range of 1.5% to 3%, suggesting that while the labor market faces challenges, the broader economy maintains some underlying strength. This economic expansion provides a foundation for potential labor market recovery, though the timing and effectiveness of monetary policy interventions remain uncertain given the complex interplay between employment, inflation, and economic growth. The Fed's decision will likely hinge on whether they believe the labor market weakness is temporary or indicative of a broader economic slowdown.
                 </p>
                 <p>
-                    On a positive note, GDP appears to be expanding within a healthy range of 1.5% to 3%, suggesting that while the labor market faces challenges, the broader economy maintains some underlying strength. This economic expansion provides a foundation for potential labor market recovery, though the timing and effectiveness of monetary policy interventions remain uncertain given the complex interplay between employment, inflation, and economic growth.
+                    Market participants are closely monitoring upcoming employment reports and inflation data to gauge the likelihood of a September rate cut. The Fed's forward guidance and economic projections will be crucial in setting market expectations and potentially stabilizing labor market sentiment. Additionally, the impact of seasonal factors and potential revisions to employment data could influence the timing and magnitude of any monetary policy response.
                 </p>
             </div>
         </div>
