@@ -296,7 +296,7 @@
         <div class="header">
             <h1><span class="ib-logo">IBKR</span> Forecaster</h1>
             <p>Advanced Unemployment Rate Forecasting System</p>
-            <div class="version-badge">v3.0 Enhanced</div>
+            <div class="version-badge">v3.3 Economic Data Integrated</div>
         </div>
 
         <!-- System Status -->
@@ -304,22 +304,22 @@
             <div class="status-item">
                 <div class="status-value current-rate">4.2%</div>
                 <div class="status-label">Current Unemployment Rate</div>
-                <div class="status-description">Latest BLS data as of August 2024</div>
+                <div class="status-description">Latest BLS data as of August 2025</div>
             </div>
             <div class="status-item">
-                <div class="status-value forecast-rate">4.2%</div>
+                <div class="status-value forecast-rate">4.20%</div>
                 <div class="status-label">Forecasted Rate</div>
                 <div class="status-description">Next month projection</div>
             </div>
             <div class="status-item">
-                <div class="status-value confidence-level">96.9%</div>
+                <div class="status-value confidence-level">95.0%</div>
                 <div class="status-label">Confidence Level</div>
                 <div class="status-description">Statistical reliability</div>
             </div>
             <div class="status-item">
-                <div class="status-value direction-stable">Stable</div>
+                <div class="status-value direction-stable">Improvement</div>
                 <div class="status-label">Direction</div>
-                <div class="status-description">Neutral trend</div>
+                <div class="status-description">Slight improvement</div>
             </div>
         </div>
 
@@ -330,13 +330,13 @@
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
                     <span style="color: #cccccc;">Current: 4.2%</span>
                     <span style="color: var(--ib-red); font-weight: 600;">→</span>
-                    <span style="color: var(--ib-dark-red); font-weight: 600;">Forecast: 4.2%</span>
+                    <span style="color: var(--ib-dark-red); font-weight: 600;">Forecast: 4.20%</span>
                 </div>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 96.9%;"></div>
+                    <div class="progress-fill" style="width: 95.0%;"></div>
                 </div>
                 <div style="font-size: 0.8em; color: #cccccc; text-align: center;">
-                    Forecast Accuracy: 96.9%
+                    Forecast Accuracy: 95.0%
                 </div>
             </div>
             
@@ -541,16 +541,16 @@
                     </div>
                 </div>
             </div>
-                             <!-- Right Chart: ForecastEx Pairs Data Probability Chart (September 5, 2025 Expiration) -->
+                             <!-- Right Chart: ForecastEx Pairs Data Probability Chart -->
             <div class="chart-container">
-                <h3 style="margin-bottom: 20px;">ForecastEx Pairs Data Probability (September 5, 2025 Expiration)</h3>
+                <h3 style="margin-bottom: 20px;">ForecastEx Pairs Data Probability</h3>
                 <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 400px; position: relative;">
-                    <svg width="100%" height="350" viewBox="0 0 400 350">
+                    <svg width="100%" height="350" viewBox="0 0 500 350">
                         <!-- Grid lines -->
-                        <line x1="0" y1="70" x2="400" y2="70" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-                        <line x1="0" y1="140" x2="400" y2="140" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-                        <line x1="0" y1="210" x2="400" y2="210" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-                        <line x1="0" y1="280" x2="400" y2="280" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="70" x2="500" y2="70" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="140" x2="500" y2="140" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="210" x2="500" y2="210" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="0" y1="280" x2="500" y2="280" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                         
                         <!-- Y-axis labels for probability (0-100%) -->
                         <text x="-10" y="70" text-anchor="end" fill="#cccccc" font-size="10">100%</text>
@@ -560,29 +560,51 @@
                         <text x="-10" y="350" text-anchor="end" fill="#cccccc" font-size="10">0%</text>
                         
                         <!-- X-axis labels (Target rates) -->
-                        <text x="0" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.1%</text>
-                        <text x="100" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.2%</text>
-                        <text x="200" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.3%</text>
-                        <text x="300" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.4%</text>
-                        <text x="400" y="320" text-anchor="middle" fill="#cccccc" font-size="8">Target</text>
+                        <text x="50" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.0%</text>
+                        <text x="150" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.1%</text>
+                        <text x="250" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.2%</text>
+                        <text x="350" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.3%</text>
+                        <text x="450" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.4%</text>
                         
-                        <!-- Yes probability bars (using new ForecastEx data) -->
-                        <rect x="50" y="175" width="40" height="35" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="70" y="195" text-anchor="middle" fill="var(--ib-white)" font-size="8">72.5%</text>
+                        <!-- Yes probability bars (Green) -->
+                        <rect x="30" y="10" width="40" height="340" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="50" y="25" text-anchor="middle" fill="var(--ib-white)" font-size="8">97%</text>
                         
-                        <rect x="150" y="200" width="40" height="10" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="170" y="210" text-anchor="middle" fill="var(--ib-white)" font-size="8">48.6%</text>
+                        <rect x="130" y="40" width="40" height="310" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="150" y="55" text-anchor="middle" fill="var(--ib-white)" font-size="8">90%</text>
                         
-                        <rect x="250" y="240" width="40" height="40" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="270" y="260" text-anchor="middle" fill="var(--ib-white)" font-size="8">18.8%</text>
+                        <rect x="230" y="140" width="40" height="210" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="250" y="155" text-anchor="middle" fill="var(--ib-white)" font-size="8">59%</text>
                         
-                        <rect x="350" y="260" width="40" height="40" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="370" y="280" text-anchor="middle" fill="var(--ib-white)" font-size="8">6.6%</text>
+                        <rect x="330" y="280" width="40" height="70" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="350" y="295" text-anchor="middle" fill="var(--ib-white)" font-size="8">15%</text>
+                        
+                        <rect x="430" y="315" width="40" height="35" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="450" y="330" text-anchor="middle" fill="var(--ib-white)" font-size="8">5%</text>
+                        
+                        <!-- No probability bars (Red) -->
+                        <rect x="30" y="350" width="40" height="10" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="50" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">3%</text>
+                        
+                        <rect x="130" y="350" width="40" height="40" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="150" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">8%</text>
+                        
+                        <rect x="230" y="350" width="40" height="140" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="250" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">39%</text>
+                        
+                        <rect x="330" y="350" width="40" height="280" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="350" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">83%</text>
+                        
+                        <rect x="430" y="350" width="40" height="315" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="450" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">93%</text>
                     </svg>
                     
                     <div style="text-align: center; margin-top: 15px;">
                         <div style="display: inline-block; margin: 0 15px;">
-                            <span style="color: var(--ib-green); font-weight: 600;">●</span> Yes Probability (4.1%: 72.5%, 4.2%: 48.6%, 4.3%: 18.8%, 4.4%: 6.6%)
+                            <span style="color: var(--ib-green); font-weight: 600;">●</span> Yes Probability (4.0%: 97%, 4.1%: 90%, 4.2%: 59%, 4.3%: 15%, 4.4%: 5%)
+                        </div>
+                        <div style="display: inline-block; margin: 0 15px;">
+                            <span style="color: var(--ib-red); font-weight: 600;">●</span> No Probability (4.0%: 3%, 4.1%: 8%, 4.2%: 39%, 4.3%: 83%, 4.4%: 93%)
                         </div>
                     </div>
                 </div>
@@ -595,31 +617,31 @@
             <div class="trend-blocks">
                 <div class="trend-block">
                     <h4 style="color: var(--ib-light-blue);">4-Month Short-Term Trend</h4>
-                    <div class="trend-value" style="color: var(--ib-light-blue);">4.2%</div>
+                    <div class="trend-value" style="color: var(--ib-light-blue);">4.20%</div>
                     <div class="trend-description">
-                        <strong>Trend:</strong> Steady decline<br>
+                        <strong>Trend:</strong> Stable with slight improvement<br>
                         <strong>Volatility:</strong> Low (0.08)<br>
-                        <strong>Direction:</strong> Downward
+                        <strong>Direction:</strong> Slight improvement
                     </div>
                 </div>
                 
                 <div class="trend-block">
                     <h4 style="color: var(--ib-green);">12-Month Medium-Term Trend</h4>
-                    <div class="trend-value" style="color: var(--ib-green);">4.2%</div>
+                    <div class="trend-value" style="color: var(--ib-green);">4.20%</div>
                     <div class="trend-description">
-                        <strong>Trend:</strong> Consistent downward trajectory<br>
-                        <strong>Volatility:</strong> Medium (0.15)<br>
-                        <strong>Direction:</strong> Declining
+                        <strong>Trend:</strong> Consistent stable trajectory<br>
+                        <strong>Volatility:</strong> Low (0.12)<br>
+                        <strong>Direction:</strong> Stable with slight improvement
                     </div>
                 </div>
                 
                 <div class="trend-block">
                     <h4 style="color: var(--ib-yellow);">24-Month Long-Term Trend</h4>
-                    <div class="trend-value" style="color: var(--ib-yellow);">4.2%</div>
+                    <div class="trend-value" style="color: var(--ib-yellow);">4.20%</div>
                     <div class="trend-description">
-                        <strong>Trend:</strong> Gradual upward trajectory to current levels<br>
-                        <strong>Volatility:</strong> High (0.24)<br>
-                        <strong>Direction:</strong> Rising
+                        <strong>Trend:</strong> Long-term stability<br>
+                        <strong>Volatility:</strong> Very Low (0.15)<br>
+                        <strong>Direction:</strong> Stable with slight improvement
                     </div>
                 </div>
             </div>
@@ -627,7 +649,8 @@
 
         <!-- Economic Factors -->
         <div class="card" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
-            <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon"></span>Economic Factors</h2>
+            <h2 style="border-bottom: none; margin-bottom: 20px; 
+                width: 100%; text-align: center;"><span class="icon"></span>Economic Factors</h2>
             <div class="metrics-grid">
                 <div class="metric" style="min-width: 140px;">
                     <div class="metric-value">4.2%</div>
@@ -642,15 +665,15 @@
                     <div class="metric-label">Weekly Claims</div>
                 </div>
                 <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">-0.008</div>
+                    <div class="metric-value">-0.124</div>
                     <div class="metric-label">Market Sentiment</div>
                 </div>
                 <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">0.15</div>
-                    <div class="metric-label">Market Stability</div>
+                    <div class="metric-value">-0.0043%</div>
+                    <div class="metric-label">Total Adjustment</div>
                 </div>
                 <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">96.9%</div>
+                    <div class="metric-value">95.0%</div>
                     <div class="metric-label">Confidence Level</div>
                 </div>
             </div>
@@ -664,16 +687,16 @@
             <h3>Report and Outlook</h3>
             <div style="color: #cccccc; line-height: 1.8;">
                 <p style="margin-bottom: 15px;">
-                    The Federal Reserve is considering a potential rate cut in September due to growing economic uncertainty surrounding the labor market, while inflation continues to remain above their target levels. The current unemployment rate of 4.2% reflects a stable labor market with our enhanced forecasting model projecting a slight decrease to 4.2% with 96.9% confidence. This projection incorporates real-time market sentiment from ForecastEx pairs data for September 5, 2025 expiration, showing strong market conviction that unemployment will remain below 4.3% (81.2% probability).
+                    Our enhanced system integrates multiple data sources including BLS, BEA, and FRED APIs, providing comprehensive economic intelligence. The total adjustment of -0.0043% indicates slight downward pressure on unemployment, driven by improving labor force participation (62.2%) and declining initial claims (218,000). Market sentiment analysis shows neutral positioning (-0.124) with high confidence (85%) in the underlying data quality.
                 </p>
                 <p style="margin-bottom: 15px;">
-                    Market participants show a 72.5% probability that unemployment will exceed 4.1%, indicating confidence in maintaining current employment levels. The market is roughly split on whether unemployment will exceed 4.2% (48.6% YES vs 51.4% NO), suggesting this level represents a key psychological threshold. There's overwhelming market confidence (93.4%) that unemployment will not exceed 4.4%, indicating very low tail risk.
+                    Economic health indicators remain positive with a market health score of 70/100 and low risk assessment (30/100). The Federal Reserve is considering a potential rate cut in September due to growing economic uncertainty surrounding the labor market, while inflation continues to remain above their target levels. The current unemployment rate of 4.2% reflects a stable labor market with our enhanced forecasting model projecting a slight improvement to 4.20% with 95.0% confidence.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    Market participants show a 90% probability that unemployment will exceed 4.0%, indicating confidence in maintaining current employment levels. The market is roughly split on whether unemployment will exceed 4.2% (59% YES vs 39% NO), suggesting this level represents a key psychological threshold. There's overwhelming market confidence (93%) that unemployment will not exceed 4.4%, indicating very low tail risk.
                 </p>
                 <p style="margin-bottom: 15px;">
                     A rate cut in September could potentially lead to an improved unemployment rate figure ahead of seasonal adjustments, providing some relief to the labor market. However, this must be balanced against inflationary pressures that remain persistent above the Fed's target range. The central bank faces a delicate balancing act between supporting employment growth and maintaining price stability, particularly as core inflation metrics continue to show resilience despite recent cooling in headline inflation numbers.
-                </p>
-                <p style="margin-bottom: 15px;">
-                    On a positive note, GDP appears to be expanding within a healthy range of 1.5% to 3%, suggesting that while the labor market faces challenges, the broader economy maintains some underlying strength. This economic expansion provides a foundation for potential labor market recovery, though the timing and effectiveness of monetary policy interventions remain uncertain given the complex interplay between employment, inflation, and economic growth. The Fed's decision will likely hinge on whether they believe the labor market weakness is temporary or indicative of a broader economic slowdown.
                 </p>
                 <p>
                     Market participants are closely monitoring upcoming employment reports and inflation data to gauge the likelihood of a September rate cut. The Fed's forward guidance and economic projections will be crucial in setting market expectations and potentially stabilizing labor market sentiment. Additionally, the impact of seasonal factors and potential revisions to employment data could influence the timing and magnitude of any monetary policy response.
@@ -684,9 +707,9 @@
         <!-- Footer positioned at the bottom -->
         <div class="footer">
             <p>IBKR Forecaster - Advanced Unemployment Rate Forecasting System</p>
-            <p>Data Sources: BLS, FRED, ForecastEx, Enhanced Trade Data (54K+ trades)</p>
+            <p>Data Sources: BLS, BEA, FRED APIs, Initial Claims Trade Data, Weekly Unemployment Trade Data</p>
             <div class="system-info">
-                Last Updated: August 2025
+                Last Updated: August 31, 2025 | v3.3 Economic Data Integrated
             </div>
         </div>
     </div>
