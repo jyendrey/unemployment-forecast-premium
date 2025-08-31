@@ -1,0 +1,80 @@
+{
+  "generated_date": "2025-08-31T02:16:15.751364",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "version": "v3.3-economic-data-integrated",
+  "forecast_summary": {
+    "current_unemployment": 4.2,
+    "forecasted_unemployment": 4.2,
+    "change": -0.0,
+    "confidence": 95,
+    "direction": "Improvement"
+  },
+  "adjustments": [
+    {
+      "name": "LFPR Adjustment",
+      "value": -0.004,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Initial Claims Adjustment",
+      "value": -0.0001,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Continuing Claims Adjustment",
+      "value": 0.0001,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Trade Sentiment Adjustment",
+      "value": -0.0002,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Trade Volume Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Extended Claims Trend Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Market Stability Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Initial Claims Trade Data Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Weekly Trade Data Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Economic Health Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Economic Risk Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    }
+  ],
+  "economic_indicators": {
+    "current_unemployment_rate": 4.2,
+    "current_lfpr": 62.2,
+    "latest_initial_claims": 218000,
+    "latest_continuing_claims": 1800000,
+    "trade_sentiment": -0.124,
+    "trade_confidence": 85.0,
+    "market_health_score": 70,
+    "risk_score": 30
+  }
+}
