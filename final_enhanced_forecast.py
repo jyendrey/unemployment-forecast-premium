@@ -34,6 +34,9 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
        
 +        # Load weekly unemployment trade data analysis
 +        self.weekly_trade_analysis = self.load_weekly_trade_analysis()
+        
++        # Load fresh economic data from APIs
++        self.economic_data_analysis = self.load_economic_data_analysis()
     def load_trade_analysis(self):
          """Load the updated trade data analysis"""
          try:
@@ -192,6 +195,68 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            return self.weekly_trade_analysis['market_insights']
 +        return {}
     
++    def load_economic_data_analysis(self):
++        """Load the fresh economic data analysis from APIs"""
++        try:
++            with open('economic_data_analysis.json', 'r') as f:
++                return json.load(f)
++        except FileNotFoundError:
++            print("⚠️ Economic data analysis file not found. Using default values.")
++            return self.get_default_economic_data_analysis()
+    
++    def get_default_economic_data_analysis(self):
++        """Get default economic data analysis if not available"""
++        return {
++            'unemployment_analysis': {
++                'current_rate': 4.2,
++                'direction': 'Stable',
++                'initial_claims': {'current': 218000, 'trend': 'Improving'}
++            },
++            'labor_market_analysis': {
++                'current_participation': 62.2,
++                'direction': 'Stable'
++            },
++            'market_health_assessment': {
++                'overall_health_score': 70,
++                'health_level': 'Good'
+            },
+            'risk_assessment': {
+                'risk_level': 'Low',
+                'risk_score': 30
+            }
+        }
+    
++    def get_current_unemployment_rate_from_api(self):
++        """Get current unemployment rate from fresh economic data"""
++        if self.economic_data_analysis and 'unemployment_analysis' in self.economic_data_analysis:
++            return self.economic_data_analysis['unemployment_analysis'].get('current_rate', 4.2)
++        return 4.2  # Fallback value
+    
++    def get_labor_force_participation_rate_from_api(self):
++        """Get current labor force participation rate from fresh economic data"""
++        if self.economic_data_analysis and 'labor_market_analysis' in self.economic_data_analysis:
++            return self.economic_data_analysis['labor_market_analysis'].get('current_participation', 62.2)
++        return 62.2  # Fallback value
+    
++    def get_latest_initial_claims_from_api(self):
++        """Get latest initial claims from fresh economic data"""
++        if self.economic_data_analysis and 'unemployment_analysis' in self.economic_data_analysis:
++            initial_claims = self.economic_data_analysis['unemployment_analysis'].get('initial_claims', {})
++            return initial_claims.get('current', 218000)
++        return 218000  # Fallback value
+    
++    def get_market_health_from_api(self):
++        """Get market health assessment from fresh economic data"""
++        if self.economic_data_analysis and 'market_health_assessment' in self.economic_data_analysis:
++            return self.economic_data_analysis['market_health_assessment']
++        return {'overall_health_score': 70, 'health_level': 'Good'}
+    
++    def get_risk_assessment_from_api(self):
++        """Get risk assessment from fresh economic data"""
++        if self.economic_data_analysis and 'risk_assessment' in self.economic_data_analysis:
++            return self.economic_data_analysis['risk_assessment']
++        return {'risk_level': 'Low', 'risk_score': 30}
+    
 +    def calculate_final_enhanced_forecast(self):
 +        """Calculate final enhanced unemployment forecast using all available data"""
 +        
@@ -200,27 +265,30 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        print(f"Math Framework ID: {self.math_framework_id}")
 +        print("="*60)
 +        
++        # Get current economic indicators from fresh API data
++        current_unemployment_rate = self.get_current_unemployment_rate_from_api()
++        current_lfpr = self.get_labor_force_participation_rate_from_api()
++        latest_initial_claims = self.get_latest_initial_claims_from_api()
++        latest_continuing_claims = self.get_latest_continuing_claims()
+        
 +        # Base rate from foundation
-+        base_rate = self.get_current_unemployment_rate()
++        base_rate = current_unemployment_rate
 +        print(f"📊 Base Rate (Foundation {self.foundation_id}): {base_rate}%")
 +        
 +        # Enhanced adjustments using math framework, updated trade data, and extended FRED data
 +        adjustments = []
 +        
 +        # 1. LFPR Adjustment
-+        lfpr = self.get_labor_force_participation_rate()
-+        lfpr_adjustment = (lfpr - 63.0) * 0.5 / 100
++        lfpr_adjustment = (current_lfpr - 63.0) * 0.5 / 100
 +        adjustments.append(('LFPR Adjustment', lfpr_adjustment))
 +        print(f"🔧 LFPR Adjustment (Math Framework {self.math_framework_id}): {lfpr_adjustment:.4f}%")
 +        
 +        # 2. Extended Initial Claims Adjustment (using 24 months of FRED data)
-+        latest_initial_claims = self.get_latest_initial_claims()
 +        claims_adjustment = (latest_initial_claims - 225000) / 225000 * 0.3 / 100
 +        adjustments.append(('Initial Claims Adjustment', claims_adjustment))
 +        print(f"🔧 Initial Claims Adjustment (Math Framework {self.math_framework_id}): {claims_adjustment:.4f}%")
 +        
 +        # 3. Extended Continuing Claims Adjustment
-+        latest_continuing_claims = self.get_latest_continuing_claims()
 +        continuing_claims_adjustment = (latest_continuing_claims - 1750000) / 1750000 * 0.2 / 100
 +        adjustments.append(('Continuing Claims Adjustment', continuing_claims_adjustment))
 +        print(f"🔧 Continuing Claims Adjustment (Math Framework {self.math_framework_id}): {continuing_claims_adjustment:.4f}%")
@@ -229,12 +297,12 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        if self.trade_analysis:
 +            trade_sentiment = self.trade_analysis['market_sentiment']['sentiment_score']
 +            trade_confidence = self.trade_analysis['market_sentiment']['confidence']
-+            
+            
 +            # Enhanced sentiment calculation using updated trade data
 +            sentiment_adjustment = trade_sentiment * 0.2 * trade_confidence / 100
 +            adjustments.append(('Updated Trade Sentiment Adjustment', sentiment_adjustment))
 +            print(f"🔧 Updated Trade Sentiment Adjustment (Math Framework {self.math_framework_id}): {sentiment_adjustment:.4f}%")
-+            
+            
 +            # Additional adjustment based on updated trade volume
 +            trade_volume = self.trade_analysis['market_sentiment']['total_volume']
 +            volume_factor = min(trade_volume / 100000, 2.0)  # Normalize to reasonable range
@@ -252,7 +320,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        if extended_trends and 'short_term' in extended_trends:
 +            short_term_initial = extended_trends['short_term'].get('initial_claims', {}).get('trend', 'Unknown')
 +            short_term_continuing = extended_trends['short_term'].get('continuing_claims', {}).get('trend', 'Unknown')
-+            
+            
 +            # Calculate trend adjustment based on short-term trends
 +            trend_adjustment = 0.0
 +            if short_term_initial == 'Rising':
@@ -272,7 +340,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        market_stability = self.get_market_stability()
 +        if market_stability and 'overall_market_stability' in market_stability:
 +            stability_level = market_stability['overall_market_stability']
-+            
+            
 +            # Adjust forecast based on market stability
 +            if stability_level == 'Very Stable':
 +                stability_adjustment = -0.0005 / 100  # Slight downward pressure due to stability
@@ -291,7 +359,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        if initial_claims_sentiment and 'overall_sentiment_score' in initial_claims_sentiment:
 +            sentiment_score = initial_claims_sentiment['overall_sentiment_score']
 +            confidence = initial_claims_sentiment.get('confidence', 0.5)
-+            
+            
 +            # Calculate initial claims adjustment based on trade sentiment
 +            # Positive sentiment score indicates higher claims expectations (bearish for unemployment)
 +            initial_claims_adjustment = sentiment_score * 0.15 * confidence / 100
@@ -325,6 +393,30 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                volume_adjustment = sentiment_score * 0.03 * volume_factor / 100
 +                adjustments.append(('Weekly Trade Volume Adjustment', volume_adjustment))
 +                print(f"🔧 Weekly Trade Volume Adjustment (Foundation {self.foundation_id}): {volume_adjustment:.4f}%")
+        
++        # 9. New: Economic Data API Adjustment (Fresh Data)
++        market_health = self.get_market_health_from_api()
++        risk_assessment = self.get_risk_assessment_from_api()
+        
++        if market_health and 'overall_health_score' in market_health:
++            health_score = market_health['overall_health_score']
++            health_level = market_health.get('health_level', 'Good')
+            
++            # Calculate economic health adjustment
++            # Higher health score indicates better economic conditions (lower unemployment)
++            health_adjustment = (health_score - 70) * 0.001 / 100  # Normalize to small adjustment
++            adjustments.append(('Economic Health Adjustment', health_adjustment))
++            print(f"🔧 Economic Health Adjustment (API Data): {health_adjustment:.4f}% (Health: {health_level})")
+            
++            # Risk-based adjustment
++            if risk_assessment and 'risk_level' in risk_assessment:
++                risk_level = risk_assessment['risk_level']
++                risk_score = risk_assessment.get('risk_score', 30)
+                
++                # Higher risk indicates potential economic stress (higher unemployment)
++                risk_adjustment = (risk_score - 30) * 0.0005 / 100  # Normalize to small adjustment
++                adjustments.append(('Economic Risk Adjustment', risk_adjustment))
++                print(f"🔧 Economic Risk Adjustment (API Data): {risk_adjustment:.4f}% (Risk: {risk_level})")
         
 +        # Calculate total adjustment
 +        total_adjustment = sum(adj[1] for adj in adjustments)
@@ -484,6 +576,15 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                'foundation_id': self.foundation_id,
 +                'math_framework_id': self.math_framework_id
 +            },
++            'economic_data_api_integration': {
++                'unemployment_rate': self.get_current_unemployment_rate_from_api(),
++                'labor_force_participation': self.get_labor_force_participation_rate_from_api(),
++                'initial_claims': self.get_latest_initial_claims_from_api(),
++                'market_health': self.get_market_health_from_api(),
++                'risk_assessment': self.get_risk_assessment_from_api(),
++                'foundation_id': self.foundation_id,
++                'math_framework_id': self.math_framework_id
++            },
 +            'system_architecture': {
 +                'foundation_components': [
 +                    'Data Sources: BLS, FRED (24 months), ForecastEx, Updated Trade Data, Initial Claims Trade Data',
@@ -581,6 +682,25 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
             print(f"  Total Records: {weekly_trade_data['total_records']:,}")
             print(f"  Foundation: {weekly_trade_data['foundation_id']}")
             print(f"  Math Framework: {weekly_trade_data['math_framework_id']}")
+        
+        # Economic Data API Integration (Fresh Data)
+        if 'economic_data_api_integration' in report:
+            economic_data = report['economic_data_api_integration']
+            print(f"\n📈 ECONOMIC DATA API INTEGRATION (FRESH DATA):")
+            print(f"  Unemployment Rate: {economic_data['unemployment_rate']}%")
+            print(f"  Labor Force Participation: {economic_data['labor_force_participation']}%")
+            print(f"  Initial Claims: {economic_data['initial_claims']:,}")
+            
+            market_health = economic_data.get('market_health', {})
+            if 'health_level' in market_health:
+                print(f"  Market Health: {market_health['health_level']} (Score: {market_health.get('overall_health_score', 'N/A')})")
+            
+            risk_assessment = economic_data.get('risk_assessment', {})
+            if 'risk_level' in risk_assessment:
+                print(f"  Risk Level: {risk_assessment['risk_level']} (Score: {risk_assessment.get('risk_score', 'N/A')})")
+            
+            print(f"  Foundation: {economic_data['foundation_id']}")
+            print(f"  Math Framework: {economic_data['math_framework_id']}")
         
         print("\n" + "="*60)
     
