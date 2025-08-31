@@ -541,17 +541,17 @@
                     </div>
                 </div>
             </div>
-                           <!-- Enhanced ForecastEx Pairs Data - Horizontal Stacked Bar Chart -->
+                          <!-- Enhanced ForecastEx Pairs Data - Waterfall Chart -->
 <div class="chart-container">
     <h3 style="margin-bottom: 20px;">ForecastEx Pairs Data Probability Analysis</h3>
     <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 400px; position: relative;">
         <svg width="100%" height="350" viewBox="0 0 600 350">
-            <!-- Y-axis labels (Target rates) -->
-            <text x="10" y="40" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.0%</text>
-            <text x="10" y="80" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.1%</text>
-            <text x="10" y="120" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.2%</text>
-            <text x="10" y="160" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.3%</text>
-            <text x="10" y="200" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.4%</text>
+            <!-- Y-axis labels -->
+            <text x="10" y="40" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">100%</text>
+            <text x="10" y="80" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">75%</text>
+            <text x="10" y="120" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">50%</text>
+            <text x="10" y="160" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">25%</text>
+            <text x="10" y="200" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">0%</text>
             
             <!-- Grid lines -->
             <line x1="80" y1="30" x2="580" y2="30" stroke="#444" stroke-width="1" stroke-dasharray="3,3"/>
@@ -560,54 +560,46 @@
             <line x1="80" y1="150" x2="580" y2="150" stroke="#444" stroke-width="1" stroke-dasharray="3,3"/>
             <line x1="80" y1="190" x2="580" y2="190" stroke="#444" stroke-width="1" stroke-dasharray="3,3"/>
             
-            <!-- X-axis labels (0-100%) -->
-            <text x="80" y="220" text-anchor="middle" fill="#cccccc" font-size="10">0%</text>
-            <text x="180" y="220" text-anchor="middle" fill="#cccccc" font-size="10">25%</text>
-            <text x="280" y="220" text-anchor="middle" fill="#cccccc" font-size="10">50%</text>
-            <text x="380" y="220" text-anchor="middle" fill="#cccccc" font-size="10">75%</text>
-            <text x="480" y="220" text-anchor="middle" fill="#cccccc" font-size="10">100%</text>
+            <!-- X-axis labels -->
+            <text x="120" y="220" text-anchor="middle" fill="#cccccc" font-size="10">4.0%</text>
+            <text x="220" y="220" text-anchor="middle" fill="#cccccc" font-size="10">4.1%</text>
+            <text x="320" y="220" text-anchor="middle" fill="#cccccc" font-size="10">4.2%</text>
+            <text x="420" y="220" text-anchor="middle" fill="#cccccc" font-size="10">4.3%</text>
+            <text x="520" y="220" text-anchor="middle" fill="#cccccc" font-size="10">4.4%</text>
             
-            <!-- Horizontal stacked bars -->
-            <!-- 4.0% Row -->
-            <rect x="80" y="25" width="388" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="468" y="25" width="12" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="45" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">97%</text>
-            <text x="470" y="45" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">3%</text>
+            <!-- Waterfall bars -->
+            <!-- 4.0% -->
+            <rect x="100" y="15" width="40" height="345" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="2" rx="3"/>
+            <text x="120" y="30" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="700">97%</text>
             
-            <!-- 4.1% Row -->
-            <rect x="80" y="65" width="360" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="440" y="65" width="40" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="85" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">90%</text>
-            <text x="445" y="85" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">8%</text>
+            <!-- 4.1% -->
+            <rect x="200" y="45" width="40" height="315" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="2" rx="3"/>
+            <text x="220" y="60" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="700">90%</text>
             
-            <!-- 4.2% Row -->
-            <rect x="80" y="105" width="236" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="316" y="105" width="164" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="125" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">59%</text>
-            <text x="320" y="125" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">39%</text>
+            <!-- 4.2% -->
+            <rect x="300" y="135" width="40" height="225" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="2" rx="3"/>
+            <text x="320" y="150" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="700">59%</text>
             
-            <!-- 4.3% Row -->
-            <rect x="80" y="145" width="60" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="140" y="145" width="340" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="165" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">15%</text>
-            <text x="145" y="165" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">83%</text>
+            <!-- 4.3% -->
+            <rect x="400" y="270" width="40" height="90" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="2" rx="3"/>
+            <text x="420" y="285" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="700">15%</text>
             
-            <!-- 4.4% Row -->
-            <rect x="80" y="185" width="20" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="100" y="185" width="380" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="205" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">5%</text>
-            <text x="105" y="205" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">93%</text>
+            <!-- 4.4% -->
+            <rect x="500" y="300" width="40" height="60" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="2" rx="3"/>
+            <text x="520" y="315" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="700">5%</text>
+            
+            <!-- Connecting lines -->
+            <line x1="140" y1="187" x2="200" y2="187" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+            <line x1="240" y1="187" x2="300" y2="187" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+            <line x1="340" y1="187" x2="400" y2="187" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+            <line x1="440" y1="187" x2="500" y2="187" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
         </svg>
         
-        <!-- Enhanced legend -->
+        <!-- Legend -->
         <div style="text-align: center; margin-top: 20px;">
             <div style="display: inline-block; margin: 0 15px; padding: 8px 12px; background: rgba(0,0,0,0.3); border-radius: 6px;">
                 <span style="color: var(--ib-green); font-weight: 700;">●</span> 
                 <span style="color: var(--ib-white); font-weight: 600;">Yes Probability</span>
-            </div>
-            <div style="display: inline-block; margin: 0 15px; padding: 8px 12px; background: rgba(0,0,0,0.3); border-radius: 6px;">
-                <span style="color: var(--ib-red); font-weight: 700;">●</span> 
-                <span style="color: var(--ib-white); font-weight: 600;">No Probability</span>
             </div>
         </div>
     </div>
