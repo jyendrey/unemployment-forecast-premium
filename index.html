@@ -541,79 +541,96 @@
                     </div>
                 </div>
             </div>
-                        <!-- Enhanced ForecastEx Pairs Data - Horizontal Stacked Bar Chart -->
+                        <!-- Enhanced ForecastEx Pairs Data - Horizontal Stacked Bar Chart (4.0% to 4.3%) -->
 <div class="chart-container">
     <h3 style="margin-bottom: 20px;">ForecastEx Pairs Data Probability Analysis</h3>
     <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 400px; position: relative;">
         <svg width="100%" height="350" viewBox="0 0 600 350">
-            <!-- Y-axis labels (Target rates) -->
+            <!-- Y-axis labels (Target rates: 4.0% to 4.3%) -->
             <text x="10" y="40" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.0%</text>
             <text x="10" y="80" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.1%</text>
             <text x="10" y="120" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.2%</text>
             <text x="10" y="160" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.3%</text>
-            <text x="10" y="200" text-anchor="start" fill="#cccccc" font-size="12" font-weight="600">4.4%</text>
             
             <!-- Grid lines -->
             <line x1="80" y1="30" x2="580" y2="30" stroke="#444" stroke-width="1" stroke-dasharray="3,3"/>
             <line x1="80" y1="70" x2="580" y2="70" stroke="#444" stroke-width="1" stroke-dasharray="3,3"/>
             <line x1="80" y1="110" x2="580" y2="110" stroke="#444" stroke-width="1" stroke-dasharray="3,3"/>
             <line x1="80" y1="150" x2="580" y2="150" stroke="#444" stroke-width="1" stroke-dasharray="3,3"/>
-            <line x1="80" y1="190" x2="580" y2="190" stroke="#444" stroke-width="1" stroke-dasharray="3,3"/>
             
             <!-- X-axis labels (0-100%) -->
-            <text x="80" y="220" text-anchor="middle" fill="#cccccc" font-size="10">0%</text>
-            <text x="180" y="220" text-anchor="middle" fill="#cccccc" font-size="10">25%</text>
-            <text x="280" y="220" text-anchor="middle" fill="#cccccc" font-size="10">50%</text>
-            <text x="380" y="220" text-anchor="middle" fill="#cccccc" font-size="10">75%</text>
-            <text x="480" y="220" text-anchor="middle" fill="#cccccc" font-size="10">100%</text>
+            <text x="80" y="200" text-anchor="middle" fill="#cccccc" font-size="10">0%</text>
+            <text x="180" y="200" text-anchor="middle" fill="#cccccc" font-size="10">25%</text>
+            <text x="280" y="200" text-anchor="middle" fill="#cccccc" font-size="10">50%</text>
+            <text x="380" y="200" text-anchor="middle" fill="#cccccc" font-size="10">75%</text>
+            <text x="480" y="200" text-anchor="middle" fill="#cccccc" font-size="10">100%</text>
             
-            <!-- Horizontal stacked bars -->
+            <!-- Enhanced gradients and shadows -->
+            <defs>
+                <linearGradient id="yesGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgba(0, 166, 81, 0.9);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgba(0, 166, 81, 0.7);stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="noGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgba(217, 17, 35, 0.9);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgba(217, 17, 35, 0.7);stop-opacity:1" />
+                </linearGradient>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            
             <!-- 4.0% Row -->
-            <rect x="80" y="25" width="388" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="468" y="25" width="12" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="45" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">97%</text>
-            <text x="470" y="45" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">3%</text>
+            <rect x="80" y="25" width="388" height="30" fill="url(#yesGradient)" stroke="var(--ib-green)" stroke-width="1" filter="url(#shadow)" rx="3"/>
+            <rect x="468" y="25" width="12" height="30" fill="url(#noGradient)" stroke="var(--ib-red)" stroke-width="1" filter="url(#shadow)" rx="3"/>
+            <text x="85" y="45" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="700">97%</text>
+            <text x="470" y="45" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="700">3%</text>
             
             <!-- 4.1% Row -->
-            <rect x="80" y="65" width="360" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="440" y="65" width="40" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="85" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">90%</text>
-            <text x="445" y="85" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">8%</text>
+            <rect x="80" y="65" width="360" height="30" fill="url(#yesGradient)" stroke="var(--ib-green)" stroke-width="1" filter="url(#shadow)" rx="3"/>
+            <rect x="440" y="65" width="40" height="30" fill="url(#noGradient)" stroke="var(--ib-red)" stroke-width="1" filter="url(#shadow)" rx="3"/>
+            <text x="85" y="85" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="700">90%</text>
+            <text x="445" y="85" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="700">8%</text>
             
             <!-- 4.2% Row -->
-            <rect x="80" y="105" width="236" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="316" y="105" width="164" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="125" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">59%</text>
-            <text x="320" y="125" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">39%</text>
+            <rect x="80" y="105" width="236" height="30" fill="url(#yesGradient)" stroke="var(--ib-green)" stroke-width="1" filter="url(#shadow)" rx="3"/>
+            <rect x="316" y="105" width="164" height="30" fill="url(#noGradient)" stroke="var(--ib-red)" stroke-width="1" filter="url(#shadow)" rx="3"/>
+            <text x="85" y="125" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="700">59%</text>
+            <text x="320" y="125" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="700">39%</text>
             
             <!-- 4.3% Row -->
-            <rect x="80" y="145" width="60" height="30" fill="var(--ib-green)" stroke="var(--ib-green)" stroke-width="1" rx="3"/>
-            <rect x="140" y="145" width="340" height="30" fill="var(--ib-red)" stroke="var(--ib-red)" stroke-width="1" rx="3"/>
-            <text x="85" y="165" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">15%</text>
-            <text x="145" y="165" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="600">83%</text>
+            <rect x="80" y="145" width="60" height="30" fill="url(#yesGradient)" stroke="var(--ib-green)" stroke-width="1" filter="url(#shadow)" rx="3"/>
+            <rect x="140" y="145" width="340" height="30" fill="url(#noGradient)" stroke="var(--ib-red)" stroke-width="1" filter="url(#shadow)" rx="3"/>
+            <text x="85" y="165" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="700">15%</text>
+            <text x="145" y="165" text-anchor="start" fill="var(--ib-white)" font-size="10" font-weight="700">83%</text>
         </svg>
         
-        <!-- Enhanced legend -->
+        <!-- Enhanced legend below chart -->
         <div style="text-align: center; margin-top: 20px;">
-            <div style="display: inline-block; margin: 0 15px; padding: 8px 12px; background: rgba(0,0,0,0.3); border-radius: 6px;">
-                <span style="color: var(--ib-green); font-weight: 700;">●</span> 
+            <div style="display: inline-block; margin: 0 20px; padding: 10px 15px; background: rgba(0,0,0,0.4); border-radius: 8px; border: 1px solid #555;">
+                <span style="color: var(--ib-green); font-weight: 700; font-size: 14px;">●</span> 
                 <span style="color: var(--ib-white); font-weight: 600;">Yes Probability</span>
+                <div style="font-size: 11px; color: #cccccc; margin-top: 5px;">
+                    4.0%: 97% | 4.1%: 90% | 4.2%: 59% | 4.3%: 15%
+                </div>
             </div>
-            <div style="display: inline-block; margin: 0 15px; padding: 8px 12px; background: rgba(0,0,0,0.3); border-radius: 6px;">
-                <span style="color: var(--ib-red); font-weight: 700;">●</span> 
+            <div style="display: inline-block; margin: 0 20px; padding: 10px 15px; background: rgba(0,0,0,0.4); border-radius: 8px; border: 1px solid #555;">
+                <span style="color: var(--ib-red); font-weight: 700; font-size: 14px;">●</span> 
                 <span style="color: var(--ib-white); font-weight: 600;">No Probability</span>
+                <div style="font-size: 11px; color: #cccccc; margin-top: 5px;">
+                    4.0%: 3% | 4.1%: 8% | 4.2%: 39% | 4.3%: 83%
+                </div>
             </div>
         </div>
-    </div>
-</div>
         
-        <!-- Key insights summary -->
+        <!-- Market insights summary -->
         <div style="margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 8px; border: 1px solid #444;">
-            <div style="text-align: center; color: var(--ib-white); font-weight: 600; margin-bottom: 10px;">KEY INSIGHTS</div>
+            <div style="text-align: center; color: var(--ib-white); font-weight: 600; margin-bottom: 10px;">MARKET SENTIMENT ANALYSIS</div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; font-size: 12px; color: #cccccc;">
-                <div><strong>Bullish Signal:</strong> 4.0% target shows 97% confidence in unemployment staying at or below this level</div>
-                <div><strong>Neutral Zone:</strong> 4.2% target shows market uncertainty (59% Yes vs 39% No)</div>
-                <div><strong>Bearish Signal:</strong> 4.3% target shows 83% confidence in unemployment exceeding this level</div>
+                <div><strong>Strong Bullish (4.0%):</strong> 97% confidence unemployment stays at/below this level</div>
+                <div><strong>Moderate Bullish (4.1%):</strong> 90% confidence unemployment stays at/below this level</div>
+                <div><strong>Neutral Zone (4.2%):</strong> Market split - 59% Yes vs 39% No</div>
+                <div><strong>Strong Bearish (4.3%):</strong> 83% confidence unemployment exceeds this level</div>
             </div>
         </div>
     </div>
