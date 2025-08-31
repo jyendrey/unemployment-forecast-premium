@@ -1,7 +1,8 @@
 {
-  "system_version": "v3.0-final-enhanced",
+  "system_version": "v3.1-initial-claims-integrated",
   "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
   "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "initial_claims_foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
   "last_updated": "2025-08-23",
   "enhanced_features": {
     "extended_fred_data": "24 months (103 observations)",
@@ -19,7 +20,9 @@
     "trade_sentiment": 0.2,
     "trade_volume": 0.1,
     "claims_trend": 0.001,
-    "market_stability": 0.0005
+    "market_stability": 0.0005,
+    "initial_claims_trade_sentiment": 0.15,
+    "initial_claims_volume": 0.05
   },
   "confidence_calculation": {
     "base_confidence": 70,
@@ -29,6 +32,8 @@
     "trade_volume_weight": 0.1,
     "extended_fred_weight": 0.15,
     "data_freshness_weight": 0.05,
+    "initial_claims_sentiment_weight": 0.1,
+    "initial_claims_volume_weight": 0.05,
     "stability_bonus_max": 5,
     "max_confidence": 95
   },
@@ -51,6 +56,14 @@
       "data_file": "Unemployment Trade Prices Data.csv",
       "update_frequency": "real-time",
       "processing_method": "enhanced_v3"
+    },
+    "initial_claims_trade_data": {
+      "enabled": true,
+      "pairs_file": "Initial Claims Trade Data - Pairs",
+      "prices_file": "Initial Claims Trade Data - Prices",
+      "update_frequency": "real-time",
+      "processing_method": "initial_claims_v1",
+      "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f"
     }
   },
   "market_stability_thresholds": {
@@ -76,6 +89,7 @@
     "enhanced_forecast_report": "final_enhanced_unemployment_forecast_report.json",
     "extended_fred_analysis": "extended_fred_claims_analysis.json",
     "enhanced_trade_analysis": "enhanced_forecast_input.json",
+    "initial_claims_analysis": "initial_claims_analysis.json",
     "visual_analysis": "enhanced_unemployment_forecast_analysis.md",
     "economic_breakdown": "enhanced_economic_breakdown_v3.md",
     "summary": "enhanced_forecast_summary_v3.md"
@@ -95,8 +109,18 @@
       "components": [
         "Statistical Models: Advanced regression analysis with 24-month trends",
         "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics",
-        "Confidence Intervals: Enhanced statistical validation with extended FRED data",
-        "Trade Data Integration: Real-time market sentiment and extended claims analysis"
+        "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics and initial claims adjustments",
+        "Confidence Intervals: Enhanced statistical validation with extended FRED data and initial claims confidence",
+        "Trade Data Integration: Real-time market sentiment, extended claims analysis, and initial claims trade data"
+      ]
+    },
+    "initial_claims_foundation": {
+      "id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+      "components": [
+        "Initial Claims Trade Data Processing: Pairs and prices analysis",
+        "Sentiment Analysis: Market sentiment scoring and interpretation",
+        "Threshold Analysis: Claims threshold distribution and trends",
+        "Temporal Patterns: Trading activity and contract expiration analysis"
       ]
     }
   },

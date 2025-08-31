@@ -19,7 +19,8 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +    def __init__(self):
 +        self.foundation_id = "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b"
 +        self.math_framework_id = "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
-+        self.version = "v3.0-final-enhanced"
++        self.initial_claims_foundation_id = "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f"
++        self.version = "v3.1-initial-claims-integrated"
 +        self.current_date = datetime.now()
 +        
 +        # Load updated trade data analysis
@@ -27,16 +28,19 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        
 +        # Load extended FRED data (24 months)
 +        self.extended_fred_data = self.load_extended_fred_data()
-+        
-+    def load_trade_analysis(self):
-+        """Load the updated trade data analysis"""
-+        try:
-+            with open('enhanced_forecast_input.json', 'r') as f:
-+                return json.load(f)
-+        except FileNotFoundError:
-+            print("⚠️ Updated trade analysis file not found. Using default values.")
-+            return self.get_default_analysis()
-+    
+        
++        # Load initial claims trade data analysis
++        self.initial_claims_analysis = self.load_initial_claims_analysis()
+        
+    def load_trade_analysis(self):
+         """Load the updated trade data analysis"""
+         try:
+             with open('enhanced_forecast_input.json', 'r') as f:
+                 return json.load(f)
+         except FileNotFoundError:
+             print("⚠️ Updated trade analysis file not found. Using default values.")
+             return self.get_default_analysis()
+    
 +    def load_extended_fred_data(self):
 +        """Load the extended FRED claims data (24 months)"""
 +        try:
@@ -45,7 +49,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        except FileNotFoundError:
 +            print("⚠️ Extended FRED data file not found. Using default values.")
 +            return self.get_default_extended_fred_data()
-+    
+    
 +    def get_default_analysis(self):
 +        """Get default analysis if trade data is not available"""
 +        return {
@@ -62,7 +66,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                'date_coverage': 0
 +            }
 +        }
-+    
+    
 +    def get_default_extended_fred_data(self):
 +        """Get default extended FRED data if not available"""
 +        return {
@@ -77,7 +81,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            },
 +            'market_health_assessment': {'overall_market_health': 'Strong'}
 +        }
-+    
+    
 +    def get_current_unemployment_rate(self):
 +        """Get current unemployment rate (using fallback for demonstration)"""
 +        return 4.2  # Current rate as of latest data
@@ -103,19 +107,54 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        if self.extended_fred_data and 'extended_trends' in self.extended_fred_data:
 +            return self.extended_fred_data['extended_trends']
 +        return {'short_term': {}, 'medium_term': {}, 'long_term': {}}
-+    
+    
 +    def get_market_stability(self):
 +        """Get market stability metrics from extended FRED data"""
 +        if self.extended_fred_data and 'volatility_analysis' in self.extended_fred_data:
 +            return self.extended_fred_data['volatility_analysis']
 +        return {'overall_market_stability': 'Unknown'}
-+    
+    
 +    def get_market_health(self):
 +        """Get market health assessment from extended FRED data"""
 +        if self.extended_fred_data and 'market_health_assessment' in self.extended_fred_data:
 +            return self.extended_fred_data['market_health_assessment']
 +        return {'overall_market_health': 'Unknown'}
-+    
+    
++    def load_initial_claims_analysis(self):
++        """Load the initial claims trade data analysis"""
++        try:
++            with open('initial_claims_analysis.json', 'r') as f:
++                return json.load(f)
++        except FileNotFoundError:
++            print("⚠️ Initial claims analysis file not found. Using default values.")
++            return self.get_default_initial_claims_analysis()
+    
++    def get_default_initial_claims_analysis(self):
++        """Get default initial claims analysis if not available"""
++        return {
++            'foundation_id': self.initial_claims_foundation_id,
++            'integrated_sentiment': {
++                'overall_sentiment_score': 0.0,
++                'overall_sentiment_interpretation': 'Neutral',
++                'confidence': 0.0
++            },
++            'data_summary': {
++                'total_records': 0
++            }
++        }
+    
++    def get_initial_claims_sentiment(self):
++        """Get initial claims sentiment from trade data"""
++        if self.initial_claims_analysis and 'integrated_sentiment' in self.initial_claims_analysis:
++            return self.initial_claims_analysis['integrated_sentiment']
++        return self.get_default_initial_claims_analysis()['integrated_sentiment']
+    
++    def get_initial_claims_insights(self):
++        """Get initial claims market insights"""
++        if self.initial_claims_analysis and 'market_insights' in self.initial_claims_analysis:
++            return self.initial_claims_analysis['market_insights']
++        return {}
+    
 +    def calculate_final_enhanced_forecast(self):
 +        """Calculate final enhanced unemployment forecast using all available data"""
 +        
@@ -170,7 +209,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            sentiment_adjustment = -0.025 / 100
 +            adjustments.append(('Sentiment Adjustment', sentiment_adjustment))
 +            print(f"🔧 Sentiment Adjustment (Math Framework {self.math_framework_id}): {sentiment_adjustment:.4f}%")
-+        
+        
 +        # 5. Extended Claims Trend Adjustment (24 months analysis)
 +        extended_trends = self.get_extended_trends()
 +        if extended_trends and 'short_term' in extended_trends:
@@ -209,7 +248,27 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            
 +            adjustments.append(('Market Stability Adjustment', stability_adjustment))
 +            print(f"🔧 Market Stability Adjustment (Math Framework {self.math_framework_id}): {stability_adjustment:.4f}%")
-+        
+        
++        # 7. New: Initial Claims Trade Data Adjustment (Foundation bc-78795d1e-6a46-4716-9ff6-78bca58ca95f)
++        initial_claims_sentiment = self.get_initial_claims_sentiment()
++        if initial_claims_sentiment and 'overall_sentiment_score' in initial_claims_sentiment:
++            sentiment_score = initial_claims_sentiment['overall_sentiment_score']
++            confidence = initial_claims_sentiment.get('confidence', 0.5)
++            
++            # Calculate initial claims adjustment based on trade sentiment
++            # Positive sentiment score indicates higher claims expectations (bearish for unemployment)
++            initial_claims_adjustment = sentiment_score * 0.15 * confidence / 100
++            adjustments.append(('Initial Claims Trade Data Adjustment', initial_claims_adjustment))
++            print(f"🔧 Initial Claims Trade Data Adjustment (Foundation {self.initial_claims_foundation_id}): {initial_claims_adjustment:.4f}%")
++            
++            # Additional adjustment based on data volume
++            if self.initial_claims_analysis and 'data_summary' in self.initial_claims_analysis:
++                total_records = self.initial_claims_analysis['data_summary'].get('total_records', 0)
++                volume_factor = min(total_records / 10000, 2.0)  # Normalize to reasonable range
++                volume_adjustment = sentiment_score * 0.05 * volume_factor / 100
++                adjustments.append(('Initial Claims Volume Adjustment', volume_adjustment))
++                print(f"🔧 Initial Claims Volume Adjustment (Foundation {self.initial_claims_foundation_id}): {volume_adjustment:.4f}%")
+        
 +        # Calculate total adjustment
 +        total_adjustment = sum(adj[1] for adj in adjustments)
 +        print(f"📈 Total Adjustment: {total_adjustment:.4f}%")
@@ -243,11 +302,19 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        if self.trade_analysis:
 +            trade_confidence = self.trade_analysis['market_sentiment']['confidence'] * 100
 +            trade_volume_score = min(self.trade_analysis['market_sentiment']['total_volume'] / 1000, 100)
-+        
+        
 +        # Extended FRED data confidence (24 months)
 +        extended_fred_confidence = 100 if self.extended_fred_data else 80
 +        extended_fred_freshness = 100  # Data is very recent
-+        
+        
++        # Initial claims trade data confidence (Foundation bc-78795d1e-6a46-4716-9ff6-78bca58ca95f)
++        initial_claims_confidence = 0
++        initial_claims_volume_score = 0
++        if self.initial_claims_analysis and 'integrated_sentiment' in self.initial_claims_analysis:
++            initial_claims_confidence = self.initial_claims_analysis['integrated_sentiment'].get('confidence', 0) * 100
++            total_records = self.initial_claims_analysis.get('data_summary', {}).get('total_records', 0)
++            initial_claims_volume_score = min(total_records / 1000, 100)
+        
 +        # Market stability bonus (new)
 +        market_stability = self.get_market_stability()
 +        stability_bonus = 0
@@ -259,7 +326,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                stability_bonus = 3
 +            elif stability_level == 'Moderately Stable':
 +                stability_bonus = 1
-+        
+        
 +        # Final enhanced confidence calculation
 +        final_enhanced_confidence = (base_confidence + 
 +                                   (data_quality * 0.25) + 
@@ -269,8 +336,10 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                                   (trade_volume_score * 0.1) +
 +                                   (extended_fred_confidence * 0.15) +
 +                                   (extended_fred_freshness * 0.05) +
++                                   (initial_claims_confidence * 0.1) +
++                                   (initial_claims_volume_score * 0.05) +
 +                                   stability_bonus)
-+        
+        
 +        # Adjust for uncertainty and cap at 95%
 +        final_confidence = min(final_enhanced_confidence, 95)
 +        
@@ -280,6 +349,8 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        print(f"🔧 Updated Trade Volume Score: {trade_volume_score:.1f}%")
 +        print(f"🔧 Extended FRED Data Confidence: {extended_fred_confidence:.1f}%")
 +        print(f"🔧 Extended FRED Data Freshness: {extended_fred_freshness:.1f}%")
++        print(f"🔧 Initial Claims Trade Data Confidence: {initial_claims_confidence:.1f}%")
++        print(f"🔧 Initial Claims Volume Score: {initial_claims_volume_score:.1f}%")
 +        print(f"🔧 Market Stability Bonus: +{stability_bonus:.1f}%")
 +        print(f"📊 Final Enhanced Confidence: {final_confidence:.1f}%")
 +        
@@ -326,19 +397,37 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                'foundation_id': self.foundation_id,
 +                'math_framework_id': self.math_framework_id
 +            },
++            'initial_claims_trade_data_integration': {
++                'sentiment_score': self.get_initial_claims_sentiment().get('overall_sentiment_score'),
++                'sentiment_interpretation': self.get_initial_claims_sentiment().get('overall_sentiment_interpretation'),
++                'confidence': self.get_initial_claims_sentiment().get('confidence'),
++                'total_records': self.initial_claims_analysis.get('data_summary', {}).get('total_records', 0) if self.initial_claims_analysis else 0,
++                'market_insights': self.get_initial_claims_insights(),
++                'foundation_id': self.initial_claims_foundation_id,
++                'math_framework_id': self.math_framework_id
++            },
 +            'system_architecture': {
 +                'foundation_components': [
-+                    'Data Sources: BLS, FRED (24 months), ForecastEx, Updated Trade Data',
-+                    'Core Algorithms: Final enhanced unemployment forecasting with extended analysis',
-+                    'Quality Assurance: Multi-source validation with 24-month FRED integration',
-+                    'System Stability: Robust error handling and extended data feeds'
++                    'Data Sources: BLS, FRED (24 months), ForecastEx, Updated Trade Data, Initial Claims Trade Data',
++                    'Core Algorithms: Final enhanced unemployment forecasting with extended analysis and initial claims integration',
++                    'Quality Assurance: Multi-source validation with 24-month FRED integration and trade data analysis',
++                    'System Stability: Robust error handling and extended data feeds with initial claims foundation'
 +                ],
 +                'math_framework_components': [
-+                    'Statistical Models: Advanced regression analysis with 24-month trends',
-+                    'Adjustment Algorithms: Multi-factor weighted calculations including stability metrics',
-+                    'Confidence Intervals: Enhanced statistical validation with extended FRED data',
-+                    'Trade Data Integration: Updated market sentiment and extended claims analysis'
-+                ]
++                    'Statistical Models: Advanced regression analysis with 24-month trends and initial claims sentiment',
++                    'Adjustment Algorithms: Multi-factor weighted calculations including stability metrics and initial claims adjustments',
++                    'Confidence Intervals: Enhanced statistical validation with extended FRED data and initial claims confidence',
++                    'Trade Data Integration: Updated market sentiment, extended claims analysis, and initial claims trade data'
++                ],
++                'initial_claims_foundation': {
++                    'id': self.initial_claims_foundation_id,
++                    'components': [
++                        'Initial Claims Trade Data Processing: Pairs and prices analysis',
++                        'Sentiment Analysis: Market sentiment scoring and interpretation',
++                        'Threshold Analysis: Claims threshold distribution and trends',
++                        'Temporal Patterns: Trading activity and contract expiration analysis'
++                    ]
++                }
 +            }
 +        }
 +        
@@ -348,7 +437,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        """Save the final enhanced forecast report"""
 +        with open(filename, 'w') as f:
 +            json.dump(report, f, indent=2)
-+        
+        
 +        print(f"✅ Final enhanced forecast report saved to: {filename}")
 +        return filename
 +    
@@ -374,7 +463,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        print(f"\n🔧 ENHANCED ADJUSTMENTS APPLIED:")
 +        for adj in report['adjustments']:
 +            print(f"  {adj['name']}: {adj['value']:+.4f}% (Math Framework: {adj['math_framework']})")
-+        
+        
 +        trade_data = report['updated_trade_data_integration']
 +        if trade_data['sentiment_score'] is not None:
 +            print(f"\n📈 UPDATED TRADE DATA INTEGRATION:")
@@ -384,7 +473,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            print(f"  Total Volume: {trade_data['total_volume']:,}")
 +            print(f"  Foundation: {trade_data['foundation_id']}")
 +            print(f"  Math Framework: {trade_data['math_framework_id']}")
-+        
+        
 +        fred_data = report['extended_fred_data_integration']
 +        print(f"\n📊 EXTENDED FRED DATA INTEGRATION (24 MONTHS):")
 +        print(f"  Initial Claims: {fred_data['initial_claims']:,}")
@@ -392,7 +481,18 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        print(f"  Data Coverage: {fred_data['data_coverage']}")
 +        print(f"  Foundation: {fred_data['foundation_id']}")
 +        print(f"  Math Framework: {fred_data['math_framework_id']}")
-+        
+        
++        # Initial Claims Trade Data Integration
++        if 'initial_claims_trade_data_integration' in report:
++            initial_claims_data = report['initial_claims_trade_data_integration']
++            print(f"\n📈 INITIAL CLAIMS TRADE DATA INTEGRATION:")
++            print(f"  Sentiment Score: {initial_claims_data['sentiment_score']:.4f}" if initial_claims_data['sentiment_score'] is not None else "  Sentiment Score: N/A")
++            print(f"  Interpretation: {initial_claims_data['sentiment_interpretation']}")
++            print(f"  Confidence: {initial_claims_data['confidence']:.2f}" if initial_claims_data['confidence'] is not None else "  Confidence: N/A")
++            print(f"  Total Records: {initial_claims_data['total_records']:,}")
++            print(f"  Foundation: {initial_claims_data['foundation_id']}")
++            print(f"  Math Framework: {initial_claims_data['math_framework_id']}")
+        
 +        print("\n" + "="*60)
 +    
 +    def run_final_enhanced_forecast(self):
