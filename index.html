@@ -541,7 +541,7 @@
                     </div>
                 </div>
             </div>
-                            <!-- Right Chart: ForecastEx Pairs Data Probability -->
+                           <!-- Right Chart: ForecastEx Pairs Data Probability -->
 <div class="chart-container">
     <h3 style="margin-bottom: 20px;">ForecastEx Pairs Data Probability</h3>
     <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 400px; position: relative;">
@@ -563,46 +563,55 @@
             <text x="-15" y="305" text-anchor="end" fill="#cccccc" font-size="10">0%</text>
             
             <!-- X-axis labels (Target rates) -->
-            <text x="50" y="330" text-anchor="middle" fill="#cccccc" font-size="8">4.1%</text>
-            <text x="150" y="330" text-anchor="middle" fill="#cccccc" font-size="8">4.2%</text>
-            <text x="250" y="330" text-anchor="middle" fill="#cccccc" font-size="8">4.3%</text>
-            <text x="350" y="330" text-anchor="middle" fill="#cccccc" font-size="8">4.4%</text>
+            <text x="50" y="330" text-anchor="middle" fill="#cccccc" font-size="8">4.0%</text>
+            <text x="150" y="330" text-anchor="middle" fill="#cccccc" font-size="8">4.1%</text>
+            <text x="250" y="330" text-anchor="middle" fill="#cccccc" font-size="8">4.2%</text>
+            <text x="350" y="330" text-anchor="middle" fill="#cccccc" font-size="8">4.3%</text>
+            
+            <!-- 4.0% Target: Yes and No bars -->
+            <!-- Yes bar (97% = 97% of 250px = 243px height from bottom) -->
+            <rect x="30" y="7" width="30" height="243" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
+            <text x="45" y="25" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">97%</text>
+            
+            <!-- No bar (3% = 3% of 250px = 8px height from bottom) -->
+            <rect x="70" y="242" width="30" height="8" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
+            <text x="85" y="250" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">3%</text>
             
             <!-- 4.1% Target: Yes and No bars -->
-            <!-- Yes bar (72.5% = 72.5% of 250px = 181px height from bottom) -->
-            <rect x="30" y="69" width="30" height="181" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
-            <text x="45" y="85" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">72.5%</text>
+            <!-- Yes bar (90% = 90% of 250px = 225px height from bottom) -->
+            <rect x="130" y="25" width="30" height="225" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
+            <text x="145" y="45" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">90%</text>
             
-            <!-- No bar (27.5% = 27.5% of 250px = 69px height from bottom) -->
-            <rect x="70" y="181" width="30" height="69" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
-            <text x="85" y="200" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">27.5%</text>
+            <!-- No bar (8% = 8% of 250px = 20px height from bottom) -->
+            <rect x="170" y="230" width="30" height="20" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
+            <text x="185" y="240" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">8%</text>
             
             <!-- 4.2% Target: Yes and No bars -->
-            <!-- Yes bar (48.6% = 48.6% of 250px = 121px height from bottom) -->
-            <rect x="130" y="129" width="30" height="121" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
-            <text x="145" y="145" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">48.6%</text>
+            <!-- Yes bar (59% = 59% of 250px = 148px height from bottom) -->
+            <rect x="230" y="102" width="30" height="148" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
+            <text x="245" y="120" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">59%</text>
             
-            <!-- No bar (51.4% = 51.4% of 250px = 128px height from bottom) -->
-            <rect x="170" y="122" width="30" height="128" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
-            <text x="185" y="140" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">51.4%</text>
+            <!-- No bar (39% = 39% of 250px = 98px height from bottom) -->
+            <rect x="270" y="152" width="30" height="98" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
+            <text x="285" y="170" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">39%</text>
             
             <!-- 4.3% Target: Yes and No bars -->
-            <!-- Yes bar (18.8% = 18.8% of 250px = 47px height from bottom) -->
-            <rect x="230" y="203" width="30" height="47" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
-            <text x="245" y="220" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">18.8%</text>
+            <!-- Yes bar (15% = 15% of 250px = 38px height from bottom) -->
+            <rect x="330" y="212" width="30" height="38" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
+            <text x="345" y="230" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">15%</text>
             
-            <!-- No bar (81.2% = 81.2% of 250px = 203px height from bottom) -->
-            <rect x="270" y="47" width="30" height="203" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
-            <text x="285" y="65" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">81.2%</text>
+            <!-- No bar (83% = 83% of 250px = 208px height from bottom) -->
+            <rect x="370" y="42" width="30" height="208" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
+            <text x="385" y="60" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">83%</text>
             
             <!-- 4.4% Target: Yes and No bars -->
-            <!-- Yes bar (6.6% = 6.6% of 250px = 17px height from bottom) -->
-            <rect x="330" y="233" width="30" height="17" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
-            <text x="345" y="245" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">6.6%</text>
+            <!-- Yes bar (5% = 5% of 250px = 13px height from bottom) -->
+            <rect x="430" y="237" width="30" height="13" fill="rgba(0, 166, 81, 0.8)" stroke="var(--ib-green)" stroke-width="2"/>
+            <text x="445" y="250" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">5%</text>
             
-            <!-- No bar (93.4% = 93.4% of 250px = 234px height from bottom) -->
-            <rect x="370" y="16" width="30" height="234" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
-            <text x="385" y="35" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">93.4%</text>
+            <!-- No bar (93% = 93% of 250px = 233px height from bottom) -->
+            <rect x="470" y="17" width="30" height="233" fill="rgba(217, 17, 35, 0.8)" stroke="var(--ib-red)" stroke-width="2"/>
+            <text x="485" y="35" text-anchor="middle" fill="var(--ib-white)" font-size="9" font-weight="600">93%</text>
         </svg>
         
         <div style="text-align: center; margin-top: 15px;">
@@ -616,32 +625,36 @@
         
         <!-- Detailed probability breakdown -->
         <div style="margin-top: 20px; padding: 15px; background: #1a1a1a; border-radius: 10px; border: 1px solid rgba(217, 17, 35, 0.2);">
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; text-align: center;">
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; text-align: center;">
+                <div>
+                    <div style="color: var(--ib-green); font-weight: 600; font-size: 0.9em;">4.0% Target</div>
+                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 97%</div>
+                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 3%</div>
+                </div>
                 <div>
                     <div style="color: var(--ib-green); font-weight: 600; font-size: 0.9em;">4.1% Target</div>
-                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 72.5%</div>
-                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 27.5%</div>
+                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 90%</div>
+                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 8%</div>
                 </div>
                 <div>
                     <div style="color: var(--ib-green); font-weight: 600; font-size: 0.9em;">4.2% Target</div>
-                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 48.6%</div>
-                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 51.4%</div>
+                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 59%</div>
+                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 39%</div>
                 </div>
                 <div>
                     <div style="color: var(--ib-green); font-weight: 600; font-size: 0.9em;">4.3% Target</div>
-                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 18.8%</div>
-                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 81.2%</div>
+                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 15%</div>
+                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 83%</div>
                 </div>
                 <div>
                     <div style="color: var(--ib-green); font-weight: 600; font-size: 0.9em;">4.4% Target</div>
-                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 6.6%</div>
-                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 93.4%</div>
+                    <div style="color: var(--ib-green); font-size: 0.8em;">Yes: 5%</div>
+                    <div style="color: var(--ib-red); font-size: 0.8em;">No: 93%</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
         <!-- Multi-Period Trend Analysis -->
         <div class="chart-container" style="grid-column: 1 / -1;">
             <h3>Multi-Period Trend Analysis</h3>
