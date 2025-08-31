@@ -28,10 +28,12 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        
 +        # Load extended FRED data (24 months)
 +        self.extended_fred_data = self.load_extended_fred_data()
-        
+       
 +        # Load initial claims trade data analysis
 +        self.initial_claims_analysis = self.load_initial_claims_analysis()
-        
+       
++        # Load weekly unemployment trade data analysis
++        self.weekly_trade_analysis = self.load_weekly_trade_analysis()
     def load_trade_analysis(self):
          """Load the updated trade data analysis"""
          try:
@@ -155,6 +157,41 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            return self.initial_claims_analysis['market_insights']
 +        return {}
     
++    def load_weekly_trade_analysis(self):
++        """Load the weekly unemployment trade data analysis"""
++        try:
++            with open('weekly_trade_analysis.json', 'r') as f:
++                return json.load(f)
++        except FileNotFoundError:
++            print("⚠️ Weekly trade analysis file not found. Using default values.")
++            return self.get_default_weekly_trade_analysis()
+    
++    def get_default_weekly_trade_analysis(self):
++        """Get default weekly trade analysis if not available"""
++        return {
++            'foundation_id': self.foundation_id,
++            'integrated_sentiment': {
++                'overall_sentiment_score': 0.0,
++                'overall_sentiment_interpretation': 'Neutral',
++                'confidence': 0.0
++            },
++            'data_summary': {
++                'total_records': 0
++            }
++        }
+    
++    def get_weekly_trade_sentiment(self):
++        """Get weekly trade sentiment from updated data"""
++        if self.weekly_trade_analysis and 'integrated_sentiment' in self.weekly_trade_analysis:
++            return self.weekly_trade_analysis['integrated_sentiment']
++        return self.get_default_weekly_trade_analysis()['integrated_sentiment']
+    
++    def get_weekly_trade_insights(self):
++        """Get weekly trade market insights"""
++        if self.weekly_trade_analysis and 'market_insights' in self.weekly_trade_analysis:
++            return self.weekly_trade_analysis['market_insights']
++        return {}
+    
 +    def calculate_final_enhanced_forecast(self):
 +        """Calculate final enhanced unemployment forecast using all available data"""
 +        
@@ -230,7 +267,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            
 +            adjustments.append(('Extended Claims Trend Adjustment', trend_adjustment))
 +            print(f"🔧 Extended Claims Trend Adjustment (Math Framework {self.math_framework_id}): {trend_adjustment:.4f}%")
-+        
+        
 +        # 6. New: Market Stability Adjustment (from 24 months of data)
 +        market_stability = self.get_market_stability()
 +        if market_stability and 'overall_market_stability' in market_stability:
@@ -260,7 +297,7 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            initial_claims_adjustment = sentiment_score * 0.15 * confidence / 100
 +            adjustments.append(('Initial Claims Trade Data Adjustment', initial_claims_adjustment))
 +            print(f"🔧 Initial Claims Trade Data Adjustment (Foundation {self.initial_claims_foundation_id}): {initial_claims_adjustment:.4f}%")
-+            
+            
 +            # Additional adjustment based on data volume
 +            if self.initial_claims_analysis and 'data_summary' in self.initial_claims_analysis:
 +                total_records = self.initial_claims_analysis['data_summary'].get('total_records', 0)
@@ -268,6 +305,26 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                volume_adjustment = sentiment_score * 0.05 * volume_factor / 100
 +                adjustments.append(('Initial Claims Volume Adjustment', volume_adjustment))
 +                print(f"🔧 Initial Claims Volume Adjustment (Foundation {self.initial_claims_foundation_id}): {volume_adjustment:.4f}%")
+        
++        # 8. New: Weekly Unemployment Trade Data Adjustment (Updated Data)
++        weekly_trade_sentiment = self.get_weekly_trade_sentiment()
++        if weekly_trade_sentiment and 'overall_sentiment_score' in weekly_trade_sentiment:
++            sentiment_score = weekly_trade_sentiment['overall_sentiment_score']
++            confidence = weekly_trade_sentiment.get('confidence', 0.5)
+            
++            # Calculate weekly trade adjustment based on sentiment
++            # Positive sentiment score indicates lower unemployment expectations (bullish)
++            weekly_trade_adjustment = sentiment_score * 0.12 * confidence / 100
++            adjustments.append(('Weekly Trade Data Adjustment', weekly_trade_adjustment))
++            print(f"🔧 Weekly Trade Data Adjustment (Foundation {self.foundation_id}): {weekly_trade_adjustment:.4f}%")
+            
++            # Additional adjustment based on data volume
++            if self.weekly_trade_analysis and 'data_summary' in self.weekly_trade_analysis:
++                total_records = self.weekly_trade_analysis['data_summary'].get('total_records', 0)
++                volume_factor = min(total_records / 5000, 2.0)  # Normalize to reasonable range
++                volume_adjustment = sentiment_score * 0.03 * volume_factor / 100
++                adjustments.append(('Weekly Trade Volume Adjustment', volume_adjustment))
++                print(f"🔧 Weekly Trade Volume Adjustment (Foundation {self.foundation_id}): {volume_adjustment:.4f}%")
         
 +        # Calculate total adjustment
 +        total_adjustment = sum(adj[1] for adj in adjustments)
@@ -315,6 +372,14 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            total_records = self.initial_claims_analysis.get('data_summary', {}).get('total_records', 0)
 +            initial_claims_volume_score = min(total_records / 1000, 100)
         
++        # Weekly unemployment trade data confidence (Updated Data)
++        weekly_trade_confidence = 0
++        weekly_trade_volume_score = 0
++        if self.weekly_trade_analysis and 'integrated_sentiment' in self.weekly_trade_analysis:
++            weekly_trade_confidence = self.weekly_trade_analysis['integrated_sentiment'].get('confidence', 0) * 100
++            total_records = self.weekly_trade_analysis.get('data_summary', {}).get('total_records', 0)
++            weekly_trade_volume_score = min(total_records / 500, 100)
+        
 +        # Market stability bonus (new)
 +        market_stability = self.get_market_stability()
 +        stability_bonus = 0
@@ -338,6 +403,8 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                                   (extended_fred_freshness * 0.05) +
 +                                   (initial_claims_confidence * 0.1) +
 +                                   (initial_claims_volume_score * 0.05) +
++                                   (weekly_trade_confidence * 0.05) +
++                                   (weekly_trade_volume_score * 0.05) +
 +                                   stability_bonus)
         
 +        # Adjust for uncertainty and cap at 95%
@@ -351,6 +418,8 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +        print(f"🔧 Extended FRED Data Freshness: {extended_fred_freshness:.1f}%")
 +        print(f"🔧 Initial Claims Trade Data Confidence: {initial_claims_confidence:.1f}%")
 +        print(f"🔧 Initial Claims Volume Score: {initial_claims_volume_score:.1f}%")
++        print(f"🔧 Weekly Unemployment Trade Data Confidence: {weekly_trade_confidence:.1f}%")
++        print(f"🔧 Weekly Unemployment Trade Volume Score: {weekly_trade_volume_score:.1f}%")
 +        print(f"🔧 Market Stability Bonus: +{stability_bonus:.1f}%")
 +        print(f"📊 Final Enhanced Confidence: {final_confidence:.1f}%")
 +        
@@ -404,6 +473,15 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +                'total_records': self.initial_claims_analysis.get('data_summary', {}).get('total_records', 0) if self.initial_claims_analysis else 0,
 +                'market_insights': self.get_initial_claims_insights(),
 +                'foundation_id': self.initial_claims_foundation_id,
++                'math_framework_id': self.math_framework_id
++            },
++            'weekly_trade_data_integration': {
++                'sentiment_score': self.get_weekly_trade_sentiment().get('overall_sentiment_score'),
++                'sentiment_interpretation': self.get_weekly_trade_sentiment().get('overall_sentiment_interpretation'),
++                'confidence': self.get_weekly_trade_sentiment().get('confidence'),
++                'total_records': self.weekly_trade_analysis.get('data_summary', {}).get('total_records', 0) if self.weekly_trade_analysis else 0,
++                'market_insights': self.get_weekly_trade_insights(),
++                'foundation_id': self.foundation_id,
 +                'math_framework_id': self.math_framework_id
 +            },
 +            'system_architecture': {
@@ -493,48 +571,59 @@ diff --git a/final_enhanced_forecast.py b/final_enhanced_forecast.py
 +            print(f"  Foundation: {initial_claims_data['foundation_id']}")
 +            print(f"  Math Framework: {initial_claims_data['math_framework_id']}")
         
-+        print("\n" + "="*60)
-+    
-+    def run_final_enhanced_forecast(self):
-+        """Run the complete final enhanced unemployment forecasting process"""
-+        
-+        print("="*60)
-+        print("FINAL ENHANCED UNEMPLOYMENT FORECASTING SYSTEM")
-+        print("="*60)
-+        print(f"Foundation ID: {self.foundation_id}")
-+        print(f"Math Framework ID: {self.math_framework_id}")
-+        print(f"Version: {self.version}")
-+        print("="*60)
-+        
-+        # Calculate final enhanced forecast
-+        forecast, adjustments = self.calculate_final_enhanced_forecast()
-+        
-+        # Calculate final enhanced confidence
-+        confidence = self.calculate_final_enhanced_confidence()
-+        
-+        # Create final enhanced report
-+        report = self.create_final_enhanced_report(forecast, adjustments, confidence)
-+        
-+        # Save report
-+        report_file = self.save_final_report(report)
-+        
-+        # Print summary
-+        self.print_final_summary(report)
-+        
-+        print(f"\n🎯 Final enhanced forecasting complete!")
-+        print(f"📁 Report saved to: {report_file}")
-+        print(f"🔧 Foundation System: {self.foundation_id}")
-+        print(f"🔧 Math Framework: {self.math_framework_id}")
-+        print("="*60)
-+        
-+        return report
-+
-+def main():
-+    """Main execution function"""
-+    forecaster = FinalEnhancedUnemploymentForecaster()
-+    forecaster.run_final_enhanced_forecast()
-+
-+if __name__ == "__main__":
-+    main()
+        # Weekly Unemployment Trade Data Integration (Updated Data)
+        if 'weekly_trade_data_integration' in report:
+            weekly_trade_data = report['weekly_trade_data_integration']
+            print(f"\n📊 WEEKLY UNEMPLOYMENT TRADE DATA INTEGRATION (UPDATED):")
+            print(f"  Sentiment Score: {weekly_trade_data['sentiment_score']:.4f}" if weekly_trade_data['sentiment_score'] is not None else "  Sentiment Score: N/A")
+            print(f"  Interpretation: {weekly_trade_data['sentiment_interpretation']}")
+            print(f"  Confidence: {weekly_trade_data['confidence']:.2f}" if weekly_trade_data['confidence'] is not None else "  Confidence: N/A")
+            print(f"  Total Records: {weekly_trade_data['total_records']:,}")
+            print(f"  Foundation: {weekly_trade_data['foundation_id']}")
+            print(f"  Math Framework: {weekly_trade_data['math_framework_id']}")
+        
+        print("\n" + "="*60)
+    
+    def run_final_enhanced_forecast(self):
+        """Run the complete final enhanced unemployment forecasting process"""
+        
+        print("="*60)
+        print("FINAL ENHANCED UNEMPLOYMENT FORECASTING SYSTEM")
+        print("="*60)
+        print(f"Foundation ID: {self.foundation_id}")
+        print(f"Math Framework ID: {self.math_framework_id}")
+        print(f"Version: {self.version}")
+        print("="*60)
+        
+        # Calculate final enhanced forecast
+        forecast, adjustments = self.calculate_final_enhanced_forecast()
+        
+        # Calculate final enhanced confidence
+        confidence = self.calculate_final_enhanced_confidence()
+        
+        # Create final enhanced report
+        report = self.create_final_enhanced_report(forecast, adjustments, confidence)
+        
+        # Save report
+        report_file = self.save_final_report(report)
+        
+        # Print summary
+        self.print_final_summary(report)
+        
+        print(f"\n🎯 Final enhanced forecasting complete!")
+        print(f"📁 Report saved to: {report_file}")
+        print(f"🔧 Foundation System: {self.foundation_id}")
+        print(f"🔧 Math Framework: {self.math_framework_id}")
+        print("="*60)
+        
+        return report
+
+def main():
+    """Main execution function"""
+    forecaster = FinalEnhancedUnemploymentForecaster()
+    forecaster.run_final_enhanced_forecast()
+
+if __name__ == "__main__":
+    main()
 EOF
 )

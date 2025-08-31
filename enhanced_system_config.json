@@ -1,5 +1,5 @@
 {
-  "system_version": "v3.1-initial-claims-integrated",
+  "system_version": "v3.2-weekly-trade-updated",
   "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
   "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
   "initial_claims_foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
@@ -22,7 +22,9 @@
     "claims_trend": 0.001,
     "market_stability": 0.0005,
     "initial_claims_trade_sentiment": 0.15,
-    "initial_claims_volume": 0.05
+    "initial_claims_volume": 0.05,
+    "weekly_trade_sentiment": 0.12,
+    "weekly_trade_volume": 0.03
   },
   "confidence_calculation": {
     "base_confidence": 70,
@@ -34,6 +36,8 @@
     "data_freshness_weight": 0.05,
     "initial_claims_sentiment_weight": 0.1,
     "initial_claims_volume_weight": 0.05,
+    "weekly_trade_sentiment_weight": 0.05,
+    "weekly_trade_volume_weight": 0.05,
     "stability_bonus_max": 5,
     "max_confidence": 95
   },
@@ -64,6 +68,14 @@
       "update_frequency": "real-time",
       "processing_method": "initial_claims_v1",
       "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f"
+    },
+    "weekly_unemployment_trade_data": {
+      "enabled": true,
+      "prices_file": "Unemployment Trade Prices Data.csv",
+      "pairs_file": "Unemployment Rate Pair Data.csv",
+      "update_frequency": "weekly",
+      "processing_method": "weekly_trade_v1",
+      "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b"
     }
   },
   "market_stability_thresholds": {
@@ -90,6 +102,7 @@
     "extended_fred_analysis": "extended_fred_claims_analysis.json",
     "enhanced_trade_analysis": "enhanced_forecast_input.json",
     "initial_claims_analysis": "initial_claims_analysis.json",
+    "weekly_trade_analysis": "weekly_trade_analysis.json",
     "visual_analysis": "enhanced_unemployment_forecast_analysis.md",
     "economic_breakdown": "enhanced_economic_breakdown_v3.md",
     "summary": "enhanced_forecast_summary_v3.md"
@@ -98,20 +111,19 @@
     "foundation": {
       "id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
       "components": [
-        "Data Sources: BLS, FRED (24 months), ForecastEx, Enhanced Trade Data",
-        "Core Algorithms: Final enhanced unemployment forecasting with extended analysis",
-        "Quality Assurance: Multi-source validation with 24-month FRED integration",
-        "System Stability: Robust error handling and extended data feeds"
+        "Data Sources: BLS, FRED (24 months), ForecastEx, Enhanced Trade Data, Initial Claims Trade Data, Weekly Unemployment Trade Data",
+        "Core Algorithms: Final enhanced unemployment forecasting with extended analysis, initial claims integration, and weekly trade updates",
+        "Quality Assurance: Multi-source validation with 24-month FRED integration, trade data analysis, and weekly updates",
+        "System Stability: Robust error handling and extended data feeds with initial claims and weekly trade foundations"
       ]
     },
     "math_framework": {
       "id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
       "components": [
-        "Statistical Models: Advanced regression analysis with 24-month trends",
-        "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics",
-        "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics and initial claims adjustments",
-        "Confidence Intervals: Enhanced statistical validation with extended FRED data and initial claims confidence",
-        "Trade Data Integration: Real-time market sentiment, extended claims analysis, and initial claims trade data"
+        "Statistical Models: Advanced regression analysis with 24-month trends and weekly trade sentiment",
+        "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics, initial claims adjustments, and weekly trade updates",
+        "Confidence Intervals: Enhanced statistical validation with extended FRED data, initial claims confidence, and weekly trade confidence",
+        "Trade Data Integration: Real-time market sentiment, extended claims analysis, initial claims trade data, and weekly unemployment trade data"
       ]
     },
     "initial_claims_foundation": {
@@ -122,20 +134,32 @@
         "Threshold Analysis: Claims threshold distribution and trends",
         "Temporal Patterns: Trading activity and contract expiration analysis"
       ]
+    },
+    "weekly_trade_foundation": {
+      "id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+      "components": [
+        "Weekly Unemployment Trade Data Processing: Prices and pairs analysis",
+        "Sentiment Analysis: Weekly market sentiment scoring and interpretation",
+        "Contract Analysis: Unemployment rate contract distribution and trends",
+        "Temporal Patterns: Weekly trading activity and contract analysis"
+      ]
     }
   },
   "enhancement_history": {
     "v1.0": "Basic unemployment forecasting",
     "v2.0": "Enhanced foundation and math framework integration",
     "v2.1": "Trade data integration and sentiment analysis",
-    "v3.0": "Extended FRED data (24 months), enhanced trade processing (54K+ trades), market stability metrics, multi-period trend analysis"
+    "v3.0": "Extended FRED data (24 months), enhanced trade processing (54K+ trades), market stability metrics, multi-period trend analysis",
+    "v3.1": "Initial claims trade data integration with sentiment analysis and threshold analysis",
+    "v3.2": "Weekly unemployment trade data integration with updated prices and pairs analysis"
   },
   "performance_metrics": {
     "target_confidence": 95.0,
     "current_confidence": 95.0,
-    "data_coverage": "24 months FRED + 54K+ trades",
+    "data_coverage": "24 months FRED + 54K+ trades + Initial Claims + Weekly Trade Updates",
     "market_stability": "Very Stable",
-    "update_frequency": "real-time",
-    "last_forecast": "2025-08-23"
+    "update_frequency": "real-time + weekly",
+    "last_forecast": "2025-08-23",
+    "weekly_trade_integration": "Enabled"
   }
 }
