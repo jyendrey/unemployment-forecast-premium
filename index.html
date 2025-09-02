@@ -290,7 +290,7 @@
         }
         .indicators-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             margin-top: 20px;
         }
@@ -655,6 +655,42 @@
             </div>
         </div>
 
+        <!-- Multi-Period Trend Analysis -->
+        <div class="chart-container" style="grid-column: 1 / -1;">
+            <h3>Multi-Period Trend Analysis</h3>
+            <div class="trend-blocks">
+                <div class="trend-block">
+                    <h4 style="color: var(--ib-light-blue);">4-Month Short-Term Trend</h4>
+                    <div class="trend-value" style="color: var(--ib-light-blue);">4.20%</div>
+                    <div class="trend-description">
+                        <strong>Trend:</strong> Stable with slight improvement<br>
+                        <strong>Volatility:</strong> Low (0.08)<br>
+                        <strong>Direction:</strong> Slight improvement
+                    </div>
+                </div>
+                
+                <div class="trend-block">
+                    <h4 style="color: var(--ib-green);">12-Month Medium-Term Trend</h4>
+                    <div class="trend-value" style="color: var(--ib-green);">4.20%</div>
+                    <div class="trend-description">
+                        <strong>Trend:</strong> Consistent stability<br>
+                        <strong>Volatility:</strong> Medium (0.15)<br>
+                        <strong>Direction:</strong> Stable
+                    </div>
+                </div>
+                
+                <div class="trend-block">
+                    <h4 style="color: var(--ib-yellow);">24-Month Long-Term Trend</h4>
+                    <div class="trend-value" style="color: var(--ib-yellow);">4.20%</div>
+                    <div class="trend-description">
+                        <strong>Trend:</strong> Gradual stabilization<br>
+                        <strong>Volatility:</strong> High (0.24)<br>
+                        <strong>Direction:</strong> Stabilizing
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Economic Intelligence Dashboard -->
         <div class="chart-container">
             <h3>Economic Intelligence Dashboard</h3>
@@ -665,7 +701,7 @@
                     <div class="indicator-confidence">Latest BLS Data</div>
                     <div class="sub-metrics">
                         <span class="sub-metric">Previous: 4.1%</span>
-                         <span class="sub-metric">Change: +0.1%</span>
+                        <span class="sub-metric">Change: +0.1%</span>
                         <span class="sub-metric">Trend: Stable</span>
                     </div>
                 </div>
@@ -748,42 +784,6 @@
                         <span class="sub-metric">Services PMI: 54.2</span>
                         <span class="sub-metric">LEI: +0.3%</span>
                         <span class="sub-metric">Coincident: +0.2%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Multi-Period Trend Analysis -->
-        <div class="chart-container" style="grid-column: 1 / -1;">
-            <h3>Multi-Period Trend Analysis</h3>
-            <div class="trend-blocks">
-                <div class="trend-block">
-                    <h4 style="color: var(--ib-light-blue);">4-Month Short-Term Trend</h4>
-                    <div class="trend-value" style="color: var(--ib-light-blue);">4.20%</div>
-                    <div class="trend-description">
-                        <strong>Trend:</strong> Stable with slight improvement<br>
-                        <strong>Volatility:</strong> Low (0.08)<br>
-                        <strong>Direction:</strong> Slight improvement
-                    </div>
-                </div>
-                
-                <div class="trend-block">
-                    <h4 style="color: var(--ib-green);">12-Month Medium-Term Trend</h4>
-                    <div class="trend-value" style="color: var(--ib-green);">4.20%</div>
-                    <div class="trend-description">
-                        <strong>Trend:</strong> Consistent stability<br>
-                        <strong>Volatility:</strong> Medium (0.15)<br>
-                        <strong>Direction:</strong> Stable
-                    </div>
-                </div>
-                
-                <div class="trend-block">
-                    <h4 style="color: var(--ib-yellow);">24-Month Long-Term Trend</h4>
-                    <div class="trend-value" style="color: var(--ib-yellow);">4.20%</div>
-                    <div class="trend-description">
-                        <strong>Trend:</strong> Gradual stabilization<br>
-                        <strong>Volatility:</strong> High (0.24)<br>
-                        <strong>Direction:</strong> Stabilizing
                     </div>
                 </div>
             </div>
