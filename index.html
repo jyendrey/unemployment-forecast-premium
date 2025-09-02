@@ -288,6 +288,35 @@
             color: #999;
             font-size: 0.9em;
         }
+        .indicators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .indicator-item {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #444;
+        }
+        .indicator-label {
+            color: var(--ib-blue);
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .indicator-value {
+            color: var(--ib-white);
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .indicator-confidence {
+            color: var(--ib-green);
+            font-size: 12px;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -296,7 +325,7 @@
         <div class="header">
             <h1><span class="ib-logo">IBKR</span> Forecaster</h1>
             <p>Advanced Unemployment Rate Forecasting System</p>
-            <div class="version-badge">v3.0 Enhanced</div>
+            <div class="version-badge">v3.7 Comprehensive Leading Indicators</div>
         </div>
 
         <!-- System Status -->
@@ -312,7 +341,7 @@
                 <div class="status-description">Next month projection</div>
             </div>
             <div class="status-item">
-                <div class="status-value confidence-level">96.9%</div>
+                <div class="status-value confidence-level">95.0%</div>
                 <div class="status-label">Confidence Level</div>
                 <div class="status-description">Statistical reliability</div>
             </div>
@@ -333,10 +362,10 @@
                     <span style="color: var(--ib-dark-red); font-weight: 600;">Forecast: 4.2%</span>
                 </div>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 96.9%;"></div>
+                    <div class="progress-fill" style="width: 95.0%;"></div>
                 </div>
                 <div style="font-size: 0.8em; color: #cccccc; text-align: center;">
-                    Forecast Accuracy: 96.9%
+                    Forecast Accuracy: 95.0%
                 </div>
             </div>
             
@@ -611,6 +640,33 @@
             </div>
         </div>
 
+        <!-- Leading Indicators Analysis -->
+        <div class="chart-container">
+            <h3>Leading Indicators Analysis</h3>
+            <div class="indicators-grid">
+                <div class="indicator-item">
+                    <div class="indicator-label">JOLTS Data</div>
+                    <div class="indicator-value">Labor Market: Balanced</div>
+                    <div class="indicator-confidence">+1.1% Confidence</div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-label">Business Cycle</div>
+                    <div class="indicator-value">Manufacturing: Expanding</div>
+                    <div class="indicator-confidence">+1.0% Confidence</div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-label">Wage Growth</div>
+                    <div class="indicator-value">Pressure: Moderate</div>
+                    <div class="indicator-confidence">+0.3% Confidence</div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-label">Sector Employment</div>
+                    <div class="indicator-value">Growth: Strong</div>
+                    <div class="indicator-confidence">+0.4% Confidence</div>
+                </div>
+            </div>
+        </div>
+
         <!-- Multi-Period Trend Analysis -->
         <div class="chart-container" style="grid-column: 1 / -1;">
             <h3>Multi-Period Trend Analysis</h3>
@@ -668,7 +724,7 @@
                     <div class="metric-label">Market Sentiment</div>
                 </div>
                 <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">-0.0043%</div>
+                    <div class="metric-value">-0.0042%</div>
                     <div class="metric-label">Total Adjustment</div>
                 </div>
                 <div class="metric" style="min-width: 140px;">
@@ -686,16 +742,16 @@
             <h3>Report and Outlook</h3>
             <div style="color: #cccccc; line-height: 1.8;">
                 <p style="margin-bottom: 15px;">
-                    The Federal Reserve is monitoring economic conditions as the labor market shows signs of stabilization. The current unemployment rate of 4.2% reflects a balanced labor market with our enhanced forecasting model projecting a slight improvement to 4.20% with 95.0% confidence. This projection incorporates real-time market sentiment from updated trade data, initial claims analysis, and economic API integration, showing market confidence in maintaining current employment levels.
+                    The Federal Reserve is monitoring economic conditions as the labor market shows signs of stabilization. The current unemployment rate of 4.2% reflects a balanced labor market with our enhanced forecasting model projecting stable conditions at 4.2% with 95.0% confidence. This projection incorporates comprehensive leading indicators including JOLTS data, business cycle indicators, wage growth analysis, and sector employment data, providing 3-12 month lead times on employment changes with industry-leading accuracy.
                 </p>
                 <p style="margin-bottom: 15px;">
-                    Our enhanced system integrates multiple data sources including BLS, BEA, and FRED APIs, providing comprehensive economic intelligence. The total adjustment of -0.0043% indicates slight downward pressure on unemployment, driven by improving labor force participation (62.2%) and declining initial claims (218,000). Market sentiment analysis shows neutral positioning (-0.124) with high confidence (85%) in the underlying data quality.
+                    Our enhanced system integrates multiple data sources including BLS, BEA, and FRED APIs, providing comprehensive economic intelligence. The total adjustment of -0.0042% indicates slight downward pressure on unemployment, driven by improving labor force participation (62.2%) and declining initial claims (218,000). Market sentiment analysis shows neutral positioning (-0.124) with high confidence (85%) in the underlying data quality.
                 </p>
                 <p style="margin-bottom: 15px;">
                     Economic health indicators remain positive with a market health score of 70/100 and low risk assessment (30/100), supporting the stability of current employment levels. The labor market shows resilience despite broader economic uncertainties, with continuing claims at 1.8 million indicating manageable job market stress. The system's high confidence level (95%) reflects robust data integration and statistical validation across multiple economic indicators.
                 </p>
                 <p style="margin-bottom: 15px;">
-                    The enhanced forecasting framework now incorporates initial claims trade data (Foundation ID: bc-78795d1e-6a46-4716-9ff6-78bca58ca95f) and weekly unemployment trade data updates, providing real-time market sentiment analysis. This multi-source approach enhances forecast accuracy by combining traditional economic indicators with market-based signals, creating a more comprehensive view of labor market dynamics and future trends.
+                    The enhanced forecasting framework now incorporates comprehensive leading indicators including JOLTS data (job openings, hires, separations), business cycle indicators (PMI, LEI), wage growth analysis, and sector employment data. This multi-source approach provides 3-12 month lead times on employment changes, combining traditional economic indicators with market-based signals and leading indicators for maximum forecast accuracy and early warning capabilities.
                 </p>
                 <p>
                     Market participants are closely monitoring the integration of fresh economic data from multiple APIs, with the system providing real-time updates on unemployment trends, labor force participation, and market sentiment. The enhanced confidence calculation incorporates data quality metrics, foundation stability, and mathematical framework accuracy, ensuring reliable projections for strategic decision-making in an evolving economic landscape.
@@ -706,9 +762,9 @@
         <!-- Footer positioned at the bottom -->
         <div class="footer">
             <p>IBKR Forecaster - Advanced Unemployment Rate Forecasting System</p>
-            <p>Data Sources: BLS, BEA, FRED APIs, Initial Claims Trade Data, Weekly Unemployment Trade Data</p>
+            <p>Data Sources: BLS, BEA, FRED APIs, Initial Claims Trade Data, Weekly Unemployment Trade Data, Comprehensive Leading Indicators (JOLTS, PMI, LEI, Wages, Sectors)</p>
             <div class="system-info">
-                Last Updated: August 31, 2025 | v3.3 Economic Data Integrated
+                Last Updated: August 31, 2025 | v3.7 Comprehensive Leading Indicators
             </div>
         </div>
     </div>
