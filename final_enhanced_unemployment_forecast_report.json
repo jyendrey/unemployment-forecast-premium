@@ -1,0 +1,232 @@
+{
+  "generated_date": "2025-09-02T02:51:27.763710",
+  "version": "v3.7-comprehensive-leading-indicators",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "forecast_summary": {
+    "current_unemployment": 4.2,
+    "forecasted_unemployment": 4.2,
+    "change": -0.0,
+    "confidence": 95,
+    "direction": "Improvement"
+  },
+  "adjustments": [
+    {
+      "name": "LFPR Adjustment",
+      "value": -0.004,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Initial Claims Adjustment",
+      "value": -0.0001,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Continuing Claims Adjustment",
+      "value": 0.0001,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Updated Trade Sentiment Adjustment",
+      "value": -0.0002,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Updated Trade Volume Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Extended Claims Trend Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Market Stability Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Initial Claims Trade Data Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Initial Claims Volume Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Weekly Trade Data Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Weekly Trade Volume Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Economic Health Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Economic Risk Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "JOLTS Data Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Business Cycle Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Wage Growth Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Sector Employment Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    }
+  ],
+  "updated_trade_data_integration": {
+    "sentiment_score": -0.124,
+    "sentiment_interpretation": "Neutral",
+    "contracts_analyzed": 26,
+    "total_volume": 260,
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "extended_fred_data_integration": {
+    "initial_claims": 218000,
+    "continuing_claims": 1800000,
+    "extended_trends": {
+      "short_term": {
+        "initial_claims": {
+          "trend": "Declining"
+        },
+        "continuing_claims": {
+          "trend": "Declining"
+        }
+      },
+      "medium_term": {
+        "initial_claims": {
+          "trend": "Declining"
+        },
+        "continuing_claims": {
+          "trend": "Declining"
+        }
+      },
+      "long_term": {
+        "initial_claims": {
+          "trend": "Declining"
+        },
+        "continuing_claims": {
+          "trend": "Declining"
+        }
+      }
+    },
+    "market_stability": {
+      "overall_market_stability": "Unknown"
+    },
+    "market_health": {
+      "overall_market_health": "Strong"
+    },
+    "data_coverage": "24 months (103 observations)",
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "initial_claims_trade_data_integration": {
+    "sentiment_score": 0.0,
+    "sentiment_interpretation": "Neutral",
+    "confidence": 0.0,
+    "total_records": 0,
+    "market_insights": {},
+    "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "weekly_trade_data_integration": {
+    "sentiment_score": 0.0,
+    "sentiment_interpretation": "Neutral",
+    "confidence": 0.0,
+    "total_records": 0,
+    "market_insights": {},
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "economic_data_api_integration": {
+    "unemployment_rate": 4.2,
+    "labor_force_participation": 62.2,
+    "initial_claims": 218000,
+    "market_health": {
+      "overall_health_score": 70,
+      "health_level": "Good"
+    },
+    "risk_assessment": {
+      "risk_level": "Low",
+      "risk_score": 30
+    },
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "leading_indicators_integration": {
+    "jolts_data": {
+      "labor_market_tightness": "balanced",
+      "hiring_activity": "moderate",
+      "confidence_score": 0.3
+    },
+    "business_cycle_indicators": {
+      "manufacturing_health": "expanding",
+      "services_health": "expanding",
+      "confidence_score": 0.4
+    },
+    "wage_growth_data": {
+      "wage_pressure": "moderate",
+      "confidence_score": 0.2
+    },
+    "sector_employment_data": {
+      "key_sector_growth": "strong",
+      "confidence_score": 0.3
+    },
+    "confidence_boost": {
+      "jolts_data": "+3-4%",
+      "business_cycle_indicators": "+2-3%",
+      "wage_growth_data": "+1-2%",
+      "sector_employment_data": "+1-2%",
+      "total_estimated_boost": "+7-11%"
+    },
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "system_architecture": {
+    "foundation_components": [
+      "Data Sources: BLS, FRED (24 months), ForecastEx, Updated Trade Data, Initial Claims Trade Data",
+      "Core Algorithms: Final enhanced unemployment forecasting with extended analysis and initial claims integration",
+      "Quality Assurance: Multi-source validation with 24-month FRED integration and trade data analysis",
+      "System Stability: Robust error handling and extended data feeds with initial claims foundation"
+    ],
+    "math_framework_components": [
+      "Statistical Models: Advanced regression analysis with 24-month trends and initial claims sentiment",
+      "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics and initial claims adjustments",
+      "Confidence Intervals: Enhanced statistical validation with extended FRED data and initial claims confidence",
+      "Trade Data Integration: Updated market sentiment, extended claims analysis, and initial claims trade data"
+    ],
+    "initial_claims_foundation": {
+      "id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+      "components": [
+        "Initial Claims Trade Data Processing: Pairs and prices analysis",
+        "Sentiment Analysis: Market sentiment scoring and interpretation",
+        "Threshold Analysis: Claims threshold distribution and trends",
+        "Temporal Patterns: Trading activity and contract expiration analysis"
+      ]
+    }
+  }
+}
