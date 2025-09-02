@@ -184,10 +184,13 @@
     "math_framework": {
       "id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
       "components": [
-        "Statistical Models: Advanced regression analysis with 24-month trends and weekly trade sentiment",
-        "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics, initial claims adjustments, and weekly trade updates",
-        "Confidence Intervals: Enhanced statistical validation with extended FRED data, initial claims confidence, and weekly trade confidence",
-        "Trade Data Integration: Real-time market sentiment, extended claims analysis, initial claims trade data, and weekly unemployment trade data"
+        "Statistical Models: Advanced regression analysis with 24-month trends, weekly trade sentiment, and comprehensive leading indicators integration",
+        "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics, initial claims adjustments, weekly trade updates, and leading indicators adjustments (JOLTS, PMI, LEI, Wages, Sectors)",
+        "Confidence Intervals: Enhanced statistical validation with extended FRED data, initial claims confidence, weekly trade confidence, and leading indicators confidence boost",
+        "Trade Data Integration: Real-time market sentiment, extended claims analysis, initial claims trade data, and weekly unemployment trade data",
+        "Leading Indicators Integration: JOLTS data analysis (job openings/hires ratio, quits rate), Business cycle indicators (PMI, LEI trends), Wage growth analysis (hourly earnings, ECI), Sector employment analysis (manufacturing, construction, healthcare, leisure)",
+        "Mathematical Framework Enhancements: 16 adjustment factors with leading indicators weights, confidence calculation with 99% maximum, temporal pattern analysis with 3-12 month lead times",
+        "Advanced Analytics: Multi-period trend analysis (4, 12, 24 months), volatility metrics (coefficient of variation), market stability assessment, and comprehensive economic health scoring"
       ]
     },
     "initial_claims_foundation": {
@@ -216,6 +219,17 @@
         "Wage Growth Analysis: Hourly earnings, employment cost index analysis",
         "Sector Employment Analysis: Manufacturing, construction, services analysis"
       ]
+    },
+    "comprehensive_math_framework": {
+      "id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+      "mathematical_components": [
+        "16 Adjustment Factors: Labor force participation, initial claims, continuing claims, trade sentiment, trade volume, claims trend, market stability, initial claims trade sentiment, initial claims volume, weekly trade sentiment, weekly trade volume, economic health, economic risk, JOLTS data, business cycle indicators, wage growth data, sector employment data",
+        "Leading Indicators Mathematical Integration: JOLTS confidence boost (+3-4%), Business cycle confidence boost (+2-3%), Wage growth confidence boost (+1-2%), Sector employment confidence boost (+1-2%)",
+        "Confidence Calculation Algorithm: Base confidence (70) + Foundation stability (20%) + Math framework accuracy (10%) + Trade data (25%) + Trade volume (10%) + Extended FRED (15%) + Data freshness (5%) + Initial claims sentiment (10%) + Initial claims volume (5%) + Weekly trade sentiment (5%) + Weekly trade volume (5%) + Leading indicators boost (7-11%)",
+        "Statistical Validation: 85% confidence intervals for unemployment rate trends, multi-period trend analysis with volatility metrics, market stability assessment with coefficient of variation calculations",
+        "Temporal Pattern Analysis: 3-12 month lead times on employment changes, weekly trade data integration, monthly leading indicators updates, real-time economic API data",
+        "Advanced Mathematical Models: Multi-factor regression analysis, weighted adjustment algorithms, confidence interval calculations, volatility and stability metrics, economic health scoring algorithms"
+      ]
     }
   },
   "enhancement_history": {
@@ -236,5 +250,17 @@
     "update_frequency": "real-time + weekly",
     "last_forecast": "2025-08-23",
     "weekly_trade_integration": "Enabled"
+  },
+  "math_framework_performance": {
+    "adjustment_factors_total": 16,
+    "leading_indicators_integrated": 4,
+    "confidence_calculation_components": 12,
+    "statistical_validation_level": "85% confidence intervals",
+    "temporal_analysis_periods": ["3 months", "6 months", "12 months"],
+    "volatility_metrics": ["coefficient_of_variation", "stability_assessment", "market_health_score"],
+    "mathematical_models": ["multi_factor_regression", "weighted_adjustments", "confidence_intervals", "volatility_calculations", "economic_health_scoring"],
+    "lead_time_capabilities": "3-12 months on employment changes",
+    "data_integration_sources": 8,
+    "real_time_update_capability": true
   }
 }
