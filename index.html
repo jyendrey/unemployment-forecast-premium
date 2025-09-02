@@ -317,6 +317,21 @@
             font-size: 12px;
             font-weight: 600;
         }
+        .sub-metrics {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .sub-metric {
+            color: #cccccc;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 4px 8px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 6px;
+            border-left: 3px solid var(--ib-blue);
+        }
     </style>
 </head>
 <body>
@@ -640,29 +655,99 @@
             </div>
         </div>
 
-        <!-- Leading Indicators Analysis -->
+        <!-- Economic Intelligence Dashboard -->
         <div class="chart-container">
-            <h3>Leading Indicators Analysis</h3>
+            <h3>Economic Intelligence Dashboard</h3>
             <div class="indicators-grid">
+                <div class="indicator-item">
+                    <div class="indicator-label">Unemployment Rate</div>
+                    <div class="indicator-value">4.2%</div>
+                    <div class="indicator-confidence">Latest BLS Data</div>
+                    <div class="sub-metrics"> <span class="sub-metric">Previous: 4.1%</span>
+                        <span class="sub-metric">Change: +0.1%</span>
+                        <span class="sub-metric">Trend: Stable</span>
+                    </div>
+                </div>
+                
                 <div class="indicator-item">
                     <div class="indicator-label">JOLTS Data</div>
                     <div class="indicator-value">Labor Market: Balanced</div>
                     <div class="indicator-confidence">+1.1% Confidence</div>
+                    <div class="sub-metrics">
+                        <span class="sub-metric">Job Openings: 8.7M</span>
+                        <span class="sub-metric">Hires: 5.9M</span>
+                        <span class="sub-metric">Quits: 3.6M</span>
+                        <span class="sub-metric">Layoffs: 1.4M</span>
+                    </div>
                 </div>
+                
                 <div class="indicator-item">
-                    <div class="indicator-label">Business Cycle</div>
-                    <div class="indicator-value">Manufacturing: Expanding</div>
-                    <div class="indicator-confidence">+1.0% Confidence</div>
+                    <div class="indicator-label">Labor Force Participation</div>
+                    <div class="indicator-value">62.2%</div>
+                    <div class="indicator-confidence">Historical Avg: 63.0%</div>
+                    <div class="sub-metrics">
+                        <span class="sub-metric">Previous: 62.1%</span>
+                        <span class="sub-metric">Change: +0.1%</span>
+                        <span class="sub-metric">Impact: Slight Downward</span>
+                    </div>
                 </div>
+                
+                <div class="indicator-item">
+                    <div class="indicator-label">Weekly Claims</div>
+                    <div class="indicator-value">218k</div>
+                    <div class="indicator-confidence">4-Week Average</div>
+                    <div class="sub-metrics">
+                        <span class="sub-metric">Initial: 235k</span>
+                        <span class="sub-metric">Continuing: 1.8M</span>
+                        <span class="sub-metric">Trend: Declining</span>
+                    </div>
+                </div>
+                
                 <div class="indicator-item">
                     <div class="indicator-label">Wage Growth</div>
                     <div class="indicator-value">Pressure: Moderate</div>
                     <div class="indicator-confidence">+0.3% Confidence</div>
+                    <div class="sub-metrics">
+                        <span class="sub-metric">Hourly Earnings: +4.1%</span>
+                        <span class="sub-metric">ECI: +4.3%</span>
+                        <span class="sub-metric">Unit Labor: +2.8%</span>
+                        <span class="sub-metric">Productivity: +1.2%</span>
+                    </div>
                 </div>
+                
                 <div class="indicator-item">
                     <div class="indicator-label">Sector Employment</div>
                     <div class="indicator-value">Growth: Strong</div>
                     <div class="indicator-confidence">+0.4% Confidence</div>
+                    <div class="sub-metrics">
+                        <span class="sub-metric">Manufacturing: +12K</span>
+                        <span class="sub-metric">Construction: +18K</span>
+                        <span class="sub-metric">Healthcare: +25K</span>
+                        <span class="sub-metric">Leisure: +15K</span>
+                    </div>
+                </div>
+                
+                <div class="indicator-item">
+                    <div class="indicator-label">Market Sentiment</div>
+                    <div class="indicator-value">-0.124</div>
+                    <div class="indicator-confidence">Neutral Position</div>
+                    <div class="sub-metrics">
+                        <span class="sub-metric">Trades: 54K+</span>
+                        <span class="sub-metric">Volume: 123K</span>
+                        <span class="sub-metric">Confidence: 85%</span>
+                    </div>
+                </div>
+                
+                <div class="indicator-item">
+                    <div class="indicator-label">Business Cycle</div>
+                    <div class="indicator-value">Manufacturing: Expanding</div>
+                    <div class="indicator-confidence">+1.0% Confidence</div>
+                    <div class="sub-metrics">
+                        <span class="sub-metric">PMI: 52.8</span>
+                        <span class="sub-metric">Services PMI: 54.2</span>
+                        <span class="sub-metric">LEI: +0.3%</span>
+                        <span class="sub-metric">Coincident: +0.2%</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -703,38 +788,9 @@
             </div>
         </div>
 
-        <!-- Economic Factors -->
-        <div class="card" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
-            <h2 style="border-bottom: none; margin-bottom: 20px; width: 100%; text-align: center;"><span class="icon"></span>Economic Factors</h2>
-            <div class="metrics-grid">
-                <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">4.2%</div>
-                    <div class="metric-label">Current Rate</div>
-                </div>
-                <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">62.2%</div>
-                    <div class="metric-label">Labor Force Participation</div>
-                </div>
-                <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">218k</div>
-                    <div class="metric-label">Weekly Claims</div>
-                </div>
-                <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">-0.124</div>
-                    <div class="metric-label">Market Sentiment</div>
-                </div>
-                <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">-0.0042%</div>
-                    <div class="metric-label">Total Adjustment</div>
-                </div>
-                <div class="metric" style="min-width: 140px;">
-                    <div class="metric-value">95.0%</div>
-                    <div class="metric-label">Confidence Level</div>
-                </div>
-            </div>
-            <div style="width: 100%; text-align: center; margin-top: 20px;">
-                <a href="ECONOMIC_BREAKDOWN.md" class="btn"> View Economic Breakdown</a>
-            </div>
+        <!-- Economic Breakdown Link -->
+        <div class="chart-container" style="grid-column: 1 / -1; text-align: center;">
+            <a href="ECONOMIC_BREAKDOWN.md" class="btn">View Economic Breakdown</a>
         </div>
 
         <!-- Report and Outlook -->
