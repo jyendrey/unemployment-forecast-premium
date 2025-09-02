@@ -575,65 +575,65 @@
                 <h3 style="margin-bottom: 20px;">ForecastEx Pairs Data Probability</h3>
                 <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 400px; position: relative;">
                     <svg width="100%" height="350" viewBox="0 0 500 350">
-                        <!-- Grid lines -->
-                        <line x1="0" y1="70" x2="500" y2="70" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-                        <line x1="0" y1="140" x2="500" y2="140" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-                        <line x1="0" y1="210" x2="500" y2="210" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-                        <line x1="0" y1="280" x2="500" y2="280" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <!-- Grid lines (horizontal) -->
+                        <line x1="50" y1="50" x2="450" y2="50" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="50" y1="100" x2="450" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="50" y1="150" x2="450" y2="150" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="50" y1="200" x2="450" y2="200" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="50" y1="250" x2="450" y2="250" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                        <line x1="50" y1="300" x2="450" y2="300" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                         
-                        <!-- Y-axis labels for probability (0-100%) -->
-                        <text x="-10" y="70" text-anchor="end" fill="#cccccc" font-size="10">100%</text>
-                        <text x="-10" y="140" text-anchor="end" fill="#cccccc" font-size="10">75%</text>
-                        <text x="-10" y="210" text-anchor="end" fill="#cccccc" font-size="10">50%</text>
-                        <text x="-10" y="280" text-anchor="end" fill="#cccccc" font-size="10">25%</text>
-                        <text x="-10" y="350" text-anchor="end" fill="#cccccc" font-size="10">0%</text>
+                        <!-- X-axis labels for probability (0-100%) -->
+                        <text x="50" y="45" text-anchor="middle" fill="#cccccc" font-size="10">0%</text>
+                        <text x="150" y="45" text-anchor="middle" fill="#cccccc" font-size="10">25%</text>
+                        <text x="250" y="45" text-anchor="middle" fill="#cccccc" font-size="10">50%</text>
+                        <text x="350" y="45" text-anchor="middle" fill="#cccccc" font-size="10">75%</text>
+                        <text x="450" y="45" text-anchor="middle" fill="#cccccc" font-size="10">100%</text>
                         
-                        <!-- X-axis labels (Target rates) -->
-                        <text x="50" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.0%</text>
-                        <text x="150" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.1%</text>
-                        <text x="250" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.2%</text>
-                        <text x="350" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.3%</text>
-                        <text x="450" y="320" text-anchor="middle" fill="#cccccc" font-size="8">4.4%</text>
+                        <!-- Y-axis labels (Target rates) -->
+                        <text x="30" y="75" text-anchor="end" fill="#cccccc" font-size="10">4.0%</text>
+                        <text x="30" y="125" text-anchor="end" fill="#cccccc" font-size="10">4.1%</text>
+                        <text x="30" y="175" text-anchor="end" fill="#cccccc" font-size="10">4.2%</text>
+                        <text x="30" y="225" text-anchor="end" fill="#cccccc" font-size="10">4.3%</text>
+                        <text x="30" y="275" text-anchor="end" fill="#cccccc" font-size="10">4.4%</text>
                         
-                        <!-- Yes probability bars (Green) -->
-                        <rect x="30" y="10" width="40" height="340" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="50" y="25" text-anchor="middle" fill="var(--ib-white)" font-size="8">97%</text>
+                        <!-- 4.0% - Yes (97%) and No (3%) -->
+                        <rect x="50" y="60" width="388" height="30" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="244" y="80" text-anchor="middle" fill="var(--ib-white)" font-size="10">97%</text>
+                        <rect x="438" y="60" width="12" height="30" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="444" y="80" text-anchor="middle" fill="var(--ib-white)" font-size="10">3%</text>
                         
-                        <rect x="130" y="40" width="40" height="310" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="50" y="55" text-anchor="middle" fill="var(--ib-white)" font-size="8">90%</text>
+                        <!-- 4.1% - Yes (90%) and No (10%) -->
+                        <rect x="50" y="110" width="360" height="30" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="230" y="130" text-anchor="middle" fill="var(--ib-white)" font-size="10">90%</text>
+                        <rect x="410" y="110" width="40" height="30" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="430" y="130" text-anchor="middle" fill="var(--ib-white)" font-size="10">10%</text>
                         
-                        <rect x="230" y="140" width="40" height="210" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="250" y="155" text-anchor="middle" fill="var(--ib-white)" font-size="8">59%</text>
+                        <!-- 4.2% - Yes (59%) and No (41%) -->
+                        <rect x="50" y="160" width="236" height="30" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="168" y="180" text-anchor="middle" fill="var(--ib-white)" font-size="10">59%</text>
+                        <rect x="286" y="160" width="164" height="30" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="368" y="180" text-anchor="middle" fill="var(--ib-white)" font-size="10">41%</text>
                         
-                        <rect x="330" y="280" width="40" height="70" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="350" y="295" text-anchor="middle" fill="var(--ib-white)" font-size="8">15%</text>
+                        <!-- 4.3% - Yes (15%) and No (85%) -->
+                        <rect x="50" y="210" width="60" height="30" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="80" y="230" text-anchor="middle" fill="var(--ib-white)" font-size="10">15%</text>
+                        <rect x="110" y="210" width="340" height="30" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="280" y="230" text-anchor="middle" fill="var(--ib-white)" font-size="10">85%</text>
                         
-                        <rect x="430" y="315" width="40" height="35" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
-                        <text x="450" y="330" text-anchor="middle" fill="var(--ib-white)" font-size="8">5%</text>
-                        
-                        <!-- No probability bars (Red) -->
-                        <rect x="30" y="350" width="40" height="10" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
-                        <text x="50" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">3%</text>
-                        
-                        <rect x="130" y="350" width="40" height="40" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
-                        <text x="150" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">8%</text>
-                        
-                        <rect x="230" y="350" width="40" height="140" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
-                        <text x="250" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">39%</text>
-                        
-                        <rect x="330" y="350" width="40" height="280" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
-                        <text x="350" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">83%</text>
-                        
-                        <rect x="430" y="350" width="40" height="315" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
-                        <text x="450" y="365" text-anchor="middle" fill="var(--ib-white)" font-size="8">93%</text>
+                        <!-- 4.4% - Yes (5%) and No (95%) -->
+                        <rect x="50" y="260" width="20" height="30" fill="rgba(0, 166, 81, 0.6)" stroke="var(--ib-green)" stroke-width="2"/>
+                        <text x="60" y="280" text-anchor="middle" fill="var(--ib-white)" font-size="10">5%</text>
+                        <rect x="70" y="260" width="380" height="30" fill="rgba(217, 17, 35, 0.6)" stroke="var(--ib-red)" stroke-width="2"/>
+                        <text x="260" y="280" text-anchor="middle" fill="var(--ib-white)" font-size="10">95%</text>
                     </svg>
                     
                     <div style="text-align: center; margin-top: 15px;">
                         <div style="display: inline-block; margin: 0 15px;">
-                            <span style="color: var(--ib-green); font-weight: 600;">●</span> Yes Probability (4.0%: 97%, 4.1%: 90%, 4.2%: 59%, 4.3%: 15%, 4.4%: 5%)
+                            <span style="color: var(--ib-green); font-weight: 600;">●</span> Yes
                         </div>
                         <div style="display: inline-block; margin: 0 15px;">
-                            <span style="color: var(--ib-red); font-weight: 600;">●</span> No Probability (4.0%: 3%, 4.1%: 8%, 4.2%: 39%, 4.3%: 83%, 4.4%: 93%)
+                            <span style="color: var(--ib-red); font-weight: 600;">●</span> No
                         </div>
                     </div>
                 </div>
@@ -660,13 +660,18 @@
                     <div class="indicator-confidence">+0.3% Confidence</div>
                 </div>
                 <div class="indicator-item">
+ 
+No problem! Let me continue providing the complete index.html file code from where I left off:
+
+                <div class="indicator-item">
                     <div class="indicator-label">Sector Employment</div>
                     <div class="indicator-value">Growth: Strong</div>
                     <div class="indicator-confidence">+0.4% Confidence</div>
                 </div>
             </div>
         </div>
-     <!-- Multi-Period Trend Analysis -->
+
+        <!-- Multi-Period Trend Analysis -->
         <div class="chart-container" style="grid-column: 1 / -1;">
             <h3>Multi-Period Trend Analysis</h3>
             <div class="trend-blocks">
