@@ -1,0 +1,919 @@
+{
+  "timestamp": "2025-09-03T14:10:02.009332",
+  "data_source": "FRED API",
+  "jolts_data": {
+    "JTSJOL": {
+      "description": "Job Openings: Total Nonfarm",
+      "data": [
+        {
+          "date": "2025-07-01",
+          "value": 7181.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-06-01",
+          "value": 7357.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-05-01",
+          "value": 7712.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-04-01",
+          "value": 7395.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-03-01",
+          "value": 7200.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-02-01",
+          "value": 7480.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-01-01",
+          "value": 7762.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-12-01",
+          "value": 7508.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-11-01",
+          "value": 8031.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-10-01",
+          "value": 7615.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-09-01",
+          "value": 7103.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-08-01",
+          "value": 7649.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-07-01",
+          "value": 7504.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-06-01",
+          "value": 7412.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-05-01",
+          "value": 7901.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-04-01",
+          "value": 7619.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-03-01",
+          "value": 8093.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-02-01",
+          "value": 8445.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-01-01",
+          "value": 8468.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-12-01",
+          "value": 8585.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-11-01",
+          "value": 8663.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-10-01",
+          "value": 8550.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-09-01",
+          "value": 9279.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        }
+      ],
+      "latest_value": 7181.0,
+      "latest_date": "2025-07-01",
+      "total_observations": 23
+    },
+    "JTSHIL": {
+      "description": "Hires: Total Nonfarm",
+      "data": [
+        {
+          "date": "2025-07-01",
+          "value": 5308.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-06-01",
+          "value": 5267.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-05-01",
+          "value": 5465.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-04-01",
+          "value": 5615.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-03-01",
+          "value": 5404.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-02-01",
+          "value": 5370.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-01-01",
+          "value": 5371.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-12-01",
+          "value": 5374.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-11-01",
+          "value": 5307.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-10-01",
+          "value": 5350.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-09-01",
+          "value": 5519.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-08-01",
+          "value": 5230.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-07-01",
+          "value": 5451.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-06-01",
+          "value": 5088.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-05-01",
+          "value": 5573.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-04-01",
+          "value": 5584.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-03-01",
+          "value": 5472.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-02-01",
+          "value": 5664.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-01-01",
+          "value": 5572.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-12-01",
+          "value": 5614.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-11-01",
+          "value": 5501.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-10-01",
+          "value": 5700.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-09-01",
+          "value": 5772.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        }
+      ],
+      "latest_value": 5308.0,
+      "latest_date": "2025-07-01",
+      "total_observations": 23
+    },
+    "JTSTSL": {
+      "description": "Total Separations: Total Nonfarm",
+      "data": [
+        {
+          "date": "2025-07-01",
+          "value": 5289.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-06-01",
+          "value": 5341.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-05-01",
+          "value": 5213.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-04-01",
+          "value": 5313.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-03-01",
+          "value": 5183.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-02-01",
+          "value": 5316.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-01-01",
+          "value": 5272.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-12-01",
+          "value": 5082.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-11-01",
+          "value": 5087.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-10-01",
+          "value": 5285.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-09-01",
+          "value": 5197.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-08-01",
+          "value": 5170.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-07-01",
+          "value": 5434.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-06-01",
+          "value": 5064.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-05-01",
+          "value": 5314.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-04-01",
+          "value": 5388.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-03-01",
+          "value": 5268.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-02-01",
+          "value": 5476.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-01-01",
+          "value": 5429.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-12-01",
+          "value": 5342.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-11-01",
+          "value": 5429.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-10-01",
+          "value": 5513.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-09-01",
+          "value": 5533.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        }
+      ],
+      "latest_value": 5289.0,
+      "latest_date": "2025-07-01",
+      "total_observations": 23
+    },
+    "JTSQUL": {
+      "description": "Quits: Total Nonfarm",
+      "data": [
+        {
+          "date": "2025-07-01",
+          "value": 3208.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-06-01",
+          "value": 3209.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-05-01",
+          "value": 3270.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-04-01",
+          "value": 3215.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-03-01",
+          "value": 3344.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-02-01",
+          "value": 3250.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-01-01",
+          "value": 3256.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-12-01",
+          "value": 3095.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-11-01",
+          "value": 3032.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-10-01",
+          "value": 3217.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-09-01",
+          "value": 3085.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-08-01",
+          "value": 3177.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-07-01",
+          "value": 3390.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-06-01",
+          "value": 3284.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-05-01",
+          "value": 3355.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-04-01",
+          "value": 3414.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-03-01",
+          "value": 3329.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-02-01",
+          "value": 3468.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-01-01",
+          "value": 3353.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-12-01",
+          "value": 3370.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-11-01",
+          "value": 3549.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-10-01",
+          "value": 3558.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-09-01",
+          "value": 3638.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        }
+      ],
+      "latest_value": 3208.0,
+      "latest_date": "2025-07-01",
+      "total_observations": 23
+    },
+    "JTSLDL": {
+      "description": "Layoffs and Discharges: Total Nonfarm",
+      "data": [
+        {
+          "date": "2025-07-01",
+          "value": 1808.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-06-01",
+          "value": 1796.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-05-01",
+          "value": 1611.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-04-01",
+          "value": 1789.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-03-01",
+          "value": 1590.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-02-01",
+          "value": 1780.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-01-01",
+          "value": 1674.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-12-01",
+          "value": 1669.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-11-01",
+          "value": 1739.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-10-01",
+          "value": 1788.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-09-01",
+          "value": 1844.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-08-01",
+          "value": 1697.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-07-01",
+          "value": 1745.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-06-01",
+          "value": 1467.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-05-01",
+          "value": 1665.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-04-01",
+          "value": 1587.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-03-01",
+          "value": 1614.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-02-01",
+          "value": 1681.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-01-01",
+          "value": 1692.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-12-01",
+          "value": 1648.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-11-01",
+          "value": 1526.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-10-01",
+          "value": 1621.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-09-01",
+          "value": 1561.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        }
+      ],
+      "latest_value": 1808.0,
+      "latest_date": "2025-07-01",
+      "total_observations": 23
+    },
+    "JTSOSL": {
+      "description": "Other Separations: Total Nonfarm",
+      "data": [
+        {
+          "date": "2025-07-01",
+          "value": 272.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-06-01",
+          "value": 335.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-05-01",
+          "value": 332.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-04-01",
+          "value": 309.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-03-01",
+          "value": 248.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-02-01",
+          "value": 286.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2025-01-01",
+          "value": 342.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-12-01",
+          "value": 318.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-11-01",
+          "value": 316.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-10-01",
+          "value": 280.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-09-01",
+          "value": 268.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-08-01",
+          "value": 295.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-07-01",
+          "value": 300.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-06-01",
+          "value": 312.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-05-01",
+          "value": 294.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-04-01",
+          "value": 386.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-03-01",
+          "value": 325.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-02-01",
+          "value": 327.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2024-01-01",
+          "value": 384.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-12-01",
+          "value": 324.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-11-01",
+          "value": 354.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-10-01",
+          "value": 335.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        },
+        {
+          "date": "2023-09-01",
+          "value": 334.0,
+          "realtime_start": "2025-09-03",
+          "realtime_end": "2025-09-03"
+        }
+      ],
+      "latest_value": 272.0,
+      "latest_date": "2025-07-01",
+      "total_observations": 23
+    }
+  },
+  "analysis": {
+    "job_openings": {
+      "current": 7181.0,
+      "date": "2025-07-01",
+      "trend": "Strongly Falling (-2.4%)"
+    },
+    "hires": {
+      "current": 5308.0,
+      "date": "2025-07-01",
+      "trend": "Rising (+0.8%)"
+    },
+    "quits": {
+      "current": 3208.0,
+      "date": "2025-07-01",
+      "trend": "Stable (-0.0%)"
+    },
+    "layoffs": {
+      "current": 1808.0,
+      "date": "2025-07-01",
+      "trend": "Rising (+0.7%)"
+    },
+    "labor_market_tightness": {
+      "ratio": 1.3528636021100227,
+      "openings": 7181.0,
+      "hires": 5308.0,
+      "interpretation": "Very Tight - More openings than hires"
+    },
+    "quits_rate": {
+      "rate": 0.002005,
+      "quits": 3208.0,
+      "interpretation": "Low - Cautious worker behavior"
+    }
+  },
+  "summary": {
+    "total_series": 6,
+    "latest_update": "2025-07-01"
+  }
+}
