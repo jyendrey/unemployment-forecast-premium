@@ -15,7 +15,7 @@ def calculate_updated_forecast():
     
     # Current forecast parameters (from previous runs)
     current_forecast = {
-        'unemployment_rate': 4.15,  # Current forecast
+        'unemployment_rate': 4.2,  # Current forecast
         'confidence': 95.0,  # Current confidence
         'direction': 'stable',
         'adjustment_factors': {
