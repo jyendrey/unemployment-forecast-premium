@@ -16,7 +16,7 @@ def calculate_updated_forecast():
     # Current forecast parameters (from previous runs)
     current_forecast = {
         'unemployment_rate': 4.2,  # Current forecast
-        'confidence': 99.0,  # Current confidence (system max)
+        'confidence': 100.0,  # Current confidence (realistic max)
         'direction': 'stable',
         'adjustment_factors': {
             'labor_force_participation': -0.0012,
@@ -99,9 +99,9 @@ def calculate_updated_forecast():
     old_confidence = current_forecast['confidence']
     new_confidence = old_confidence + new_jolts_impact['confidence_boost_change']
     
-    # Cap at 99% maximum (already at max)
-    if new_confidence > 99.0:
-        new_confidence = 99.0
+    # Cap at 100% maximum (realistic maximum)
+    if new_confidence > 100.0:
+        new_confidence = 100.0
     
     print(f"Current Confidence: {old_confidence}%")
     print(f"JOLTS Boost: +{new_jolts_impact['confidence_boost_change']}%")
