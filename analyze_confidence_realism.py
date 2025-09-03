@@ -72,6 +72,7 @@ def analyze_confidence_components():
     print(f"Calculated Total: {total_confidence:.1f}%")
     print(f"System Cap (95%): {min(total_confidence, 95):.1f}%")
     print(f"Config Cap (99%): {min(total_confidence, 99):.1f}%")
+    print(f"Adjusted Cap (100%): {min(total_confidence, 100):.1f}%")
     
     # Analyze realism
     print(f"\n🎯 REALISM ANALYSIS:")
@@ -141,6 +142,7 @@ def analyze_confidence_components():
     return {
         'calculated_confidence': total_confidence,
         'capped_confidence': min(total_confidence, 95),
+        'adjusted_confidence': min(total_confidence, 100),
         'assessment': assessment,
         'realistic_range': realistic_range,
         'recommendation': recommendation
@@ -154,6 +156,8 @@ def main():
     print(f"✅ CONFIDENCE REALISM ANALYSIS COMPLETE")
     print(f"=" * 60)
     print(f"📊 Calculated Confidence: {analysis['calculated_confidence']:.1f}%")
+    print(f"🔧 System Cap (95%): {analysis['capped_confidence']:.1f}%")
+    print(f"📈 Adjusted Cap (100%): {analysis['adjusted_confidence']:.1f}%")
     print(f"🎯 Assessment: {analysis['assessment']}")
     print(f"📈 Realistic Range: {analysis['realistic_range']}")
     print(f"💡 Recommendation: {analysis['recommendation']}")
