@@ -1,0 +1,186 @@
+{
+  "timestamp": "2025-09-04T13:57:27.563737",
+  "data_source": "FRED API",
+  "claims_data": {
+    "ICSA": {
+      "description": "Initial Claims",
+      "data": [
+        {
+          "date": "2025-08-30",
+          "value": 237000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-08-23",
+          "value": 229000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-08-16",
+          "value": 234000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-08-09",
+          "value": 224000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-08-02",
+          "value": 227000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-07-26",
+          "value": 219000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-07-19",
+          "value": 217000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-07-12",
+          "value": 221000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-07-05",
+          "value": 228000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-06-28",
+          "value": 232000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-06-21",
+          "value": 237000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-06-14",
+          "value": 246000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        }
+      ],
+      "latest_value": 237000.0,
+      "latest_date": "2025-08-30",
+      "total_observations": 12
+    },
+    "CCSA": {
+      "description": "Continuing Claims",
+      "data": [
+        {
+          "date": "2025-08-23",
+          "value": 1940000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-08-16",
+          "value": 1944000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-08-09",
+          "value": 1961000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-08-02",
+          "value": 1942000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-07-26",
+          "value": 1968000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-07-19",
+          "value": 1936000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-07-12",
+          "value": 1946000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-07-05",
+          "value": 1951000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-06-28",
+          "value": 1954000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-06-21",
+          "value": 1956000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-06-14",
+          "value": 1964000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        },
+        {
+          "date": "2025-06-07",
+          "value": 1937000.0,
+          "realtime_start": "2025-09-04",
+          "realtime_end": "2025-09-04"
+        }
+      ],
+      "latest_value": 1940000.0,
+      "latest_date": "2025-08-23",
+      "total_observations": 12
+    }
+  },
+  "analysis": {
+    "initial_claims": {
+      "current": 237000.0,
+      "date": "2025-08-30",
+      "trend": "Rising (+3.5%)"
+    },
+    "continuing_claims": {
+      "current": 1940000.0,
+      "date": "2025-08-23",
+      "trend": "Stable (-0.2%)"
+    },
+    "four_week_averages": {
+      "initial_claims": 231000.0,
+      "continuing_claims": 1946750.0
+    }
+  },
+  "summary": {
+    "total_series": 2,
+    "latest_update": "2025-08-30"
+  }
+}
