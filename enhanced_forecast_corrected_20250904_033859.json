@@ -1,0 +1,33 @@
+{
+  "enhanced_forecast": 6.973,
+  "enhanced_confidence": 89.4,
+  "direction": "rising",
+  "job_flows": {
+    "job_finding_rate": 0.7898809523809524,
+    "job_separation_rate": 0.03305625,
+    "flow_consistent_rate": 4.016861785365935,
+    "total_employment": 160000000,
+    "unemployed": 6720000.0
+  },
+  "blending_results": {
+    "traditional_component": 7.665058535609781,
+    "high_frequency_component": 4.1628,
+    "blended_rate": 6.964606828487825,
+    "smoothed_rate": 6.964606828487825,
+    "blending_weights": {
+      "traditional": 0.8,
+      "high_frequency": 0.2
+    }
+  },
+  "volatility_metrics": {
+    "volatility": 1.303248157158917,
+    "coefficient_of_variation": 0.21565990370312518,
+    "volatility_reduction": 0,
+    "stability_score": 0.7843400962968748
+  },
+  "adjustments": {
+    "job_flow_adjustment": -0.018313821463406477,
+    "volatility_adjustment": 0.03921700481484375,
+    "trade_adjustment": -0.012400000000000001
+  }
+}
