@@ -1,0 +1,38 @@
+{
+  "trend_focused_forecast": 4.196,
+  "trend_focused_confidence": 89.0,
+  "direction": "stable",
+  "trend_indicators": {
+    "jolts_trends": {
+      "openings_trend": -0.02392279461737121,
+      "hires_trend": 0.007784317448262768,
+      "separations_trend": -0.009736004493540536,
+      "quits_trend": -0.0003116235587410408,
+      "layoffs_trend": 0.0066815144766146995
+    },
+    "economic_trends": {
+      "unemployment_trend": 0.10000000000000053,
+      "claims_trend": 0.0380952380952381,
+      "continuing_claims_trend": 0.02857142857142857
+    }
+  },
+  "forward_adjustments": {
+    "openings_adjustment": -0.007176838385211362,
+    "hires_adjustment": -0.0015568634896525537,
+    "separations_adjustment": -0.002434001123385134,
+    "claims_adjustment": 0.01523809523809524,
+    "continuing_claims_adjustment": 0.00857142857142857,
+    "trade_adjustment": 0.0075,
+    "total_forward_adjustment": 0.02014182081127476
+  },
+  "job_flows": {
+    "job_finding_rate": 0.7898809523809524,
+    "job_separation_rate": 0.03305625,
+    "flow_consistent_rate": 4.016861785365935
+  },
+  "adjustments": {
+    "trend_adjustment": 0.02014182081127476,
+    "job_flow_adjustment": -0.018313821463406477,
+    "trade_adjustment": -0.006200000000000001
+  }
+}
