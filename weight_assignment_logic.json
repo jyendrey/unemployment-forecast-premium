@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-09-05 16:58:25",
+  "system_version": "v4.5-recalibrated-no-redundant-factors",
+  "weight_assignment_principles": [
+    "Economic Significance",
+    "Data Reliability",
+    "Predictive Power",
+    "Temporal Relevance",
+    "Market Influence",
+    "Statistical Validation"
+  ],
+  "weight_distribution_rationale": {
+    "core_labor_market": {
+      "percentage": 64.1,
+      "rationale": "Most direct and reliable unemployment indicators",
+      "economic_theory": "Labor supply and demand fundamentals",
+      "data_quality": "Highest reliability and frequency",
+      "predictive_power": "Strongest correlation with unemployment"
+    },
+    "trade_data": {
+      "percentage": 35.5,
+      "rationale": "Market intelligence and forward-looking signals",
+      "economic_theory": "Market efficiency and information aggregation",
+      "data_quality": "Real-time, high-frequency data",
+      "predictive_power": "Market expectations and sentiment"
+    },
+    "leading_indicators": {
+      "percentage": 0.5,
+      "rationale": "Supporting indicators with longer lead times",
+      "economic_theory": "Economic cycle and labor market dynamics",
+      "data_quality": "High but lower frequency",
+      "predictive_power": "Good but less direct impact"
+    }
+  },
+  "weight_calibration_methodology": [
+    "LASSO Regression",
+    "Cross-Validation",
+    "Feature Selection",
+    "Regularization",
+    "Coefficient Analysis",
+    "Economic Validation",
+    "Performance Testing"
+  ],
+  "weight_adjustment_factors": [
+    "Data Frequency",
+    "Economic Impact",
+    "Predictive Power",
+    "Data Reliability",
+    "Market Influence",
+    "Temporal Relevance",
+    "Statistical Significance"
+  ],
+  "weight_validation_criteria": [
+    "Economic Theory",
+    "Statistical Validation",
+    "Performance Testing",
+    "Cross-Validation",
+    "Sensitivity Analysis",
+    "Robustness Testing"
+  ]
+}
