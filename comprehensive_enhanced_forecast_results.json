@@ -1,0 +1,78 @@
+{
+  "timestamp": "2025-09-05 19:11:44",
+  "system_version": "v4.5-state-unemployment-integration",
+  "forecast_method": "Comprehensive Enhanced System",
+  "fred_baseline": {
+    "forecast": 4.2,
+    "confidence": 85
+  },
+  "adjustments": {
+    "core_labor_market": {
+      "lfpr": {
+        "value": 64.8,
+        "trend": 0.5999999999999943,
+        "adjustment": -0.03547799999999967,
+        "weight": 0.5913
+      },
+      "initial_claims": {
+        "value": 456000,
+        "trend": -0.02460276781137878,
+        "adjustment": -0.0009698411071245516,
+        "weight": 0.3942
+      },
+      "continuing_claims": {
+        "value": 4870000,
+        "trend": 0.0095233139050791,
+        "adjustment": 0.00028150915903413817,
+        "weight": 0.2956
+      }
+    },
+    "trade_data": {
+      "trade_sentiment": {
+        "sentiment": -0.04908583588474147,
+        "weighted_yes": 0.45091416411525853,
+        "weighted_no": 0.5590858358847415,
+        "adjustment": -0.0003867963867717628,
+        "weight": 0.0788,
+        "volume": 46053
+      },
+      "trade_volume": {
+        "volume": 62170,
+        "adjustment": 0.005915,
+        "weight": 0.1183
+      },
+      "initial_claims_trade_sentiment": {
+        "sentiment": -0.037123022402227535,
+        "weighted_yes": 0.46287697759777247,
+        "weighted_no": 0.5471230224022275,
+        "adjustment": -0.0006585624174155166,
+        "weight": 0.1774,
+        "volume": 79010
+      }
+    },
+    "leading_indicators": {
+      "jolts_data": {
+        "value": 2837,
+        "trend": -0.07452845484516028,
+        "adjustment": 2.2358536453548086e-05,
+        "weight": 0.003
+      }
+    },
+    "total_adjustment": -0.03127433221582381
+  },
+  "final_forecast": {
+    "rate": 4.17,
+    "confidence": 99,
+    "total_adjustment": -0.031
+  },
+  "confidence_analysis": {
+    "base_confidence": 85,
+    "confidence_boosts": [
+      6.217,
+      9.0,
+      7.0
+    ],
+    "total_boost": 22.217,
+    "final_confidence": 99
+  }
+}
