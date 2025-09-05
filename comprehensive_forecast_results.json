@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-09-05 18:44:19",
+  "forecast_method": "FRED Baseline + Trade Data Integration",
+  "fred_baseline": {
+    "forecast": 4.2,
+    "confidence": 85,
+    "data_sources": {
+      "unemployment_rate": 4.2,
+      "labor_force_participation": 62.7,
+      "initial_claims": 228000,
+      "continuing_claims": 1845000,
+      "job_openings": 7504
+    }
+  },
+  "trade_data_analysis": {
+    "unemployment_pairs": 5277,
+    "unemployment_prices": 55727,
+    "claims_pairs": 17625,
+    "claims_prices": 76286,
+    "unrate_sentiment": 0.01561325154254553,
+    "claims_sentiment": -0.037123022402227514,
+    "combined_sentiment": -0.010754885429840991
+  },
+  "forecast_adjustments": {
+    "sentiment_adjustment": -0.0010754885429840992,
+    "confidence_boost": 10.0
+  },
+  "final_forecast": {
+    "rate": 4.2,
+    "confidence": 95.0,
+    "total_adjustment": -0.001
+  }
+}

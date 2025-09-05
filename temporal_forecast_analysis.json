@@ -1,0 +1,213 @@
+{
+  "timestamp": "2025-09-05 18:44:52",
+  "analysis_period": "August 2024 - August 2025",
+  "fred_baseline": {
+    "forecast": 4.2,
+    "confidence": 85
+  },
+  "monthly_forecasts": {
+    "2024-07": {
+      "forecast": 4.22,
+      "confidence": 85.8,
+      "sentiment_adjustment": 0.018,
+      "unrate_sentiment": 0.37,
+      "claims_sentiment": 0,
+      "combined_sentiment": 0.185,
+      "confidence_boost": 0.8
+    },
+    "2024-08": {
+      "forecast": 4.21,
+      "confidence": 91.6,
+      "sentiment_adjustment": 0.01,
+      "unrate_sentiment": 0.268,
+      "claims_sentiment": -0.077,
+      "combined_sentiment": 0.096,
+      "confidence_boost": 6.6
+    },
+    "2024-09": {
+      "forecast": 4.2,
+      "confidence": 91.9,
+      "sentiment_adjustment": -0.001,
+      "unrate_sentiment": 0.132,
+      "claims_sentiment": -0.159,
+      "combined_sentiment": -0.014,
+      "confidence_boost": 6.9
+    },
+    "2024-10": {
+      "forecast": 4.2,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.0,
+      "unrate_sentiment": 0.225,
+      "claims_sentiment": -0.226,
+      "combined_sentiment": -0.0,
+      "confidence_boost": 10.0
+    },
+    "2024-11": {
+      "forecast": 4.19,
+      "confidence": 94.2,
+      "sentiment_adjustment": -0.011,
+      "unrate_sentiment": 0.038,
+      "claims_sentiment": -0.261,
+      "combined_sentiment": -0.112,
+      "confidence_boost": 9.2
+    },
+    "2024-12": {
+      "forecast": 4.2,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.003,
+      "unrate_sentiment": 0.106,
+      "claims_sentiment": -0.162,
+      "combined_sentiment": -0.028,
+      "confidence_boost": 10.0
+    },
+    "2025-01": {
+      "forecast": 4.18,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.018,
+      "unrate_sentiment": -0.168,
+      "claims_sentiment": -0.184,
+      "combined_sentiment": -0.176,
+      "confidence_boost": 10.0
+    },
+    "2025-02": {
+      "forecast": 4.19,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.006,
+      "unrate_sentiment": 0.008,
+      "claims_sentiment": -0.12,
+      "combined_sentiment": -0.056,
+      "confidence_boost": 10.0
+    },
+    "2025-03": {
+      "forecast": 4.19,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.015,
+      "unrate_sentiment": -0.203,
+      "claims_sentiment": -0.092,
+      "combined_sentiment": -0.147,
+      "confidence_boost": 10.0
+    },
+    "2025-04": {
+      "forecast": 4.19,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.008,
+      "unrate_sentiment": -0.064,
+      "claims_sentiment": -0.087,
+      "combined_sentiment": -0.076,
+      "confidence_boost": 10.0
+    },
+    "2025-05": {
+      "forecast": 4.19,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.005,
+      "unrate_sentiment": -0.073,
+      "claims_sentiment": -0.031,
+      "combined_sentiment": -0.052,
+      "confidence_boost": 10.0
+    },
+    "2025-06": {
+      "forecast": 4.2,
+      "confidence": 95.0,
+      "sentiment_adjustment": 0.0,
+      "unrate_sentiment": -0.03,
+      "claims_sentiment": 0.035,
+      "combined_sentiment": 0.003,
+      "confidence_boost": 10.0
+    },
+    "2025-07": {
+      "forecast": 4.2,
+      "confidence": 95.0,
+      "sentiment_adjustment": 0.001,
+      "unrate_sentiment": -0.047,
+      "claims_sentiment": 0.066,
+      "combined_sentiment": 0.009,
+      "confidence_boost": 10.0
+    },
+    "2025-08": {
+      "forecast": 4.2,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.002,
+      "unrate_sentiment": 0.019,
+      "claims_sentiment": -0.061,
+      "combined_sentiment": -0.021,
+      "confidence_boost": 10.0
+    },
+    "2025-09": {
+      "forecast": 4.2,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.003,
+      "unrate_sentiment": 0.112,
+      "claims_sentiment": -0.173,
+      "combined_sentiment": -0.031,
+      "confidence_boost": 10.0
+    },
+    "2025-10": {
+      "forecast": 4.2,
+      "confidence": 95.0,
+      "sentiment_adjustment": -0.004,
+      "unrate_sentiment": 0.057,
+      "claims_sentiment": -0.131,
+      "combined_sentiment": -0.037,
+      "confidence_boost": 10.0
+    },
+    "2025-12": {
+      "forecast": 4.21,
+      "confidence": 91.8,
+      "sentiment_adjustment": 0.011,
+      "unrate_sentiment": 0.195,
+      "claims_sentiment": 0.031,
+      "combined_sentiment": 0.113,
+      "confidence_boost": 6.8
+    },
+    "2026-03": {
+      "forecast": 4.2,
+      "confidence": 89.8,
+      "sentiment_adjustment": -0.005,
+      "unrate_sentiment": -0.096,
+      "claims_sentiment": 0,
+      "combined_sentiment": -0.048,
+      "confidence_boost": 4.8
+    },
+    "2026-06": {
+      "forecast": 4.2,
+      "confidence": 85.8,
+      "sentiment_adjustment": 0.0,
+      "unrate_sentiment": 0.002,
+      "claims_sentiment": 0,
+      "combined_sentiment": 0.001,
+      "confidence_boost": 0.8
+    },
+    "2026-12": {
+      "forecast": 4.19,
+      "confidence": 87.2,
+      "sentiment_adjustment": -0.006,
+      "unrate_sentiment": -0.113,
+      "claims_sentiment": 0,
+      "combined_sentiment": -0.057,
+      "confidence_boost": 2.2
+    },
+    "2027-06": {
+      "forecast": 4.19,
+      "confidence": 85.2,
+      "sentiment_adjustment": -0.014,
+      "unrate_sentiment": -0.27,
+      "claims_sentiment": 0,
+      "combined_sentiment": -0.135,
+      "confidence_boost": 0.1
+    }
+  },
+  "summary_statistics": {
+    "forecast_range": [
+      4.18,
+      4.22
+    ],
+    "average_forecast": 4.197619047619048,
+    "forecast_volatility": 0.040000000000000036,
+    "confidence_range": [
+      85.2,
+      95.0
+    ],
+    "average_confidence": 92.53809523809524,
+    "trend": -0.01666666666666572
+  }
+}
