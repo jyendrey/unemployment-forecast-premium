@@ -41,7 +41,9 @@ def final_components_breakdown():
     
     print(f"\nSYSTEM OVERVIEW")
     print("-" * 50)
-    print(f"Total Components: {len(weights)}")
+    print(f"Base Weight Components: {len(weights)}")
+    print(f"Dynamic Components: 2")
+    print(f"Total Components: {len(weights) + 2}")
     print(f"Total Weight: {sum(weights.values()):.3f}")
     print(f"Final Forecast: 4.25%")
     print(f"Enhanced Confidence: 95.0%")
@@ -150,7 +152,9 @@ def final_components_breakdown():
     breakdown_data = {
         "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         "system_version": "v4.5-recalibrated-no-redundant-factors",
-        "total_components": len(weights),
+        "base_weight_components": len(weights),
+        "dynamic_components": 2,
+        "total_components": len(weights) + 2,
         "total_weight": sum(weights.values()),
         "final_forecast": 4.25,
         "confidence": 95.0,

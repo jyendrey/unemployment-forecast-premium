@@ -1,7 +1,9 @@
 {
-  "timestamp": "2025-09-05 16:32:55",
+  "timestamp": "2025-09-05 16:36:09",
   "system_version": "v4.5-recalibrated-no-redundant-factors",
-  "total_components": 15,
+  "base_weight_components": 15,
+  "dynamic_components": 2,
+  "total_components": 17,
   "total_weight": 1.9999999999999998,
   "final_forecast": 4.25,
   "confidence": 95.0,
