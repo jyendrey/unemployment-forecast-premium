@@ -550,6 +550,49 @@ class FinalEnhancedUnemploymentForecaster:
                 adjustments.append(('State Unemployment Adjustment', state_adjustment))
                 print(f"🔧 State Unemployment Adjustment: {state_adjustment:.4f}% (Dispersion: {regional_dispersion}, Avg: {avg_state_rate:.1f}%, Outliers: {len(outliers)})")
             
+            # Trade Predictions Adjustment
+            trade_predictions = self.leading_indicators_data.get('trade_predictions_analysis', {})
+            if trade_predictions:
+                sentiment_analysis = trade_predictions.get('sentiment_analysis', {})
+                confidence_analysis = trade_predictions.get('confidence_analysis', {})
+                
+                sentiment_score = sentiment_analysis.get('sentiment_score', 0)
+                sentiment_level = sentiment_analysis.get('sentiment_level', 'neutral')
+                confidence_level = confidence_analysis.get('confidence_level', 'low')
+                volume_weighted_confidence = confidence_analysis.get('volume_weighted_confidence', 0)
+                
+                # Calculate adjustment based on market predictions
+                predictions_adjustment = 0.0
+                
+                # Base adjustment from sentiment score (market predicts unemployment above 4.3%)
+                if sentiment_level == 'very_bullish':
+                    predictions_adjustment += 0.0020  # Strong upward pressure
+                elif sentiment_level == 'bullish':
+                    predictions_adjustment += 0.0010  # Moderate upward pressure
+                elif sentiment_level == 'bearish':
+                    predictions_adjustment -= 0.0010  # Moderate downward pressure
+                elif sentiment_level == 'very_bearish':
+                    predictions_adjustment -= 0.0020  # Strong downward pressure
+                
+                # Confidence multiplier (higher confidence = stronger adjustment)
+                if confidence_level == 'high':
+                    confidence_multiplier = 1.5
+                elif confidence_level == 'medium':
+                    confidence_multiplier = 1.0
+                else:
+                    confidence_multiplier = 0.5
+                
+                predictions_adjustment *= confidence_multiplier
+                
+                # Volume-weighted confidence adjustment
+                if volume_weighted_confidence > 0.8:
+                    predictions_adjustment *= 1.2  # High volume confidence
+                elif volume_weighted_confidence < 0.4:
+                    predictions_adjustment *= 0.8  # Low volume confidence
+                
+                adjustments.append(('Trade Predictions Adjustment', predictions_adjustment))
+                print(f"🔧 Trade Predictions Adjustment: {predictions_adjustment:.4f}% (Sentiment: {sentiment_level}, Confidence: {confidence_level}, Score: {sentiment_score:.3f})")
+            
             # Sector Employment Adjustment
             sector_analysis = self.leading_indicators_data.get('sector_employment_analysis', {})
             if sector_analysis:
@@ -701,6 +744,39 @@ class FinalEnhancedUnemploymentForecaster:
                     state_boost += 0.1
                 
                 leading_indicators_boost += state_boost
+            
+            # Trade Predictions Confidence Boost
+            predictions_boost = 0
+            if 'trade_predictions_analysis' in self.leading_indicators_data:
+                predictions_analysis = self.leading_indicators_data['trade_predictions_analysis']
+                confidence_analysis = predictions_analysis.get('confidence_analysis', {})
+                sentiment_analysis = predictions_analysis.get('sentiment_analysis', {})
+                
+                confidence_level = confidence_analysis.get('confidence_level', 'low')
+                volume_weighted_confidence = confidence_analysis.get('volume_weighted_confidence', 0)
+                sentiment_level = sentiment_analysis.get('sentiment_level', 'neutral')
+                
+                # Base boost from predictions data availability
+                if confidence_level == 'high':
+                    predictions_boost = 1.0  # +1.0% boost
+                elif confidence_level == 'medium':
+                    predictions_boost = 0.6  # +0.6% boost
+                else:
+                    predictions_boost = 0.3  # +0.3% boost
+                
+                # Additional boost for high volume confidence
+                if volume_weighted_confidence > 0.8:
+                    predictions_boost += 0.5  # +0.5% additional boost
+                elif volume_weighted_confidence > 0.6:
+                    predictions_boost += 0.2  # +0.2% additional boost
+                
+                # Additional boost for strong sentiment (market conviction)
+                if sentiment_level in ['very_bullish', 'very_bearish']:
+                    predictions_boost += 0.3  # +0.3% additional boost
+                elif sentiment_level in ['bullish', 'bearish']:
+                    predictions_boost += 0.1  # +0.1% additional boost
+                
+                leading_indicators_boost += predictions_boost
         
         # Add leading indicators boost to final confidence
         final_enhanced_confidence += leading_indicators_boost

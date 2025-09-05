@@ -1,0 +1,131 @@
+{
+  "contracts": [
+    {
+      "threshold": 2.7,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 0
+    },
+    {
+      "threshold": 2.9,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 120
+    },
+    {
+      "threshold": 3.1,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 120
+    },
+    {
+      "threshold": 3.3,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 150
+    },
+    {
+      "threshold": 3.5,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 200
+    },
+    {
+      "threshold": 3.7,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 349
+    },
+    {
+      "threshold": 3.8,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 450
+    },
+    {
+      "threshold": 3.9,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 470
+    },
+    {
+      "threshold": 4.0,
+      "yes_probability": 97,
+      "no_probability": 0,
+      "open_interest": 450
+    },
+    {
+      "threshold": 4.1,
+      "yes_probability": 94,
+      "no_probability": 6,
+      "open_interest": 430
+    },
+    {
+      "threshold": 4.2,
+      "yes_probability": 64,
+      "no_probability": 36,
+      "open_interest": 180
+    },
+    {
+      "threshold": 4.3,
+      "yes_probability": 26,
+      "no_probability": 72,
+      "open_interest": 70
+    },
+    {
+      "threshold": 4.5,
+      "yes_probability": 0,
+      "no_probability": 97,
+      "open_interest": 12
+    }
+  ],
+  "sentiment_analysis": {
+    "sentiment_score": 0.8746051316227923,
+    "sentiment_level": "very_bullish",
+    "weighted_yes_probability": 92.54681772742418,
+    "weighted_no_probability": 5.086304565144951,
+    "total_contracts": 13,
+    "total_open_interest": 3001
+  },
+  "confidence_analysis": {
+    "average_confidence": 0.8707692307692307,
+    "volume_weighted_confidence": 0.9038220593135622,
+    "confidence_level": "high",
+    "total_volume": 3001
+  },
+  "threshold_analysis": {
+    "below_4.0": {
+      "contracts": 8,
+      "total_oi": 1859,
+      "weighted_yes": 97.0,
+      "weighted_no": 0.0,
+      "net_sentiment": 97.0
+    },
+    "4.0_to_4.2": {
+      "contracts": 3,
+      "total_oi": 1060,
+      "weighted_yes": 90.17924528301887,
+      "weighted_no": 8.547169811320755,
+      "net_sentiment": 81.63207547169812
+    },
+    "4.2_to_4.3": {
+      "contracts": 1,
+      "total_oi": 70,
+      "weighted_yes": 26.0,
+      "weighted_no": 72.0,
+      "net_sentiment": -46.0
+    },
+    "above_4.3": {
+      "contracts": 1,
+      "total_oi": 12,
+      "weighted_yes": 0.0,
+      "weighted_no": 97.0,
+      "net_sentiment": -97.0
+    }
+  },
+  "market_insights": [
+    "Market strongly predicts unemployment above 4.3% (very_bullish)",
+    "High market confidence in predictions"
+  ],
+  "processing_timestamp": "2025-09-05 16:11:33"
+}
