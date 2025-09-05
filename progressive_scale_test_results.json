@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-09-05 21:00:19",
+  "base_forecast": 4.2,
+  "scenarios": {
+    "Current System (0.1x Scale)": {
+      "weights": {
+        "core_labor": 0.7,
+        "trade_data": 0.25,
+        "leading_indicators": 0.05
+      },
+      "scale_factor": 0.1,
+      "description": "Artificially constrained market signals",
+      "forecast": 4.155572837798843,
+      "trade_adjustment": -0.0010776107285871126,
+      "total_adjustment": -0.04442716220115743,
+      "trade_sentiment": -0.0431044291434845
+    },
+    "Conservative Reform (0.5x Scale)": {
+      "weights": {
+        "core_labor": 0.5,
+        "trade_data": 0.4,
+        "leading_indicators": 0.1
+      },
+      "scale_factor": 0.5,
+      "description": "50% of raw market signal, balanced approach",
+      "forecast": 4.038954844960718,
+      "trade_adjustment": -0.008620885828696901,
+      "total_adjustment": -0.16104515503928218,
+      "trade_sentiment": -0.0431044291434845
+    },
+    "Full Signal (1.0x Scale)": {
+      "weights": {
+        "core_labor": 0.5,
+        "trade_data": 0.4,
+        "leading_indicators": 0.1
+      },
+      "scale_factor": 1.0,
+      "description": "No dampening, full market signal",
+      "forecast": 3.877909689921436,
+      "trade_adjustment": -0.017241771657393802,
+      "total_adjustment": -0.32209031007856437,
+      "trade_sentiment": -0.0431044291434845
+    },
+    "Market-Driven (1.5x Scale)": {
+      "weights": {
+        "core_labor": 0.4,
+        "trade_data": 0.5,
+        "leading_indicators": 0.1
+      },
+      "scale_factor": 1.5,
+      "description": "Amplify market signals, market-driven approach",
+      "forecast": 3.804089285682337,
+      "trade_adjustment": -0.032328321857613376,
+      "total_adjustment": -0.39591071431766317,
+      "trade_sentiment": -0.0431044291434845
+    }
+  },
+  "analysis": {
+    "forecast_range": 0.35148355211650584,
+    "trade_adjustment_range": 0.03125071112902626,
+    "min_forecast": 3.804089285682337,
+    "max_forecast": 4.155572837798843,
+    "most_conservative": "Market-Driven (1.5x Scale)",
+    "most_aggressive": "Current System (0.1x Scale)"
+  }
+}
