@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-09-05T02:25:21.513386",
+  "version": "v4.4-updated-trade-data",
+  "foundation_ids": {
+    "main": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "initial_claims": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f"
+  },
+  "trade_data": {
+    "unemployment_prices": {
+      "data": {},
+      "sentiment_score": 0.0,
+      "total_records": 55727,
+      "processed_columns": 1,
+      "data_freshness": 1.0
+    },
+    "unemployment_pairs": {
+      "data": {},
+      "sentiment_score": 0.0,
+      "total_records": 5277,
+      "processed_columns": 1,
+      "data_freshness": 1.0
+    },
+    "initial_claims_prices": {
+      "data": {},
+      "sentiment_score": 0.0,
+      "total_records": 76286,
+      "processed_columns": 1,
+      "data_freshness": 1.0
+    },
+    "initial_claims_pairs": {
+      "data": {},
+      "sentiment_score": 0.0,
+      "total_records": 17625,
+      "processed_columns": 1,
+      "data_freshness": 1.0
+    }
+  },
+  "sentiment_analysis": {
+    "combined_sentiment": 0.0,
+    "sentiment_interpretation": "Neutral",
+    "individual_sentiments": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "weights": [
+      0.3,
+      0.3,
+      0.2,
+      0.2
+    ]
+  },
+  "adjustments": {
+    "sentiment_adjustment": 0.0,
+    "volume_confidence_boost": 5.0,
+    "freshness_confidence_boost": 2.0,
+    "total_confidence_boost": 7.0
+  },
+  "summary": {
+    "total_data_sources": 4,
+    "total_records": 154915,
+    "combined_sentiment": 0.0,
+    "sentiment_interpretation": "Neutral"
+  }
+}
