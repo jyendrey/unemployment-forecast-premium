@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-09-05 16:38:47",
+  "system_version": "v4.5-recalibrated-no-redundant-factors",
+  "total_components": 17,
+  "base_weight_components": 15,
+  "dynamic_components": 2,
+  "removed_components": 4,
+  "total_weight": 2.0,
+  "final_forecast": 4.25,
+  "confidence": 95.0,
+  "components": {
+    "core_labor_market": 3,
+    "trade_data": 7,
+    "leading_indicators": 5,
+    "dynamic_factors": 2
+  },
+  "data_sources": {
+    "fred_api": 8,
+    "trade_files": 7,
+    "dynamic_calculations": 2
+  },
+  "impact_analysis": {
+    "core_labor_impact": -0.0041,
+    "trade_data_impact": 0.0034,
+    "leading_indicators_impact": -0.0018,
+    "dynamic_factors_impact": 0.0001,
+    "total_adjustment": -0.0024,
+    "base_rate": 4.2485,
+    "final_forecast": 4.25
+  }
+}
