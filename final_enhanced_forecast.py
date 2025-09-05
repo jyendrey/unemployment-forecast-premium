@@ -477,9 +477,35 @@ class FinalEnhancedUnemploymentForecaster:
             wage_analysis = self.leading_indicators_data.get('wage_growth_analysis', {})
             if wage_analysis:
                 wage_confidence = wage_analysis.get('confidence_score', 0.2)
-                wage_adjustment = wage_confidence * 0.001 / 100
+                wage_pressure = wage_analysis.get('wage_pressure', 'moderate')
+                
+                # Adjust based on wage pressure
+                if wage_pressure == 'high':
+                    wage_adjustment = -0.002  # High wages = lower unemployment
+                elif wage_pressure == 'moderate':
+                    wage_adjustment = -0.001
+                else:
+                    wage_adjustment = 0.000
+                
                 adjustments.append(('Wage Growth Adjustment', wage_adjustment))
-                print(f"🔧 Wage Growth Adjustment: {wage_adjustment:.4f}% (Pressure: {wage_analysis.get('wage_pressure', 'moderate')})")
+                print(f"🔧 Wage Growth Adjustment: {wage_adjustment:.4f}% (Pressure: {wage_pressure})")
+            
+            # Quit Rate Adjustment
+            quit_analysis = self.leading_indicators_data.get('quit_rate_analysis', {})
+            if quit_analysis and quit_analysis.get('quit_rate'):
+                quit_rate = quit_analysis['quit_rate']
+                quit_interpretation = quit_analysis.get('interpretation', 'low_confidence')
+                
+                # Higher quit rate = more confident workers = lower unemployment
+                if quit_interpretation == 'high_confidence':
+                    quit_adjustment = -0.0015
+                elif quit_interpretation == 'moderate_confidence':
+                    quit_adjustment = -0.001
+                else:
+                    quit_adjustment = -0.0005
+                
+                adjustments.append(('Quit Rate Adjustment', quit_adjustment))
+                print(f"🔧 Quit Rate Adjustment: {quit_adjustment:.4f}% (Rate: {quit_rate:.2f}%, {quit_interpretation})")
             
             # Sector Employment Adjustment
             sector_analysis = self.leading_indicators_data.get('sector_employment_analysis', {})
@@ -600,6 +626,20 @@ class FinalEnhancedUnemploymentForecaster:
                 sector_confidence = self.leading_indicators_data['sector_employment_analysis'].get('confidence_score', 0.3)
                 sector_boost = sector_confidence * 1.5  # +1-2% boost
                 leading_indicators_boost += sector_boost
+            
+            # Quit Rate Confidence Boost
+            quit_boost = 0
+            if 'quit_rate_analysis' in self.leading_indicators_data:
+                quit_analysis = self.leading_indicators_data['quit_rate_analysis']
+                if quit_analysis.get('quit_rate'):
+                    quit_interpretation = quit_analysis.get('interpretation', 'low_confidence')
+                    if quit_interpretation == 'high_confidence':
+                        quit_boost = 0.8  # +0.8% boost
+                    elif quit_interpretation == 'moderate_confidence':
+                        quit_boost = 0.5  # +0.5% boost
+                    else:
+                        quit_boost = 0.2  # +0.2% boost
+                    leading_indicators_boost += quit_boost
         
         # Add leading indicators boost to final confidence
         final_enhanced_confidence += leading_indicators_boost

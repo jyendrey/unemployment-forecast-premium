@@ -507,6 +507,108 @@ class EconomicDataFetcher:
         
         print("\n" + "="*80)
     
+    def fetch_wage_growth_data(self) -> Dict:
+        """Fetch wage growth data from FRED"""
+        print("🔄 Fetching wage growth data...")
+        
+        # Wage growth series
+        wage_series = {
+            "CES0500000003": "Average Hourly Earnings - All Employees",
+            "ECIWAG": "Employment Cost Index - Wages & Salaries",
+            "AHETPI": "Average Hourly Earnings - Production Workers"
+        }
+        
+        wage_data = {}
+        for series_id, description in wage_series.items():
+            try:
+                data = self.fetch_fred_data(series_id, 24)
+                if data:
+                    wage_data[series_id] = {
+                        'description': description,
+                        'data': data
+                    }
+                    print(f"   ✅ {description}: {len(data)} months")
+                else:
+                    print(f"   ❌ Failed to fetch {description}")
+            except Exception as e:
+                print(f"   ❌ Error fetching {description}: {e}")
+        
+        return wage_data
+
+    def analyze_wage_growth_indicators(self, wage_data: Dict) -> Dict:
+        """Analyze wage growth indicators"""
+        if not wage_data:
+            return {'wage_pressure': 'unknown', 'confidence_score': 0.1}
+        
+        try:
+            # Get latest wage data
+            latest_wages = {}
+            for series_id, data in wage_data.items():
+                if data['data']:
+                    latest_wages[series_id] = data['data'][0]['value']
+            
+            # Calculate wage growth trends
+            wage_growth_rates = []
+            for series_id, data in wage_data.items():
+                if len(data['data']) >= 2:
+                    current = data['data'][0]['value']
+                    previous = data['data'][1]['value']
+                    growth_rate = (current - previous) / previous * 100
+                    wage_growth_rates.append(growth_rate)
+            
+            avg_wage_growth = sum(wage_growth_rates) / len(wage_growth_rates) if wage_growth_rates else 0
+            
+            # Determine wage pressure
+            if avg_wage_growth > 4.0:
+                wage_pressure = 'high'
+                confidence_score = 0.8
+            elif avg_wage_growth > 2.5:
+                wage_pressure = 'moderate'
+                confidence_score = 0.6
+            else:
+                wage_pressure = 'low'
+                confidence_score = 0.4
+            
+            return {
+                'wage_pressure': wage_pressure,
+                'average_growth_rate': avg_wage_growth,
+                'confidence_score': confidence_score,
+                'latest_wages': latest_wages
+            }
+            
+        except Exception as e:
+            print(f"⚠️ Error analyzing wage growth: {e}")
+            return {'wage_pressure': 'unknown', 'confidence_score': 0.1}
+
+    def calculate_quit_rate(self, jolts_data: Dict) -> Dict:
+        """Calculate quit rate from JOLTS data"""
+        try:
+            if 'JTSQUL' in jolts_data and 'LNS12000000' in self.fred_data:
+                quits = jolts_data['JTSQUL']['latest_value']
+                employment = self.fred_data['LNS12000000']['data'][0]['value']
+                quit_rate = (quits / employment) * 100
+                
+                return {
+                    'quit_rate': quit_rate,
+                    'quits': quits,
+                    'employment': employment,
+                    'interpretation': self._interpret_quit_rate(quit_rate)
+                }
+            else:
+                return {'quit_rate': None, 'interpretation': 'insufficient_data'}
+        except Exception as e:
+            print(f"⚠️ Error calculating quit rate: {e}")
+            return {'quit_rate': None, 'interpretation': 'error'}
+
+    def _interpret_quit_rate(self, rate: float) -> str:
+        """Interpret quit rate"""
+        if rate > 2.5:
+            return 'high_confidence'
+        elif rate > 2.0:
+            return 'moderate_confidence'
+        else:
+            return 'low_confidence'
+
     def fetch_all_economic_data(self) -> Dict:
         """Fetch all economic data from all sources"""
         print("🔄 Starting comprehensive economic data fetch...")
@@ -518,8 +620,20 @@ class EconomicDataFetcher:
         self.fetch_bea_data()
         self.fetch_fred_data()
         
+        # Fetch additional wage growth data
+        wage_data = self.fetch_wage_growth_data()
+        
         # Analyze the data
         self.combined_analysis = self.analyze_economic_indicators()
+        
+        # Add wage growth analysis
+        if wage_data:
+            self.combined_analysis['wage_growth_analysis'] = self.analyze_wage_growth_indicators(wage_data)
+        
+        # Add quit rate calculation if we have JOLTS data
+        if 'jolts_analysis' in self.combined_analysis:
+            quit_rate_data = self.calculate_quit_rate(self.combined_analysis.get('jolts_analysis', {}))
+            self.combined_analysis['quit_rate_analysis'] = quit_rate_data
         
         print("✅ Economic data fetching complete!")
         
