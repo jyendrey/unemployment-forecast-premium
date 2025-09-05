@@ -1,0 +1,119 @@
+{
+  "timestamp": "2025-09-05 16:32:55",
+  "system_version": "v4.5-recalibrated-no-redundant-factors",
+  "total_components": 15,
+  "total_weight": 1.9999999999999998,
+  "final_forecast": 4.25,
+  "confidence": 95.0,
+  "core_labor_market": {
+    "lfpr": [
+      "Labor Force Participation Rate",
+      0.5913
+    ],
+    "initial_claims": [
+      "Initial Claims",
+      0.3942
+    ],
+    "continuing_claims": [
+      "Continuing Claims",
+      0.2956
+    ]
+  },
+  "trade_data": {
+    "trade_sentiment": [
+      "Updated Trade Sentiment",
+      0.0788
+    ],
+    "trade_volume": [
+      "Updated Trade Volume",
+      0.1183
+    ],
+    "initial_claims_trade_sentiment": [
+      "Initial Claims Trade Sentiment",
+      0.1774
+    ],
+    "initial_claims_volume": [
+      "Initial Claims Trade Volume",
+      0.0788
+    ],
+    "weekly_trade_sentiment": [
+      "Weekly Trade Sentiment",
+      0.1478
+    ],
+    "weekly_trade_volume": [
+      "Weekly Trade Volume",
+      0.0493
+    ],
+    "updated_trade_data": [
+      "Updated Trade Data",
+      0.0591
+    ]
+  },
+  "leading_indicators": {
+    "jolts_data": [
+      "JOLTS Data",
+      0.003
+    ],
+    "business_cycle_indicators": [
+      "Business Cycle Indicators",
+      0.002
+    ],
+    "wage_growth_data": [
+      "Wage Growth Data",
+      0.002
+    ],
+    "sector_employment_data": [
+      "Sector Employment Data",
+      0.0015
+    ],
+    "state_unemployment_data": [
+      "State Unemployment Data",
+      0.001
+    ]
+  },
+  "dynamic_factors": {
+    "trade_predictions": [
+      "Trade Predictions",
+      "Dynamic"
+    ],
+    "quit_rate": [
+      "Quit Rate Analysis",
+      "Dynamic"
+    ]
+  },
+  "removed_factors": [
+    [
+      "Claims Trend",
+      "0.0005",
+      "0.0000% impact"
+    ],
+    [
+      "Market Stability",
+      "0.0003",
+      "0.0000% impact"
+    ],
+    [
+      "Economic Health",
+      "0.0015",
+      "0.0000% impact"
+    ],
+    [
+      "Economic Risk",
+      "0.001",
+      "0.0000% impact"
+    ]
+  ],
+  "weight_distribution": {
+    "core_labor_market": 1.2811,
+    "trade_data": 0.7095,
+    "leading_indicators": 0.0095
+  },
+  "impact_analysis": {
+    "core_labor_impact": -0.0041,
+    "trade_data_impact": 0.0034,
+    "leading_indicators_impact": -0.0018,
+    "total_adjustment": -0.0024,
+    "base_rate": 4.2485,
+    "final_forecast": 4.25
+  }
+}
