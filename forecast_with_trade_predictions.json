@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-09-05 21:17:42",
+  "system_version": "v6.2-trade-predictions-integration",
+  "forecast_method": "Conservative Reform with Trade Predictions",
+  "base_rate": {
+    "rate": 4.3,
+    "source": "Last Published Unemployment Rate",
+    "confidence": 85
+  },
+  "trade_predictions_analysis": {
+    "weighted_sentiment": 0.2590769230769231,
+    "total_volume": 1300,
+    "relevant_contracts": 5,
+    "expected_rate": 3.0935615384615383
+  },
+  "system_configuration": {
+    "weights": {
+      "core_labor": 0.5,
+      "trade_data": 0.4,
+      "leading_indicators": 0.1
+    },
+    "scale_factor": 0.5,
+    "approach": "Balanced - 50% of raw signal, 40% trade data weight"
+  },
+  "adjustments": {
+    "trade_predictions": 0.051815384615384624,
+    "core_labor": -0.15615069195284328,
+    "leading_indicators": 0.0037264227422580142,
+    "total": -0.10060888459520065
+  },
+  "final_forecast": {
+    "rate": 4.2,
+    "confidence": 86.3,
+    "total_adjustment": -0.101,
+    "target_period": "Next unemployment release"
+  }
+}
