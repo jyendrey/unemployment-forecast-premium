@@ -1,0 +1,301 @@
+{
+  "timestamp": "2025-09-05T13:54:29.300356",
+  "version": "v4.5-indeed-jobs-integration-phase1",
+  "phase": "Phase 1 - Foundation",
+  "data_summary": {
+    "daily_records": 30,
+    "weekly_aggregates": 5,
+    "date_range": {
+      "start": "2025-08-07",
+      "end": "2025-09-05"
+    }
+  },
+  "sentiment_indicators": {
+    "job_postings_trend": {
+      "value": -0.2857,
+      "sentiment": -0.3,
+      "interpretation": "Bearish"
+    },
+    "hiring_intensity": {
+      "value": 0.158,
+      "sentiment": 0.1,
+      "interpretation": "Bullish"
+    },
+    "job_duration": {
+      "value": 22.3,
+      "sentiment": 0.0,
+      "interpretation": "Neutral"
+    },
+    "combined": {
+      "value": -0.07999999999999999,
+      "interpretation": "Neutral"
+    }
+  },
+  "forecast_adjustments": {
+    "adjustments": {
+      "job_postings_trend": -0.009,
+      "hiring_intensity": 0.004,
+      "job_duration": 0.0,
+      "combined_indeed": -0.003999999999999999
+    },
+    "confidence_boost": 3.0,
+    "sentiment_indicators": {
+      "job_postings_trend": {
+        "value": -0.2857,
+        "sentiment": -0.3,
+        "interpretation": "Bearish"
+      },
+      "hiring_intensity": {
+        "value": 0.158,
+        "sentiment": 0.1,
+        "interpretation": "Bullish"
+      },
+      "job_duration": {
+        "value": 22.3,
+        "sentiment": 0.0,
+        "interpretation": "Neutral"
+      },
+      "combined": {
+        "value": -0.07999999999999999,
+        "interpretation": "Neutral"
+      }
+    }
+  },
+  "weekly_aggregates": {
+    "2025-W32": {
+      "week": "2025-W32",
+      "total_postings": 6099944,
+      "new_postings": 914990,
+      "average_salary": 65193.06,
+      "average_duration_days": 21.4,
+      "hiring_intensity": 0.153,
+      "wow_change": 0,
+      "sectors": {
+        "technology": 1524985,
+        "healthcare": 1219988,
+        "finance": 914990,
+        "retail": 731992,
+        "manufacturing": 609993,
+        "construction": 487994,
+        "education": 365995,
+        "other": 243996
+      },
+      "regions": {
+        "northeast": 1219988,
+        "southeast": 1524985,
+        "midwest": 1341986,
+        "southwest": 914990,
+        "west": 1097989
+      },
+      "skills": {
+        "python": 914990,
+        "javascript": 731992,
+        "data_analysis": 609993,
+        "project_management": 487994,
+        "sales": 426995,
+        "customer_service": 365995,
+        "marketing": 304996,
+        "other": 2256978
+      },
+      "days_in_week": 4
+    },
+    "2025-W33": {
+      "week": "2025-W33",
+      "total_postings": 11032111,
+      "new_postings": 1654813,
+      "average_salary": 65820.83,
+      "average_duration_days": 22.9,
+      "hiring_intensity": 0.163,
+      "wow_change": 0.8086,
+      "sectors": {
+        "technology": 2758025,
+        "healthcare": 2206420,
+        "finance": 1654813,
+        "retail": 1323849,
+        "manufacturing": 1103208,
+        "construction": 882566,
+        "education": 661923,
+        "other": 441280
+      },
+      "regions": {
+        "northeast": 2206420,
+        "southeast": 2758025,
+        "midwest": 2427062,
+        "southwest": 1654813,
+        "west": 1985777
+      },
+      "skills": {
+        "python": 1654813,
+        "javascript": 1323849,
+        "data_analysis": 1103208,
+        "project_management": 882566,
+        "sales": 772245,
+        "customer_service": 661923,
+        "marketing": 551602,
+        "other": 4081877
+      },
+      "days_in_week": 7
+    },
+    "2025-W34": {
+      "week": "2025-W34",
+      "total_postings": 10937669,
+      "new_postings": 1640647,
+      "average_salary": 66255.61,
+      "average_duration_days": 23.9,
+      "hiring_intensity": 0.169,
+      "wow_change": -0.0086,
+      "sectors": {
+        "technology": 2734415,
+        "healthcare": 2187530,
+        "finance": 1640647,
+        "retail": 1312516,
+        "manufacturing": 1093764,
+        "construction": 875009,
+        "education": 656256,
+        "other": 437503
+      },
+      "regions": {
+        "northeast": 2187530,
+        "southeast": 2734415,
+        "midwest": 2406283,
+        "southwest": 1640647,
+        "west": 1968776
+      },
+      "skills": {
+        "python": 1640647,
+        "javascript": 1312516,
+        "data_analysis": 1093764,
+        "project_management": 875009,
+        "sales": 765632,
+        "customer_service": 656256,
+        "marketing": 546880,
+        "other": 4046934
+      },
+      "days_in_week": 7
+    },
+    "2025-W35": {
+      "week": "2025-W35",
+      "total_postings": 11080530,
+      "new_postings": 1662077,
+      "average_salary": 66099.86,
+      "average_duration_days": 23.5,
+      "hiring_intensity": 0.167,
+      "wow_change": 0.0131,
+      "sectors": {
+        "technology": 2770129,
+        "healthcare": 2216103,
+        "finance": 1662077,
+        "retail": 1329660,
+        "manufacturing": 1108050,
+        "construction": 886440,
+        "education": 664828,
+        "other": 443218
+      },
+      "regions": {
+        "northeast": 2216103,
+        "southeast": 2770129,
+        "midwest": 2437713,
+        "southwest": 1662077,
+        "west": 1994492
+      },
+      "skills": {
+        "python": 1662077,
+        "javascript": 1329660,
+        "data_analysis": 1108050,
+        "project_management": 886440,
+        "sales": 775633,
+        "customer_service": 664828,
+        "marketing": 554022,
+        "other": 4099792
+      },
+      "days_in_week": 7
+    },
+    "2025-W36": {
+      "week": "2025-W36",
+      "total_postings": 7914416,
+      "new_postings": 1187160,
+      "average_salary": 65550.05,
+      "average_duration_days": 22.3,
+      "hiring_intensity": 0.158,
+      "wow_change": -0.2857,
+      "sectors": {
+        "technology": 1978603,
+        "healthcare": 1582882,
+        "finance": 1187160,
+        "retail": 949728,
+        "manufacturing": 791440,
+        "construction": 633150,
+        "education": 474863,
+        "other": 316575
+      },
+      "regions": {
+        "northeast": 1582882,
+        "southeast": 1978603,
+        "midwest": 1741169,
+        "southwest": 1187160,
+        "west": 1424592
+      },
+      "skills": {
+        "python": 1187160,
+        "javascript": 949728,
+        "data_analysis": 791440,
+        "project_management": 633150,
+        "sales": 554006,
+        "customer_service": 474863,
+        "marketing": 395719,
+        "other": 2928332
+      },
+      "days_in_week": 5
+    }
+  },
+  "metrics_config": {
+    "job_postings": {
+      "weight": 0.15,
+      "description": "Total job postings on Indeed",
+      "correlation": "negative",
+      "lead_time_weeks": 3
+    },
+    "job_postings_trend": {
+      "weight": 0.2,
+      "description": "Week-over-week change in job postings",
+      "correlation": "strong_negative",
+      "lead_time_weeks": 2
+    },
+    "hiring_intensity": {
+      "weight": 0.25,
+      "description": "New job postings vs. total postings ratio",
+      "correlation": "strong_negative",
+      "lead_time_weeks": 1
+    },
+    "job_duration": {
+      "weight": 0.1,
+      "description": "Average time jobs stay posted",
+      "correlation": "negative",
+      "lead_time_weeks": 2
+    },
+    "salary_trends": {
+      "weight": 0.08,
+      "description": "Average salary trends in job postings",
+      "correlation": "negative",
+      "lead_time_weeks": 4
+    },
+    "sector_analysis": {
+      "weight": 0.1,
+      "description": "Job postings by industry sector",
+      "correlation": "sector_specific",
+      "lead_time_weeks": 3
+    },
+    "geographic_distribution": {
+      "weight": 0.07,
+      "description": "Job postings by geographic region",
+      "correlation": "regional",
+      "lead_time_weeks": 3
+    },
+    "skill_demand": {
+      "weight": 0.05,
+      "description": "Most in-demand skills in job postings",
+      "correlation": "skill_mismatch",
+      "lead_time_weeks": 3
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "enhanced_forecast": 4.221,
+  "enhanced_confidence": 100.0,
+  "direction": "stable",
+  "trend_indicators": {
+    "jolts_trends": {
+      "openings_trend": -0.02392279461737121,
+      "hires_trend": 0.007784317448262768,
+      "separations_trend": -0.009736004493540536
+    },
+    "economic_trends": {
+      "unemployment_trend": 0.10000000000000053,
+      "initial_claims_trend": 0.034934497816593885,
+      "continuing_claims_trend": -0.00205761316872428
+    },
+    "indeed_trends": {
+      "combined_sentiment": -0.07999999999999999,
+      "postings_trend": -0.2857,
+      "hiring_intensity": 0.158,
+      "job_duration": 22.3
+    }
+  },
+  "enhanced_adjustments": {
+    "jolts_adjustments": {
+      "openings_adjustment": -0.011961397308685605,
+      "hires_adjustment": -0.0023352952344788303,
+      "separations_adjustment": -0.0038944017974162147
+    },
+    "claims_adjustments": {
+      "initial_claims_adjustment": 0.02096069868995633,
+      "continuing_claims_adjustment": -0.000823045267489712
+    },
+    "trade_adjustment": 0.0,
+    "indeed_adjustments": {
+      "combined_adjustment": -0.003999999999999999,
+      "postings_adjustment": -0.008571,
+      "hiring_adjustment": 0.00016000000000000015,
+      "duration_adjustment": -0.0013000000000000008
+    },
+    "economic_headwinds": 0.04,
+    "total_enhanced_adjustment": 0.02823555908188597
+  },
+  "job_flows": {
+    "job_finding_rate": 0.7898809523809524,
+    "job_separation_rate": 0.03305625,
+    "flow_consistent_rate": 4.016861785365935,
+    "indeed_adjusted_finding_rate": 0.7835052316890883,
+    "indeed_adjusted_flow_rate": 4.048225484702255,
+    "indeed_adjustment_factor": 0.9919282511210763
+  },
+  "indeed_data_summary": {
+    "combined_sentiment": -0.07999999999999999,
+    "sentiment_interpretation": "Neutral",
+    "confidence_boost": 3.0
+  },
+  "adjustments": {
+    "trend_adjustment": 0.02823555908188597,
+    "job_flow_adjustment": -0.007588725764887273,
+    "total_adjustment": 0.020646833316998698
+  },
+  "confidence_components": {
+    "base_confidence": 85.0,
+    "trend_confidence_boost": 3.0,
+    "job_flow_confidence_boost": 1.0,
+    "trade_data_confidence_boost": 7.0,
+    "indeed_confidence_boost": 3.0,
+    "fresh_data_boost": 2.0,
+    "total_confidence": 100.0
+  }
+}
