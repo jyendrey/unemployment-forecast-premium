@@ -507,6 +507,36 @@ class FinalEnhancedUnemploymentForecaster:
                 adjustments.append(('Quit Rate Adjustment', quit_adjustment))
                 print(f"🔧 Quit Rate Adjustment: {quit_adjustment:.4f}% (Rate: {quit_rate:.2f}%, {quit_interpretation})")
             
+            # State Unemployment Adjustment
+            state_analysis = self.leading_indicators_data.get('state_unemployment_analysis', {})
+            if state_analysis:
+                regional_dispersion = state_analysis.get('regional_dispersion', 'unknown')
+                avg_state_rate = state_analysis.get('average_state_rate', 4.2)
+                outliers = state_analysis.get('outliers', [])
+                
+                # Calculate adjustment based on regional dispersion and outliers
+                state_adjustment = 0.0
+                
+                # High dispersion suggests economic stress
+                if regional_dispersion == 'high':
+                    state_adjustment += 0.0005
+                elif regional_dispersion == 'moderate':
+                    state_adjustment += 0.0002
+                
+                # Outlier states with high unemployment suggest problems
+                high_unemployment_outliers = [o for o in outliers if o['deviation'] > 1.0]
+                if len(high_unemployment_outliers) > 3:  # More than 3 states significantly above average
+                    state_adjustment += 0.0003
+                
+                # Average state rate vs national rate comparison
+                if avg_state_rate > 4.5:  # States averaging higher than 4.5%
+                    state_adjustment += 0.0002
+                elif avg_state_rate < 3.8:  # States averaging lower than 3.8%
+                    state_adjustment -= 0.0002
+                
+                adjustments.append(('State Unemployment Adjustment', state_adjustment))
+                print(f"🔧 State Unemployment Adjustment: {state_adjustment:.4f}% (Dispersion: {regional_dispersion}, Avg: {avg_state_rate:.1f}%, Outliers: {len(outliers)})")
+            
             # Sector Employment Adjustment
             sector_analysis = self.leading_indicators_data.get('sector_employment_analysis', {})
             if sector_analysis:
@@ -640,6 +670,24 @@ class FinalEnhancedUnemploymentForecaster:
                     else:
                         quit_boost = 0.2  # +0.2% boost
                     leading_indicators_boost += quit_boost
+            
+            # State Unemployment Confidence Boost
+            state_boost = 0
+            if 'state_unemployment_analysis' in self.leading_indicators_data:
+                state_analysis = self.leading_indicators_data['state_unemployment_analysis']
+                state_confidence = state_analysis.get('confidence_score', 0.4)
+                regional_dispersion = state_analysis.get('regional_dispersion', 'unknown')
+                
+                # Base boost from state data availability
+                state_boost = state_confidence * 0.6  # +0.2-0.5% boost
+                
+                # Additional boost for high dispersion (more informative)
+                if regional_dispersion == 'high':
+                    state_boost += 0.3
+                elif regional_dispersion == 'moderate':
+                    state_boost += 0.1
+                
+                leading_indicators_boost += state_boost
         
         # Add leading indicators boost to final confidence
         final_enhanced_confidence += leading_indicators_boost

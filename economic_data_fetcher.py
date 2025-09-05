@@ -515,7 +515,7 @@ class EconomicDataFetcher:
         wage_series = {
             "CES0500000003": "Average Hourly Earnings - All Employees",
             "ECIWAG": "Employment Cost Index - Wages & Salaries",
-            "AHETPI": "Average Hourly Earnings - Production Workers"
+            "AHETPI": "Average Hourly Earnings -Production Workers"
         }
         
         wage_data = {}
@@ -534,6 +534,51 @@ class EconomicDataFetcher:
                 print(f"   ❌ Error fetching {description}: {e}")
         
         return wage_data
+
+    def fetch_state_unemployment_data(self) -> Dict:
+        """Fetch state-level unemployment data from FRED"""
+        print("🔄 Fetching state-level unemployment data...")
+        
+        # Key states for unemployment analysis (largest economies + diverse regions)
+        state_series = {
+            "CAUR": "California Unemployment Rate",
+            "TXUR": "Texas Unemployment Rate", 
+            "FLUR": "Florida Unemployment Rate",
+            "NYUR": "New York Unemployment Rate",
+            "PAUR": "Pennsylvania Unemployment Rate",
+            "ILUR": "Illinois Unemployment Rate",
+            "OHUR": "Ohio Unemployment Rate",
+            "GAUR": "Georgia Unemployment Rate",
+            "NCUR": "North Carolina Unemployment Rate",
+            "MIUR": "Michigan Unemployment Rate",
+            "NJUR": "New Jersey Unemployment Rate",
+            "VAUR": "Virginia Unemployment Rate",
+            "WAUR": "Washington Unemployment Rate",
+            "AZUR": "Arizona Unemployment Rate",
+            "MAUR": "Massachusetts Unemployment Rate",
+            "TNUR": "Tennessee Unemployment Rate",
+            "INUR": "Indiana Unemployment Rate",
+            "MOUR": "Missouri Unemployment Rate",
+            "MDUR": "Maryland Unemployment Rate",
+            "WIUR": "Wisconsin Unemployment Rate"
+        }
+        
+        state_data = {}
+        for series_id, description in state_series.items():
+            try:
+                data = self.fetch_fred_data(series_id, 24)
+                if data:
+                    state_data[series_id] = {
+                        'description': description,
+                        'data': data
+                    }
+                    print(f"   ✅ {description}: {len(data)} months")
+                else:
+                    print(f"   ❌ Failed to fetch {description}")
+            except Exception as e:
+                print(f"   ❌ Error fetching {description}: {e}")
+        
+        return state_data
 
     def analyze_wage_growth_indicators(self, wage_data: Dict) -> Dict:
         """Analyze wage growth indicators"""
@@ -609,6 +654,82 @@ class EconomicDataFetcher:
         else:
             return 'low_confidence'
 
+    def analyze_state_unemployment_indicators(self, state_data: Dict) -> Dict:
+        """Analyze state-level unemployment indicators"""
+        if not state_data:
+            return {'regional_dispersion': 'unknown', 'confidence_score': 0.1}
+        
+        try:
+            # Get latest unemployment rates for all states
+            latest_rates = {}
+            for state_id, data in state_data.items():
+                if data['data']:
+                    latest_rates[state_id] = data['data'][0]['value']
+            
+            if not latest_rates:
+                return {'regional_dispersion': 'unknown', 'confidence_score': 0.1}
+            
+            # Calculate statistics
+            rates = list(latest_rates.values())
+            avg_state_rate = sum(rates) / len(rates)
+            min_rate = min(rates)
+            max_rate = max(rates)
+            rate_std = (sum((x - avg_state_rate) ** 2 for x in rates) / len(rates)) ** 0.5
+            
+            # Calculate coefficient of variation (dispersion measure)
+            cv = rate_std / avg_state_rate if avg_state_rate > 0 else 0
+            
+            # Determine regional dispersion level
+            if cv > 0.3:
+                dispersion_level = 'high'
+                confidence_score = 0.8
+            elif cv > 0.2:
+                dispersion_level = 'moderate'
+                confidence_score = 0.6
+            else:
+                dispersion_level = 'low'
+                confidence_score = 0.4
+            
+            # Identify outlier states
+            outliers = []
+            for state_id, rate in latest_rates.items():
+                if abs(rate - avg_state_rate) > 2 * rate_std:
+                    outliers.append({
+                        'state': state_id,
+                        'rate': rate,
+                        'deviation': rate - avg_state_rate
+                    })
+            
+            # Calculate trend analysis (comparing latest vs 3 months ago)
+            trend_analysis = {}
+            for state_id, data in state_data.items():
+                if len(data['data']) >= 3:
+                    current = data['data'][0]['value']
+                    previous = data['data'][2]['value']
+                    change = current - previous
+                    trend_analysis[state_id] = {
+                        'current': current,
+                        'change': change,
+                        'trend': 'improving' if change < -0.1 else 'worsening' if change > 0.1 else 'stable'
+                    }
+            
+            return {
+                'regional_dispersion': dispersion_level,
+                'average_state_rate': avg_state_rate,
+                'rate_std': rate_std,
+                'coefficient_variation': cv,
+                'min_rate': min_rate,
+                'max_rate': max_rate,
+                'outliers': outliers,
+                'trend_analysis': trend_analysis,
+                'confidence_score': confidence_score,
+                'latest_rates': latest_rates
+            }
+            
+        except Exception as e:
+            print(f"⚠️ Error analyzing state unemployment: {e}")
+            return {'regional_dispersion': 'unknown', 'confidence_score': 0.1}
+
     def fetch_all_economic_data(self) -> Dict:
         """Fetch all economic data from all sources"""
         print("🔄 Starting comprehensive economic data fetch...")
@@ -623,6 +744,9 @@ class EconomicDataFetcher:
         # Fetch additional wage growth data
         wage_data = self.fetch_wage_growth_data()
         
+        # Fetch state-level unemployment data
+        state_data = self.fetch_state_unemployment_data()
+        
         # Analyze the data
         self.combined_analysis = self.analyze_economic_indicators()
         
@@ -634,6 +758,10 @@ class EconomicDataFetcher:
         if 'jolts_analysis' in self.combined_analysis:
             quit_rate_data = self.calculate_quit_rate(self.combined_analysis.get('jolts_analysis', {}))
             self.combined_analysis['quit_rate_analysis'] = quit_rate_data
+        
+        # Add state unemployment analysis
+        if state_data:
+            self.combined_analysis['state_unemployment_analysis'] = self.analyze_state_unemployment_indicators(state_data)
         
         print("✅ Economic data fetching complete!")
         

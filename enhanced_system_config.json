@@ -1,5 +1,5 @@
 {
-  "system_version": "v4.4-final-updated-trade-data",
+  "system_version": "v4.5-state-unemployment-integration",
   "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
   "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
   "initial_claims_foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
@@ -38,6 +38,7 @@
     "business_cycle_indicators": 0.0015,
     "wage_growth_data": 0.001,
     "sector_employment_data": 0.001,
+    "state_unemployment_data": 0.0005,
     "updated_trade_data": 0.05
   },
   "confidence_calculation": {

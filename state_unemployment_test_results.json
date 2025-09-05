@@ -1,0 +1,20 @@
+{
+  "test_timestamp": "2025-09-05 15:57:34",
+  "state_analysis": {
+    "states_analyzed": 10,
+    "average_state_rate": 4.4,
+    "rate_std": 0.44721359549995804,
+    "coefficient_variation": 0.10163945352271772,
+    "regional_dispersion": "low",
+    "outliers": [],
+    "confidence_score": 0.4
+  },
+  "forecast_impact": {
+    "adjustment": 0.0,
+    "confidence_boost": 0.24,
+    "base_forecast": 4.2,
+    "new_forecast": 4.2,
+    "base_confidence": 95.0,
+    "new_confidence": 95.24
+  }
+}
