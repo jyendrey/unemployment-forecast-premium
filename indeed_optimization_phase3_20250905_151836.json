@@ -1,0 +1,53 @@
+{
+  "optimized_forecast": 4.258,
+  "actual_rate": 4.3,
+  "error": 0.042,
+  "accuracy": 99.0,
+  "adjustments": {
+    "jolts": -0.01819109434058065,
+    "claims": 0.02013765342246662,
+    "trade": 0.0,
+    "economic_headwinds": 0.04,
+    "indeed_total": 0.015555999999999993,
+    "total": 0.057502559081885965
+  },
+  "indeed_breakdown": {
+    "postings_adjustment": 0.022856,
+    "hiring_adjustment": -0.0008000000000000008,
+    "duration_adjustment": -0.006500000000000005,
+    "total_indeed": 0.015555999999999993
+  },
+  "optimized_weights": {
+    "job_postings": 0.05,
+    "job_postings_trend": 0.08,
+    "hiring_intensity": 0.1,
+    "job_duration": 0.05,
+    "salary_trends": 0.03,
+    "sector_analysis": 0.04,
+    "geographic_distribution": 0.03,
+    "skill_demand": 0.02
+  },
+  "corrected_interpretation": {
+    "job_postings_trend": {
+      "original_signal": -0.2857,
+      "original_interpretation": "Declining postings = bearish for unemployment (WRONG)",
+      "corrected_interpretation": "Declining postings = bullish for unemployment (CORRECT)",
+      "corrected_signal": 0.2857,
+      "rationale": "Fewer job postings = higher unemployment"
+    },
+    "hiring_intensity": {
+      "original_signal": 0.158,
+      "original_interpretation": "Low intensity = neutral",
+      "corrected_interpretation": "Low intensity = bullish for unemployment (CORRECT)",
+      "corrected_signal": -0.008000000000000007,
+      "rationale": "Low hiring activity = higher unemployment"
+    },
+    "job_duration": {
+      "original_signal": 22.3,
+      "original_interpretation": "Long duration = bearish for unemployment (WRONG)",
+      "corrected_interpretation": "Long duration = bullish for unemployment (CORRECT)",
+      "corrected_signal": -0.1300000000000001,
+      "rationale": "Longer job postings = higher unemployment"
+    }
+  }
+}
