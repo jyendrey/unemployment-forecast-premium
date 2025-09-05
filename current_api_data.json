@@ -1,0 +1,883 @@
+{
+  "timestamp": "2025-09-05 18:26:40",
+  "date_range": {
+    "start": "2023-09-06",
+    "end": "2025-09-05"
+  },
+  "fred_data": {
+    "UNRATE": {
+      "description": "Unemployment Rate",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-01",
+          "value": "4.3"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "4.1"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "4.1"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "4.0"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "4.1"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "4.2"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "4.1"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "4.1"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "CIVPART": {
+      "description": "Labor Force Participation Rate",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-01",
+          "value": "62.3"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "62.2"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "62.3"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "62.4"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "62.6"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "62.5"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "62.4"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "62.6"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "62.5"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "62.5"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "62.5"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "62.7"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "ICSA": {
+      "description": "Initial Claims",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-30",
+          "value": "237000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-23",
+          "value": "229000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-16",
+          "value": "234000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-09",
+          "value": "224000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-02",
+          "value": "227000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-26",
+          "value": "219000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-19",
+          "value": "217000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-12",
+          "value": "221000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-05",
+          "value": "228000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-28",
+          "value": "232000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-21",
+          "value": "237000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-14",
+          "value": "246000"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "CCSA": {
+      "description": "Continuing Claims",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-23",
+          "value": "1940000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-16",
+          "value": "1944000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-09",
+          "value": "1961000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-02",
+          "value": "1942000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-26",
+          "value": "1968000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-19",
+          "value": "1936000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-12",
+          "value": "1946000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-05",
+          "value": "1951000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-28",
+          "value": "1954000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-21",
+          "value": "1956000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-14",
+          "value": "1964000"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-07",
+          "value": "1937000"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "JTSJOL": {
+      "description": "Job Openings",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "7181"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "7357"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "7712"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "7395"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "7200"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "7480"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "7762"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "7508"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "8031"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "7615"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "7103"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-08-01",
+          "value": "7649"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "JTSHIL": {
+      "description": "Hires",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "5308"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "5267"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "5465"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "5615"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "5404"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "5370"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "5371"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "5374"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "5307"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "5350"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "5519"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-08-01",
+          "value": "5230"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "JTSTSL": {
+      "description": "Total Separations",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "5289"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "5341"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "5213"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "5313"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "5183"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "5316"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "5272"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "5082"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "5087"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "5285"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "5197"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-08-01",
+          "value": "5170"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "JTSQUL": {
+      "description": "Quits",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "3208"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "3209"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "3270"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "3215"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "3344"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "3250"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "3256"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "3095"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "3032"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "3217"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "3085"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-08-01",
+          "value": "3177"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "PAYEMS": {
+      "description": "Total Nonfarm Payrolls",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-01",
+          "value": "159540"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "159518"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "159439"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "159452"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "159433"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "159275"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "159155"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "159053"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "158942"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "158619"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "158358"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "158314"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "UNEMPLOY": {
+      "description": "Unemployed",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-01",
+          "value": "7384"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "7236"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "7015"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "7237"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "7166"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "7083"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "7052"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "6849"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "6886"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "7121"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "6972"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "6901"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    },
+    "EMRATIO": {
+      "description": "Employment-Population Ratio",
+      "data": [
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-08-01",
+          "value": "59.6"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-07-01",
+          "value": "59.6"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-06-01",
+          "value": "59.7"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-05-01",
+          "value": "59.7"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-04-01",
+          "value": "60.0"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-03-01",
+          "value": "59.9"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-02-01",
+          "value": "59.9"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2025-01-01",
+          "value": "60.1"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-12-01",
+          "value": "60.0"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-11-01",
+          "value": "59.8"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-10-01",
+          "value": "60.0"
+        },
+        {
+          "realtime_start": "2025-09-05",
+          "realtime_end": "2025-09-05",
+          "date": "2024-09-01",
+          "value": "60.1"
+        }
+      ],
+      "status": "success",
+      "count": 12
+    }
+  },
+  "summary": {
+    "fred_success": 11,
+    "fred_total": 11,
+    "total_observations": 132
+  }
+}

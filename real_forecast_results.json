@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-09-05 18:27:15",
+  "base_rate": 4.3,
+  "forecast": 4.24,
+  "total_adjustment": -0.06,
+  "confidence": 67.0,
+  "adjustments": [
+    "LFPR increase: -0.03pp",
+    "High quit rate: -0.03pp"
+  ],
+  "data_sources": {
+    "unemployment_rate": 4.3,
+    "labor_force_participation": 62.3,
+    "initial_claims": 237000,
+    "continuing_claims": 1940000,
+    "job_openings": 7181,
+    "hires": 5308,
+    "quits": 3208
+  },
+  "trends": {
+    "lfpr_trend": 0.09999999999999432,
+    "claims_trend": 0.025974025974025976,
+    "continuing_trend": -0.00205761316872428,
+    "tightness_ratio": 1.3528636021100227,
+    "quit_rate": 0.6043707611152976
+  }
+}
