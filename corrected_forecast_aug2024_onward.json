@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-09-05 20:21:07",
+  "forecast_method": "August 2024 Baseline + Trade Data from Aug 2024 Onward",
+  "fred_baseline": {
+    "forecast": 4.2,
+    "confidence": 85,
+    "period": "August 2024"
+  },
+  "trade_data_analysis": {
+    "unemployment_pairs": 5262,
+    "claims_pairs": 17625,
+    "months_covered": 20,
+    "unrate_sentiment": -0.04908583588474147,
+    "claims_sentiment": -0.037123022402227535,
+    "combined_sentiment": -0.0431044291434845
+  },
+  "forecast_adjustments": {
+    "sentiment_adjustment": -0.0043104429143484505,
+    "confidence_boost": 10.0
+  },
+  "final_forecast": {
+    "rate": 4.2,
+    "confidence": 95.0,
+    "total_adjustment": -0.004,
+    "target_period": "September 2024 and beyond"
+  }
+}
