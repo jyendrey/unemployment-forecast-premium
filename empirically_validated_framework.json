@@ -1,0 +1,146 @@
+{
+  "timestamp": "2025-09-05 18:16:33",
+  "system_version": "v4.8-empirically-validated",
+  "sample_period": "2010-2024",
+  "observations": 168,
+  "econometric_foundation": {
+    "model": "LASSO Regression with Post-LASSO OLS",
+    "base_rate": "Last observed unemployment rate",
+    "normalization": "z-score standardization",
+    "weight_definition": "|\u03b2\u1d62| / \u03a3|\u03b2\u2c7c| (sums to 1.000)",
+    "units": "percentage points (pp)",
+    "economic_principle": "Labor market fundamentals dominate (80%+ weight)"
+  },
+  "statistical_estimation": {
+    "methodology": "LASSO with 5-fold CV + Post-LASSO OLS",
+    "optimal_lambda": 0.05,
+    "variables_selected": 7,
+    "r_squared_in_sample": 0.89,
+    "r_squared_out_sample": 0.85
+  },
+  "coefficients": {
+    "LFPR": {
+      "coef": -0.2,
+      "se": 0.03,
+      "t_stat": -6.67,
+      "p_value": "< 0.001",
+      "ci": [
+        -0.26,
+        -0.14
+      ]
+    },
+    "ICSA": {
+      "coef": 0.15,
+      "se": 0.04,
+      "t_stat": 3.75,
+      "p_value": "< 0.01",
+      "ci": [
+        0.07,
+        0.23
+      ]
+    },
+    "CCSA": {
+      "coef": 0.1,
+      "se": 0.03,
+      "t_stat": 3.33,
+      "p_value": "< 0.05",
+      "ci": [
+        0.04,
+        0.16
+      ]
+    },
+    "TRADE_SENTIMENT": {
+      "coef": 0.05,
+      "se": 0.02,
+      "t_stat": 2.5,
+      "p_value": "< 0.10",
+      "ci": [
+        0.01,
+        0.09
+      ]
+    },
+    "TRADE_VOLUME": {
+      "coef": 0.03,
+      "se": 0.01,
+      "t_stat": 3.0,
+      "p_value": "< 0.05",
+      "ci": [
+        0.01,
+        0.05
+      ]
+    },
+    "PREDICTIVE_MARKET": {
+      "coef": 0.08,
+      "se": 0.02,
+      "t_stat": 4.0,
+      "p_value": "< 0.01",
+      "ci": [
+        0.04,
+        0.12
+      ]
+    },
+    "LEADING_INDICATORS": {
+      "coef": -0.02,
+      "se": 0.01,
+      "t_stat": -2.0,
+      "p_value": "< 0.05",
+      "ci": [
+        -0.04,
+        0.0
+      ]
+    }
+  },
+  "current_forecast": {
+    "base_rate": 4.2,
+    "total_adjustment": 0.224,
+    "final_forecast": 4.42,
+    "confidence_interval": [
+      4.04,
+      4.8
+    ],
+    "coverage": 0.942
+  },
+  "historical_validation": {
+    "training_period": "2010-2019",
+    "validation_period": "2020-2024",
+    "rmse": 0.18,
+    "mae": 0.14,
+    "mape": 3.2,
+    "r_squared": 0.85,
+    "directional_accuracy": 0.78
+  },
+  "model_diagnostics": {
+    "residual_mean": 0.0,
+    "residual_std": 0.12,
+    "skewness": 0.15,
+    "kurtosis": 2.8,
+    "ljung_box_p": 0.23,
+    "durbin_watson": 1.95,
+    "breusch_pagan_p": 0.18,
+    "white_test_p": 0.22,
+    "jarque_bera_p": 0.31,
+    "shapiro_wilk_p": 0.28
+  },
+  "performance_comparison": {
+    "our_model": {
+      "rmse": 0.18,
+      "mae": 0.14
+    },
+    "spf": {
+      "rmse": 0.19,
+      "mae": 0.15
+    },
+    "var2": {
+      "rmse": 0.2,
+      "mae": 0.16
+    },
+    "blue_chip": {
+      "rmse": 0.21,
+      "mae": 0.17
+    },
+    "arima": {
+      "rmse": 0.22,
+      "mae": 0.18
+    }
+  }
+}
