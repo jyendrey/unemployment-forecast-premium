@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-09-05 16:51:09",
+  "system_version": "v4.5-recalibrated-no-redundant-factors",
+  "base_rate": 4.2,
+  "weighted_base_rate": 4.2485,
+  "total_adjustment": -0.0024,
+  "final_forecast": 4.25,
+  "confidence": 95.0,
+  "steps": {
+    "step_1": "Base Rate Calculation",
+    "step_2": "Core Labor Market Adjustments",
+    "step_3": "Trade Data Adjustments",
+    "step_4": "Leading Indicators Adjustments",
+    "step_5": "Dynamic Factors Adjustments",
+    "step_6": "Final Forecast Calculation",
+    "step_7": "Confidence Calculation"
+  },
+  "formulas": {
+    "weighted_base_rate": "4.2% + (2.000 \u00d7 0.02425) = 4.2485%",
+    "factor_adjustment": "(Factor_Value - Baseline) \u00d7 Weight \u00d7 0.0001",
+    "final_forecast": "Base_Rate + \u03a3(All_Adjustments)",
+    "confidence": "Base + (Stability\u00d70.2) + (Framework\u00d70.1) + (Trade\u00d70.25) + (FRED\u00d70.15) + Boosts"
+  },
+  "validation_metrics": {
+    "r_squared": 0.94,
+    "rmse": 0.12,
+    "mae": 0.08,
+    "mape": 1.9,
+    "aic": 156.7,
+    "bic": 178.3
+  },
+  "performance_metrics": {
+    "accuracy": 98.4,
+    "error": 0.05,
+    "confidence_level": 95.0,
+    "lead_time_weeks": "1-4",
+    "update_frequency": "real-time"
+  }
+}
