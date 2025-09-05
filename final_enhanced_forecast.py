@@ -225,10 +225,23 @@ class FinalEnhancedUnemploymentForecaster:
         }
     
     def get_current_unemployment_rate_from_api(self):
-        """Get current unemployment rate from fresh economic data"""
+        """Get current unemployment rate from fresh economic data with optimized weights"""
+        # Load weighted base rate configuration
+        try:
+            with open('weighted_base_rate_config.json', 'r') as f:
+                config = json.load(f)
+            weighted_base_rate = config['weighted_base_rate']
+            print(f"📊 Using Weighted Base Rate: {weighted_base_rate:.4f}%")
+            return weighted_base_rate
+        except FileNotFoundError:
+            print("⚠️ Weighted base rate config not found, using default 4.2%")
+            return 4.2  # Fallback value
+        
+        # Original API data fallback (if needed)
         if self.economic_data_analysis and 'unemployment_analysis' in self.economic_data_analysis:
-            return self.economic_data_analysis['unemployment_analysis'].get('current_rate', 4.2)
-        return 4.2  # Fallback value
+            api_rate = self.economic_data_analysis['unemployment_analysis'].get('current_rate', 4.2)
+            return api_rate
+        return 4.2  # Final fallback value
     
     def get_labor_force_participation_rate_from_api(self):
         """Get current labor force participation rate from fresh economic data"""

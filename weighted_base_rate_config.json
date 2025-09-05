@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-09-05 16:02:08",
+  "base_rate_update": "v1.0-weighted-base-rate",
+  "current_base_rate": 4.2,
+  "weighted_base_rate": 4.24852869047619,
+  "base_rate_adjustment": 0.04852869047619048,
+  "influence_weights": {
+    "core_labor_market": 0.43333333333333335,
+    "trade_data": 0.10285714285714286,
+    "leading_indicators": 0.0019000000000000002,
+    "economic_health": 0.00125,
+    "technical_factors": 0.00039999999999999996
+  },
+  "optimized_weights": {
+    "lfpr": 0.6,
+    "initial_claims": 0.4,
+    "continuing_claims": 0.3,
+    "trade_sentiment": 0.08,
+    "trade_volume": 0.12,
+    "initial_claims_trade_sentiment": 0.18,
+    "initial_claims_volume": 0.08,
+    "weekly_trade_sentiment": 0.15,
+    "weekly_trade_volume": 0.05,
+    "updated_trade_data": 0.06,
+    "jolts_data": 0.003,
+    "business_cycle_indicators": 0.002,
+    "wage_growth_data": 0.002,
+    "sector_employment_data": 0.0015,
+    "state_unemployment_data": 0.001,
+    "economic_health": 0.0015,
+    "economic_risk": 0.001,
+    "claims_trend": 0.0005,
+    "market_stability": 0.0003
+  }
+}
