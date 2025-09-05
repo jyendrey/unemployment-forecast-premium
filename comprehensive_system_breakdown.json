@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-09-05 16:19:38",
+  "system_version": "v4.5-state-unemployment-integration",
+  "total_factors": 20,
+  "final_forecast": 4.25,
+  "confidence": 95.0,
+  "base_rate": 4.2485,
+  "total_adjustments": -0.0024,
+  "components": {
+    "core_labor_market": {
+      "factors": 3,
+      "total_weight": 1.3,
+      "total_impact": -0.0041
+    },
+    "trade_data": {
+      "factors": 8,
+      "total_weight": 0.72,
+      "total_impact": 0.0034
+    },
+    "leading_indicators": {
+      "factors": 6,
+      "total_weight": 0.0095,
+      "total_impact": -0.0018
+    },
+    "economic_health": {
+      "factors": 2,
+      "total_weight": 0.0025,
+      "total_impact": 0.0
+    },
+    "technical_factors": {
+      "factors": 2,
+      "total_weight": 0.0008,
+      "total_impact": 0.0
+    }
+  }
+}
