@@ -1,0 +1,18 @@
+{
+  "analysis_date": "2025-09-05T13:21:09.064397",
+  "actual_unemployment_rate": 4.3,
+  "our_forecast": 4.233,
+  "our_error": 0.06700000000000017,
+  "our_accuracy": 98.44186046511628,
+  "churn_forecast": 4.26,
+  "churn_error": 0.040000000000000036,
+  "churn_accuracy": 99.06976744186046,
+  "performance_rating": "EXCELLENT",
+  "model_direction": "Underestimated",
+  "recommendations": [
+    "Continue monitoring trade data for real-time adjustments",
+    "Fine-tune economic headwinds calculation",
+    "Review claims trend impact weights",
+    "Maintain current confidence calculation approach"
+  ]
+}
