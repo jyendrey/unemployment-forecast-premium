@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-09-05 18:37:31",
+  "forecast_date": "September 2024",
+  "base_rate": 4.2,
+  "forecast": 4.2,
+  "total_adjustment": 0.0,
+  "confidence": 85,
+  "adjustments": [],
+  "data_sources": {
+    "unemployment_rate": 4.2,
+    "labor_force_participation": 62.7,
+    "initial_claims": 228000,
+    "continuing_claims": 1845000,
+    "job_openings": 7504
+  }
+}
