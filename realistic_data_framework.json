@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-09-05 18:19:43",
+  "system_version": "v4.9-realistic-data-framework",
+  "current_date": "September 5, 2025",
+  "data_availability": {
+    "fred_data": "2010-2025 (15+ years, 180+ observations)",
+    "trade_data": "2024-2025 (1+ years, 12+ observations)",
+    "bls_data": "2010-2025",
+    "dol_data": "2010-2025"
+  },
+  "current_forecast": {
+    "base_rate": 4.3,
+    "total_adjustment": 0.081,
+    "final_forecast": 4.38,
+    "confidence_interval": [
+      3.95,
+      4.81
+    ],
+    "coverage": 0.925
+  },
+  "weight_distribution": {
+    "core_labor_market": 0.85,
+    "leading_indicators": 0.1,
+    "market_sentiment": 0.05,
+    "total": 1.0
+  },
+  "trade_data_limitations": {
+    "insufficient_history": true,
+    "limited_predictive_power": true,
+    "conservative_weight": 0.05,
+    "focus_on_sentiment_only": true
+  },
+  "api_status": {
+    "fred": "Active (2010-2025)",
+    "bls": "Active (2010-2025)",
+    "bea": "Active (2010-2025)",
+    "trade_data": "Limited (2024-2025)"
+  }
+}
