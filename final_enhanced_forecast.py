@@ -365,44 +365,7 @@ class FinalEnhancedUnemploymentForecaster:
             adjustments.append(('Sentiment Adjustment', sentiment_adjustment))
             print(f"🔧 Sentiment Adjustment (Math Framework {self.math_framework_id}): {sentiment_adjustment:.4f}%")
         
-        # 5. Extended Claims Trend Adjustment (24 months analysis)
-        extended_trends = self.get_extended_trends()
-        if extended_trends and 'short_term' in extended_trends:
-            short_term_initial = extended_trends['short_term'].get('initial_claims', {}).get('trend', 'Unknown')
-            short_term_continuing = extended_trends['short_term'].get('continuing_claims', {}).get('trend', 'Unknown')
-            
-            # Calculate trend adjustment based on short-term trends
-            trend_adjustment = 0.0
-            if short_term_initial == 'Rising':
-                trend_adjustment += 0.001 / 100  # Slight upward pressure
-            elif short_term_initial == 'Declining':
-                trend_adjustment -= 0.001 / 100  # Slight downward pressure
-                
-            if short_term_continuing == 'Rising':
-                trend_adjustment += 0.0005 / 100  # Additional upward pressure
-            elif short_term_continuing == 'Declining':
-                trend_adjustment -= 0.0005 / 100  # Additional downward pressure
-            
-            adjustments.append(('Extended Claims Trend Adjustment', trend_adjustment))
-            print(f"🔧 Extended Claims Trend Adjustment (Math Framework {self.math_framework_id}): {trend_adjustment:.4f}%")
-        
-        # 6. New: Market Stability Adjustment (from 24 months of data)
-        market_stability = self.get_market_stability()
-        if market_stability and 'overall_market_stability' in market_stability:
-            stability_level = market_stability['overall_market_stability']
-            
-            # Adjust forecast based on market stability
-            if stability_level == 'Very Stable':
-                stability_adjustment = -0.0005 / 100  # Slight downward pressure due to stability
-            elif stability_level == 'Stable':
-                stability_adjustment = -0.0002 / 100  # Minimal downward pressure
-            elif stability_level == 'Moderately Stable':
-                stability_adjustment = 0.0  # No adjustment
-            else:  # Volatile
-                stability_adjustment = 0.001 / 100  # Slight upward pressure due to volatility
-            
-            adjustments.append(('Market Stability Adjustment', stability_adjustment))
-            print(f"🔧 Market Stability Adjustment (Math Framework {self.math_framework_id}): {stability_adjustment:.4f}%")
+        # Note: Extended Claims Trend and Market Stability adjustments removed as redundant factors
         
         # 7. New: Initial Claims Trade Data Adjustment (Foundation bc-78795d1e-6a46-4716-9ff6-78bca58ca95f)
         initial_claims_sentiment = self.get_initial_claims_sentiment()
@@ -452,21 +415,7 @@ class FinalEnhancedUnemploymentForecaster:
             health_score = market_health['overall_health_score']
             health_level = market_health.get('health_level', 'Good')
             
-            # Calculate economic health adjustment
-            # Higher health score indicates better economic conditions (lower unemployment)
-            health_adjustment = (health_score - 70) * 0.001 / 100  # Normalize to small adjustment
-            adjustments.append(('Economic Health Adjustment', health_adjustment))
-            print(f"🔧 Economic Health Adjustment (API Data): {health_adjustment:.4f}% (Health: {health_level})")
-            
-            # Risk-based adjustment
-            if risk_assessment and 'risk_level' in risk_assessment:
-                risk_level = risk_assessment['risk_level']
-                risk_score = risk_assessment.get('risk_score', 30)
-                
-                # Higher risk indicates potential economic stress (higher unemployment)
-                risk_adjustment = (risk_score - 30) * 0.0005 / 100  # Normalize to small adjustment
-                adjustments.append(('Economic Risk Adjustment', risk_adjustment))
-                print(f"🔧 Economic Risk Adjustment (API Data): {risk_adjustment:.4f}% (Risk: {risk_level})")
+            # Note: Economic Health and Risk adjustments removed as redundant factors
         
         # Leading Indicators Adjustments
         if self.leading_indicators_data:

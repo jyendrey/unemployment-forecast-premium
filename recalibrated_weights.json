@@ -1,0 +1,94 @@
+{
+  "timestamp": "2025-09-05 16:27:26",
+  "recalibration_version": "v1.0-remove-redundant-factors",
+  "removed_factors": [
+    "claims_trend",
+    "market_stability",
+    "economic_health",
+    "economic_risk"
+  ],
+  "original_weights": {
+    "lfpr": 0.6,
+    "initial_claims": 0.4,
+    "continuing_claims": 0.3,
+    "trade_sentiment": 0.08,
+    "trade_volume": 0.12,
+    "claims_trend": 0.0005,
+    "market_stability": 0.0003,
+    "initial_claims_trade_sentiment": 0.18,
+    "initial_claims_volume": 0.08,
+    "weekly_trade_sentiment": 0.15,
+    "weekly_trade_volume": 0.05,
+    "economic_health": 0.0015,
+    "economic_risk": 0.001,
+    "jolts_data": 0.003,
+    "business_cycle_indicators": 0.002,
+    "wage_growth_data": 0.002,
+    "sector_employment_data": 0.0015,
+    "state_unemployment_data": 0.001,
+    "updated_trade_data": 0.06
+  },
+  "cleaned_weights": {
+    "lfpr": 0.6,
+    "initial_claims": 0.4,
+    "continuing_claims": 0.3,
+    "trade_sentiment": 0.08,
+    "trade_volume": 0.12,
+    "initial_claims_trade_sentiment": 0.18,
+    "initial_claims_volume": 0.08,
+    "weekly_trade_sentiment": 0.15,
+    "weekly_trade_volume": 0.05,
+    "jolts_data": 0.003,
+    "business_cycle_indicators": 0.002,
+    "wage_growth_data": 0.002,
+    "sector_employment_data": 0.0015,
+    "state_unemployment_data": 0.001,
+    "updated_trade_data": 0.06
+  },
+  "recalibrated_weights": {
+    "lfpr": 0.5912786400591278,
+    "initial_claims": 0.3941857600394186,
+    "continuing_claims": 0.2956393200295639,
+    "trade_sentiment": 0.07883715200788372,
+    "trade_volume": 0.11825572801182556,
+    "initial_claims_trade_sentiment": 0.17738359201773835,
+    "initial_claims_volume": 0.07883715200788372,
+    "weekly_trade_sentiment": 0.14781966001478195,
+    "weekly_trade_volume": 0.04927322000492732,
+    "jolts_data": 0.0029563932002956393,
+    "business_cycle_indicators": 0.001970928800197093,
+    "wage_growth_data": 0.001970928800197093,
+    "sector_employment_data": 0.0014781966001478197,
+    "state_unemployment_data": 0.0009854644000985464,
+    "updated_trade_data": 0.05912786400591278
+  },
+  "weight_analysis": {
+    "original_total": 2.0328,
+    "cleaned_total": 2.0295,
+    "recalibrated_total": 1.9999999999999998,
+    "recalibration_factor": 0.9854644000985464
+  },
+  "category_breakdown": {
+    "core_labor_market": {
+      "lfpr": 0.5912786400591278,
+      "initial_claims": 0.3941857600394186,
+      "continuing_claims": 0.2956393200295639
+    },
+    "trade_data": {
+      "trade_sentiment": 0.07883715200788372,
+      "trade_volume": 0.11825572801182556,
+      "initial_claims_trade_sentiment": 0.17738359201773835,
+      "initial_claims_volume": 0.07883715200788372,
+      "weekly_trade_sentiment": 0.14781966001478195,
+      "weekly_trade_volume": 0.04927322000492732,
+      "updated_trade_data": 0.05912786400591278
+    },
+    "leading_indicators": {
+      "jolts_data": 0.0029563932002956393,
+      "business_cycle_indicators": 0.001970928800197093,
+      "wage_growth_data": 0.001970928800197093,
+      "sector_employment_data": 0.0014781966001478197,
+      "state_unemployment_data": 0.0009854644000985464
+    }
+  }
+}
