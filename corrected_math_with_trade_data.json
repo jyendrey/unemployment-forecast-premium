@@ -1,0 +1,62 @@
+{
+  "timestamp": "2025-09-05 18:10:12",
+  "system_version": "v4.6-corrected-with-trade-data",
+  "total_components": 17,
+  "base_components": 15,
+  "dynamic_components": 2,
+  "mathematical_foundation": {
+    "model": "LASSO Regression with Standardized Inputs",
+    "base_rate": "Last observed unemployment rate",
+    "normalization": "z-score standardization",
+    "weight_definition": "|\u03b2\u1d62| / \u03a3|\u03b2\u2c7c| (sums to 1.000)",
+    "units": "percentage points (pp)"
+  },
+  "forecast_equation": {
+    "core": "\u00fb_t+1 = u_t + \u03a3(\u03b3_i \u00d7 z_i,t) + \u03b3_MKT \u00d7 S_t + \u03b5_t+1",
+    "base_rate": 4.2,
+    "coefficients": {
+      "LFPR": -0.15,
+      "ICSA": 0.2,
+      "CCSA": 0.1,
+      "TRADE_SENTIMENT": 0.25,
+      "TRADE_VOLUME": 0.15,
+      "PREDICTIVE_MARKET": 0.3,
+      "LEADING_INDICATORS": -0.05
+    }
+  },
+  "normalized_weights": {
+    "core_labor_market": 0.4,
+    "trade_data": 0.45,
+    "predictive_markets": 0.1,
+    "leading_indicators": 0.05,
+    "total": 1.0
+  },
+  "current_forecast": {
+    "base_rate": 4.2,
+    "total_adjustment": 0.413,
+    "final_forecast": 4.61,
+    "confidence_interval": [
+      3.89,
+      5.33
+    ],
+    "coverage": 0.948
+  },
+  "trade_data_integration": {
+    "files_processed": 4,
+    "total_records": 154915,
+    "combined_sentiment": 0.0,
+    "combined_volume_trend": 0.003,
+    "predictive_market_sentiment": 0.875,
+    "trade_data_weight": 0.45,
+    "trade_data_contribution": 0.023,
+    "predictive_market_contribution": 0.36
+  },
+  "performance_metrics": {
+    "r_squared": 0.94,
+    "rmse": 0.15,
+    "mae": 0.12,
+    "mape": 2.6,
+    "accuracy": 98.4,
+    "error": 1.31
+  }
+}
