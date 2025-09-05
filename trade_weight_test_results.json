@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-09-05 20:48:09",
+  "base_forecast": 4.2,
+  "scenarios": {
+    "Current (25% Trade)": {
+      "weights": {
+        "core_labor": 0.7,
+        "trade_data": 0.25,
+        "leading_indicators": 0.05
+      },
+      "scale_factor": 0.1,
+      "forecast": 4.155572837798843,
+      "trade_adjustment": -0.0010776107285871126,
+      "total_adjustment": -0.04442716220115743,
+      "trade_sentiment": -0.0431044291434845
+    },
+    "Balanced (40% Trade)": {
+      "weights": {
+        "core_labor": 0.5,
+        "trade_data": 0.4,
+        "leading_indicators": 0.1
+      },
+      "scale_factor": 0.1,
+      "forecast": 4.1677909689921435,
+      "trade_adjustment": -0.0017241771657393803,
+      "total_adjustment": -0.03220903100785644,
+      "trade_sentiment": -0.0431044291434845
+    },
+    "Market-Heavy (50% Trade)": {
+      "weights": {
+        "core_labor": 0.4,
+        "trade_data": 0.5,
+        "leading_indicators": 0.1
+      },
+      "scale_factor": 0.1,
+      "forecast": 4.173605952378822,
+      "trade_adjustment": -0.0021552214571742253,
+      "total_adjustment": -0.026394047621177547,
+      "trade_sentiment": -0.0431044291434845
+    },
+    "High Impact (40% Trade, 0.5x Scale)": {
+      "weights": {
+        "core_labor": 0.5,
+        "trade_data": 0.4,
+        "leading_indicators": 0.1
+      },
+      "scale_factor": 0.5,
+      "forecast": 4.038954844960718,
+      "trade_adjustment": -0.008620885828696901,
+      "total_adjustment": -0.16104515503928218,
+      "trade_sentiment": -0.0431044291434845
+    },
+    "Very High Impact (50% Trade, 1.0x Scale)": {
+      "weights": {
+        "core_labor": 0.4,
+        "trade_data": 0.5,
+        "leading_indicators": 0.1
+      },
+      "scale_factor": 1.0,
+      "forecast": 3.9360595237882245,
+      "trade_adjustment": -0.02155221457174225,
+      "total_adjustment": -0.26394047621177547,
+      "trade_sentiment": -0.0431044291434845
+    }
+  },
+  "analysis": {
+    "forecast_range": 0.2375464285905977,
+    "trade_adjustment_range": 0.020474603843155137,
+    "most_impactful": "Very High Impact (50% Trade, 1.0x Scale)"
+  }
+}
