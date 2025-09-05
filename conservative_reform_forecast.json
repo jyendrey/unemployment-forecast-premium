@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-09-05 21:08:50",
+  "system_version": "v6.0-conservative-reform",
+  "forecast_method": "Conservative Reform (0.5x Scale, 40% Trade Data)",
+  "fred_baseline": {
+    "forecast": 4.2,
+    "confidence": 85,
+    "period": "August 2024"
+  },
+  "system_configuration": {
+    "weights": {
+      "core_labor": 0.5,
+      "trade_data": 0.4,
+      "leading_indicators": 0.1
+    },
+    "scale_factor": 0.5,
+    "approach": "Balanced - 50% of raw signal, 40% trade data weight"
+  },
+  "trade_data_analysis": {
+    "unrate_sentiment": -0.04908583588474147,
+    "claims_sentiment": -0.037123022402227535,
+    "combined_sentiment": -0.0431044291434845,
+    "total_volume": 125063,
+    "relevant_pairs": 11061
+  },
+  "adjustments": {
+    "trade_data": -0.008620885828696901,
+    "core_labor": -0.15615069195284328,
+    "leading_indicators": 0.0037264227422580142,
+    "total": -0.16104515503928218
+  },
+  "final_forecast": {
+    "rate": 4.04,
+    "confidence": 95,
+    "total_adjustment": -0.161,
+    "target_period": "September 2024 and beyond"
+  }
+}
