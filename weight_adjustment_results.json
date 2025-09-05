@@ -1,0 +1,98 @@
+{
+  "timestamp": "2025-09-05 20:13:17",
+  "base_forecast": 4.2,
+  "scenarios": {
+    "Current (Cleaned)": {
+      "weights": {
+        "lfpr": 0.35,
+        "initial_claims": 0.25,
+        "continuing_claims": 0.1,
+        "unemployment_trade_sentiment": 0.15,
+        "unemployment_trade_volume": 0.05,
+        "claims_trade_sentiment": 0.05,
+        "jolts_data": 0.03,
+        "business_cycle_indicators": 0.02
+      },
+      "forecast": 4.18028184665802,
+      "adjustment": -0.01971815334198026,
+      "core_adj": -0.02151983605623348,
+      "trade_adj": 0.0015780973497177408,
+      "leading_adj": 0.00022358536453548087
+    },
+    "Labor Market Heavy": {
+      "weights": {
+        "lfpr": 0.5,
+        "initial_claims": 0.3,
+        "continuing_claims": 0.15,
+        "unemployment_trade_sentiment": 0.03,
+        "unemployment_trade_volume": 0.01,
+        "claims_trade_sentiment": 0.01,
+        "jolts_data": 0.0,
+        "business_cycle_indicators": 0.0
+      },
+      "forecast": 4.169720386144179,
+      "adjustment": -0.030279613855821348,
+      "core_adj": -0.030595233325764894,
+      "trade_adj": 0.00031561946994354805,
+      "leading_adj": 0.0
+    },
+    "Trade Data Heavy": {
+      "weights": {
+        "lfpr": 0.2,
+        "initial_claims": 0.15,
+        "continuing_claims": 0.05,
+        "unemployment_trade_sentiment": 0.3,
+        "unemployment_trade_volume": 0.15,
+        "claims_trade_sentiment": 0.1,
+        "jolts_data": 0.03,
+        "business_cycle_indicators": 0.02
+      },
+      "forecast": 4.193558355116326,
+      "adjustment": -0.006441644883674213,
+      "core_adj": -0.012321424947645173,
+      "trade_adj": 0.00565619469943548,
+      "leading_adj": 0.00022358536453548087
+    },
+    "Balanced": {
+      "weights": {
+        "lfpr": 0.25,
+        "initial_claims": 0.2,
+        "continuing_claims": 0.1,
+        "unemployment_trade_sentiment": 0.2,
+        "unemployment_trade_volume": 0.1,
+        "claims_trade_sentiment": 0.1,
+        "jolts_data": 0.03,
+        "business_cycle_indicators": 0.02
+      },
+      "forecast": 4.188473816205642,
+      "adjustment": -0.011526183794358267,
+      "core_adj": -0.015396822217176644,
+      "trade_adj": 0.0036470530582828962,
+      "leading_adj": 0.00022358536453548087
+    },
+    "Leading Indicators Heavy": {
+      "weights": {
+        "lfpr": 0.2,
+        "initial_claims": 0.15,
+        "continuing_claims": 0.05,
+        "unemployment_trade_sentiment": 0.15,
+        "unemployment_trade_volume": 0.05,
+        "claims_trade_sentiment": 0.05,
+        "jolts_data": 0.2,
+        "business_cycle_indicators": 0.15
+      },
+      "forecast": 4.190747241498976,
+      "adjustment": -0.009252758501024227,
+      "core_adj": -0.012321424947645173,
+      "trade_adj": 0.0015780973497177408,
+      "leading_adj": 0.0014905690969032057
+    }
+  },
+  "analysis": {
+    "forecast_range": 0.023837968972147294,
+    "min_forecast": 4.169720386144179,
+    "max_forecast": 4.193558355116326,
+    "most_sensitive": "Labor Market Heavy",
+    "least_sensitive": "Trade Data Heavy"
+  }
+}
