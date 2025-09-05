@@ -1,0 +1,75 @@
+{
+  "timestamp": "2025-09-05 19:18:11",
+  "system_version": "v5.0-cleaned-8-components",
+  "forecast_method": "Cleaned 8-Component System",
+  "fred_baseline": {
+    "forecast": 4.2,
+    "confidence": 85
+  },
+  "adjustments": {
+    "core_labor_market": {
+      "lfpr": {
+        "value": 64.8,
+        "trend": 0.5999999999999943,
+        "adjustment": -0.0209999999999998,
+        "weight": 0.35
+      },
+      "initial_claims": {
+        "value": 456000,
+        "trend": -0.02460276781137878,
+        "adjustment": -0.0006150691952844696,
+        "weight": 0.25
+      },
+      "continuing_claims": {
+        "value": 4870000,
+        "trend": 0.0095233139050791,
+        "adjustment": 9.523313905079102e-05,
+        "weight": 0.1
+      }
+    },
+    "trade_data": {
+      "unemployment_trade_sentiment": {
+        "sentiment": -0.04908583588474147,
+        "weighted_yes": 0.45091416411525853,
+        "weighted_no": 0.5590858358847415,
+        "adjustment": -0.0007362875382711221,
+        "weight": 0.15,
+        "volume": 46053
+      },
+      "unemployment_trade_volume": {
+        "volume": 46053,
+        "adjustment": 0.0025000000000000005,
+        "weight": 0.05
+      },
+      "claims_trade_sentiment": {
+        "sentiment": -0.037123022402227535,
+        "weighted_yes": 0.46287697759777247,
+        "weighted_no": 0.5471230224022275,
+        "adjustment": -0.0001856151120111377,
+        "weight": 0.05,
+        "volume": 79010
+      }
+    },
+    "leading_indicators": {
+      "jolts_data": {
+        "value": 2837,
+        "trend": -0.07452845484516028,
+        "adjustment": 0.00022358536453548087,
+        "weight": 0.03
+      }
+    },
+    "total_adjustment": -0.01971815334198026
+  },
+  "final_forecast": {
+    "rate": 4.18,
+    "confidence": 92.6,
+    "total_adjustment": -0.02
+  },
+  "component_summary": {
+    "total_components": 8,
+    "core_labor_market": 3,
+    "trade_data": 3,
+    "leading_indicators": 2,
+    "redundancy_removed": 7
+  }
+}
