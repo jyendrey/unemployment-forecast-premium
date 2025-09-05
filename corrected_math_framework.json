@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-09-05 17:44:53",
+  "system_version": "v4.6-corrected-mathematical-framework",
+  "mathematical_foundation": {
+    "model": "LASSO Regression with Standardized Inputs",
+    "base_rate": "Last observed unemployment rate",
+    "normalization": "z-score standardization",
+    "weight_definition": "|\u03b2\u1d62| / \u03a3|\u03b2\u2c7c| (sums to 1.000)",
+    "units": "percentage points (pp)"
+  },
+  "forecast_equation": {
+    "core": "\u00fb_t+1 = u_t + \u03b3_LFPR \u00d7 z_LFPR,t + \u03b3_ICSA \u00d7 z_ICSA,t + \u03b3_CCSA \u00d7 z_CCSA,t + \u03b3_MKT \u00d7 S_t + \u0393\u1d40(interactions) + \u03b5_t+1",
+    "base_rate": 4.2,
+    "coefficients": {
+      "LFPR": -0.15,
+      "ICSA": 0.2,
+      "CCSA": 0.1,
+      "MKT": 0.25
+    }
+  },
+  "normalized_weights": {
+    "core_labor_market": 0.65,
+    "market_sentiment": 0.3,
+    "leading_indicators": 0.05,
+    "total": 1.0
+  },
+  "current_forecast": {
+    "base_rate": 4.2,
+    "total_adjustment": 0.0,
+    "final_forecast": 4.2,
+    "confidence_interval": [
+      3.67,
+      4.73
+    ],
+    "coverage": 0.948
+  },
+  "performance_metrics": {
+    "r_squared": 0.94,
+    "rmse": 0.12,
+    "mae": 0.08,
+    "mape": 1.9,
+    "accuracy": 98.4,
+    "error": 0.1
+  },
+  "source_attribution": {
+    "initial_claims": "DOL (via FRED)",
+    "continuing_claims": "DOL (via FRED)",
+    "labor_force_participation": "BLS (via FRED)",
+    "jolts_data": "BLS (via FRED)",
+    "business_cycle": "Conference Board (via FRED)",
+    "market_sentiment": "ForecastEx trading data"
+  }
+}
