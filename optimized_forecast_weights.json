@@ -1,0 +1,104 @@
+{
+  "timestamp": "2025-09-05 15:59:15",
+  "optimization_version": "v1.0-weight-rebalancing",
+  "current_weights": {
+    "lfpr": 0.5,
+    "initial_claims": 0.3,
+    "continuing_claims": 0.2,
+    "trade_sentiment": 0.05,
+    "trade_volume": 0.1,
+    "claims_trend": 0.001,
+    "market_stability": 0.0005,
+    "initial_claims_trade_sentiment": 0.15,
+    "initial_claims_volume": 0.05,
+    "weekly_trade_sentiment": 0.12,
+    "weekly_trade_volume": 0.03,
+    "economic_health": 0.001,
+    "economic_risk": 0.0005,
+    "jolts_data": 0.002,
+    "business_cycle_indicators": 0.0015,
+    "wage_growth_data": 0.001,
+    "sector_employment_data": 0.001,
+    "state_unemployment_data": 0.0005,
+    "updated_trade_data": 0.05
+  },
+  "optimized_weights": {
+    "lfpr": 0.6,
+    "initial_claims": 0.4,
+    "continuing_claims": 0.3,
+    "trade_sentiment": 0.08,
+    "trade_volume": 0.12,
+    "initial_claims_trade_sentiment": 0.18,
+    "initial_claims_volume": 0.08,
+    "weekly_trade_sentiment": 0.15,
+    "weekly_trade_volume": 0.05,
+    "updated_trade_data": 0.06,
+    "jolts_data": 0.003,
+    "business_cycle_indicators": 0.002,
+    "wage_growth_data": 0.002,
+    "sector_employment_data": 0.0015,
+    "state_unemployment_data": 0.001,
+    "economic_health": 0.0015,
+    "economic_risk": 0.001,
+    "claims_trend": 0.0005,
+    "market_stability": 0.0003
+  },
+  "weight_changes": {
+    "lfpr": 0.09999999999999998,
+    "initial_claims": 0.10000000000000003,
+    "continuing_claims": 0.09999999999999998,
+    "trade_sentiment": 0.03,
+    "trade_volume": 0.01999999999999999,
+    "initial_claims_trade_sentiment": 0.03,
+    "initial_claims_volume": 0.03,
+    "weekly_trade_sentiment": 0.03,
+    "weekly_trade_volume": 0.020000000000000004,
+    "updated_trade_data": 0.009999999999999995,
+    "jolts_data": 0.001,
+    "business_cycle_indicators": 0.0005,
+    "wage_growth_data": 0.001,
+    "sector_employment_data": 0.0005,
+    "state_unemployment_data": 0.0005,
+    "economic_health": 0.0005,
+    "economic_risk": 0.0005,
+    "claims_trend": -0.0005,
+    "market_stability": -0.00020000000000000004
+  },
+  "category_analysis": {
+    "core_labor": {
+      "lfpr": 0.6,
+      "initial_claims": 0.4,
+      "continuing_claims": 0.3
+    },
+    "trade_data": {
+      "trade_sentiment": 0.08,
+      "trade_volume": 0.12,
+      "initial_claims_trade_sentiment": 0.18,
+      "initial_claims_volume": 0.08,
+      "weekly_trade_sentiment": 0.15,
+      "weekly_trade_volume": 0.05,
+      "updated_trade_data": 0.06
+    },
+    "leading_indicators": {
+      "jolts_data": 0.003,
+      "business_cycle_indicators": 0.002,
+      "wage_growth_data": 0.002,
+      "sector_employment_data": 0.0015,
+      "state_unemployment_data": 0.001
+    },
+    "economic_health": {
+      "economic_health": 0.0015,
+      "economic_risk": 0.001
+    },
+    "technical_factors": {
+      "claims_trend": 0.0005,
+      "market_stability": 0.0003
+    }
+  },
+  "expected_impact": {
+    "core_labor_impact": 0.030000000000000006,
+    "trade_data_impact": 0.008499999999999997,
+    "leading_indicators_impact": 0.00035,
+    "total_weight_change": 0.4738
+  }
+}
