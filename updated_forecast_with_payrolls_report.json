@@ -1,0 +1,69 @@
+{
+  "generated_date": "2025-09-18T02:06:39.766880",
+  "version": "v3.2-final-enhanced-with-payrolls",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "updated_foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "forecast_summary": {
+    "current_unemployment": 4.2,
+    "forecasted_unemployment": 4.19,
+    "change": -0.01,
+    "confidence": 95,
+    "direction": "Improvement"
+  },
+  "adjustments": [
+    {
+      "name": "LFPR Adjustment",
+      "value": -0.004,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Initial Claims Adjustment",
+      "value": 0.0005,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Continuing Claims Adjustment",
+      "value": 0.0002,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Trade Sentiment Adjustment",
+      "value": -0.0001,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Payrolls Benchmark Revision Adjustment",
+      "value": -0.0073,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Market Stability Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    }
+  ],
+  "payrolls_benchmark_integration": {
+    "revision_amount": -911000,
+    "revision_period": "March 2025 to September 2025",
+    "unemployment_impact": -0.0106,
+    "data_authority": "BLS Official Benchmark",
+    "confidence_level": 0.85,
+    "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f"
+  },
+  "data_sources": {
+    "fred_data": {
+      "initial_claims": 263000,
+      "continuing_claims": 1939000,
+      "coverage": "24 months (103 observations)"
+    },
+    "trade_data": {
+      "sentiment_score": -0.030577111716621242,
+      "total_volume": 1835
+    },
+    "payrolls_data": {
+      "benchmark_revision": -911000,
+      "impact_on_forecast": -0.0106
+    }
+  }
+}
