@@ -1,0 +1,92 @@
+{
+  "generated_date": "2025-09-18T02:42:05.653251",
+  "version": "v3.0-churn-blended",
+  "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+  "methodology": {
+    "model": "CHURN-Blended Forecasting System",
+    "components": [
+      "Traditional Data",
+      "Alternative Data",
+      "Market Sentiment"
+    ],
+    "weights": {
+      "traditional_data": 0.4,
+      "alternative_data": 0.3,
+      "market_sentiment": 0.3
+    },
+    "data_sources": {
+      "traditional": "BLS unemployment, claims, payrolls data",
+      "alternative": "Estimated job postings, social sentiment, mobility, real-time payroll",
+      "market_sentiment": "Trade range data with percent distributions"
+    }
+  },
+  "forecast_summary": {
+    "current_unemployment": 4.3,
+    "forecasted_unemployment": 4.26,
+    "change": 0.036,
+    "churn_score": 57.2,
+    "direction": "Deterioration"
+  },
+  "component_analysis": {
+    "traditional_data": {
+      "score": 56.36,
+      "weight": 0.4,
+      "contribution": 22.544
+    },
+    "alternative_data": {
+      "score": 74.076,
+      "weight": 0.3,
+      "contribution": 22.222799999999996
+    },
+    "market_sentiment": {
+      "score": 41.4,
+      "weight": 0.3,
+      "contribution": 12.42
+    }
+  },
+  "data_inputs": {
+    "traditional_data": {
+      "unemployment_rate": 4.3,
+      "initial_claims": 263000,
+      "continuing_claims": 1939000,
+      "payrolls_revision": -911000,
+      "labor_force_participation": 62.2
+    },
+    "alternative_data": {
+      "online_job_postings": 94.7,
+      "social_media_sentiment": 39.4,
+      "mobility_data": 84.1,
+      "real_time_payroll": 2.3954999999999997
+    },
+    "market_sentiment": {
+      "Above 3.9%": {
+        "Yes": 97,
+        "No": 3
+      },
+      "Above 4.0%": {
+        "Yes": 92,
+        "No": 6
+      },
+      "Above 4.1%": {
+        "Yes": 73,
+        "No": 25
+      },
+      "Above 4.2%": {
+        "Yes": 50,
+        "No": 48
+      },
+      "Above 4.3%": {
+        "Yes": 28,
+        "No": 70
+      },
+      "Above 4.4%": {
+        "Yes": 16,
+        "No": 84
+      },
+      "Above 4.5%": {
+        "Yes": 8,
+        "No": 92
+      }
+    }
+  }
+}
