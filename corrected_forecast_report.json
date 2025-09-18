@@ -1,0 +1,64 @@
+{
+  "generated_date": "2025-09-18T02:20:33.795470",
+  "version": "v3.3-corrected-forecast",
+  "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+  "forecast_summary": {
+    "current_unemployment": 4.2,
+    "forecasted_unemployment": 3.31,
+    "change": -0.89,
+    "direction": "Improvement (Lower Unemployment Expected)"
+  },
+  "data_analysis": {
+    "initial_claims": {
+      "value": 263000,
+      "trend": "Rising (+29,000)",
+      "impact": 0.01688888888888889
+    },
+    "continuing_claims": {
+      "value": 1939000,
+      "trend": "Declining (-22,000)",
+      "impact": 0.0054
+    },
+    "payrolls_revision": {
+      "revision": -911000,
+      "period": "March 2025 to September 2025",
+      "impact": -0.911
+    }
+  },
+  "market_sentiment": {
+    "market_range": "Above 4.1% but below 4.3%",
+    "flip_point": 4.3,
+    "sentiment_interpretation": "Market expects higher unemployment",
+    "sentiment_adjustment": 0.002
+  },
+  "trade_range_analysis": {
+    "Above 3.9%": {
+      "Yes": 97,
+      "No": 3
+    },
+    "Above 4.0%": {
+      "Yes": 92,
+      "No": 6
+    },
+    "Above 4.1%": {
+      "Yes": 73,
+      "No": 25
+    },
+    "Above 4.2%": {
+      "Yes": 50,
+      "No": 48
+    },
+    "Above 4.3%": {
+      "Yes": 28,
+      "No": 70
+    },
+    "Above 4.4%": {
+      "Yes": 16,
+      "No": 84
+    },
+    "Above 4.5%": {
+      "Yes": 8,
+      "No": 92
+    }
+  }
+}
