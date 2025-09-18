@@ -1,0 +1,54 @@
+{
+  "generated_date": "2025-09-18T02:46:29.416750",
+  "version": "v3.1-corrected-churn-blended",
+  "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+  "correction_note": "Fixed trade range interpretation - \"Above 4.3%\" means 4.4%+",
+  "methodology": {
+    "model": "Corrected CHURN-Blended Forecasting System",
+    "components": [
+      "Traditional Data",
+      "Alternative Data",
+      "Market Sentiment"
+    ],
+    "weights": {
+      "traditional_data": 0.4,
+      "alternative_data": 0.3,
+      "market_sentiment": 0.3
+    },
+    "data_sources": {
+      "traditional": "BLS unemployment, claims, payrolls data",
+      "alternative": "Estimated job postings, social sentiment, mobility, real-time payroll",
+      "market_sentiment": "Trade range data with CORRECTED percent distributions"
+    }
+  },
+  "forecast_summary": {
+    "current_unemployment": 4.3,
+    "forecasted_unemployment": 4.25,
+    "change": 0.049,
+    "churn_score": 59.8,
+    "direction": "Deterioration"
+  },
+  "component_analysis": {
+    "traditional_data": {
+      "score": 56.36,
+      "weight": 0.4,
+      "contribution": 22.544
+    },
+    "alternative_data": {
+      "score": 74.076,
+      "weight": 0.3,
+      "contribution": 22.222799999999996
+    },
+    "market_sentiment": {
+      "score": 50.000000000000114,
+      "weight": 0.3,
+      "contribution": 15.000000000000034
+    }
+  },
+  "corrected_trade_analysis": {
+    "interpretation": "Above 4.3% means 4.4% and above",
+    "market_expectation_range": "4.2% - 4.3%",
+    "current_rate_position": "Within expected range",
+    "market_sentiment": "Neutral to slightly bullish"
+  }
+}

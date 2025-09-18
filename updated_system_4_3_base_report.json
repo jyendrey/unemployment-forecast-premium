@@ -1,0 +1,69 @@
+{
+  "generated_date": "2025-09-18T02:33:06.142257",
+  "version": "v2.0-updated-4.3-base",
+  "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+  "update_summary": {
+    "previous_base": 4.2,
+    "current_base": 4.3,
+    "change": "+0.1 percentage points",
+    "update_reason": "Latest unemployment rate print"
+  },
+  "market_analysis": {
+    "current_rate": 4.3,
+    "market_expectation_range": "Above 4.1% but below 4.3%",
+    "current_position": "Upper end of expected range",
+    "market_sentiment": "Expects decline from current 4.3%",
+    "flip_point": 4.3
+  },
+  "economic_analysis": {
+    "initial_claims_interpretation": "Supports current 4.3% rate",
+    "continuing_claims_interpretation": "Consistent with 4.3% rate",
+    "payrolls_interpretation": "Makes 4.3% rate look more reasonable"
+  },
+  "forecast": {
+    "base_rate": 4.3,
+    "forecast_range": "4.2% - 4.3%",
+    "most_likely": "4.2% - 4.3%",
+    "direction": "Stable to slightly lower",
+    "confidence": "Moderate to High",
+    "key_driver": "Market expects decline from 4.3%",
+    "market_position": "Upper end of expected range"
+  },
+  "trade_range_data": {
+    "Above 3.9%": {
+      "Yes": 97,
+      "No": 3
+    },
+    "Above 4.0%": {
+      "Yes": 92,
+      "No": 6
+    },
+    "Above 4.1%": {
+      "Yes": 73,
+      "No": 25
+    },
+    "Above 4.2%": {
+      "Yes": 50,
+      "No": 48
+    },
+    "Above 4.3%": {
+      "Yes": 28,
+      "No": 70
+    },
+    "Above 4.4%": {
+      "Yes": 16,
+      "No": 84
+    },
+    "Above 4.5%": {
+      "Yes": 8,
+      "No": 92
+    }
+  },
+  "data_sources": {
+    "unemployment_rate": "BLS Latest Print",
+    "initial_claims": "BLS Week ending September 6, 2025",
+    "continuing_claims": "BLS Week ending August 30, 2025",
+    "payrolls_revision": "BLS Since March 2025",
+    "market_sentiment": "Trade Range Data"
+  }
+}
