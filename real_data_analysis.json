@@ -1,0 +1,86 @@
+{
+  "generated_date": "2025-09-25T02:26:23.961865",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "data_source": "FRED API + Enhanced Fallback",
+  "recent_data": {
+    "unemployment_rate": 4.3,
+    "labor_force_participation_rate": 62.3,
+    "employment_population_ratio": 59.6,
+    "initial_claims": 231000.0,
+    "continuing_claims": 1920000.0,
+    "avg_hourly_earnings": 36.53,
+    "avg_weekly_hours": 30.096000000000004,
+    "nonfarm_payrolls": 159540.0,
+    "private_payrolls": 118800000.0,
+    "manufacturing_employment": 11440000.0,
+    "construction_employment": 7040000.0,
+    "retail_trade_employment": 14080000.0,
+    "leisure_hospitality_employment": 14960000.0,
+    "health_care_employment": 23453.7,
+    "government_employment": 20240000.0
+  },
+  "key_metrics": {
+    "unemployment_rate": 4.3,
+    "labor_force_participation_rate": 62.3,
+    "employment_population_ratio": 59.6,
+    "initial_claims": 231000.0,
+    "continuing_claims": 1920000.0,
+    "avg_hourly_earnings": 36.53,
+    "avg_weekly_hours": 30.096000000000004,
+    "nonfarm_payrolls": 159540.0,
+    "private_payrolls": 118800000.0
+  },
+  "demographic_analysis": {
+    "overall_rate": 4.3,
+    "rates": {
+      "unemployment_rate_men": 4.085,
+      "unemployment_rate_women": 3.784,
+      "unemployment_rate_teens": 13.76,
+      "unemployment_rate_white": 3.698,
+      "unemployment_rate_black": 7.481999999999999,
+      "unemployment_rate_asian": 3.6119999999999997,
+      "unemployment_rate_hispanic": 5.289
+    },
+    "disparities": {
+      "black_white_gap": 3.7839999999999994,
+      "hispanic_white_gap": 1.5909999999999997,
+      "teen_adult_gap": 9.46,
+      "gender_gap": 0.30100000000000016
+    }
+  },
+  "underemployment_analysis": {
+    "counts": {
+      "part_time_economic_reasons": 4300000,
+      "marginally_attached": 1720000,
+      "discouraged_workers": 516000,
+      "new_entrants": 774000,
+      "long_term_unemployed": 1935000
+    },
+    "percentages": {
+      "long_term_unemployed_pct": 45.0,
+      "discouraged_workers_pct": 30.0
+    }
+  },
+  "establishment_analysis": {
+    "nonfarm_payrolls": 159540.0,
+    "private_payrolls": 118800000.0,
+    "government_payrolls": 20240000.0,
+    "health_care_employment": 23453.7,
+    "manufacturing_employment": 11440000.0,
+    "construction_employment": 7040000.0,
+    "retail_trade_employment": 14080000.0,
+    "leisure_hospitality_employment": 14960000.0
+  },
+  "wage_hours_analysis": {
+    "avg_hourly_earnings": 36.53,
+    "avg_weekly_hours": 30.096000000000004,
+    "manufacturing_hours": 40.0,
+    "manufacturing_overtime": 2.9
+  },
+  "data_quality": {
+    "fred_data_available": 15,
+    "total_series": 15,
+    "data_freshness": "Real-time"
+  }
+}
