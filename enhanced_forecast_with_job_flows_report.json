@@ -1,0 +1,81 @@
+{
+  "generated_date": "2025-09-25T01:53:06.218127",
+  "version": "v3.1-enhanced-with-job-flows",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "forecast_summary": {
+    "current_unemployment": 4.2,
+    "forecasted_unemployment": 4.12,
+    "change": -0.08,
+    "confidence_level": 95,
+    "direction": "Falling"
+  },
+  "job_flows_analysis": {
+    "job_finding_rate": 0.43902439024390244,
+    "job_separation_rate": 0.013333333333333334,
+    "net_flows": {
+      "net_employment_growth": -490000.0,
+      "net_unemployment_change": -140000.0,
+      "net_labor_force_participation": -630000.0
+    },
+    "data_quality": "Unknown"
+  },
+  "enhanced_adjustments": [
+    {
+      "adjustment_name": "LFPR Adjustment",
+      "adjustment_value": -0.004,
+      "adjustment_percentage": -0.4
+    },
+    {
+      "adjustment_name": "Initial Claims Adjustment",
+      "adjustment_value": -0.0001,
+      "adjustment_percentage": -0.0093
+    },
+    {
+      "adjustment_name": "Continuing Claims Adjustment",
+      "adjustment_value": 0.0001,
+      "adjustment_percentage": 0.0057
+    },
+    {
+      "adjustment_name": "Job Finding Rate Adjustment",
+      "adjustment_value": -0.0945,
+      "adjustment_percentage": -9.4512
+    },
+    {
+      "adjustment_name": "Job Separation Rate Adjustment",
+      "adjustment_value": -0.0005,
+      "adjustment_percentage": -0.05
+    },
+    {
+      "adjustment_name": "Net Employment Growth Adjustment",
+      "adjustment_value": 0.049,
+      "adjustment_percentage": 4.9
+    },
+    {
+      "adjustment_name": "Net Unemployment Change Adjustment",
+      "adjustment_value": -0.028,
+      "adjustment_percentage": -2.8
+    },
+    {
+      "adjustment_name": "Trade Sentiment Adjustment",
+      "adjustment_value": -0.0002,
+      "adjustment_percentage": -0.0211
+    },
+    {
+      "adjustment_name": "Trade Volume Adjustment",
+      "adjustment_value": -0.0,
+      "adjustment_percentage": -0.0
+    }
+  ],
+  "data_sources": {
+    "trade_data": "Enhanced Trade Data (ForecastEx)",
+    "fred_data": "Extended FRED Data (24 months)",
+    "job_flows_data": "BLS CPS Job Flows Data",
+    "bls_data": "BLS API (Unemployment Rate, LFPR)"
+  },
+  "system_components": {
+    "foundation": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+    "job_flows_integration": "v3.1-enhanced"
+  }
+}

@@ -16,6 +16,10 @@
     "lfpr": 0.5,
     "initial_claims": 0.3,
     "continuing_claims": 0.2,
+    "job_finding_rate": 0.5,
+    "job_separation_rate": 0.3,
+    "net_employment_growth": 0.1,
+    "net_unemployment_change": 0.2,
     "trade_sentiment": 0.2,
     "trade_volume": 0.1,
     "claims_trend": 0.001,
@@ -23,13 +27,16 @@
   },
   "confidence_calculation": {
     "base_confidence": 70,
-    "foundation_stability_weight": 0.2,
+    "foundation_stability_weight": 0.15,
     "math_framework_accuracy_weight": 0.1,
-    "trade_data_weight": 0.25,
-    "trade_volume_weight": 0.1,
-    "extended_fred_weight": 0.15,
+    "trade_data_weight": 0.1,
+    "trade_volume_weight": 0.05,
+    "extended_fred_weight": 0.1,
+    "job_flows_data_weight": 0.15,
+    "job_flows_freshness_weight": 0.05,
     "data_freshness_weight": 0.05,
     "stability_bonus_max": 5,
+    "job_flows_stability_bonus_max": 3,
     "max_confidence": 95
   },
   "data_sources": {
@@ -38,6 +45,14 @@
       "api_key": "7358702e869844db978f304b5079cfb8",
       "series": ["LNS14000000", "LNS11300000"],
       "update_frequency": "monthly"
+    },
+    "bls_cps_job_flows": {
+      "enabled": true,
+      "api_key": "7358702e869844db978f304b5079cfb8",
+      "series": ["LNS17000000", "LNS17000001", "LNS17000002", "LNS17000003", "LNS17000004", "LNS17000005", "LNS17000006", "LNS17000007", "LNS17000008"],
+      "update_frequency": "monthly",
+      "description": "BLS Current Population Survey Job Flows Data",
+      "flows": ["EE", "EU", "EN", "UE", "UU", "UN", "NE", "NU", "NN"]
     },
     "fred": {
       "enabled": true,
