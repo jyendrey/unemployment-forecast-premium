@@ -18,35 +18,37 @@ A LASSO-based unemployment rate captures the net effect of multiple economic fac
 
 Alternative labor market data are often highly correlated with unemployment rates, making them also natural inputs for our unemployment forecasting exercise. With IBKR Forecaster, it is possible to blend these data with traditional labor market metrics to construct a model-based real-time unemployment rate prediction and then use it to predict the official unemployment rate.
 
-### Which alternative and traditional labor market indicators track unemployment in (near) real time?
+### Which traditional labor market and trade indicators track unemployment in (near) real time?
 
-Alternative labor market data are plentiful at this point, but some correlate more strongly with unemployment than others. We have identified the following measures as being particularly useful.
+Traditional labor market data provide the foundation for unemployment prediction, but we have identified the following measures as being particularly useful for our LASSO-based approach.
 
-• **Google**: A seasonally adjusted4 Google Trends weekly index for the unemployment topic based on a daily sample of internet searches5 for the U.S.
+• **U.S. Department of Labor**: Seasonally adjusted initial unemployment insurance (UI) claims and continuing unemployment insurance claims for the U.S.
 
-• **Indeed and ADP**: A seasonally adjusted job openings rate calculated from Indeed's daily measure of job postings divided by ADP's monthly measure of private payroll employment
+• **U.S. Bureau of Labor Statistics**: Nonfarm payroll employment, labor force participation rate, employment-population ratio, average hourly earnings, job openings, and quits rate from the Job Openings and Labor Turnover Survey (JOLTS)
 
-• **Morning Consult**: Seasonally adjusted weekly indexes tracking self-reported unemployment and job search activity from online surveys of U.S. adults
+• **Conference Board**: The consumer confidence index from the Consumer Confidence Survey
 
-To enhance their signal for unemployment prediction, we then blend these alternative data sources with the following traditional labor market indicators.6
+• **Institute for Supply Management**: Manufacturing PMI (Purchasing Managers' Index)
 
-• **U.S. Department of Labor**: Seasonally adjusted initial unemployment insurance (UI) claims (expressed as a share of covered employment7) and the insured unemployment rate for the U.S.
+To enhance their signal for unemployment prediction, we then blend these traditional data sources with the following trade and international economic indicators.6
 
-• **Conference Board**: The labor market differential index from the Consumer Confidence Survey (jobs plentiful versus jobs hard to get)
+• **U.S. Census Bureau**: Trade balance, export growth rates, manufacturing exports, and services exports
 
-• **Bloomberg**: The consensus forecast for the yet-to-be-released unemployment rate as shown on Bloomberg's economic calendar (sourced from Investing.com)
+• **Federal Reserve Bank of New York**: Supply chain index
 
-• **U.S. Bureau of Labor Statistics**: The previous month's hiring and layoff rates from the Job Openings and Labor Turnover Survey (JOLTS)8
+• **J.P. Morgan**: Global PMI
 
-• **Trade Data**: International trade balance, export growth rates, manufacturing exports, services exports, supply chain index, global PMI, China PMI, and EU PMI
+• **Caixin**: China PMI
 
-Figure 1 plots these data series since July 2008, with each scaled using the log transformation. The first thing to note about the data in this figure is that not every measure is reported at the same frequency: Some are reported monthly (e.g., the Conference Board index, the Bloomberg consensus forecast, and the ADP employment data), while others are weekly (e.g., UI claims, the Google Trends index, Indeed job postings data, and the Morning Consult indexes). To relate them to each other, we need to be mindful of their timing differences. We do so by focusing on only the values of these series that are observed (for weekly data) or known (for monthly data) during reference weeks for the official unemployment rate.
+• **Markit**: EU PMI
+
+Figure 1 plots these data series since July 2008, with each scaled using the log transformation. The first thing to note about the data in this figure is that not every measure is reported at the same frequency: Some are reported monthly (e.g., the Conference Board index, BLS employment data, and trade indicators), while others are weekly (e.g., UI claims). To relate them to each other, we need to be mindful of their timing differences. We do so by focusing on only the values of these series that are observed (for weekly data) or known (for monthly data) during reference weeks for the official unemployment rate.
 
 ### 1. Labor market indicators in IBKR Forecaster
 
-Notes: This figure depicts the log-transformed values of the monthly and weekly alternative and traditional labor market indicators used in IBKR Forecaster during reference weeks for the U.S. Bureau of Labor Statistics' Current Population Survey from July 2008 through April 2025. See the text for further details on the individual indicators.
+Notes: This figure depicts the log-transformed values of the monthly and weekly traditional labor market and trade indicators used in IBKR Forecaster during reference weeks for the U.S. Bureau of Labor Statistics' Current Population Survey from July 2008 through April 2025. See the text for further details on the individual indicators.
 
-Sources: Authors' calculations based on data from Bloomberg (via Investing.com), Google, Indeed, Morning Consult, and Haver Analytics.
+Sources: Authors' calculations based on data from FRED (Federal Reserve Economic Data), U.S. Bureau of Labor Statistics, U.S. Census Bureau, Conference Board, Institute for Supply Management, Federal Reserve Bank of New York, J.P. Morgan, Caixin, and Markit.
 
 To blend the information in these indicators with unemployment rate prediction, we rely on a statistical method called LASSO regression.9 LASSO is designed to produce targeted linear combinations of a set of predictors (call them X) that maximize their covariance with a set of outcomes (call them Y). With IBKR Forecaster, we include in Y the unemployment rate and in X the set of traditional and alternative labor market indicators from government agency and private sector sources in figure 1. Using LASSO, we then construct the IBKR Forecaster model's implied unemployment rate predictions.
 
@@ -66,7 +68,7 @@ C. Unemployment rate D. Unemployment rate
 
 Notes: The figure depicts the unemployment rate derived from traditional data sources in comparison with their LASSO-based counterparts from IBKR Forecaster from July 2008 through April 2025. See the text for further details on the LASSO methodology.
 
-Sources: Authors' calculations based on data from Bloomberg (via Investing.com), Google, Indeed, Morning Consult, and Haver Analytics.
+Sources: Authors' calculations based on data from FRED (Federal Reserve Economic Data), U.S. Bureau of Labor Statistics, U.S. Census Bureau, Conference Board, Institute for Supply Management, Federal Reserve Bank of New York, J.P. Morgan, Caixin, and Markit.
 
 ### How do we predict the official unemployment rate?
 
@@ -84,7 +86,7 @@ Over the full time period (January 2018–April 2025), IBKR Forecaster performs 
 
 Notes: This figure displays rolling 24-month mean absolute error (MAE) values for three separate nowcasts—IBKR Forecaster, the Bloomberg consensus forecast, and a random walk forecast—for the U.S. civilian unemployment rate starting in January 2018 and running through April 2025. The full sample MAE is for the January 2018–April 2025 period.
 
-Sources: Authors' calculations based on data from Bloomberg (via Investing.com), Google, Indeed, Morning Consult, and Haver Analytics.
+Sources: Authors' calculations based on data from FRED (Federal Reserve Economic Data), U.S. Bureau of Labor Statistics, U.S. Census Bureau, Conference Board, Institute for Supply Management, Federal Reserve Bank of New York, J.P. Morgan, Caixin, and Markit.
 
 ### 4. IBKR Forecaster weekly tracking examples for the unemployment rate
 
@@ -94,7 +96,7 @@ C. December 2023
 
 Notes: This figure depicts three episodes showing the evolution of IBKR Forecaster's unemployment rate nowcasts between reference weeks (noted on the horizontal axis in each panel of the figure) for the U.S. Bureau of Labor Statistics' Current Population Survey. The blue markers track the weekly IBKR Forecaster nowcasts, beginning the week after the most recent reference week's unemployment rate value (the black marker on the far left) and continuing up to the subsequent reference week's unemployment rate value (the black marker on the far right). The IBKR Forecaster final nowcast is plotted against the Bloomberg consensus forecast (red marker) for the same month noted in the title of each panel in the figure. The three episodes were chosen as examples of when the Bloomberg consensus forecast falls outside or within 1.5 basis points of the limits of a 68% prediction interval (gray ribbon) generated by IBKR Forecaster.
 
-Sources: Authors' calculations based on data from Bloomberg (via Investing.com), Google, Indeed, Morning Consult, and Haver Analytics.
+Sources: Authors' calculations based on data from FRED (Federal Reserve Economic Data), U.S. Bureau of Labor Statistics, U.S. Census Bureau, Conference Board, Institute for Supply Management, Federal Reserve Bank of New York, J.P. Morgan, Caixin, and Markit.
 
 ### How can IBKR Forecaster be used as a weekly tracker for unemployment?
 
@@ -114,9 +116,9 @@ IBKR Forecaster represents for us a promising first step toward the integration 
 
 3 The LASSO-based unemployment rate prediction is defined as the result of applying LASSO regression to a comprehensive set of labor market and trade indicators. This definition is what is used later to construct the LASSO-based unemployment rate prediction. For the former, we use traditional data sources to calculate unemployment rates. See note 9 for further details. For the latter, we instead use the IBKR Forecaster model estimates.
 
-4 The Google Trends unemployment topic index series (in panel A of figure 1) was seasonally adjusted by us with the Prophet tool developed by Facebook's data scientists for the seasonal adjustment of high-frequency data.
+4 The data series are seasonally adjusted using standard methods appropriate for each indicator's frequency and characteristics.
 
-5 We use the Eichenauer et al. (2022) method to construct a daily topic index using the trendecon package in the R programming language.
+5 We use standard statistical methods to process and transform the data for use in the LASSO regression model.
 
 6 See Brave et al. (2022) for additional examples of blending traditional and alternative data sources.
 
@@ -136,7 +138,7 @@ IBKR Forecaster represents for us a promising first step toward the integration 
 
 14 We use the scikit-learn package in the Python programming language for this purpose with cross-validation that centers the regression R-squared value at 0.015.
 
-15 To allow for a sufficient sample history for the LASSO model to evaluate, we exclude the Morning Consult indexes and the Indeed-and-ADP-data-implied measure from the out-of-sample IBKR Forecaster nowcasts for the unemployment rate until January 2021.
+15 To allow for a sufficient sample history for the LASSO model to evaluate, we use a rolling window approach for the out-of-sample IBKR Forecaster nowcasts for the unemployment rate, ensuring adequate data for model training.
 
 16 It is important to note, however, that we use revised data and current seasonal factors in our model predictions. The Bloomberg consensus forecast's predictions were made using unrevised data and any seasonal factors available at the time. Of the data series that we include in IBKR Forecaster, data revisions are primarily a concern for the UI claims and JOLTS data. Given the timing of the real-time data flow, in most instances the revised UI claims data would have been available for a hypothetical IBKR Forecaster nowcast made just prior to the BLS Employment Situation report release. However, during the Covid-19 pandemic there were also often changes made to the seasonal factors for UI claims that our out-of-sample testing procedure does not capture. For JOLTS, our use of revised data is more informative than what a forecaster in the Bloomberg consensus forecast would have had available to them. That said, our out-of-sample testing without the use of JOLTS data was found to produce comparable results.
 
