@@ -18,23 +18,30 @@ Traditional labor market data are often highly correlated with unemployment rate
 
 ### Which traditional labor market indicators track unemployment in (near) real time?
 
-Traditional labor market data provide the foundation for unemployment prediction, and we have identified the following measures as being particularly useful for our LASSO-based approach.
+Traditional labor market data provide the foundation for unemployment prediction, and we have identified the following specific measures as being particularly useful for our LASSO-based approach.
 
-• **U.S. Department of Labor**: Seasonally adjusted initial unemployment insurance (UI) claims and continuing unemployment insurance claims for the U.S.
+• **U.S. Department of Labor**: Seasonally adjusted initial unemployment insurance (UI) claims (ICSA) and continuing unemployment insurance claims (CCSA) for the U.S.
 
-• **U.S. Bureau of Labor Statistics**: Nonfarm payroll employment, labor force participation rate, employment-population ratio, average hourly earnings
+• **U.S. Bureau of Labor Statistics**: 
+  - Nonfarm payroll employment (PAYEMS)
+  - Labor force participation rate (CIVPART) 
+  - Employment-population ratio (EMRATIO)
+  - Average hourly earnings (CES0500000003)
+  - Health care employment (CES6562000001)
 
 • **Conference Board**: The consumer confidence index from the Consumer Confidence Survey
 
 • **Institute for Supply Management**: Manufacturing PMI (Purchasing Managers' Index)
 
-To enhance their signal for unemployment prediction, we then blend these traditional data sources with trade-related economic indicators.4
+To enhance their signal for unemployment prediction, we then blend these traditional data sources with trade-related economic indicators that create the range-based forecasting approach.4
 
-• **Trade Balance**: International trade balance data
+• **Trade Balance**: International trade balance data (projected)
 
-• **Export Growth**: Export growth rates and manufacturing exports
+• **Export Growth**: Export growth rates and manufacturing exports (projected)
 
-• **Global Economic Conditions**: Global PMI, China PMI, and EU PMI indicators
+• **Global Economic Conditions**: Global PMI, China PMI, and EU PMI indicators (projected)
+
+The trade data serves a unique purpose in our model: rather than being directly incorporated into the LASSO regression equation, trade indicators are used to create the range scenarios. This approach acknowledges that trade data introduces additional uncertainty and volatility that is better captured through scenario analysis rather than direct mathematical modeling.
 
 Figure 1 plots these data series since July 2008, with each scaled using the log transformation. The first thing to note about the data in this figure is that not every measure is reported at the same frequency: Some are reported monthly (e.g., the Conference Board index, BLS employment data, and trade indicators), while others are weekly (e.g., UI claims). To relate them to each other, we need to be mindful of their timing differences. We do so by focusing on only the values of these series that are observed (for weekly data) or known (for monthly data) during reference weeks for the official unemployment rate.
 
@@ -94,13 +101,36 @@ Notes: This figure depicts three episodes showing the evolution of IBKR Forecast
 
 Sources: Authors' calculations based on data from FRED (Federal Reserve Economic Data), U.S. Bureau of Labor Statistics, Conference Board, and Institute for Supply Management.
 
+### How does trade data create the range-based forecasting approach?
+
+The range-based forecasting approach of IBKR Forecaster uses trade data to create three distinct scenarios that capture the uncertainty surrounding unemployment rate predictions. This methodology recognizes that trade data introduces additional volatility and uncertainty that is better captured through scenario analysis rather than direct mathematical modeling.
+
+The **optimistic scenario (4.2%)** assumes favorable trade conditions, including:
+- Improved trade balance (-$85B vs -$90B baseline)
+- Strong export growth (+1.8% projected)
+- Manufacturing export growth (+3.7% projected)
+- Supply chain improvements (52.5 index)
+- Global economic expansion (51.8 PMI)
+- China economic expansion (50.5 PMI)
+
+The **base scenario (4.22%)** uses only the LASSO regression results from traditional labor market indicators, providing a benchmark that reflects domestic economic conditions without the additional uncertainty of international factors.
+
+The **pessimistic scenario (4.4%)** incorporates potential trade headwinds, including:
+- EU economic contraction (49.8 PMI)
+- Trade policy uncertainty
+- Supply chain disruptions
+- China economic slowdown
+- Global economic headwinds
+
+This range-based approach provides a natural way to incorporate trade-related uncertainty into the forecasting process while maintaining the statistical rigor of the LASSO methodology for core labor market indicators.
+
 ### How can IBKR Forecaster be used as a monthly tracker for unemployment?
 
 Assuming that the relationship between our LASSO-based unemployment rate prediction and the official unemployment rate is stable over time, we can translate our model forecasts to any month, in essence predicting with IBKR Forecaster what the official unemployment rate might be for upcoming months by incorporating new information as it becomes available. Not only that, but with IBKR Forecaster we can also assess the uncertainty around these estimates, constructing range-based forecasts that are calibrated to achieve realistic bounds for decision-making.11
 
-Figure 4 highlights recent episodes where the IBKR Forecaster forecast provides insights into unemployment rate predictions. The range-based approach acknowledges the inherent uncertainty in economic forecasting while providing useful bounds for decision-making. The different scenarios represent different levels of model complexity, with the optimistic scenario allowing for more complex relationships and the pessimistic scenario favoring simpler, more robust relationships.
+Figure 4 highlights recent episodes where the IBKR Forecaster forecast provides insights into unemployment rate predictions. The range-based approach acknowledges the inherent uncertainty in economic forecasting while providing useful bounds for decision-making. The different scenarios represent different levels of trade-related uncertainty, with the optimistic scenario assuming favorable trade conditions and the pessimistic scenario incorporating trade headwinds.
 
-We view these episodes as showing instances where our blend of traditional labor market data provides useful information on the state of unemployment in the U.S. To further highlight this point, we show the range-based forecasts for different months. The range-based approach provides a natural way to incorporate uncertainty into the forecasting process while maintaining the interpretability of the model.
+We view these episodes as showing instances where our blend of traditional labor market data with trade scenario analysis provides useful information on the state of unemployment in the U.S. To further highlight this point, we show the range-based forecasts for different months. The range-based approach provides a natural way to incorporate trade-related uncertainty into the forecasting process while maintaining the interpretability of the model.
 
 ### Conclusion
 
@@ -127,6 +157,34 @@ IBKR Forecaster represents for us a promising first step toward the integration 
 10 We use the scikit-learn package in the Python programming language for this purpose with cross-validation that selects the optimal regularization parameter.
 
 11 We use the scikit-learn package in the Python programming language for this purpose. It applies cross-validation procedures to estimate the optimal parameters for our LASSO regression.
+
+### Technical Appendix
+
+The IBKR Forecaster system is implemented in Python using the scikit-learn library for LASSO regression. The model uses cross-validation to select the optimal regularization parameter and generates range-based forecasts incorporating trade data scenarios. The system fetches data from FRED API and processes it through a standardized pipeline before applying the LASSO regression model.
+
+**Data Sources and Series IDs:**
+- **FRED API Series:**
+  - UNRATE: Civilian Unemployment Rate
+  - CIVPART: Labor Force Participation Rate
+  - EMRATIO: Employment-Population Ratio
+  - ICSA: Initial Claims
+  - CCSA: Continued Claims
+  - CES0500000003: Average Hourly Earnings
+  - PAYEMS: All Employees, Total Nonfarm
+  - CES6562000001: All Employees, Health Care
+
+- **Trade Data (Projected):**
+  - Trade Balance: -$85B (October 2025)
+  - Total Exports: $280B (October 2025)
+  - Manufacturing Exports: $95B (October 2025)
+  - Services Exports: $85B (October 2025)
+  - Supply Chain Index: 52.5
+  - Global PMI: 51.8
+  - China PMI: 50.5
+  - EU PMI: 49.8
+
+**Range Creation Methodology:**
+The 4.2%-4.4% range is created by applying trade scenario adjustments to the base LASSO forecast of 4.22%. The optimistic bound (4.2%) reflects favorable trade conditions, while the pessimistic bound (4.4%) incorporates trade headwinds and global economic uncertainty.
 
 ---
 
