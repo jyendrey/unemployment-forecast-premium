@@ -50,12 +50,12 @@ class CorrectedOctober2025Forecaster:
         # CORRECTED Forecast probability ranges
         # These represent probability that unemployment will be ABOVE each threshold
         self.forecast_ranges = {
-            "above_3.9": 97,  # 97% think it will be above 3.9%
-            "above_4.0": 93,  # 93% think it will be above 4.0%
-            "above_4.1": 73,  # 73% think it will be above 4.1%
-            "above_4.2": 63,  # 63% think it will be above 4.2%
-            "above_4.3": 40,  # 40% think it will be above 4.3% (flip point)
-            "above_4.4": 16   # 16% think it will be above 4.4%
+            "above_3.9": {"yes": 97, "no": 3},   # 97% think it will be above 3.9%
+            "above_4.0": {"yes": 93, "no": 5},   # 93% think it will be above 4.0%
+            "above_4.1": {"yes": 87, "no": 11},  # 87% think it will be above 4.1%
+            "above_4.2": {"yes": 63, "no": 35},  # 63% think it will be above 4.2%
+            "above_4.3": {"yes": 40, "no": 58},  # 40% think it will be above 4.3% (flip point)
+            "above_4.4": {"yes": 16, "no": 84}   # 16% think it will be above 4.4%
         }
         
     def calculate_trade_adjustments(self):
@@ -198,22 +198,25 @@ class CorrectedOctober2025Forecaster:
         analysis = {}
         
         # Determine which side of each threshold our forecast falls on
-        for threshold, market_prob in self.forecast_ranges.items():
+        for threshold, probs in self.forecast_ranges.items():
             threshold_value = float(threshold.split('_')[1])
+            market_yes_prob = probs["yes"]
             
             if forecast_rate >= threshold_value:
                 # Our forecast is above the threshold
                 analysis[threshold] = {
                     "our_forecast": "ABOVE",
-                    "market_probability": market_prob,
-                    "alignment": "ALIGNED" if market_prob > 50 else "MISALIGNED"
+                    "market_yes_probability": market_yes_prob,
+                    "market_no_probability": probs["no"],
+                    "alignment": "ALIGNED" if market_yes_prob > 50 else "MISALIGNED"
                 }
             else:
                 # Our forecast is below the threshold
                 analysis[threshold] = {
                     "our_forecast": "BELOW", 
-                    "market_probability": market_prob,
-                    "alignment": "MISALIGNED" if market_prob > 50 else "ALIGNED"
+                    "market_yes_probability": market_yes_prob,
+                    "market_no_probability": probs["no"],
+                    "alignment": "MISALIGNED" if market_yes_prob > 50 else "ALIGNED"
                 }
         
         return analysis
@@ -305,7 +308,7 @@ class CorrectedOctober2025Forecaster:
         for threshold, analysis in probability_analysis.items():
             threshold_display = threshold.replace('_', ' ').title()
             status = "✅" if analysis["alignment"] == "ALIGNED" else "❌"
-            print(f"{status} {threshold_display}: Market {analysis['market_probability']}% | Our Forecast: {analysis['our_forecast']}")
+            print(f"{status} {threshold_display}: Market Yes {analysis['market_yes_probability']}% | No {analysis['market_no_probability']}% | Our Forecast: {analysis['our_forecast']}")
         print()
         
         print("🎯 CORRECTED FORECAST RATIONALE:")

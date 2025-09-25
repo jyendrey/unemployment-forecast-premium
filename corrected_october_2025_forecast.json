@@ -1,5 +1,5 @@
 {
-  "forecast_date": "2025-09-25T03:39:15.910527",
+  "forecast_date": "2025-09-25T03:41:36.016049",
   "target_month": "October 2025",
   "september_rate": 4.3,
   "october_forecast": 3.955497083445305,
@@ -29,42 +29,66 @@
   "probability_analysis": {
     "above_3.9": {
       "our_forecast": "ABOVE",
-      "market_probability": 97,
+      "market_yes_probability": 97,
+      "market_no_probability": 3,
       "alignment": "ALIGNED"
     },
     "above_4.0": {
       "our_forecast": "BELOW",
-      "market_probability": 93,
+      "market_yes_probability": 93,
+      "market_no_probability": 5,
       "alignment": "MISALIGNED"
     },
     "above_4.1": {
       "our_forecast": "BELOW",
-      "market_probability": 73,
+      "market_yes_probability": 87,
+      "market_no_probability": 11,
       "alignment": "MISALIGNED"
     },
     "above_4.2": {
       "our_forecast": "BELOW",
-      "market_probability": 63,
+      "market_yes_probability": 63,
+      "market_no_probability": 35,
       "alignment": "MISALIGNED"
     },
     "above_4.3": {
       "our_forecast": "BELOW",
-      "market_probability": 40,
+      "market_yes_probability": 40,
+      "market_no_probability": 58,
       "alignment": "ALIGNED"
     },
     "above_4.4": {
       "our_forecast": "BELOW",
-      "market_probability": 16,
+      "market_yes_probability": 16,
+      "market_no_probability": 84,
       "alignment": "ALIGNED"
     }
   },
   "market_expectations": {
-    "above_3.9": 97,
-    "above_4.0": 93,
-    "above_4.1": 73,
-    "above_4.2": 63,
-    "above_4.3": 40,
-    "above_4.4": 16
+    "above_3.9": {
+      "yes": 97,
+      "no": 3
+    },
+    "above_4.0": {
+      "yes": 93,
+      "no": 5
+    },
+    "above_4.1": {
+      "yes": 87,
+      "no": 11
+    },
+    "above_4.2": {
+      "yes": 63,
+      "no": 35
+    },
+    "above_4.3": {
+      "yes": 40,
+      "no": 58
+    },
+    "above_4.4": {
+      "yes": 16,
+      "no": 84
+    }
   },
   "confidence_factors": {
     "data_quality": 0.85,
