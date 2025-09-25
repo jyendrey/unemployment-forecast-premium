@@ -1,0 +1,38 @@
+{
+  "forecast_date": "2025-09-25T03:08:53.629778",
+  "target_month": "October 2025",
+  "september_rate": 4.3,
+  "october_forecast": 4.217107514371749,
+  "change": -0.08289248562825069,
+  "confidence": 78.75,
+  "adjustments": {
+    "initial_claims": -0.00125,
+    "continuing_claims": -0.003,
+    "nonfarm_payrolls": -0.078,
+    "lfpr": 0.010000000000000142,
+    "ep_ratio": -0.020000000000000285,
+    "wage_growth": -0.0016424856282507177,
+    "consumer_confidence": 0.035,
+    "manufacturing_pmi": -0.024000000000000056,
+    "job_openings": -0.0,
+    "quits_rate": -0.0
+  },
+  "total_adjustment": -0.08289248562825091,
+  "economic_projections": {
+    "initial_claims": 235000,
+    "continuing_claims": 1900000,
+    "nonfarm_payrolls": 159800000,
+    "lfpr": 62.4,
+    "ep_ratio": 59.7,
+    "avg_hourly_earnings": 36.65,
+    "consumer_confidence": 108.5,
+    "manufacturing_pmi": 51.2,
+    "job_openings": 8500000,
+    "quits_rate": 2.3
+  },
+  "confidence_factors": {
+    "data_quality": 0.85,
+    "methodology": 0.725,
+    "external": 0.775
+  }
+}
