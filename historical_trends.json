@@ -1,0 +1,46 @@
+{
+  "ICSA": {
+    "current": 218000.0,
+    "current_date": "2025-09-20",
+    "3_month_avg": 238000.0,
+    "6_month_avg": 235500.0,
+    "12_month_avg": 229083.33333333334,
+    "avg_mom_change": -6000.0,
+    "yoy_change": -10000.0,
+    "projection": 212000.0,
+    "volatility": 0.06510815715588937
+  },
+  "CCSA": {
+    "current": 1926000.0,
+    "current_date": "2025-09-13",
+    "3_month_avg": 1927000.0,
+    "6_month_avg": 1937500.0,
+    "12_month_avg": 1943500.0,
+    "avg_mom_change": -4333.333333333333,
+    "yoy_change": -28000.0,
+    "projection": 1921666.6666666667,
+    "volatility": 0.007037169045786823
+  },
+  "PAYEMS": {
+    "current": 159540.0,
+    "current_date": "2025-08-01",
+    "3_month_avg": 159499.0,
+    "6_month_avg": 159442.83333333334,
+    "12_month_avg": 159091.5,
+    "avg_mom_change": 29.333333333333332,
+    "yoy_change": 1226.0,
+    "projection": 159569.33333333334,
+    "volatility": 0.0005846945407085402
+  },
+  "CES0500000003": {
+    "current": 36.53,
+    "current_date": "2025-08-01",
+    "3_month_avg": 36.42333333333333,
+    "6_month_avg": 36.266666666666666,
+    "12_month_avg": 35.9525,
+    "avg_mom_change": 0.10000000000000142,
+    "yoy_change": 1.2000000000000028,
+    "projection": 36.63,
+    "volatility": 0.005444404845127433
+  }
+}
