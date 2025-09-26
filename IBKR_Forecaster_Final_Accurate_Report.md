@@ -28,6 +28,12 @@ Traditional labor market data provide the foundation for unemployment prediction
   - Employment-population ratio (EMRATIO)
   - Average hourly earnings (CES0500000003)
   - Health care employment (CES6562000001)
+  - Job Openings and Labor Turnover Survey (JOLTS):
+    - Job openings rate (JTSJOL)
+    - Hires rate (JTSHIL)
+    - Quits rate (JTSQUL)
+    - Layoffs and discharges rate (JTSLDL)
+  - Payroll benchmark revisions (QCEW data)
 
 • **Conference Board**: The consumer confidence index from the Consumer Confidence Survey
 
@@ -42,6 +48,21 @@ To enhance their signal for unemployment prediction, we then blend these traditi
 • **Global Economic Conditions**: Global PMI, China PMI, and EU PMI indicators (projected)
 
 The trade data serves a unique purpose in our model: rather than being directly incorporated into the LASSO regression equation, trade indicators are used to create the range scenarios. This approach acknowledges that trade data introduces additional uncertainty and volatility that is better captured through scenario analysis rather than direct mathematical modeling.
+
+### How do JOLTS data and payroll benchmarks enhance unemployment prediction?
+
+The Job Openings and Labor Turnover Survey (JOLTS) provides crucial insights into labor market dynamics that complement traditional unemployment measures:
+
+• **Job Openings Rate (JTSJOL)**: Indicates labor demand and hiring intentions, with higher openings suggesting stronger job creation potential
+• **Hires Rate (JTSHIL)**: Measures actual job creation activity, providing real-time signals about employment growth
+• **Quits Rate (JTSQUL)**: Reflects worker confidence and labor market tightness, with higher quits indicating strong job opportunities
+• **Layoffs and Discharges Rate (JTSLDL)**: Captures job destruction activity, with higher rates signaling potential unemployment increases
+
+**Payroll Benchmark Revisions**: The Quarterly Census of Employment and Wages (QCEW) data provides annual benchmark revisions that correct for sampling errors in the monthly establishment survey. These revisions are crucial for maintaining forecast accuracy, as they reflect the most comprehensive employment counts available from state unemployment insurance records.
+
+**Average Hourly Earnings (CES0500000003)**: Wage growth provides insights into labor market tightness and inflationary pressures, with faster wage growth often indicating stronger labor demand and lower unemployment risk.
+
+These indicators work together to provide a comprehensive view of labor market conditions, with JOLTS data offering forward-looking signals about job creation and destruction, while payroll benchmarks ensure data accuracy and wage data captures labor market tightness.
 
 Figure 1 plots these data series since July 2008, with each scaled using the log transformation. The first thing to note about the data in this figure is that not every measure is reported at the same frequency: Some are reported monthly (e.g., the Conference Board index, BLS employment data, and trade indicators), while others are weekly (e.g., UI claims). To relate them to each other, we need to be mindful of their timing differences. We do so by focusing on only the values of these series that are observed (for weekly data) or known (for monthly data) during reference weeks for the official unemployment rate.
 
@@ -172,6 +193,10 @@ The IBKR Forecaster system is implemented in Python using the scikit-learn libra
   - CES0500000003: Average Hourly Earnings
   - PAYEMS: All Employees, Total Nonfarm
   - CES6562000001: All Employees, Health Care
+  - JTSJOL: Job Openings Rate
+  - JTSHIL: Hires Rate
+  - JTSQUL: Quits Rate
+  - JTSLDL: Layoffs and Discharges Rate
 
 - **Trade Data (Projected):**
   - Trade Balance: -$85B (October 2025)
