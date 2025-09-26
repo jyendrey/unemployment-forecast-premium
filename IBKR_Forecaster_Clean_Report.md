@@ -65,7 +65,7 @@ This range-based approach provides a natural way to incorporate market-related u
 
 ### How can IBKR Forecaster be used as a real-time tracker for unemployment?
 
-Assuming that the relationship between our real-time unemployment rate analysis and the official unemployment rate is stable over time, we can translate our model analysis to any time period, in essence analyzing with IBKR Forecaster what the official unemployment rate might be by incorporating new information as it becomes available. Not only that, but with IBKR Forecaster we can also assess the uncertainty around these estimates, constructing range-based forecasts that are calibrated to achieve realistic bounds for decision-making.11
+Assuming that the relationship between our real-time unemployment rate analysis and the official unemployment rate is stable over time, we can translate our model analysis to any time period, in essence analyzing with IBKR Forecaster what the official unemployment rate might be by incorporating new information as it becomes available. Not only that, but with IBKR Forecaster we can also assess the uncertainty around these estimates, constructing range-based forecasts that are calibrated to achieve realistic bounds for decision-making.
 
 The range-based approach acknowledges the inherent uncertainty in economic analysis while providing useful bounds for decision-making. The different scenarios represent different levels of market-related uncertainty, with the optimistic scenario assuming favorable market conditions and the pessimistic scenario incorporating market headwinds.
 
