@@ -1,0 +1,48 @@
+{
+  "raw_data": {
+    "JTSJOL": {
+      "value": 7181.0,
+      "date": "2025-07-01",
+      "description": "Job Openings"
+    },
+    "JTSHIL": {
+      "value": 5308.0,
+      "date": "2025-07-01",
+      "description": "Hires"
+    },
+    "JTSQUL": {
+      "value": 3208.0,
+      "date": "2025-07-01",
+      "description": "Quits"
+    },
+    "JTSLDL": {
+      "value": 1808.0,
+      "date": "2025-07-01",
+      "description": "Layoffs and Discharges"
+    }
+  },
+  "rates": {
+    "JTSJOL_rate": {
+      "value": 0.004500862976701544,
+      "date": "2025-07-01",
+      "description": "Job Openings Rate"
+    },
+    "JTSHIL_rate": {
+      "value": 0.0033270653127742255,
+      "date": "2025-07-01",
+      "description": "Hires Rate"
+    },
+    "JTSQUL_rate": {
+      "value": 0.002010780995361665,
+      "date": "2025-07-01",
+      "description": "Quits Rate"
+    },
+    "JTSLDL_rate": {
+      "value": 0.001133258117086624,
+      "date": "2025-07-01",
+      "description": "Layoffs and Discharges Rate"
+    }
+  },
+  "fetched_at": "2025-09-26T02:44:35.777161",
+  "data_source": "FRED API"
+}

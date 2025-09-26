@@ -1,0 +1,52 @@
+{
+  "coefficients": {
+    "ICSA": 0.28417412002045367,
+    "CCSA": 0.0,
+    "PAYEMS": 0.0,
+    "CES0500000003": 0.0,
+    "CIVPART": 0.0,
+    "EMRATIO": -0.20623997946418987,
+    "JTSJOL": 0.0,
+    "JTSHIL": 0.0,
+    "JTSQUL": 0.0,
+    "JTSLDL": 0.0
+  },
+  "intercept": 5.760669719023781e-16,
+  "feature_means": {
+    "ICSA": 333900.0,
+    "CCSA": 3283200.0,
+    "PAYEMS": 152981.3,
+    "CES0500000003": 32.695,
+    "CIVPART": 62.370000000000005,
+    "EMRATIO": 59.589999999999996,
+    "JTSJOL": 8571.6,
+    "JTSHIL": 5797.3,
+    "JTSQUL": 3567.2,
+    "JTSLDL": 1603.7
+  },
+  "feature_stds": {
+    "ICSA": 252749.06528017073,
+    "CCSA": 4038091.6235271334,
+    "PAYEMS": 5817.131269792698,
+    "CES0500000003": 2.4965225815121324,
+    "CIVPART": 0.4627094120503698,
+    "EMRATIO": 1.2731457104353767,
+    "JTSJOL": 1617.565714275621,
+    "JTSHIL": 383.6039754747075,
+    "JTSQUL": 394.7461969417818,
+    "JTSLDL": 168.1576938471743
+  },
+  "feature_names": [
+    "ICSA",
+    "CCSA",
+    "PAYEMS",
+    "CES0500000003",
+    "CIVPART",
+    "EMRATIO",
+    "JTSJOL",
+    "JTSHIL",
+    "JTSQUL",
+    "JTSLDL"
+  ],
+  "trained_at": "2025-09-26T03:27:45.078829"
+}

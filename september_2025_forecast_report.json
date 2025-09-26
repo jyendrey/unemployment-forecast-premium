@@ -1,0 +1,59 @@
+{
+  "forecast_date": "September 2025",
+  "generated_date": "2025-09-25T02:51:34.037949",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "data_source": "Real FRED API Data",
+  "forecast_summary": {
+    "august_2025_rate": 4.3,
+    "september_2025_forecast": 4.32,
+    "change": 0.02,
+    "confidence_level": 95,
+    "direction": "Rising"
+  },
+  "economic_indicators": {
+    "labor_force_participation_rate": 62.3,
+    "employment_population_ratio": 59.6,
+    "initial_claims_4week_avg": 240000.0,
+    "continuing_claims": 1920000.0,
+    "nonfarm_payrolls": 159540000.0,
+    "average_hourly_earnings": 36.53
+  },
+  "adjustments": [
+    {
+      "adjustment_name": "LFPR Adjustment",
+      "adjustment_value": 0.0,
+      "adjustment_percentage": 0.0
+    },
+    {
+      "adjustment_name": "Initial Claims Adjustment",
+      "adjustment_value": 0.013,
+      "adjustment_percentage": 1.333
+    },
+    {
+      "adjustment_name": "Continuing Claims Adjustment",
+      "adjustment_value": 0.01,
+      "adjustment_percentage": 1.0
+    },
+    {
+      "adjustment_name": "Nonfarm Payrolls Adjustment",
+      "adjustment_value": -0.003,
+      "adjustment_percentage": -0.292
+    },
+    {
+      "adjustment_name": "Wage Growth Adjustment",
+      "adjustment_value": -0.001,
+      "adjustment_percentage": -0.147
+    },
+    {
+      "adjustment_name": "Employment-Population Ratio Adjustment",
+      "adjustment_value": -0.0,
+      "adjustment_percentage": -0.0
+    }
+  ],
+  "methodology": {
+    "base_rate": "August 2025 unemployment rate from FRED",
+    "adjustments": "Based on real economic indicators from FRED API",
+    "confidence": "Based on data quality and economic consistency"
+  }
+}

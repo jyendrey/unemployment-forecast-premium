@@ -1,0 +1,55 @@
+{
+  "forecast_date": "2025-09-25T03:33:38.713233",
+  "target_month": "October 2025",
+  "september_rate": 4.3,
+  "october_forecast": 3.955497083445305,
+  "change": -0.34450291655469467,
+  "confidence": 79.0,
+  "adjustments": {
+    "initial_claims": -0.00125,
+    "continuing_claims": -0.003,
+    "nonfarm_payrolls": -0.078,
+    "lfpr": 0.010000000000000142,
+    "ep_ratio": -0.020000000000000285,
+    "wage_growth": -0.0016424856282507177,
+    "consumer_confidence": 0.035,
+    "manufacturing_pmi": -0.024000000000000056,
+    "job_openings": -0.0,
+    "quits_rate": -0.0,
+    "trade_balance": -0.05,
+    "export_growth": -0.005454545454545454,
+    "manufacturing_exports": -0.014634146341463414,
+    "services_exports": -0.006521739130434783,
+    "supply_chain": -0.125,
+    "global_pmi": -0.053999999999999916,
+    "china_pmi": -0.01,
+    "eu_pmi": 0.004000000000000057
+  },
+  "total_adjustment": -0.34450291655469445,
+  "probability_distribution": {
+    "above_3.9": 97,
+    "above_4.0": 5,
+    "above_4.1": 11,
+    "above_4.2": 35,
+    "above_4.3": 58,
+    "above_4.4": 84
+  },
+  "trade_projections": {
+    "trade_balance": -85000,
+    "exports": 280000000000,
+    "imports": 365000000000,
+    "manufacturing_exports": 85000000000,
+    "services_exports": 95000000000,
+    "agricultural_exports": 18000000000,
+    "energy_exports": 12000000000,
+    "supply_chain_index": 52.5,
+    "global_pmi": 51.8,
+    "china_pmi": 50.5,
+    "eu_pmi": 49.8
+  },
+  "confidence_factors": {
+    "data_quality": 0.85,
+    "methodology": 0.75,
+    "external": 0.75
+  }
+}

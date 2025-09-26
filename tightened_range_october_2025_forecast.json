@@ -1,0 +1,175 @@
+{
+  "forecast_date": "2025-09-25T04:07:30.484997",
+  "target_month": "October 2025",
+  "september_rate": 4.3,
+  "base_forecast": 4.217107514371749,
+  "tightened_range": {
+    "min": 4.2,
+    "max": 4.4,
+    "width": 0.20000000000000018
+  },
+  "trade_scenarios": {
+    "optimistic": {
+      "forecast": 4.2,
+      "description": "Strong trade improvements + labor market strength",
+      "factors": [
+        "Better trade balance (-$85B vs -$90B)",
+        "Export growth (+1.8%)",
+        "Manufacturing export growth (+3.7%)",
+        "Supply chain improvements (52.5)",
+        "Global expansion (51.8 PMI)",
+        "China expansion (50.5 PMI)",
+        "Strong job growth (+260k)",
+        "Improving jobless claims"
+      ]
+    },
+    "base": {
+      "forecast": 4.3,
+      "description": "Balanced labor market + modest trade improvements",
+      "factors": [
+        "Slight trade balance improvement",
+        "Modest export growth",
+        "Stable supply chains",
+        "Mixed global PMI signals",
+        "Moderate job growth",
+        "Stable labor force participation"
+      ]
+    },
+    "pessimistic": {
+      "forecast": 4.4,
+      "description": "Trade headwinds + labor market challenges",
+      "factors": [
+        "EU contraction (49.8 PMI)",
+        "Trade policy uncertainty",
+        "Supply chain disruptions",
+        "China economic slowdown",
+        "Global economic headwinds",
+        "Rising labor force participation pressure",
+        "Weaker job growth than expected"
+      ]
+    }
+  },
+  "labor_market_adjustments": {
+    "initial_claims": -0.00125,
+    "continuing_claims": -0.003,
+    "nonfarm_payrolls": -0.078,
+    "lfpr": 0.010000000000000142,
+    "ep_ratio": -0.020000000000000285,
+    "wage_growth": -0.0016424856282507177,
+    "consumer_confidence": 0.035,
+    "manufacturing_pmi": -0.024000000000000056,
+    "job_openings": -0.0,
+    "quits_rate": -0.0
+  },
+  "total_labor_market_adjustment": -0.08289248562825091,
+  "probability_analysis": {
+    "min": {
+      "above_3.9": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 97,
+        "market_no_probability": 3,
+        "alignment": "ALIGNED"
+      },
+      "above_4.0": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 93,
+        "market_no_probability": 5,
+        "alignment": "ALIGNED"
+      },
+      "above_4.1": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 87,
+        "market_no_probability": 11,
+        "alignment": "ALIGNED"
+      },
+      "above_4.2": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 63,
+        "market_no_probability": 35,
+        "alignment": "ALIGNED"
+      },
+      "above_4.3": {
+        "our_forecast": "BELOW",
+        "market_yes_probability": 40,
+        "market_no_probability": 58,
+        "alignment": "ALIGNED"
+      },
+      "above_4.4": {
+        "our_forecast": "BELOW",
+        "market_yes_probability": 16,
+        "market_no_probability": 84,
+        "alignment": "ALIGNED"
+      }
+    },
+    "max": {
+      "above_3.9": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 97,
+        "market_no_probability": 3,
+        "alignment": "ALIGNED"
+      },
+      "above_4.0": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 93,
+        "market_no_probability": 5,
+        "alignment": "ALIGNED"
+      },
+      "above_4.1": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 87,
+        "market_no_probability": 11,
+        "alignment": "ALIGNED"
+      },
+      "above_4.2": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 63,
+        "market_no_probability": 35,
+        "alignment": "ALIGNED"
+      },
+      "above_4.3": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 40,
+        "market_no_probability": 58,
+        "alignment": "MISALIGNED"
+      },
+      "above_4.4": {
+        "our_forecast": "ABOVE",
+        "market_yes_probability": 16,
+        "market_no_probability": 84,
+        "alignment": "MISALIGNED"
+      }
+    }
+  },
+  "market_expectations": {
+    "above_3.9": {
+      "yes": 97,
+      "no": 3
+    },
+    "above_4.0": {
+      "yes": 93,
+      "no": 5
+    },
+    "above_4.1": {
+      "yes": 87,
+      "no": 11
+    },
+    "above_4.2": {
+      "yes": 63,
+      "no": 35
+    },
+    "above_4.3": {
+      "yes": 40,
+      "no": 58
+    },
+    "above_4.4": {
+      "yes": 16,
+      "no": 84
+    }
+  },
+  "confidence": 80.75,
+  "confidence_factors": {
+    "data_quality": 0.85,
+    "methodology": 0.8,
+    "external": 0.75
+  }
+}

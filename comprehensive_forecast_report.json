@@ -1,0 +1,144 @@
+{
+  "generated_date": "2025-09-25T02:08:12.342017",
+  "version": "v4.0-comprehensive-bls",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "forecast_summary": {
+    "current_unemployment": 3.784,
+    "forecasted_unemployment": 3.45,
+    "change": -0.33,
+    "confidence_level": 98,
+    "direction": "Falling"
+  },
+  "bls_comprehensive_analysis": {
+    "rates": {
+      "unemployment_rate_men": 3.6079999999999997,
+      "unemployment_rate_women": 3.344,
+      "unemployment_rate_teens": 12.232000000000001,
+      "unemployment_rate_white": 3.2560000000000002,
+      "unemployment_rate_black": 6.6,
+      "unemployment_rate_asian": 3.168,
+      "unemployment_rate_hispanic": 4.664
+    },
+    "disparities": {
+      "black_white_gap": 3.3439999999999994,
+      "hispanic_white_gap": 1.4079999999999995,
+      "teen_adult_gap": 8.448,
+      "gender_gap": 0.2639999999999998
+    },
+    "overall_rate": 3.784
+  },
+  "underemployment_analysis": {
+    "counts": {
+      "part_time_economic_reasons": 4136000.0,
+      "marginally_attached": 1584000.0,
+      "discouraged_workers": 452320.0,
+      "new_entrants": 691680.0,
+      "long_term_unemployed": 1672000.0,
+      "unemployed_persons": 6512000.0
+    },
+    "percentages": {
+      "long_term_unemployed_pct": 25.675675675675674,
+      "discouraged_workers_pct": 28.555555555555557
+    }
+  },
+  "establishment_analysis": {
+    "nonfarm_payrolls": 139040000.0,
+    "private_payrolls": 118800000.0,
+    "government_payrolls": 20240000.0,
+    "health_care_employment": 14960000.0,
+    "manufacturing_employment": 11440000.0,
+    "construction_employment": 7040000.0,
+    "retail_trade_employment": 14080000.0,
+    "leisure_hospitality_employment": 14960000.0
+  },
+  "wage_hours_analysis": {
+    "avg_hourly_earnings": 32.1464,
+    "avg_weekly_hours": 30.096000000000004,
+    "manufacturing_hours": 35.2,
+    "manufacturing_overtime": 2.552
+  },
+  "job_flows_analysis": {
+    "job_finding_rate": 0.43902439024390244,
+    "job_separation_rate": 0.013333333333333334,
+    "net_flows": {
+      "net_employment_growth": -490000.0,
+      "net_unemployment_change": -140000.0,
+      "net_labor_force_participation": -630000.0
+    }
+  },
+  "comprehensive_adjustments": [
+    {
+      "adjustment_name": "LFPR Adjustment",
+      "adjustment_value": -0.0224,
+      "adjustment_percentage": -2.2428
+    },
+    {
+      "adjustment_name": "Employment-Population Ratio Adjustment",
+      "adjustment_value": -0.0143,
+      "adjustment_percentage": -1.4304
+    },
+    {
+      "adjustment_name": "Demographic Disparities Adjustment",
+      "adjustment_value": -0.0005,
+      "adjustment_percentage": -0.0456
+    },
+    {
+      "adjustment_name": "Part-time Economic Reasons Adjustment",
+      "adjustment_value": -0.0282,
+      "adjustment_percentage": -2.82
+    },
+    {
+      "adjustment_name": "Long-term Unemployed Adjustment",
+      "adjustment_value": -0.0,
+      "adjustment_percentage": -0.0005
+    },
+    {
+      "adjustment_name": "Nonfarm Payrolls Adjustment",
+      "adjustment_value": -0.1896,
+      "adjustment_percentage": -18.96
+    },
+    {
+      "adjustment_name": "Wage Growth Adjustment",
+      "adjustment_value": -0.012,
+      "adjustment_percentage": -1.2
+    },
+    {
+      "adjustment_name": "Job Finding Rate Adjustment",
+      "adjustment_value": -0.0567,
+      "adjustment_percentage": -5.6707
+    },
+    {
+      "adjustment_name": "Job Separation Rate Adjustment",
+      "adjustment_value": -0.0003,
+      "adjustment_percentage": -0.0333
+    },
+    {
+      "adjustment_name": "Trade Sentiment Adjustment",
+      "adjustment_value": -0.0105,
+      "adjustment_percentage": -1.054
+    },
+    {
+      "adjustment_name": "Initial Claims Adjustment",
+      "adjustment_value": -0.0,
+      "adjustment_percentage": -0.0031
+    },
+    {
+      "adjustment_name": "Continuing Claims Adjustment",
+      "adjustment_value": 0.0,
+      "adjustment_percentage": 0.0014
+    }
+  ],
+  "data_sources": {
+    "bls_comprehensive": "BLS Employment Situation (Demographic, Establishment, Household)",
+    "bls_job_flows": "BLS CPS Job Flows Data",
+    "trade_data": "Enhanced Trade Data (ForecastEx)",
+    "fred_data": "Extended FRED Data (24 months)"
+  },
+  "methodology": {
+    "bls_employment_situation": "Full BLS methodology including demographic, establishment, and household survey data",
+    "job_flows_integration": "BLS CPS job flows with job finding/separation rates",
+    "comprehensive_adjustments": "Multi-factor adjustments using all available data sources",
+    "confidence_calculation": "Enhanced confidence with comprehensive data weighting"
+  }
+}
