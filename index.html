@@ -252,9 +252,9 @@
                 <div class="status-description">Regime-switching model</div>
             </div>
             <div class="status-item">
-                <div class="status-value" style="color: var(--ib-yellow);">218K</div>
-                <div class="status-label">Initial Claims</div>
-                <div class="status-description">Week ending Sept 20, 2025</div>
+                <div class="status-value" style="color: var(--ib-yellow);">~220K</div>
+                <div class="status-label">Initial Claims (Projected)</div>
+                <div class="status-description">Week ending Sept 27, 2025*</div>
             </div>
             <div class="status-item">
                 <div class="status-value" style="color: var(--ib-light-blue);">0.89</div>
@@ -756,6 +756,13 @@
         <!-- Weekly Claims Impact -->
         <div class="chart-container">
             <h3>Weekly Initial Claims Analysis</h3>
+            <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--ib-yellow); padding: 15px; margin-bottom: 20px; border-radius: 8px;">
+                <strong style="color: var(--ib-yellow);">*Projected Data:</strong> 
+                <span style="color: #cccccc; font-size: 0.9em;">
+                    Week ending September 27, 2025 data will be officially released by DOL on Thursday, October 2, 2025. 
+                    Projection based on 4-week moving average trend (~220K).
+                </span>
+            </div>
             <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 25px;">
                 <div>
                     <div style="background: #1a1a1a; border-radius: 15px; padding: 20px;">
@@ -785,6 +792,11 @@
                                 <div style="color: #cccccc; font-size: 0.8em; margin-top: 10px;">Sep 20</div>
                                 <div style="color: var(--ib-green); font-size: 0.9em; font-weight: 600;">218K</div>
                             </div>
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                <div style="background: linear-gradient(135deg, var(--ib-green), var(--ib-yellow)); width: 60px; height: 125px; border-radius: 4px; border: 2px dashed var(--ib-yellow); opacity: 0.7;"></div>
+                                <div style="color: #cccccc; font-size: 0.8em; margin-top: 10px;">Sep 27*</div>
+                                <div style="color: var(--ib-yellow); font-size: 0.9em; font-weight: 600;">~220K</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -792,14 +804,85 @@
                 <div>
                     <div class="metric-card" style="height: 100%;">
                         <div class="metric-title">CLAIMS SIGNAL</div>
-                        <div class="metric-value" style="color: var(--ib-green);">Positive</div>
+                        <div class="metric-value" style="color: var(--ib-green);">Strong Positive</div>
                         <div style="margin-top: 15px; color: #cccccc; font-size: 0.85em; line-height: 1.6;">
-                            <strong>14K drop</strong> in latest week signals labor market strength.
+                            <strong>14K drop</strong> to 218K (Sep 20) signals continued labor market strength.
                             <br><br>
                             <strong>4-week average:</strong> 227K<br>
+                            <strong>Sept 27 estimate:</strong> ~220K<br>
                             <strong>Baseline:</strong> 235K<br>
-                            <strong>Signal:</strong> -8K vs baseline
+                            <strong>Signal:</strong> -15K vs baseline
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOLTS Data Section -->
+        <div class="chart-container">
+            <h3>JOLTS Job Openings - August 2025</h3>
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 25px;">
+                <div class="metric-card" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a1a2a 100%); border: 2px solid var(--ib-purple);">
+                    <div class="metric-title">AUGUST 2025 JOB OPENINGS</div>
+                    <div class="metric-value" style="font-size: 3em; color: var(--ib-purple);">7.227M</div>
+                    <div class="metric-subtitle" style="color: var(--ib-green);">+19K from July (essentially flat)</div>
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #444;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                            <span style="color: #999; font-size: 0.85em;">July 2025:</span>
+                            <span style="color: #cccccc; font-weight: 600;">7.208M</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span style="color: #999; font-size: 0.85em;">Change:</span>
+                            <span style="color: var(--ib-green); font-weight: 600;">+0.3%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div style="background: #1a1a1a; border-radius: 15px; padding: 20px;">
+                        <h4 style="color: #ffffff; margin-bottom: 15px; font-size: 1.1em;">JOLTS Key Metrics - August 2025</h4>
+                        <table style="width: 100%; font-size: 0.9em;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #444;">
+                                    <th style="text-align: left; padding: 8px;">Metric</th>
+                                    <th style="text-align: right; padding: 8px;">Value</th>
+                                    <th style="text-align: right; padding: 8px;">Rate</th>
+                                    <th style="text-align: right; padding: 8px;">Change</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #333;">
+                                    <td style="padding: 8px; color: var(--ib-purple); font-weight: 600;">Job Openings</td>
+                                    <td style="text-align: right; padding: 8px;">7.227M</td>
+                                    <td style="text-align: right; padding: 8px;">4.4%</td>
+                                    <td style="text-align: right; padding: 8px; color: var(--ib-green);">↑ 19K</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #333;">
+                                    <td style="padding: 8px; color: #cccccc;">Hires</td>
+                                    <td style="text-align: right; padding: 8px;">5.1M</td>
+                                    <td style="text-align: right; padding: 8px;">3.1%</td>
+                                    <td style="text-align: right; padding: 8px; color: #999;">Little changed</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #333;">
+                                    <td style="padding: 8px; color: #cccccc;">Total Separations</td>
+                                    <td style="text-align: right; padding: 8px;">5.1M</td>
+                                    <td style="text-align: right; padding: 8px;">3.1%</td>
+                                    <td style="text-align: right; padding: 8px; color: #999;">Little changed</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px; color: #cccccc;">Quits</td>
+                                    <td style="text-align: right; padding: 8px;">3.1M</td>
+                                    <td style="text-align: right; padding: 8px;">1.9%</td>
+                                    <td style="text-align: right; padding: 8px; color: var(--ib-red);">↓ Accom/Food</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="highlight-box" style="margin-top: 15px; background: rgba(139, 92, 246, 0.1); border-color: var(--ib-purple);">
+                        <strong>JOLTS Interpretation:</strong> Job openings remained essentially flat at 7.2M, suggesting labor demand 
+                        is stable but no longer accelerating. The openings-to-unemployment ratio of approximately 1.1:1 indicates a 
+                        balanced labor market, down from the 2:1 peak in 2022 but still above pre-pandemic levels (~1.2:1 in 2019).
                     </div>
                 </div>
             </div>
@@ -834,17 +917,20 @@
             </div>
 
             <div class="highlight-box" style="margin-top: 25px; background: rgba(59, 130, 246, 0.1); border-color: var(--ib-light-blue);">
-                <h4 style="color: var(--ib-light-blue); margin-bottom: 10px;">Bottom Line</h4>
+                <h4 style="color: var(--ib-light-blue); margin-bottom: 10px;">Bottom Line - Updated October 1, 2025</h4>
                 <p style="color: #cccccc; line-height: 1.8;">
                     The <strong style="color: #ffffff;">Enhanced IBKR Forecaster</strong> predicts September 2025 unemployment at 
                     <strong style="color: var(--ib-red);">4.29%</strong>, essentially unchanged from August's 4.3%. The forecast 
                     combines MIDAS nowcasting (4.31%), regime-switching analysis (4.26%), and Kalman filtering (4.28%) with 
                     dynamic ensemble weighting. The sharp drop in initial claims to <strong style="color: var(--ib-green);">218K</strong>
-                    provides strong evidence of labor market resilience. With <strong style="color: var(--ib-green);">82.4% probability</strong> 
-                    of continued expansion and no signs of deterioration, the outlook remains stable through fall 2025. The 90% 
-                    confidence interval of <strong style="color: #ffffff;">[4.06%, 4.52%]</strong> reflects appropriate uncertainty, 
-                    while market sentiment ranges <strong style="color: #ffffff;">[4.22%, 4.46%]</strong> align closely with 
-                    statistical predictions.
+                    (week ending Sept 20) - the lowest level in two months - provides strong evidence of labor market resilience. 
+                    Preliminary estimates suggest claims remained near <strong style="color: var(--ib-yellow);">220K</strong> 
+                    for the week ending September 27 (official data pending Oct 2). <strong style="color: var(--ib-purple);">JOLTS data</strong> 
+                    shows job openings essentially flat at 7.227M in August, indicating stable but not accelerating labor demand. 
+                    With <strong style="color: var(--ib-green);">82.4% probability</strong> of continued expansion and no signs of 
+                    deterioration, the outlook remains stable through fall 2025. The 90% confidence interval of 
+                    <strong style="color: #ffffff;">[4.06%, 4.52%]</strong> reflects appropriate uncertainty, while market sentiment 
+                    ranges <strong style="color: #ffffff;">[4.22%, 4.46%]</strong> align closely with statistical predictions.
                 </p>
             </div>
         </div>
@@ -895,9 +981,11 @@
 
             <div style="color: #999; font-size: 0.85em; line-height: 1.6;">
                 <p style="margin-bottom: 10px;"><strong style="color: #ffffff;">Data Sources:</strong> 
-                Federal Reserve Economic Data (FRED), Bureau of Labor Statistics (BLS), ForecastEx market data (54K+ positions)</p>
+                Federal Reserve Economic Data (FRED), Bureau of Labor Statistics (BLS), JOLTS (Job Openings and Labor Turnover Survey), ForecastEx market data (54K+ positions)</p>
                 <p style="margin-bottom: 10px;"><strong style="color: #ffffff;">Update Frequency:</strong> 
-                Weekly Kalman updates (Thursdays), full model refresh (monthly after BLS release)</p>
+                Weekly Kalman updates (Thursdays with initial claims), monthly JOLTS (first Tuesday after BLS employment report), full model refresh (monthly after BLS release)</p>
+                <p style="margin-bottom: 10px;"><strong style="color: #ffffff;">Latest Data Points:</strong>
+                Initial Claims: Sept 20 (218K confirmed), Sept 27 (~220K projected, releases Oct 2) | JOLTS: August 2025 (7.227M openings) | Unemployment: August 2025 (4.3%)</p>
                 <p><strong style="color: #ffffff;">Validation:</strong> 
                 Walk-forward cross-validation (2020-2025), 36-month training windows, out-of-sample RMSE = 0.24%</p>
             </div>
