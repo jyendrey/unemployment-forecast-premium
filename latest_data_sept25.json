@@ -1,0 +1,61 @@
+{
+  "latest_data": {
+    "UNRATE": {
+      "value": 4.3,
+      "date": "2025-08-01",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    },
+    "ICSA": {
+      "value": 218000.0,
+      "date": "2025-09-20",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    },
+    "CCSA": {
+      "value": 1926000.0,
+      "date": "2025-09-13",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    },
+    "PAYEMS": {
+      "value": 159540.0,
+      "date": "2025-08-01",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    },
+    "CES0500000003": {
+      "value": 36.53,
+      "date": "2025-08-01",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    },
+    "JTSJOL": {
+      "value": 7181.0,
+      "date": "2025-07-01",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    },
+    "JTSHIL": {
+      "value": 5308.0,
+      "date": "2025-07-01",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    },
+    "JTSQUL": {
+      "value": 3208.0,
+      "date": "2025-07-01",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    },
+    "JTSLDL": {
+      "value": 1808.0,
+      "date": "2025-07-01",
+      "realtime_start": "2025-09-25",
+      "realtime_end": "2025-09-25"
+    }
+  },
+  "fetched_at": "2025-09-26T02:57:22.511271",
+  "data_source": "FRED API",
+  "end_date": "2025-09-25"
+}
