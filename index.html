@@ -280,8 +280,18 @@
                         
                         <div class="confidence-band">
                             <div class="band-label">Market Sentiment:</div>
-                            <div class="band-bar" style="background: linear-gradient(90deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.4)); border-color: var(--ib-yellow);">
-                                [4.22%, 4.46%]
+                            <div class="band-bar" style="background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.4)); border-color: var(--ib-light-blue);">
+                                Mode: 4.3% (43% prob)
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(59, 130, 246, 0.15); border: 1px solid var(--ib-light-blue); border-radius: 8px; padding: 12px; margin-top: 12px;">
+                            <div style="font-size: 0.85em; color: var(--ib-light-blue); font-weight: 600; margin-bottom: 5px;">
+                                ✓ Model-Market Alignment
+                            </div>
+                            <div style="font-size: 0.8em; color: #cccccc; line-height: 1.4;">
+                                Market modal outcome (4.3%, 43% probability) aligns with statistical forecast (4.29%). 
+                                Market center at 4.33% is only +0.04pp above model prediction.
                             </div>
                         </div>
                     </div>
@@ -364,7 +374,7 @@
                     <tbody>
                         <tr>
                             <td>Temporal Consistency</td>
-                            <td style="color: var(--ib-red);">Mixed-freq VAR (flawed)</td>
+                            <td style="color: var(--ib-red);">Standard VAR with naive averaging</td>
                             <td style="color: var(--ib-green);">MIDAS with Almon lags</td>
                             <td style="color: var(--ib-green);">15-20% RMSE reduction</td>
                         </tr>
@@ -583,20 +593,6 @@
                             <td style="color: var(--ib-green);">Selected</td>
                         </tr>
                         <tr>
-                            <td style="color: #666;">PAYEMS (Nonfarm Payrolls)</td>
-                            <td>0.000</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td style="color: #666;">Zeroed</td>
-                        </tr>
-                        <tr>
-                            <td style="color: #666;">CIVPART (Labor Force Part.)</td>
-                            <td>0.000</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td style="color: #666;">Zeroed</td>
-                        </tr>
-                        <tr>
                             <td style="font-weight: 600;">Intercept</td>
                             <td>4.156</td>
                             <td>0.234</td>
@@ -605,6 +601,15 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <div style="margin-top: 15px; padding: 12px; background: rgba(59, 130, 246, 0.1); border-left: 3px solid var(--ib-light-blue); border-radius: 6px;">
+                    <strong style="color: var(--ib-light-blue); font-size: 0.9em;">Feature Selection Note:</strong>
+                    <p style="color: #cccccc; font-size: 0.85em; margin-top: 5px; line-height: 1.5;">
+                        LASSO with optimal λ=0.001 selected only ICSA and EMRATIO. Other candidates (PAYEMS, CIVPART, etc.) 
+                        were excluded as they provided no incremental predictive value due to multicollinearity with selected features 
+                        and lack of statistical significance (p > 0.25 in unrestricted models).
+                    </p>
+                </div>
 
                 <div style="margin-top: 20px; padding: 15px; background: #1a1a1a; border-radius: 10px;">
                     <strong style="color: #ffffff;">LASSO Forecast: 4.28%</strong><br>
@@ -627,50 +632,59 @@
                     <thead>
                         <tr>
                             <th>Threshold</th>
-                            <th>P(UNRATE > threshold)</th>
+                            <th>Interpretation</th>
                             <th>Yes Probability</th>
                             <th>No Probability</th>
-                            <th>Market Signal</th>
+                            <th>Implied Range</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>4.0%</td>
-                            <td>97%</td>
+                            <td>Above 4.0%</td>
+                            <td>UNRATE ≥ 4.1%</td>
                             <td style="color: var(--ib-green); font-weight: 600;">97%</td>
                             <td style="color: var(--ib-red);">3%</td>
-                            <td style="color: var(--ib-green);">Strong consensus</td>
+                            <td style="color: #999; font-size: 0.85em;">P(≤4.0%) = 3%</td>
                         </tr>
                         <tr>
-                            <td>4.1%</td>
-                            <td>90%</td>
-                            <td style="color: var(--ib-green); font-weight: 600;">90%</td>
-                            <td style="color: var(--ib-red);">10%</td>
-                            <td style="color: var(--ib-green);">High confidence</td>
-                        </tr>
-                        <tr style="background: rgba(217, 17, 35, 0.1);">
-                            <td>4.2%</td>
-                            <td>59%</td>
-                            <td style="color: var(--ib-green); font-weight: 600;">59%</td>
-                            <td style="color: var(--ib-red); font-weight: 600;">41%</td>
-                            <td style="color: var(--ib-yellow);">Contested zone</td>
+                            <td>Above 4.1%</td>
+                            <td>UNRATE ≥ 4.2%</td>
+                            <td style="color: var(--ib-green); font-weight: 600;">92%</td>
+                            <td style="color: var(--ib-red);">8%</td>
+                            <td style="color: #999; font-size: 0.85em;">P(4.1%) = 5%</td>
                         </tr>
                         <tr>
-                            <td>4.3%</td>
-                            <td>15%</td>
-                            <td style="color: var(--ib-green);">15%</td>
-                            <td style="color: var(--ib-red); font-weight: 600;">85%</td>
-                            <td style="color: var(--ib-red);">Low probability</td>
+                            <td>Above 4.2%</td>
+                            <td>UNRATE ≥ 4.3%</td>
+                            <td style="color: var(--ib-green); font-weight: 600;">77%</td>
+                            <td style="color: var(--ib-red);">23%</td>
+                            <td style="color: #999; font-size: 0.85em;">P(4.2%) = 15%</td>
+                        </tr>
+                        <tr style="background: rgba(59, 130, 246, 0.1);">
+                            <td>Above 4.3%</td>
+                            <td>UNRATE ≥ 4.4%</td>
+                            <td style="color: var(--ib-green);">34%</td>
+                            <td style="color: var(--ib-red); font-weight: 600;">66%</td>
+                            <td style="color: var(--ib-light-blue); font-size: 0.85em; font-weight: 600;">P(4.3%) = 43% ← Mode</td>
                         </tr>
                         <tr>
-                            <td>4.4%</td>
-                            <td>5%</td>
-                            <td style="color: var(--ib-green);">5%</td>
-                            <td style="color: var(--ib-red); font-weight: 600;">95%</td>
-                            <td style="color: var(--ib-red);">Very unlikely</td>
+                            <td>Above 4.4%</td>
+                            <td>UNRATE ≥ 4.5%</td>
+                            <td style="color: var(--ib-green);">16%</td>
+                            <td style="color: var(--ib-red); font-weight: 600;">84%</td>
+                            <td style="color: #999; font-size: 0.85em;">P(4.4%) = 18%</td>
                         </tr>
                     </tbody>
                 </table>
+
+                <div style="background: rgba(59, 130, 246, 0.2); border-left: 4px solid var(--ib-light-blue); padding: 15px; margin: 20px 0; border-radius: 8px;">
+                    <strong style="color: var(--ib-light-blue);">Market Distribution Analysis:</strong>
+                    <span style="color: #cccccc; font-size: 0.9em;">
+                        The market assigns <strong style="color: #ffffff;">43% probability to 4.3%</strong>, making it the modal (most likely) 
+                        outcome. This aligns closely with the August actual of 4.3% and suggests market expects stability. Only 34% expect 
+                        deterioration to ≥4.4%, while 23% expect improvement to ≤4.2%.
+                    </span>
+                </div>
 
                 <div style="margin-top: 25px;">
                     <h4 style="color: #ffffff; margin-bottom: 15px;">Enhanced Market Sentiment Calculation</h4>
@@ -691,19 +705,19 @@
 
                     <div class="metrics-grid" style="margin-top: 20px;">
                         <div class="metric-card">
-                            <div class="metric-title">MARKET CENTER</div>
-                            <div class="metric-value">4.31%</div>
-                            <div class="metric-subtitle">Weighted average expectation</div>
+                            <div class="metric-title">MARKET CENTER (IMPLIED)</div>
+                            <div class="metric-value">4.33%</div>
+                            <div class="metric-subtitle">Probability-weighted expectation</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-title">MARKET RANGE (80%)</div>
-                            <div class="metric-value">4.22%-4.46%</div>
-                            <div class="metric-subtitle">Adjusted for effective sample size</div>
+                            <div class="metric-title">MODAL OUTCOME</div>
+                            <div class="metric-value">4.3%</div>
+                            <div class="metric-subtitle">Most likely (43% probability)</div>
                         </div>
                         <div class="metric-card">
-                            <div class="metric-title">ALIGNMENT WITH STATISTICAL</div>
-                            <div class="metric-value" style="color: var(--ib-green);">Strong</div>
-                            <div class="metric-subtitle">Market + model agreement</div>
+                            <div class="metric-title">STATISTICAL vs MARKET</div>
+                            <div class="metric-value" style="color: var(--ib-green);">Close Alignment</div>
+                            <div class="metric-subtitle">Market +0.04pp above model</div>
                         </div>
                     </div>
                 </div>
@@ -712,12 +726,86 @@
 
         <!-- Historical Data Visualization -->
         <div class="chart-container">
-            <h3>Unemployment Rate History (Aug 2023 - Sep 2025)</h3>
-            <div style="background: #1a1a1a; border-radius: 15px; padding: 25px; height: 300px; position: relative;">
-                <svg width="100%" height="280" viewBox="0 0 1200 280">
+            <h3>Unemployment Rate History (Sept 2024 - Sept 2025)</h3>
+            <div style="background: #1a1a1a; border-radius: 15px; padding: 25px;">
+                <svg width="100%" height="320" viewBox="0 0 1100 320">
                     <!-- Grid lines -->
-                    <line x1="50" y1="40" x2="1150" y2="40" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-                    <line x1="50" y1="100" x2="1150" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
+                    <line x1="60" y1="50" x2="1040" y2="50" stroke="#444" stroke-width="1" stroke-dasharray="5,5"/>
+                    <line x1="60" y1="110" x2="1040" y2="110" stroke="#444" stroke-width="1" stroke-dasharray="5,5"/>
+                    <line x1="60" y1="170" x2="1040" y2="170" stroke="#444" stroke-width="1" stroke-dasharray="5,5"/>
+                    <line x1="60" y1="230" x2="1040" y2="230" stroke="#444" stroke-width="1" stroke-dasharray="5,5"/>
+                    
+                    <!-- Y-axis (range: 3.9% to 4.5%) -->
+                    <text x="50" y="54" text-anchor="end" fill="#999" font-size="12">4.5%</text>
+                    <text x="50" y="114" text-anchor="end" fill="#999" font-size="12">4.3%</text>
+                    <text x="50" y="174" text-anchor="end" fill="#999" font-size="12">4.1%</text>
+                    <text x="50" y="234" text-anchor="end" fill="#999" font-size="12">3.9%</text>
+                    
+                    <!-- Y-axis label -->
+                    <text x="20" y="140" text-anchor="middle" fill="#ccc" font-size="11" transform="rotate(-90 20 140)">Unemployment Rate (%)</text>
+                    
+                    <!-- Unemployment rate line (Sept 2024 - Aug 2025: 4.1,4.1,4.2,4.0,4.0,4.1,4.2,4.2,4.2,4.1,4.3,4.3) -->
+                    <!-- Y formula: 230 - ((value - 3.9) * 300) -->
+                    <!-- X positions: 60 to 980 in 13 steps = spacing of 80px -->
+                    <polyline points="140,170 220,170 300,110 380,230 460,230 540,170 620,110 700,110 780,110 860,170 940,50 1020,50" 
+                             fill="none" stroke="var(--ib-red)" stroke-width="3" stroke-linecap="round"/>
+                    
+                    <!-- Data points -->
+                    <circle cx="140" cy="170" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="220" cy="170" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="300" cy="110" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="380" cy="230" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="460" cy="230" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="540" cy="170" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="620" cy="110" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="700" cy="110" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="780" cy="110" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="860" cy="170" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="940" cy="50" r="5" fill="var(--ib-red)" stroke="#fff" stroke-width="1.5"/>
+                    <circle cx="1020" cy="50" r="6" fill="var(--ib-red)" stroke="#fff" stroke-width="2"/>
+                    
+                    <!-- Forecast point (Sept 2025: 4.29%) -->
+                    <circle cx="1020" cy="67" r="8" fill="var(--ib-light-blue)" stroke="#fff" stroke-width="2"/>
+                    <text x="1020" y="40" text-anchor="middle" fill="var(--ib-light-blue)" font-size="11" font-weight="600">4.29%</text>
+                    
+                    <!-- 90% Confidence interval shading -->
+                    <!-- CI: [4.06%, 4.52%] -->
+                    <!-- Lower: 230 - ((4.06 - 3.9) * 300) = 182 -->
+                    <!-- Upper: 230 - ((4.52 - 3.9) * 300) = 44 -->
+                    <rect x="1000" y="44" width="40" height="138" fill="rgba(59, 130, 246, 0.12)" stroke="var(--ib-light-blue)" stroke-width="1" stroke-dasharray="3,3" rx="4"/>
+                    
+                    <!-- Reference line for current -->
+                    <line x1="940" y1="30" x2="940" y2="250" stroke="var(--ib-yellow)" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.5"/>
+                    
+                    <!-- X-axis labels -->
+                    <text x="140" y="270" text-anchor="middle" fill="#999" font-size="10">Sep 24</text>
+                    <text x="220" y="270" text-anchor="middle" fill="#999" font-size="10">Oct 24</text>
+                    <text x="300" y="270" text-anchor="middle" fill="#999" font-size="10">Nov 24</text>
+                    <text x="380" y="270" text-anchor="middle" fill="#999" font-size="10">Dec 24</text>
+                    <text x="460" y="270" text-anchor="middle" fill="#999" font-size="10">Jan 25</text>
+                    <text x="540" y="270" text-anchor="middle" fill="#999" font-size="10">Feb 25</text>
+                    <text x="620" y="270" text-anchor="middle" fill="#999" font-size="10">Mar 25</text>
+                    <text x="700" y="270" text-anchor="middle" fill="#999" font-size="10">Apr 25</text>
+                    <text x="780" y="270" text-anchor="middle" fill="#999" font-size="10">May 25</text>
+                    <text x="860" y="270" text-anchor="middle" fill="#999" font-size="10">Jun 25</text>
+                    <text x="940" y="270" text-anchor="middle" fill="#ccc" font-size="10" font-weight="600">Jul 25</text>
+                    <text x="1020" y="270" text-anchor="middle" fill="#ccc" font-size="10" font-weight="600">Aug 25</text>
+                    
+                    <!-- Forecast label -->
+                    <text x="1020" y="290" text-anchor="middle" fill="var(--ib-light-blue)" font-size="10" font-weight="600">Sep 25*</text>
+                </svg>
+                
+                <div style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #ccc;">
+                    <span style="color: var(--ib-red); font-weight: 600;">●</span> Actual BLS Data
+                    <span style="margin: 0 15px;">|</span>
+                    <span style="color: var(--ib-light-blue); font-weight: 600;">●</span> Forecast (4.29%)
+                    <span style="margin: 0 15px;">|</span>
+                    <span style="color: var(--ib-light-blue);">▯</span> 90% CI [4.06%, 4.52%]
+                    <span style="margin: 0 15px;">|</span>
+                    <span style="color: var(--ib-yellow);">⋮</span> Current (Aug 25)
+                </div>
+            </div>
+        </div>="5,5"/>
                     <line x1="50" y1="160" x2="1150" y2="160" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                     <line x1="50" y1="220" x2="1150" y2="220" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
                     
@@ -899,21 +987,39 @@
                         <li style="margin-bottom: 10px;">✓ <strong style="color: #ffffff;">4.29%</strong> September forecast (vs 4.3% August)</li>
                         <li style="margin-bottom: 10px;">✓ <strong style="color: #ffffff;">0.89 FRI</strong> - High reliability score</li>
                         <li style="margin-bottom: 10px;">✓ <strong style="color: #ffffff;">82.4%</strong> expansion probability</li>
-                        <li style="margin-bottom: 10px;">✓ <strong style="color: #ffffff;">Strong alignment</strong> between statistical & market signals</li>
+                        <li style="margin-bottom: 10px;">✓ <strong style="color: var(--ib-green);">Market alignment</strong> - Modal outcome 4.3% (43% prob)</li>
                         <li style="margin-bottom: 10px;">✓ <strong style="color: #ffffff;">15-20% RMSE improvement</strong> over baseline</li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 style="color: var(--ib-yellow); margin-bottom: 15px;">Risk Factors & Limitations</h4>
+                    <h4 style="color: var(--ib-yellow); margin-bottom: 15px;">Risk Factors & Monitoring Points</h4>
                     <ul style="color: #cccccc; line-height: 2; list-style: none; padding: 0;">
-                        <li style="margin-bottom: 10px;">⚠ <strong>Data revisions:</strong> BLS may revise August figure</li>
-                        <li style="margin-bottom: 10px;">⚠ <strong>Seasonal factors:</strong> Fall patterns may affect September</li>
-                        <li style="margin-bottom: 10px;">⚠ <strong>17.6% recession risk:</strong> Not negligible</li>
-                        <li style="margin-bottom: 10px;">⚠ <strong>Fed policy uncertainty:</strong> Rate decisions pending</li>
-                        <li style="margin-bottom: 10px;">⚠ <strong>Global headwinds:</strong> External economic factors</li>
+                        <li style="margin-bottom: 10px;">⚠ <strong style="color: var(--ib-yellow);">Market assigns 34%</strong> probability to ≥4.4% outcome</li>
+                        <li style="margin-bottom: 10px;">⚠ <strong>Data revisions:</strong> BLS may revise August's 4.3% figure</li>
+                        <li style="margin-bottom: 10px;">⚠ <strong>Sept 27 claims:</strong> Projected ~220K (confirm Oct 2)</li>
+                        <li style="margin-bottom: 10px;">⚠ <strong>17.6% recession risk:</strong> Not negligible per regime model</li>
+                        <li style="margin-bottom: 10px;">⚠ <strong>JOLTS stability:</strong> Flat openings may signal cooling</li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 25px; background: rgba(59, 130, 246, 0.1); border-color: var(--ib-light-blue);">
+                <h4 style="color: var(--ib-light-blue); margin-bottom: 10px;">Executive Summary - Updated October 1, 2025</h4>
+                <p style="color: #cccccc; line-height: 1.8;">
+                    The <strong style="color: #ffffff;">Enhanced IBKR Forecaster</strong> predicts September 2025 unemployment at 
+                    <strong style="color: var(--ib-red);">4.29%</strong>, essentially unchanged from August's 4.3%. This forecast 
+                    is <strong style="color: var(--ib-green);">well-aligned with market expectations</strong>: ForecastEx traders 
+                    assign 43% probability to 4.3% (the modal outcome) and 77% probability to ≥4.3%, with a market-implied center 
+                    of 4.33%. The forecast combines MIDAS nowcasting (4.31%), regime-switching analysis (4.26%), and Kalman filtering (4.28%) 
+                    with dynamic ensemble weighting. The sharp drop in initial claims to <strong style="color: var(--ib-green);">218K</strong>
+                    (week ending Sept 20) - the lowest level in two months - provides strong evidence of labor market resilience. 
+                    <strong style="color: var(--ib-purple);">JOLTS data</strong> shows job openings stable at 7.227M in August, 
+                    indicating balanced labor demand. With <strong style="color: var(--ib-green);">82.4% probability</strong> of 
+                    continued expansion per the regime-switching model, the outlook remains stable through fall 2025. The 90% 
+                    confidence interval of <strong style="color: #ffffff;">[4.06%, 4.52%]</strong> appropriately captures forecast 
+                    uncertainty.
+                </p>
             </div>
 
             <div class="highlight-box" style="margin-top: 25px; background: rgba(59, 130, 246, 0.1); border-color: var(--ib-light-blue);">
