@@ -1,0 +1,28 @@
+{
+  "generated_date": "2025-09-18T02:05:55.435680",
+  "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+  "data_source": "BLS Payrolls Benchmark Revisions",
+  "revision_summary": {
+    "total_revision": -911000,
+    "revision_period": "March 2025 to September 2025",
+    "monthly_average": -151833.33333333334,
+    "impact_description": "Significant downward revision to job growth"
+  },
+  "unemployment_impact": {
+    "direct_impact": -0.911,
+    "trend_adjustment": -0.4555,
+    "confidence_level": 0.85,
+    "methodology": "BLS benchmark revision analysis"
+  },
+  "forecast_adjustments": {
+    "payrolls_revision_adjustment": -0.4555,
+    "job_market_weakening_factor": -0.2733,
+    "total_payrolls_impact": -0.7288
+  },
+  "data_quality": {
+    "revision_authority": "BLS Official Benchmark",
+    "revision_scope": "Comprehensive employment data review",
+    "confidence_level": 0.85,
+    "impact_significance": "High"
+  }
+}

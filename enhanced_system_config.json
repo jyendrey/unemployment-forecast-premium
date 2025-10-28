@@ -1,8 +1,9 @@
 {
-  "system_version": "v3.0-final-enhanced",
+  "system_version": "v3.1-final-enhanced-updated",
   "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "updated_foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
   "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
-  "last_updated": "2025-08-23",
+  "last_updated": "2025-09-18",
   "enhanced_features": {
     "extended_fred_data": "24 months (103 observations)",
     "enhanced_trade_processing": "54,032+ trades",

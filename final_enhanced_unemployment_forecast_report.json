@@ -1,0 +1,210 @@
+{
+  "generated_date": "2025-09-18T01:57:23.512320",
+  "version": "v3.1-final-enhanced-updated",
+  "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+  "updated_foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+  "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8",
+  "forecast_summary": {
+    "current_unemployment": 4.2,
+    "forecasted_unemployment": 4.2,
+    "change": -0.0,
+    "confidence": 95,
+    "direction": "Improvement"
+  },
+  "adjustments": [
+    {
+      "name": "LFPR Adjustment",
+      "value": -0.004,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Initial Claims Adjustment",
+      "value": 0.0005,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Continuing Claims Adjustment",
+      "value": 0.0002,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Updated Trade Sentiment Adjustment",
+      "value": -0.0001,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Updated Trade Volume Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Extended Claims Trend Adjustment",
+      "value": 0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Market Stability Adjustment",
+      "value": -0.0,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    },
+    {
+      "name": "Trade Range Data Adjustment",
+      "value": 0.0004,
+      "math_framework": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+    }
+  ],
+  "updated_trade_data_integration": {
+    "sentiment_score": -0.030577111716621242,
+    "sentiment_interpretation": "Neutral",
+    "contracts_analyzed": 8,
+    "total_volume": 1835,
+    "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "extended_fred_data_integration": {
+    "initial_claims": 263000,
+    "continuing_claims": 1939000,
+    "extended_trends": {
+      "short_term": {
+        "initial_claims": {
+          "change": 29000.0,
+          "trend": "Rising"
+        },
+        "continuing_claims": {
+          "change": -22000.0,
+          "trend": "Declining"
+        }
+      },
+      "medium_term": {
+        "initial_claims": {
+          "change": 26000.0,
+          "trend": "Rising"
+        },
+        "continuing_claims": {
+          "change": -25000.0,
+          "trend": "Declining"
+        }
+      },
+      "long_term": {
+        "initial_claims": {
+          "change": 44000.0,
+          "trend": "Rising"
+        },
+        "continuing_claims": {
+          "change": 46000.0,
+          "trend": "Rising"
+        }
+      },
+      "initial_trend": "Rising",
+      "continuing_trend": "Declining",
+      "initial_change": 29000.0,
+      "continuing_change": -22000.0
+    },
+    "market_stability": {
+      "initial_claims": {
+        "standard_deviation": 12680.65,
+        "coefficient_of_variation": 0.0568,
+        "stability": "Very Stable"
+      },
+      "continuing_claims": {
+        "standard_deviation": 54386.62,
+        "coefficient_of_variation": 0.0294,
+        "stability": "Very Stable"
+      },
+      "overall_market_stability": "Very Stable"
+    },
+    "market_health": {
+      "initial_claims_health": {
+        "healthy_percentage": 95.1,
+        "healthy_observations": 98,
+        "total_observations": 103,
+        "assessment": "Excellent"
+      },
+      "continuing_claims_health": {
+        "healthy_percentage": 100.0,
+        "healthy_observations": 103,
+        "total_observations": 103,
+        "assessment": "Excellent"
+      },
+      "overall_market_health": "Very Strong",
+      "initial_claims_benchmark": "200,000 - 250,000",
+      "continuing_claims_benchmark": "1,500,000 - 2,000,000"
+    },
+    "data_coverage": "24 months (103 observations)",
+    "foundation_id": "bc-1aac34de-3d51-4320-a4ce-c8cab2a8cd5b",
+    "math_framework_id": "bc-b635390a-67ea-41c3-ae50-c329dc3f24e8"
+  },
+  "trade_range_data_integration": {
+    "data_source": "Trade Range Data",
+    "foundation_id": "bc-78795d1e-6a46-4716-9ff6-78bca58ca95f",
+    "total_open_interest": 1835,
+    "contracts_analyzed": 9,
+    "market_distribution": {
+      "Above 3.7%": {
+        "Yes": 97,
+        "No": 0,
+        "OI": 40
+      },
+      "Above 3.8%": {
+        "Yes": 97,
+        "No": 3,
+        "OI": 190
+      },
+      "Above 3.9%": {
+        "Yes": 97,
+        "No": 3,
+        "OI": 500
+      },
+      "Above 4.0%": {
+        "Yes": 92,
+        "No": 6,
+        "OI": 480
+      },
+      "Above 4.1%": {
+        "Yes": 73,
+        "No": 25,
+        "OI": 490
+      },
+      "Above 4.2%": {
+        "Yes": 50,
+        "No": 48,
+        "OI": 85
+      },
+      "Above 4.3%": {
+        "Yes": 28,
+        "No": 70,
+        "OI": 10
+      },
+      "Above 4.4%": {
+        "Yes": 16,
+        "No": 84,
+        "OI": 0
+      },
+      "Above 4.5%": {
+        "Yes": 8,
+        "No": 92,
+        "OI": 40
+      }
+    }
+  },
+  "system_architecture": {
+    "foundation_components": [
+      "Data Sources: BLS, FRED (24 months), ForecastEx, Updated Trade Data, Trade Range Data",
+      "Core Algorithms: Final enhanced unemployment forecasting with extended analysis",
+      "Quality Assurance: Multi-source validation with 24-month FRED integration",
+      "System Stability: Robust error handling and extended data feeds"
+    ],
+    "math_framework_components": [
+      "Statistical Models: Advanced regression analysis with 24-month trends",
+      "Adjustment Algorithms: Multi-factor weighted calculations including stability metrics",
+      "Confidence Intervals: Enhanced statistical validation with extended FRED data",
+      "Trade Data Integration: Updated market sentiment and extended claims analysis"
+    ],
+    "updated_foundation_components": [
+      "Trade Range Data: Real-time market sentiment from contract distribution",
+      "Enhanced Sentiment Analysis: Weighted sentiment calculation",
+      "Volume Analysis: Open interest and trading volume metrics",
+      "Market Distribution: Comprehensive contract analysis"
+    ]
+  }
+}
